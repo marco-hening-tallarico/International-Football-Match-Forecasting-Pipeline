@@ -1,0 +1,2 @@
+source,dataset,url,local_path,downloaded_at,notes
+StatsBomb Open Data,competitions,https://raw.githubusercontent.com/statsbomb/open-data/master/data/competitions.json,/Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/competitions.json,2026-05-27 09:48:13.550656,Open professional-style football data; JSON export from StatsBomb Open Data
