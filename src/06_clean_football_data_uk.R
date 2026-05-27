@@ -156,20 +156,20 @@ read_one_fd_uk_file <- function(path) {
     ) |>
         dplyr::mutate(
             match_result = dplyr::case_when(
-                home_score > away_score ~ "home_win",
-                home_score == away_score ~ "draw",
-                home_score < away_score ~ "away_win",
+                home_score > away_score ~ "H",
+                home_score == away_score ~ "D",
+                home_score < away_score ~ "A",
                 TRUE ~ NA_character_
             ),
             result_class = dplyr::case_when(
-                match_result == "home_win" ~ 1L,
-                match_result == "draw" ~ 0L,
-                match_result == "away_win" ~ -1L,
+                match_result == "H" ~ 1L,
+                match_result == "D" ~ 0L,
+                match_result == "A" ~ -1L,
                 TRUE ~ NA_integer_
             ),
-            home_win = as.integer(match_result == "home_win"),
-            draw = as.integer(match_result == "draw"),
-            away_win = as.integer(match_result == "away_win"),
+            home_win = as.integer(match_result == "H"),
+            draw = as.integer(match_result == "D"),
+            away_win = as.integer(match_result == "A"),
             goal_difference = home_score - away_score,
             total_goals = home_score + away_score,
             neutral = NA

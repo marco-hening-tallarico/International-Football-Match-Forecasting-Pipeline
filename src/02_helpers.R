@@ -67,7 +67,10 @@ read_or_create_manifest <- function(meta_dir) {
     manifest_path <- file.path(meta_dir, "source_manifest.csv")
 
     if (file.exists(manifest_path)) {
-        readr::read_csv(manifest_path, show_col_types = FALSE)
+        readr::read_csv(
+            manifest_path,
+            col_types = readr::cols(.default = readr::col_character())
+        )
     } else {
         create_empty_manifest()
     }
