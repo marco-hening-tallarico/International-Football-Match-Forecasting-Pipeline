@@ -1,0 +1,23 @@
+check_name,severity,status,rows_affected,details
+competition_matches_tournament,error,pass,0,competition should mirror tournament for common match-table compatibility.
+date_domain_valid_and_not_future,error,pass,0,Match dates should parse and should not be after 2026-05-27
+derived_result_fields_consistent,error,pass,0,"Outcome, indicator, goal-difference, and total-goals fields should match the final score."
+exact_match_rows_unique,error,pass,0,No exact duplicate match-result rows should exist.
+home_team_differs_from_away_team,error,pass,0,A team should not play itself in one match row.
+neutral_is_populated,error,pass,0,"The international source supplies neutral-site flags, so processed neutral should not be missing."
+processed_rows_reconcile_to_raw,error,pass,0,Processed rows should reconcile exactly to complete scored rows from raw results.csv.
+processed_schema_required_columns,error,pass,0,All required processed columns are present.
+raw_complete_rows_match_processed_rows,error,pass,0,"Complete raw rows: 49,257; processed rows: 49,257."
+raw_file_points_to_results_csv,error,pass,0,Processed lineage should point to raw international_results/results.csv.
+raw_schema_required_columns,error,pass,0,All required raw columns are present.
+required_values_not_missing,error,pass,0,No missing required values.
+score_domain_nonnegative_integers,error,pass,0,"Scores should be present, integer-valued, and non-negative."
+season_equals_match_year,error,pass,0,season should equal the calendar year of date for international results.
+source_constant,error,pass,0,All rows should identify the international_results source.
+source_match_id_unique,error,pass,0,source_match_id should uniquely identify processed international matches.
+text_fields_are_squished,error,pass,0,"Core text fields should not contain leading, trailing, or repeated internal whitespace."
+extreme_scorelines_for_review,warning,review,42,Extreme scorelines are plausible in historical international data but should remain visible in QA.
+same_date_team_tournament_repeats,warning,review,1,Repeated date/home/away/tournament keys are kept but should be inspected.
+same_team_multiple_matches_same_date,warning,review,139,Teams appearing in multiple matches on the same date should be reviewed.
+processed_schema_unexpected_columns,warning,pass,0,No unexpected processed columns are present.
+raw_incomplete_fixtures_excluded,info,recorded,72,Raw rows without final scores are intentionally excluded from processed international_results.csv.

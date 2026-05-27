@@ -106,12 +106,15 @@ read_one_fd_uk_file <- function(path) {
     }
 
     path_parts <- stringr::str_split(path, .Platform$file.sep, simplify = TRUE)
-    season_code <- path_parts[, ncol(path_parts) - 1]
-    league_code <- fs::path_ext_remove(basename(path))
+    season_code <- path_parts[, ncol(path_parts) - 1] |>
+        as.character() |>
+        stringr::str_pad(width = 4, side = "left", pad = "0")
+    league_code <- fs::path_ext_remove(basename(path)) |>
+        as.character()
 
     out <- tibble::tibble(
-        source = "football-data.co.uk",
-        raw_file = path,
+        source = as.character("football-data.co.uk"),
+        raw_file = as.character(path),
         source_match_id = paste0(
             league_code,
             "_",
@@ -172,7 +175,7 @@ read_one_fd_uk_file <- function(path) {
             away_win = as.integer(match_result == "A"),
             goal_difference = home_score - away_score,
             total_goals = home_score + away_score,
-            neutral = NA
+            neutral = as.logical(NA)
         ) |>
         dplyr::filter(
             !is.na(date),

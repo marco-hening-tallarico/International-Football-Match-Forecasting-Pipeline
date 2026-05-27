@@ -55,8 +55,8 @@ make_id_part <- function(x) {
 
 international_normalized <- international_raw |>
     dplyr::transmute(
-        source = "international_results",
-        raw_file = international_results_path,
+        source = as.character("international_results"),
+        raw_file = as.character(international_results_path),
         date = suppressWarnings(as.Date(date)),
         season = as.character(lubridate::year(date)),
         competition = stringr::str_squish(as.character(tournament)),
@@ -107,11 +107,11 @@ international_results <- international_normalized |>
     ) |>
     dplyr::group_by(source_match_id_base) |>
     dplyr::mutate(
-        source_match_id = if (dplyr::n() == 1L) {
+        source_match_id = as.character(if (dplyr::n() == 1L) {
             source_match_id_base
         } else {
             paste0(source_match_id_base, "_", dplyr::row_number())
-        }
+        })
     ) |>
     dplyr::ungroup() |>
     dplyr::select(-source_match_id_base) |>
@@ -176,6 +176,11 @@ international_results_out <- file.path(
 readr::write_csv(
     international_results,
     international_results_out
+)
+
+saveRDS(
+    international_results,
+    file.path(PROCESSED_DIR, "international_results.rds")
 )
 
 message("Done.")

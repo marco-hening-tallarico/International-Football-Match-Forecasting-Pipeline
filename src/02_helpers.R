@@ -51,6 +51,107 @@ safe_read_csv <- function(path) {
 }
 
 
+processed_csv_col_types <- function(path) {
+    table_name <- basename(path)
+
+    common_match_cols <- list(
+        source = readr::col_character(),
+        raw_file = readr::col_character(),
+        source_match_id = readr::col_character(),
+        date = readr::col_date(),
+        season = readr::col_character(),
+        competition = readr::col_character(),
+        home_team = readr::col_character(),
+        away_team = readr::col_character(),
+        home_score = readr::col_integer(),
+        away_score = readr::col_integer(),
+        match_result = readr::col_character(),
+        result_class = readr::col_integer(),
+        home_win = readr::col_integer(),
+        draw = readr::col_integer(),
+        away_win = readr::col_integer(),
+        goal_difference = readr::col_integer(),
+        total_goals = readr::col_integer(),
+        neutral = readr::col_logical()
+    )
+
+    if (identical(table_name, "statsbomb_competitions.csv")) {
+        return(readr::cols(
+            competition_id = readr::col_integer(),
+            season_id = readr::col_integer(),
+            country_name = readr::col_character(),
+            competition_name = readr::col_character(),
+            competition_gender = readr::col_character(),
+            competition_youth = readr::col_logical(),
+            competition_international = readr::col_logical(),
+            season_name = readr::col_character(),
+            match_updated = readr::col_character(),
+            match_updated_360 = readr::col_character(),
+            match_available_360 = readr::col_character(),
+            match_available = readr::col_character()
+        ))
+    }
+
+    if (identical(table_name, "statsbomb_matches.csv")) {
+        return(do.call(readr::cols, c(common_match_cols, list(
+            competition_id = readr::col_integer(),
+            season_id = readr::col_integer(),
+            match_week = readr::col_integer(),
+            competition_country = readr::col_character(),
+            stadium = readr::col_character(),
+            data_version = readr::col_character(),
+            shot_fidelity_version = readr::col_character(),
+            xy_fidelity_version = readr::col_character()
+        ))))
+    }
+
+    if (identical(table_name, "football_data_uk_matches.csv")) {
+        integer_valued_stats <- list(
+            half_time_home_score = readr::col_double(),
+            half_time_away_score = readr::col_double(),
+            home_shots = readr::col_double(),
+            away_shots = readr::col_double(),
+            home_shots_on_target = readr::col_double(),
+            away_shots_on_target = readr::col_double(),
+            home_corners = readr::col_double(),
+            away_corners = readr::col_double(),
+            home_fouls = readr::col_double(),
+            away_fouls = readr::col_double(),
+            home_yellow_cards = readr::col_double(),
+            away_yellow_cards = readr::col_double(),
+            home_red_cards = readr::col_double(),
+            away_red_cards = readr::col_double()
+        )
+
+        return(do.call(readr::cols, c(common_match_cols, integer_valued_stats, list(
+            source_league_code = readr::col_character(),
+            source_season_code = readr::col_character(),
+            full_time_result = readr::col_character(),
+            half_time_result = readr::col_character()
+        ))))
+    }
+
+    if (identical(table_name, "international_results.csv")) {
+        return(do.call(readr::cols, c(common_match_cols, list(
+            tournament = readr::col_character(),
+            city = readr::col_character(),
+            country = readr::col_character()
+        ))))
+    }
+
+    readr::cols()
+}
+
+
+read_processed_csv <- function(path) {
+    readr::read_csv(
+        path,
+        col_types = processed_csv_col_types(path),
+        show_col_types = FALSE
+    )
+}
+
+
 create_empty_manifest <- function() {
     tibble::tibble(
         source = character(),

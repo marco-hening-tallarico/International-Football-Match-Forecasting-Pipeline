@@ -42,6 +42,42 @@ assert_count <- function(actual, expected, label) {
     }
 }
 
+assert_no_missing <- function(x, label) {
+    missing <- is.na(x) | trimws(as.character(x)) == ""
+
+    if (any(missing)) {
+        fail(paste0(label, " has missing values: ", sum(missing)))
+    }
+}
+
+assert_no_duplicates <- function(dat, cols, label) {
+    dupes <- dat |>
+        dplyr::count(dplyr::across(dplyr::all_of(cols)), name = "n") |>
+        dplyr::filter(n > 1L)
+
+    if (nrow(dupes) > 0) {
+        fail(paste0(
+            label,
+            " has duplicate key values for ",
+            paste(cols, collapse = ", "),
+            ": ",
+            nrow(dupes)
+        ))
+    }
+}
+
+assert_integer_valued <- function(x, label, nullable = FALSE) {
+    if (!nullable && any(is.na(x))) {
+        fail(paste0(label, " has missing values."))
+    }
+
+    non_missing <- x[!is.na(x)]
+
+    if (any(non_missing != floor(non_missing))) {
+        fail(paste0(label, " has non-integer values."))
+    }
+}
+
 normalize_existing_path <- function(path) {
     normalizePath(path, winslash = "/", mustWork = TRUE)
 }
@@ -101,7 +137,7 @@ assert_files_exist(
 )
 
 validate_match_table <- function(path, label) {
-    dat <- readr::read_csv(path, show_col_types = FALSE)
+    dat <- read_processed_csv(path)
 
     required_cols <- c(
         "source",
@@ -167,6 +203,19 @@ validate_match_table <- function(path, label) {
         ))
     }
 
+    assert_true(
+        is.character(dat$source_match_id),
+        paste0(label, " source_match_id is not character with read_processed_csv().")
+    )
+    assert_no_missing(dat$source_match_id, paste0(label, " source_match_id"))
+    assert_no_duplicates(dat, "source_match_id", paste0(label, " primary key"))
+
+    negative_scores <- sum(home_score < 0L | away_score < 0L, na.rm = TRUE)
+
+    if (negative_scores > 0) {
+        fail(paste0(label, " has negative scores: ", negative_scores))
+    }
+
     expected_match_result <- dplyr::case_when(
         home_score > away_score ~ "H",
         home_score == away_score ~ "D",
@@ -214,19 +263,50 @@ validate_match_table <- function(path, label) {
     invisible(TRUE)
 }
 
-football_data_uk_matches <- readr::read_csv(
-    file.path(PROCESSED_DIR, "football_data_uk_matches.csv"),
-    show_col_types = FALSE
+statsbomb_competitions <- read_processed_csv(
+    file.path(PROCESSED_DIR, "statsbomb_competitions.csv")
 )
 
-statsbomb_matches <- readr::read_csv(
-    file.path(PROCESSED_DIR, "statsbomb_matches.csv"),
-    show_col_types = FALSE
+football_data_uk_matches <- read_processed_csv(
+    file.path(PROCESSED_DIR, "football_data_uk_matches.csv")
 )
 
-international_results <- readr::read_csv(
-    file.path(PROCESSED_DIR, "international_results.csv"),
-    show_col_types = FALSE
+statsbomb_matches <- read_processed_csv(
+    file.path(PROCESSED_DIR, "statsbomb_matches.csv")
+)
+
+international_results <- read_processed_csv(
+    file.path(PROCESSED_DIR, "international_results.csv")
+)
+
+assert_count(
+    nrow(statsbomb_competitions),
+    80L,
+    "statsbomb_competitions.csv row"
+)
+
+assert_count(
+    nrow(statsbomb_matches),
+    3961L,
+    "statsbomb_matches.csv row"
+)
+
+assert_count(
+    nrow(football_data_uk_matches),
+    177295L,
+    "football_data_uk_matches.csv row"
+)
+
+assert_count(
+    nrow(international_results),
+    49257L,
+    "international_results.csv row"
+)
+
+assert_no_duplicates(
+    statsbomb_competitions,
+    c("competition_id", "season_id"),
+    "statsbomb_competitions.csv primary key"
 )
 
 validate_match_table(
@@ -243,6 +323,114 @@ validate_match_table(
     file.path(PROCESSED_DIR, "international_results.csv"),
     "international_results.csv"
 )
+
+statsbomb_fk_missing <- statsbomb_matches |>
+    dplyr::anti_join(
+        statsbomb_competitions |>
+            dplyr::distinct(competition_id, season_id),
+        by = c("competition_id", "season_id")
+    )
+
+if (nrow(statsbomb_fk_missing) > 0) {
+    fail(paste0(
+        "statsbomb_matches.csv has rows whose (competition_id, season_id) ",
+        "do not exist in statsbomb_competitions.csv: ",
+        nrow(statsbomb_fk_missing)
+    ))
+}
+
+if (any(!stringr::str_detect(football_data_uk_matches$source_season_code, "^[0-9]{4}$"))) {
+    fail("football_data_uk_matches.csv source_season_code has non-four-digit labels.")
+}
+
+if (any(!stringr::str_detect(football_data_uk_matches$season, "^[0-9]{4}$"))) {
+    fail("football_data_uk_matches.csv season has non-four-digit labels.")
+}
+
+football_data_stat_map <- c(
+    half_time_home_score = "hthg",
+    half_time_away_score = "htag",
+    home_shots = "hs",
+    away_shots = "as",
+    home_shots_on_target = "hst",
+    away_shots_on_target = "ast",
+    home_corners = "hc",
+    away_corners = "ac",
+    home_fouls = "hf",
+    away_fouls = "af",
+    home_yellow_cards = "hy",
+    away_yellow_cards = "ay",
+    home_red_cards = "hr",
+    away_red_cards = "ar"
+)
+
+for (stat_col in names(football_data_stat_map)) {
+    assert_integer_valued(
+        football_data_uk_matches[[stat_col]],
+        paste0("football_data_uk_matches.csv ", stat_col),
+        nullable = TRUE
+    )
+
+    if (!any(is.na(football_data_uk_matches[[stat_col]]))) {
+        fail(paste0(
+            "football_data_uk_matches.csv ",
+            stat_col,
+            " has no missing values; inspect for possible fake zero-imputation."
+        ))
+    }
+}
+
+raw_headers <- purrr::map(
+    unique(football_data_uk_matches$raw_file),
+    function(path) {
+        dat <- data.table::fread(
+            file = path,
+            nrows = 0L,
+            fill = TRUE,
+            showProgress = FALSE,
+            data.table = FALSE,
+            check.names = TRUE,
+            encoding = "Latin-1"
+        )
+
+        tibble::tibble(
+            raw_file = normalize_possible_path(path),
+            clean_name = janitor::make_clean_names(names(dat))
+        )
+    }
+) |>
+    purrr::list_rbind()
+
+football_data_by_raw <- football_data_uk_matches |>
+    dplyr::mutate(raw_file_norm = normalize_possible_path(raw_file))
+
+for (stat_col in names(football_data_stat_map)) {
+    raw_col <- football_data_stat_map[[stat_col]]
+    files_missing_raw_col <- raw_headers |>
+        dplyr::group_by(raw_file) |>
+        dplyr::summarise(has_raw_col = raw_col %in% clean_name, .groups = "drop") |>
+        dplyr::filter(!has_raw_col) |>
+        dplyr::pull(raw_file)
+
+    if (length(files_missing_raw_col) == 0L) {
+        next
+    }
+
+    bad_imputed_rows <- football_data_by_raw |>
+        dplyr::filter(raw_file_norm %in% files_missing_raw_col) |>
+        dplyr::filter(!is.na(.data[[stat_col]]))
+
+    if (nrow(bad_imputed_rows) > 0) {
+        fail(paste0(
+            "football_data_uk_matches.csv ",
+            stat_col,
+            " has non-missing values for raw files without ",
+            raw_col,
+            "; possible fake imputation rows: ",
+            nrow(bad_imputed_rows)
+        ))
+    }
+}
 
 expected_football_data_skipped <- file.path(
     RAW_DIR,
@@ -374,6 +562,10 @@ if (length(missing_from_manifest) > 0) {
 
 message("Validation passed.")
 message("Processed files checked: ", length(expected_processed_files))
+message("statsbomb_competitions.csv rows: ", nrow(statsbomb_competitions))
+message("statsbomb_matches.csv rows: ", nrow(statsbomb_matches))
+message("football_data_uk_matches.csv rows: ", nrow(football_data_uk_matches))
+message("international_results.csv rows: ", nrow(international_results))
 message("football-data.co.uk raw CSV files: ", length(football_data_raw_files))
 message("StatsBomb match JSON files: ", length(statsbomb_match_raw_files))
 message("international_results raw files: ", length(international_raw_files))

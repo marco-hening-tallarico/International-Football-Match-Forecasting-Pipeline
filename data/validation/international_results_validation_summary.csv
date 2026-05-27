@@ -1,0 +1,23 @@
+metric,value
+validation_run_at,2026-05-27 14:01:51 EDT
+processed_file,/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/international_results.csv
+raw_file,/Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/international_results/results.csv
+processed_rows,49257
+processed_columns,21
+raw_complete_scored_rows,49257
+raw_incomplete_unscored_rows,72
+date_min,1872-11-30
+date_max,2026-03-31
+teams,336
+tournaments,198
+countries,269
+cities,2138
+neutral_true,12995
+neutral_false,36262
+home_wins,24130
+draws,11202
+away_wins,13925
+max_total_goals,31
+max_absolute_goal_difference,31
+error_checks_failed,0
+warning_checks_for_review,3

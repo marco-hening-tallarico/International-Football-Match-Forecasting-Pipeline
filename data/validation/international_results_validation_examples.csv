@@ -1,0 +1,278 @@
+validation_issue,validation_row_id,source_match_id,date,home_team,away_team,home_score,away_score,tournament,city,country,neutral,total_goals,goal_difference
+same_date_team_tournament_repeats,9641,1974_02_17_tahiti_new_caledonia_friendly_1,1974-02-17,Tahiti,New Caledonia,2,1,Friendly,Papeete,Tahiti,FALSE,3,1
+same_date_team_tournament_repeats,9642,1974_02_17_tahiti_new_caledonia_friendly_2,1974-02-17,Tahiti,New Caledonia,1,2,Friendly,Papeete,Tahiti,FALSE,3,-1
+same_team_multiple_matches_same_date,70,1890_03_15_northern_ireland_england_british_home_championship,1890-03-15,Northern Ireland,England,1,9,British Home Championship,Belfast,Ireland,FALSE,10,-8
+same_team_multiple_matches_same_date,71,1890_03_15_wales_england_british_home_championship,1890-03-15,Wales,England,1,3,British Home Championship,Wrexham,Wales,FALSE,4,-2
+same_team_multiple_matches_same_date,77,1891_03_07_england_northern_ireland_british_home_championship,1891-03-07,England,Northern Ireland,6,1,British Home Championship,Wolverhampton,England,FALSE,7,5
+same_team_multiple_matches_same_date,76,1891_03_07_england_wales_british_home_championship,1891-03-07,England,Wales,4,1,British Home Championship,Sunderland,England,FALSE,5,3
+same_team_multiple_matches_same_date,82,1892_03_05_northern_ireland_england_british_home_championship,1892-03-05,Northern Ireland,England,0,2,British Home Championship,Belfast,Ireland,FALSE,2,-2
+same_team_multiple_matches_same_date,83,1892_03_05_wales_england_british_home_championship,1892-03-05,Wales,England,0,2,British Home Championship,Wrexham,Wales,FALSE,2,-2
+same_team_multiple_matches_same_date,252,1909_04_04_germany_switzerland_friendly,1909-04-04,Germany,Switzerland,1,0,Friendly,Karlsruhe,Germany,FALSE,1,1
+same_team_multiple_matches_same_date,253,1909_04_04_hungary_germany_friendly,1909-04-04,Hungary,Germany,3,3,Friendly,Budapest,Hungary,FALSE,6,0
+same_team_multiple_matches_same_date,489,1916_08_15_argentina_uruguay_copa_newton,1916-08-15,Argentina,Uruguay,3,1,Copa Newton,Avellaneda,Argentina,FALSE,4,2
+same_team_multiple_matches_same_date,490,1916_08_15_uruguay_argentina_copa_lipton,1916-08-15,Uruguay,Argentina,1,2,Copa Lipton,Montevideo,Uruguay,FALSE,3,-1
+same_team_multiple_matches_same_date,493,1916_10_01_argentina_uruguay_friendly,1916-10-01,Argentina,Uruguay,7,2,Friendly,Avellaneda,Argentina,FALSE,9,5
+same_team_multiple_matches_same_date,496,1916_10_01_uruguay_argentina_copa_premio_honor_uruguayo,1916-10-01,Uruguay,Argentina,0,1,Copa Premio Honor Uruguayo,Montevideo,Uruguay,FALSE,1,-1
+same_team_multiple_matches_same_date,675,1921_05_30_japan_philippines_friendly,1921-05-30,Japan,Philippines,0,3,Friendly,Shanghai,China PR,TRUE,3,-3
+same_team_multiple_matches_same_date,676,1921_05_30_philippines_japan_far_eastern_championship_games,1921-05-30,Philippines,Japan,3,1,Far Eastern Championship Games,Shanghai,China PR,TRUE,4,2
+same_team_multiple_matches_same_date,770,1922_10_22_argentina_chile_friendly,1922-10-22,Argentina,Chile,1,0,Friendly,Buenos Aires,Argentina,FALSE,1,1
+same_team_multiple_matches_same_date,771,1922_10_22_brazil_argentina_copa_roca,1922-10-22,Brazil,Argentina,2,1,Copa Roca,São Paulo,Brazil,FALSE,3,1
+same_team_multiple_matches_same_date,869,1923_12_02_argentina_brazil_friendly,1923-12-02,Argentina,Brazil,0,2,Friendly,Buenos Aires,Argentina,FALSE,2,-2
+same_team_multiple_matches_same_date,870,1923_12_02_uruguay_argentina_copa_am_rica,1923-12-02,Uruguay,Argentina,2,0,Copa América,Montevideo,Uruguay,FALSE,2,2
+same_team_multiple_matches_same_date,906,1924_05_25_argentina_uruguay_copa_newton,1924-05-25,Argentina,Uruguay,4,0,Copa Newton,Buenos Aires,Argentina,FALSE,4,4
+same_team_multiple_matches_same_date,907,1924_05_25_uruguay_argentina_copa_lipton,1924-05-25,Uruguay,Argentina,2,0,Copa Lipton,Montevideo,Uruguay,FALSE,2,2
+same_team_multiple_matches_same_date,1011,1925_05_20_china_pr_japan_friendly,1925-05-20,China PR,Japan,2,0,Friendly,Manila,Philippines,TRUE,2,2
+same_team_multiple_matches_same_date,1012,1925_05_20_japan_china_pr_far_eastern_championship_games,1925-05-20,Japan,China PR,0,2,Far Eastern Championship Games,Manila,Philippines,TRUE,2,-2
+same_team_multiple_matches_same_date,1135,1926_10_03_denmark_sweden_nordic_championship,1926-10-03,Denmark,Sweden,2,0,Nordic Championship,Copenhagen,Denmark,FALSE,2,2
+same_team_multiple_matches_same_date,1136,1926_10_03_sweden_poland_friendly,1926-10-03,Sweden,Poland,3,1,Friendly,Stockholm,Sweden,FALSE,4,2
+same_team_multiple_matches_same_date,1173,1927_04_10_austria_hungary_friendly,1927-04-10,Austria,Hungary,6,0,Friendly,Vienna,Austria,FALSE,6,6
+same_team_multiple_matches_same_date,1174,1927_04_10_hungary_yugoslavia_friendly,1927-04-10,Hungary,Yugoslavia,3,0,Friendly,Budapest,Hungary,FALSE,3,3
+same_team_multiple_matches_same_date,1270,1928_05_06_austria_yugoslavia_friendly,1928-05-06,Austria,Yugoslavia,3,0,Friendly,Vienna,Austria,FALSE,3,3
+same_team_multiple_matches_same_date,1271,1928_05_06_hungary_austria_friendly,1928-05-06,Hungary,Austria,5,5,Friendly,Budapest,Hungary,FALSE,10,0
+same_team_multiple_matches_same_date,1273,1928_05_06_yugoslavia_romania_friendly,1928-05-06,Yugoslavia,Romania,3,1,Friendly,Belgrade,Yugoslavia,FALSE,4,2
+same_team_multiple_matches_same_date,1380,1929_06_16_argentina_uruguay_friendly,1929-06-16,Argentina,Uruguay,2,0,Friendly,Buenos Aires,Argentina,FALSE,2,2
+same_team_multiple_matches_same_date,1382,1929_06_16_uruguay_argentina_friendly,1929-06-16,Uruguay,Argentina,1,1,Friendly,Montevideo,Uruguay,FALSE,2,0
+same_team_multiple_matches_same_date,1524,1930_09_28_belgium_sweden_friendly,1930-09-28,Belgium,Sweden,2,2,Friendly,Liège,Belgium,FALSE,4,0
+same_team_multiple_matches_same_date,1525,1930_09_28_finland_sweden_nordic_championship,1930-09-28,Finland,Sweden,4,4,Nordic Championship,Helsinki,Finland,FALSE,8,0
+same_team_multiple_matches_same_date,1527,1930_09_28_sweden_poland_friendly,1930-09-28,Sweden,Poland,0,3,Friendly,Stockholm,Sweden,FALSE,3,-3
+same_team_multiple_matches_same_date,1713,1932_09_25_germany_sweden_friendly,1932-09-25,Germany,Sweden,4,3,Friendly,Nuremberg,Germany,FALSE,7,1
+same_team_multiple_matches_same_date,1715,1932_09_25_sweden_lithuania_friendly,1932-09-25,Sweden,Lithuania,8,1,Friendly,Stockholm,Sweden,FALSE,9,7
+same_team_multiple_matches_same_date,1717,1932_10_02_poland_latvia_friendly,1932-10-02,Poland,Latvia,2,1,Friendly,Warsaw,Poland,FALSE,3,1
+same_team_multiple_matches_same_date,1718,1932_10_02_romania_poland_friendly,1932-10-02,Romania,Poland,0,5,Friendly,Bucharest,Romania,FALSE,5,-5
+same_team_multiple_matches_same_date,1863,1934_04_29_czechoslovakia_hungary_central_european_international_cup,1934-04-29,Czechoslovakia,Hungary,2,2,Central European International Cup,Prague,Czechoslovakia,FALSE,4,0
+same_team_multiple_matches_same_date,1861,1934_04_29_hungary_bulgaria_fifa_world_cup_qualification,1934-04-29,Hungary,Bulgaria,4,1,FIFA World Cup qualification,Budapest,Hungary,FALSE,5,3
+same_team_multiple_matches_same_date,1919,1934_09_23_finland_sweden_nordic_championship,1934-09-23,Finland,Sweden,5,4,Nordic Championship,Helsinki,Finland,FALSE,9,1
+same_team_multiple_matches_same_date,1921,1934_09_23_sweden_latvia_friendly,1934-09-23,Sweden,Latvia,3,1,Friendly,Stockholm,Sweden,FALSE,4,2
+same_team_multiple_matches_same_date,1925,1934_10_14_latvia_poland_friendly,1934-10-14,Latvia,Poland,2,6,Friendly,Riga,Latvia,FALSE,8,-4
+same_team_multiple_matches_same_date,1926,1934_10_14_poland_romania_friendly,1934-10-14,Poland,Romania,3,3,Friendly,Lwów,Poland,FALSE,6,0
+same_team_multiple_matches_same_date,1987,1935_05_12_austria_poland_friendly,1935-05-12,Austria,Poland,5,2,Friendly,Vienna,Austria,FALSE,7,3
+same_team_multiple_matches_same_date,1990,1935_05_12_hungary_austria_friendly,1935-05-12,Hungary,Austria,6,3,Friendly,Budapest,Hungary,FALSE,9,3
+same_team_multiple_matches_same_date,2020,1935_08_18_germany_finland_friendly,1935-08-18,Germany,Finland,6,0,Friendly,Munich,Germany,FALSE,6,6
+same_team_multiple_matches_same_date,2021,1935_08_18_luxembourg_germany_friendly,1935-08-18,Luxembourg,Germany,0,1,Friendly,Luxembourg,Luxembourg,FALSE,1,-1
+same_team_multiple_matches_same_date,2031,1935_09_15_germany_estonia_friendly,1935-09-15,Germany,Estonia,5,0,Friendly,Stettin,Germany,FALSE,5,5
+same_team_multiple_matches_same_date,2032,1935_09_15_germany_poland_friendly,1935-09-15,Germany,Poland,1,0,Friendly,Breslau,Germany,FALSE,1,1
+same_team_multiple_matches_same_date,2033,1935_09_15_poland_latvia_friendly,1935-09-15,Poland,Latvia,3,3,Friendly,Łódź,Poland,FALSE,6,0
+same_team_multiple_matches_same_date,2039,1935_10_06_austria_hungary_central_european_international_cup,1935-10-06,Austria,Hungary,4,4,Central European International Cup,Vienna,Austria,FALSE,8,0
+same_team_multiple_matches_same_date,2041,1935_10_06_poland_austria_friendly,1935-10-06,Poland,Austria,1,0,Friendly,Warsaw,Poland,FALSE,1,1
+same_team_multiple_matches_same_date,2115,1936_09_06_latvia_poland_friendly,1936-09-06,Latvia,Poland,3,3,Friendly,Riga,Latvia,FALSE,6,0
+same_team_multiple_matches_same_date,2117,1936_09_06_yugoslavia_poland_friendly,1936-09-06,Yugoslavia,Poland,9,3,Friendly,Belgrade,Yugoslavia,FALSE,12,6
+same_team_multiple_matches_same_date,2121,1936_09_27_czechoslovakia_germany_friendly,1936-09-27,Czechoslovakia,Germany,1,2,Friendly,Prague,Czechoslovakia,FALSE,3,-1
+same_team_multiple_matches_same_date,2123,1936_09_27_germany_luxembourg_friendly,1936-09-27,Germany,Luxembourg,7,2,Friendly,Krefeld,Germany,FALSE,9,5
+same_team_multiple_matches_same_date,2170,1937_03_21_germany_france_friendly,1937-03-21,Germany,France,4,0,Friendly,Stuttgart,Germany,FALSE,4,4
+same_team_multiple_matches_same_date,2171,1937_03_21_luxembourg_germany_friendly,1937-03-21,Luxembourg,Germany,2,3,Friendly,Luxembourg,Luxembourg,FALSE,5,-1
+same_team_multiple_matches_same_date,2224,1937_09_12_bulgaria_poland_friendly,1937-09-12,Bulgaria,Poland,3,3,Friendly,Sofia,Bulgaria,FALSE,6,0
+same_team_multiple_matches_same_date,2226,1937_09_12_poland_denmark_friendly,1937-09-12,Poland,Denmark,3,1,Friendly,Warsaw,Poland,FALSE,4,2
+same_team_multiple_matches_same_date,2239,1937_10_10_poland_latvia_friendly,1937-10-10,Poland,Latvia,2,1,Friendly,Katowice,Poland,FALSE,3,1
+same_team_multiple_matches_same_date,2238,1937_10_10_poland_yugoslavia_fifa_world_cup_qualification,1937-10-10,Poland,Yugoslavia,4,0,FIFA World Cup qualification,Warsaw,Poland,FALSE,4,4
+same_team_multiple_matches_same_date,2298,1938_03_20_germany_hungary_friendly,1938-03-20,Germany,Hungary,1,1,Friendly,Nuremberg,Germany,FALSE,2,0
+same_team_multiple_matches_same_date,2297,1938_03_20_germany_luxembourg_friendly,1938-03-20,Germany,Luxembourg,2,1,Friendly,Wuppertal,Germany,FALSE,3,1
+same_team_multiple_matches_same_date,2394,1938_09_25_latvia_poland_friendly,1938-09-25,Latvia,Poland,2,1,Friendly,Riga,Latvia,FALSE,3,1
+same_team_multiple_matches_same_date,2395,1938_09_25_poland_yugoslavia_friendly,1938-09-25,Poland,Yugoslavia,4,4,Friendly,Warsaw,Poland,FALSE,8,0
+same_team_multiple_matches_same_date,2443,1939_03_26_italy_germany_friendly,1939-03-26,Italy,Germany,3,2,Friendly,Florence,Italy,FALSE,5,1
+same_team_multiple_matches_same_date,2444,1939_03_26_luxembourg_germany_friendly,1939-03-26,Luxembourg,Germany,2,1,Friendly,Differdange,Luxembourg,FALSE,3,1
+same_team_multiple_matches_same_date,2498,1939_11_12_czechoslovakia_austria_friendly,1939-11-12,Czechoslovakia,Austria,4,4,Friendly,Prague,Bohemia and Moravia,FALSE,8,0
+same_team_multiple_matches_same_date,2499,1939_11_12_germany_czechoslovakia_friendly,1939-11-12,Germany,Czechoslovakia,4,4,Friendly,Breslau,Germany,FALSE,8,0
+same_team_multiple_matches_same_date,2506,1940_02_18_argentina_paraguay_copa_chevallier_boutell,1940-02-18,Argentina,Paraguay,3,1,Copa Chevallier Boutell,Avellaneda,Argentina,FALSE,4,2
+same_team_multiple_matches_same_date,2507,1940_02_18_brazil_argentina_copa_roca,1940-02-18,Brazil,Argentina,2,2,Copa Roca,São Paulo,Brazil,FALSE,4,0
+same_team_multiple_matches_same_date,2509,1940_02_25_argentina_paraguay_copa_chevallier_boutell,1940-02-25,Argentina,Paraguay,4,0,Copa Chevallier Boutell,Buenos Aires,Argentina,FALSE,4,4
+same_team_multiple_matches_same_date,2510,1940_02_25_brazil_argentina_copa_roca,1940-02-25,Brazil,Argentina,0,3,Copa Roca,São Paulo,Brazil,FALSE,3,-3
+same_team_multiple_matches_same_date,2606,1941_10_05_finland_germany_friendly,1941-10-05,Finland,Germany,0,6,Friendly,Helsinki,Finland,FALSE,6,-6
+same_team_multiple_matches_same_date,2607,1941_10_05_sweden_germany_friendly,1941-10-05,Sweden,Germany,4,2,Friendly,Solna,Sweden,FALSE,6,2
+same_team_multiple_matches_same_date,2725,1944_10_04_barbados_trinidad_and_tobago_friendly,1944-10-04,Barbados,Trinidad and Tobago,1,1,Friendly,Bridgetown,Barbados,FALSE,2,0
+same_team_multiple_matches_same_date,2724,1944_10_04_trinidad_and_tobago_guyana_friendly,1944-10-04,Trinidad and Tobago,Guyana,1,1,Friendly,Port of Spain,Trinidad and Tobago,FALSE,2,0
+same_team_multiple_matches_same_date,2787,1945_09_30_finland_sweden_friendly,1945-09-30,Finland,Sweden,1,6,Friendly,Helsinki,Finland,FALSE,7,-5
+same_team_multiple_matches_same_date,2789,1945_09_30_sweden_denmark_friendly,1945-09-30,Sweden,Denmark,4,1,Friendly,Solna,Sweden,FALSE,5,3
+same_team_multiple_matches_same_date,2866,1946_09_15_finland_sweden_friendly,1946-09-15,Finland,Sweden,0,7,Friendly,Helsinki,Finland,FALSE,7,-7
+same_team_multiple_matches_same_date,2867,1946_09_15_norway_sweden_friendly,1946-09-15,Norway,Sweden,0,3,Friendly,Oslo,Norway,FALSE,3,-3
+same_team_multiple_matches_same_date,3100,1948_05_23_albania_hungary_balkan_cup,1948-05-23,Albania,Hungary,0,0,Balkan Cup,Tirana,Albania,FALSE,0,0
+same_team_multiple_matches_same_date,3102,1948_05_23_hungary_czechoslovakia_central_european_international_cup,1948-05-23,Hungary,Czechoslovakia,2,1,Central European International Cup,Budapest,Hungary,FALSE,3,1
+same_team_multiple_matches_same_date,3140,1948_09_19_finland_sweden_nordic_championship,1948-09-19,Finland,Sweden,2,2,Nordic Championship,Helsinki,Finland,FALSE,4,0
+same_team_multiple_matches_same_date,3141,1948_09_19_norway_sweden_nordic_championship,1948-09-19,Norway,Sweden,3,5,Nordic Championship,Oslo,Norway,FALSE,8,-2
+same_team_multiple_matches_same_date,3150,1948_09_27_estonia_lithuania_baltic_cup,1948-09-27,Estonia,Lithuania,1,2,Baltic Cup,Riga,Soviet Union,TRUE,3,-1
+same_team_multiple_matches_same_date,3151,1948_09_27_latvia_estonia_baltic_cup,1948-09-27,Latvia,Estonia,1,1,Baltic Cup,Riga,Soviet Union,FALSE,2,0
+same_team_multiple_matches_same_date,3286,1949_09_11_denmark_finland_nordic_championship,1949-09-11,Denmark,Finland,0,2,Nordic Championship,Copenhagen,Denmark,FALSE,2,-2
+same_team_multiple_matches_same_date,3288,1949_09_11_norway_denmark_nordic_championship,1949-09-11,Norway,Denmark,0,2,Nordic Championship,Oslo,Norway,FALSE,2,-2
+same_team_multiple_matches_same_date,3300,1949_10_02_sweden_finland_nordic_championship,1949-10-02,Sweden,Finland,8,1,Nordic Championship,Malmö,Sweden,FALSE,9,7
+same_team_multiple_matches_same_date,3301,1949_10_02_sweden_norway_nordic_championship,1949-10-02,Sweden,Norway,3,3,Nordic Championship,Solna,Sweden,FALSE,6,0
+same_team_multiple_matches_same_date,3414,1950_07_11_madagascar_mauritius_friendly,1950-07-11,Madagascar,Mauritius,1,5,Friendly,Antananarivo,Madagascar,FALSE,6,-4
+same_team_multiple_matches_same_date,3413,1950_07_11_madagascar_r_union_friendly,1950-07-11,Madagascar,Réunion,2,3,Friendly,Antananarivo,Madagascar,FALSE,5,-1
+same_team_multiple_matches_same_date,3433,1950_09_24_finland_sweden_nordic_championship,1950-09-24,Finland,Sweden,0,1,Nordic Championship,Helsinki,Finland,FALSE,1,-1
+same_team_multiple_matches_same_date,3435,1950_09_24_norway_sweden_nordic_championship,1950-09-24,Norway,Sweden,1,3,Nordic Championship,Oslo,Norway,FALSE,4,-2
+same_team_multiple_matches_same_date,3535,1951_09_02_sweden_finland_nordic_championship,1951-09-02,Sweden,Finland,3,2,Nordic Championship,Solna,Sweden,FALSE,5,1
+same_team_multiple_matches_same_date,3536,1951_09_02_yugoslavia_sweden_friendly,1951-09-02,Yugoslavia,Sweden,2,1,Friendly,Belgrade,Yugoslavia,FALSE,3,1
+same_team_multiple_matches_same_date,3813,1953_09_13_bulgaria_poland_friendly,1953-09-13,Bulgaria,Poland,2,2,Friendly,Sofia,Bulgaria,FALSE,4,0
+same_team_multiple_matches_same_date,3815,1953_09_13_silesia_poland_friendly,1953-09-13,Silesia,Poland,3,3,Friendly,Byton,Poland,FALSE,6,0
+same_team_multiple_matches_same_date,3834,1953_10_04_bulgaria_hungary_friendly,1953-10-04,Bulgaria,Hungary,1,1,Friendly,Sofia,Bulgaria,FALSE,2,0
+same_team_multiple_matches_same_date,3835,1953_10_04_czechoslovakia_hungary_friendly,1953-10-04,Czechoslovakia,Hungary,1,5,Friendly,Prague,Czechoslovakia,FALSE,6,-4
+same_team_multiple_matches_same_date,5888,1963_08_14_sweden_finland_nordic_championship,1963-08-14,Sweden,Finland,0,0,Nordic Championship,Solna,Sweden,FALSE,0,0
+same_team_multiple_matches_same_date,5889,1963_08_14_sweden_norway_nordic_championship,1963-08-14,Sweden,Norway,0,0,Nordic Championship,Gothenburg,Sweden,FALSE,0,0
+same_team_multiple_matches_same_date,6268,1965_04_18_ethiopia_sudan_african_cup_of_nations_qualification,1965-04-18,Ethiopia,Sudan,1,0,African Cup of Nations qualification,Addis Ababa,Ethiopia,FALSE,1,1
+same_team_multiple_matches_same_date,6267,1965_04_18_ethiopia_uganda_african_cup_of_nations_qualification,1965-04-18,Ethiopia,Uganda,2,0,African Cup of Nations qualification,Addis Ababa,Ethiopia,FALSE,2,2
+same_team_multiple_matches_same_date,6355,1965_07_20_congo_togo_all_african_games,1965-07-20,Congo,Togo,7,2,All-African Games,Brazzaville,Congo,FALSE,9,5
+same_team_multiple_matches_same_date,6356,1965_07_20_mali_uganda_all_african_games,1965-07-20,Mali,Uganda,5,1,All-African Games,Brazzaville,Congo,TRUE,6,4
+same_team_multiple_matches_same_date,6357,1965_07_20_togo_uganda_all_african_games,1965-07-20,Togo,Uganda,1,1,All-African Games,Brazzaville,Congo,TRUE,2,0
+same_team_multiple_matches_same_date,6450,1965_09_21_dr_congo_liberia_african_cup_of_nations_qualification,1965-09-21,DR Congo,Liberia,3,2,African Cup of Nations qualification,Brazzaville,Congo,TRUE,5,1
+same_team_multiple_matches_same_date,6451,1965_09_21_ivory_coast_liberia_african_cup_of_nations_qualification,1965-09-21,Ivory Coast,Liberia,4,0,African Cup of Nations qualification,Abidjan,Ivory Coast,FALSE,4,4
+same_team_multiple_matches_same_date,6509,1965_11_21_brazil_hungary_friendly,1965-11-21,Brazil,Hungary,5,3,Friendly,São Paulo,Brazil,FALSE,8,2
+same_team_multiple_matches_same_date,6508,1965_11_21_brazil_russia_friendly,1965-11-21,Brazil,Russia,2,2,Friendly,Rio de Janeiro,Brazil,FALSE,4,0
+same_team_multiple_matches_same_date,6643,1966_06_08_brazil_peru_friendly,1966-06-08,Brazil,Peru,3,1,Friendly,Rio de Janeiro,Brazil,FALSE,4,2
+same_team_multiple_matches_same_date,6642,1966_06_08_brazil_poland_friendly,1966-06-08,Brazil,Poland,2,1,Friendly,Rio de Janeiro,Brazil,FALSE,3,1
+same_team_multiple_matches_same_date,6746,1966_08_20_japan_taiwan_merdeka_tournament,1966-08-20,Japan,Taiwan,5,2,Merdeka Tournament,Kuala Lumpur,Malaysia,TRUE,7,3
+same_team_multiple_matches_same_date,6745,1966_08_20_singapore_taiwan_merdeka_tournament,1966-08-20,Singapore,Taiwan,4,1,Merdeka Tournament,Ipoh,Malaysia,TRUE,5,3
+same_team_multiple_matches_same_date,6747,1966_08_20_singapore_vietnam_republic_merdeka_tournament,1966-08-20,Singapore,Vietnam Republic,1,2,Merdeka Tournament,Ipoh,Malaysia,TRUE,3,-1
+same_team_multiple_matches_same_date,6756,1966_08_23_malaysia_myanmar_merdeka_tournament,1966-08-23,Malaysia,Myanmar,0,0,Merdeka Tournament,Kuala Lumpur,Malaysia,FALSE,0,0
+same_team_multiple_matches_same_date,6753,1966_08_23_myanmar_south_korea_merdeka_tournament,1966-08-23,Myanmar,South Korea,2,0,Merdeka Tournament,Ipoh,Malaysia,TRUE,2,2
+same_team_multiple_matches_same_date,6846,1966_11_30_cambodia_north_vietnam_ganefo,1966-11-30,Cambodia,North Vietnam,2,2,GaNEFo,Phnom Penh,Cambodia,FALSE,4,0
+same_team_multiple_matches_same_date,6848,1966_11_30_china_pr_north_vietnam_ganefo,1966-11-30,China PR,North Vietnam,2,0,GaNEFo,Phnom Penh,Cambodia,TRUE,2,2
+same_team_multiple_matches_same_date,6874,1966_12_12_new_caledonia_solomon_islands_south_pacific_games,1966-12-12,New Caledonia,Solomon Islands,8,0,South Pacific Games,Nouméa,New Caledonia,FALSE,8,8
+same_team_multiple_matches_same_date,6873,1966_12_12_new_caledonia_vanuatu_south_pacific_games,1966-12-12,New Caledonia,Vanuatu,5,0,South Pacific Games,Nouméa,New Caledonia,FALSE,5,5
+same_team_multiple_matches_same_date,7074,1967_07_28_peru_japan_friendly,1967-07-28,Peru,Japan,1,0,Friendly,Lima,Peru,FALSE,1,1
+same_team_multiple_matches_same_date,7073,1967_07_28_peru_uruguay_friendly,1967-07-28,Peru,Uruguay,0,1,Friendly,Lima,Peru,FALSE,1,-1
+same_team_multiple_matches_same_date,7078,1967_07_30_peru_japan_friendly,1967-07-30,Peru,Japan,0,0,Friendly,Lima,Peru,FALSE,0,0
+same_team_multiple_matches_same_date,7077,1967_07_30_peru_uruguay_friendly,1967-07-30,Peru,Uruguay,1,2,Friendly,Lima,Peru,FALSE,3,-1
+same_team_multiple_matches_same_date,7200,1967_11_08_new_caledonia_new_zealand_friendly,1967-11-08,New Caledonia,New Zealand,4,0,Friendly,Nouméa,New Caledonia,FALSE,4,4
+same_team_multiple_matches_same_date,7201,1967_11_08_new_zealand_singapore_vietnam_independence_cup,1967-11-08,New Zealand,Singapore,3,1,Vietnam Independence Cup,Saigon,Vietnam Republic,TRUE,4,2
+same_team_multiple_matches_same_date,7604,1969_02_02_cameroon_uganda_african_cup_of_nations_qualification,1969-02-02,Cameroon,Uganda,2,0,African Cup of Nations qualification,Yaoundé,Cameroon,FALSE,2,2
+same_team_multiple_matches_same_date,7603,1969_02_02_uganda_cameroon_african_cup_of_nations_qualification,1969-02-02,Uganda,Cameroon,2,1,African Cup of Nations qualification,Kampala,Uganda,FALSE,3,1
+same_team_multiple_matches_same_date,7718,1969_06_29_cameroon_zambia_african_cup_of_nations_qualification,1969-06-29,Cameroon,Zambia,2,1,African Cup of Nations qualification,Yaoundé,Cameroon,FALSE,3,1
+same_team_multiple_matches_same_date,7717,1969_06_29_zambia_cameroon_african_cup_of_nations_qualification,1969-06-29,Zambia,Cameroon,2,2,African Cup of Nations qualification,Ndola,Zambia,FALSE,4,0
+same_team_multiple_matches_same_date,7863,1969_11_01_indonesia_south_korea_merdeka_tournament,1969-11-01,Indonesia,South Korea,3,0,Merdeka Tournament,Ipoh,Malaysia,TRUE,3,3
+same_team_multiple_matches_same_date,7862,1969_11_01_indonesia_thailand_merdeka_tournament,1969-11-01,Indonesia,Thailand,4,0,Merdeka Tournament,Ipoh,Malaysia,TRUE,4,4
+same_team_multiple_matches_same_date,7882,1969_11_07_india_thailand_merdeka_tournament,1969-11-07,India,Thailand,0,1,Merdeka Tournament,Kuala Lumpur,Malaysia,TRUE,1,-1
+same_team_multiple_matches_same_date,7884,1969_11_07_south_korea_thailand_merdeka_tournament,1969-11-07,South Korea,Thailand,2,1,Merdeka Tournament,Kuala Lumpur,Malaysia,TRUE,3,1
+same_team_multiple_matches_same_date,8496,1971_08_07_malaysia_taiwan_merdeka_tournament,1971-08-07,Malaysia,Taiwan,0,0,Merdeka Tournament,Kuala Lumpur,Malaysia,FALSE,0,0
+same_team_multiple_matches_same_date,8497,1971_08_07_malaysia_thailand_merdeka_tournament,1971-08-07,Malaysia,Thailand,0,2,Merdeka Tournament,Kuala Lumpur,Malaysia,FALSE,2,-2
+same_team_multiple_matches_same_date,8580,1971_10_06_bermuda_mexico_concacaf_championship_qualification,1971-10-06,Bermuda,Mexico,0,2,CONCACAF Championship qualification,Hamilton,Bermuda,FALSE,2,-2
+same_team_multiple_matches_same_date,8581,1971_10_06_mexico_bermuda_concacaf_championship_qualification,1971-10-06,Mexico,Bermuda,4,0,CONCACAF Championship qualification,Mexico City,Mexico,FALSE,4,4
+same_team_multiple_matches_same_date,8695,1971_12_14_laos_cambodia_southeast_asian_peninsular_games,1971-12-14,Laos,Cambodia,0,2,Southeast Asian Peninsular Games,Malaysia,Malaysia,TRUE,2,-2
+same_team_multiple_matches_same_date,8697,1971_12_14_malaysia_cambodia_southeast_asian_peninsular_games,1971-12-14,Malaysia,Cambodia,3,0,Southeast Asian Peninsular Games,Malaysia,Malaysia,FALSE,3,3
+same_team_multiple_matches_same_date,8696,1971_12_14_malaysia_thailand_southeast_asian_peninsular_games,1971-12-14,Malaysia,Thailand,4,2,Southeast Asian Peninsular Games,Malaysia,Malaysia,FALSE,6,2
+same_team_multiple_matches_same_date,9238,1973_04_08_ethiopia_tanzania_african_cup_of_nations_qualification,1973-04-08,Ethiopia,Tanzania,2,1,African Cup of Nations qualification,Addis Ababa,Ethiopia,FALSE,3,1
+same_team_multiple_matches_same_date,9239,1973_04_08_tanzania_ethiopia_african_cup_of_nations_qualification,1973-04-08,Tanzania,Ethiopia,3,0,African Cup of Nations qualification,Dar es Salaam,Tanzania,FALSE,3,3
+same_team_multiple_matches_same_date,9331,1973_06_05_madagascar_zambia_african_cup_of_nations_qualification,1973-06-05,Madagascar,Zambia,2,1,African Cup of Nations qualification,Antananarivo,Madagascar,FALSE,3,1
+same_team_multiple_matches_same_date,9330,1973_06_05_zambia_madagascar_african_cup_of_nations_qualification,1973-06-05,Zambia,Madagascar,3,1,African Cup of Nations qualification,Ndola,Zambia,FALSE,4,2
+same_team_multiple_matches_same_date,9377,1973_07_15_nigeria_zambia_african_cup_of_nations_qualification,1973-07-15,Nigeria,Zambia,3,2,African Cup of Nations qualification,Lagos,Nigeria,FALSE,5,1
+same_team_multiple_matches_same_date,9375,1973_07_15_zambia_nigeria_african_cup_of_nations_qualification,1973-07-15,Zambia,Nigeria,5,1,African Cup of Nations qualification,Lusaka,Zambia,FALSE,6,4
+same_team_multiple_matches_same_date,9393,1973_07_29_ivory_coast_central_african_republic_african_cup_of_nations_qualification,1973-07-29,Ivory Coast,Central African Republic,5,1,African Cup of Nations qualification,Lagos,Nigeria,TRUE,6,4
+same_team_multiple_matches_same_date,9396,1973_07_29_ivory_coast_ghana_african_cup_of_nations_qualification,1973-07-29,Ivory Coast,Ghana,1,0,African Cup of Nations qualification,Abidjan,Ivory Coast,FALSE,1,1
+same_team_multiple_matches_same_date,9406,1973_08_03_cambodia_south_korea_merdeka_tournament,1973-08-03,Cambodia,South Korea,0,1,Merdeka Tournament,Kuala Lumpur,Malaysia,TRUE,1,-1
+same_team_multiple_matches_same_date,9409,1973_08_03_malaysia_cambodia_merdeka_tournament,1973-08-03,Malaysia,Cambodia,1,0,Merdeka Tournament,Kuala Lumpur,Malaysia,FALSE,1,1
+same_team_multiple_matches_same_date,9410,1973_08_03_malaysia_india_merdeka_tournament,1973-08-03,Malaysia,India,4,0,Merdeka Tournament,Kuala Lumpur,Malaysia,FALSE,4,4
+same_team_multiple_matches_same_date,9408,1973_08_03_malaysia_thailand_merdeka_tournament,1973-08-03,Malaysia,Thailand,2,2,Merdeka Tournament,Kuala Lumpur,Malaysia,FALSE,4,0
+same_team_multiple_matches_same_date,9411,1973_08_05_india_cambodia_merdeka_tournament,1973-08-05,India,Cambodia,3,0,Merdeka Tournament,Kuala Lumpur,Malaysia,TRUE,3,3
+same_team_multiple_matches_same_date,9413,1973_08_05_india_south_korea_merdeka_tournament,1973-08-05,India,South Korea,0,0,Merdeka Tournament,Kuala Lumpur,Malaysia,TRUE,0,0
+same_team_multiple_matches_same_date,9430,1973_08_11_south_korea_kuwait_merdeka_tournament,1973-08-11,South Korea,Kuwait,0,1,Merdeka Tournament,Kuala Lumpur,Malaysia,TRUE,1,-1
+same_team_multiple_matches_same_date,9431,1973_08_11_south_korea_myanmar_merdeka_tournament,1973-08-11,South Korea,Myanmar,1,2,Merdeka Tournament,Kuala Lumpur,Malaysia,TRUE,3,-1
+same_team_multiple_matches_same_date,9641,1974_02_17_tahiti_new_caledonia_friendly_1,1974-02-17,Tahiti,New Caledonia,2,1,Friendly,Papeete,Tahiti,FALSE,3,1
+same_team_multiple_matches_same_date,9642,1974_02_17_tahiti_new_caledonia_friendly_2,1974-02-17,Tahiti,New Caledonia,1,2,Friendly,Papeete,Tahiti,FALSE,3,-1
+same_team_multiple_matches_same_date,10050,1975_03_22_morocco_senegal_african_cup_of_nations_qualification,1975-03-22,Morocco,Senegal,4,0,African Cup of Nations qualification,Fez,Morocco,FALSE,4,4
+same_team_multiple_matches_same_date,10051,1975_03_22_senegal_morocco_african_cup_of_nations_qualification,1975-03-22,Senegal,Morocco,2,1,African Cup of Nations qualification,Kaolack,Senegal,FALSE,3,1
+same_team_multiple_matches_same_date,10058,1975_03_23_kenya_sudan_african_cup_of_nations_qualification,1975-03-23,Kenya,Sudan,0,2,African Cup of Nations qualification,Nairobi,Kenya,FALSE,2,-2
+same_team_multiple_matches_same_date,10053,1975_03_23_sudan_kenya_african_cup_of_nations_qualification,1975-03-23,Sudan,Kenya,1,0,African Cup of Nations qualification,Khartoum,Sudan,FALSE,1,1
+same_team_multiple_matches_same_date,10615,1976_08_10_india_south_korea_merdeka_tournament,1976-08-10,India,South Korea,0,8,Merdeka Tournament,Kuala Lumpur,Malaysia,TRUE,8,-8
+same_team_multiple_matches_same_date,10614,1976_08_10_malaysia_india_merdeka_tournament,1976-08-10,Malaysia,India,5,1,Merdeka Tournament,Kuala Lumpur,Malaysia,FALSE,6,4
+same_team_multiple_matches_same_date,10625,1976_08_14_india_thailand_merdeka_tournament,1976-08-14,India,Thailand,2,6,Merdeka Tournament,Kuala Lumpur,Malaysia,TRUE,8,-4
+same_team_multiple_matches_same_date,10626,1976_08_14_indonesia_india_merdeka_tournament,1976-08-14,Indonesia,India,1,3,Merdeka Tournament,Kuala Lumpur,Malaysia,TRUE,4,-2
+same_team_multiple_matches_same_date,10623,1976_08_14_malaysia_indonesia_merdeka_tournament,1976-08-14,Malaysia,Indonesia,7,1,Merdeka Tournament,Kuala Lumpur,Malaysia,FALSE,8,6
+same_team_multiple_matches_same_date,11340,1978_04_26_iran_bulgaria_friendly,1978-04-26,Iran,Bulgaria,1,1,Friendly,Tehran,Iran,FALSE,2,0
+same_team_multiple_matches_same_date,11342,1978_04_26_poland_bulgaria_friendly,1978-04-26,Poland,Bulgaria,1,0,Friendly,Warsaw,Poland,FALSE,1,1
+same_team_multiple_matches_same_date,11454,1978_07_16_malaysia_indonesia_merdeka_tournament,1978-07-16,Malaysia,Indonesia,1,0,Merdeka Tournament,Kuala Lumpur,Malaysia,FALSE,1,1
+same_team_multiple_matches_same_date,11452,1978_07_16_malaysia_thailand_merdeka_tournament,1978-07-16,Malaysia,Thailand,2,0,Merdeka Tournament,Kuala Lumpur,Malaysia,FALSE,2,2
+same_team_multiple_matches_same_date,11823,1979_06_29_japan_thailand_merdeka_tournament,1979-06-29,Japan,Thailand,2,0,Merdeka Tournament,Kuala Lumpur,Malaysia,TRUE,2,2
+same_team_multiple_matches_same_date,11821,1979_06_29_malaysia_japan_merdeka_tournament,1979-06-29,Malaysia,Japan,1,1,Merdeka Tournament,Kuala Lumpur,Malaysia,FALSE,2,0
+same_team_multiple_matches_same_date,11824,1979_06_29_malaysia_myanmar_merdeka_tournament,1979-06-29,Malaysia,Myanmar,4,1,Merdeka Tournament,Kuala Lumpur,Malaysia,FALSE,5,3
+same_team_multiple_matches_same_date,12014,1979_10_22_guadeloupe_saint_vincent_and_the_grenadines_cfu_caribbean_cup_qualification,1979-10-22,Guadeloupe,Saint Vincent and the Grenadines,1,3,CFU Caribbean Cup qualification,Basse-Terre,Guadeloupe,FALSE,4,-2
+same_team_multiple_matches_same_date,12015,1979_10_22_saint_vincent_and_the_grenadines_guadeloupe_cfu_caribbean_cup_qualification,1979-10-22,Saint Vincent and the Grenadines,Guadeloupe,0,0,CFU Caribbean Cup qualification,Kingstown,Saint Vincent and the Grenadines,FALSE,0,0
+same_team_multiple_matches_same_date,12456,1980_10_20_myanmar_morocco_merdeka_tournament,1980-10-20,Myanmar,Morocco,2,2,Merdeka Tournament,Kuala Lumpur,Malaysia,TRUE,4,0
+same_team_multiple_matches_same_date,12458,1980_10_20_south_korea_morocco_merdeka_tournament,1980-10-20,South Korea,Morocco,1,1,Merdeka Tournament,Kuala Lumpur,Malaysia,TRUE,2,0
+same_team_multiple_matches_same_date,12463,1980_10_22_kuwait_myanmar_merdeka_tournament,1980-10-22,Kuwait,Myanmar,3,1,Merdeka Tournament,Kuala Lumpur,Malaysia,TRUE,4,2
+same_team_multiple_matches_same_date,12460,1980_10_22_myanmar_thailand_merdeka_tournament,1980-10-22,Myanmar,Thailand,1,2,Merdeka Tournament,Kuala Lumpur,Malaysia,TRUE,3,-1
+same_team_multiple_matches_same_date,13686,1983_06_04_nigeria_thailand_korea_cup,1983-06-04,Nigeria,Thailand,0,0,Korea Cup,Seoul,South Korea,TRUE,0,0
+same_team_multiple_matches_same_date,13688,1983_06_04_thailand_malaysia_southeast_asian_games,1983-06-04,Thailand,Malaysia,1,1,Southeast Asian Games,Singapore,Singapore,TRUE,2,0
+same_team_multiple_matches_same_date,13694,1983_06_06_singapore_thailand_southeast_asian_games,1983-06-06,Singapore,Thailand,1,2,Southeast Asian Games,Singapore,Singapore,FALSE,3,-1
+same_team_multiple_matches_same_date,13693,1983_06_06_south_korea_thailand_korea_cup,1983-06-06,South Korea,Thailand,4,0,Korea Cup,Suwon,South Korea,FALSE,4,4
+same_team_multiple_matches_same_date,13848,1983_09_11_new_caledonia_solomon_islands_south_pacific_games,1983-09-11,New Caledonia,Solomon Islands,1,0,South Pacific Games,Apia,Western Samoa,TRUE,1,1
+same_team_multiple_matches_same_date,13847,1983_09_11_new_caledonia_vanuatu_south_pacific_games,1983-09-11,New Caledonia,Vanuatu,6,2,South Pacific Games,Apia,Western Samoa,TRUE,8,4
+same_team_multiple_matches_same_date,13851,1983_09_14_fiji_new_caledonia_south_pacific_games,1983-09-14,Fiji,New Caledonia,3,2,South Pacific Games,Apia,Western Samoa,TRUE,5,1
+same_team_multiple_matches_same_date,13852,1983_09_14_fiji_papua_new_guinea_south_pacific_games,1983-09-14,Fiji,Papua New Guinea,2,0,South Pacific Games,Apia,Western Samoa,TRUE,2,2
+same_team_multiple_matches_same_date,13853,1983_09_14_new_caledonia_wallis_islands_and_futuna_south_pacific_games,1983-09-14,New Caledonia,Wallis Islands and Futuna,4,0,South Pacific Games,Apia,Western Samoa,TRUE,4,4
+same_team_multiple_matches_same_date,13854,1983_09_14_papua_new_guinea_tahiti_south_pacific_games,1983-09-14,Papua New Guinea,Tahiti,1,6,South Pacific Games,Apia,Western Samoa,TRUE,7,-5
+same_team_multiple_matches_same_date,13855,1983_09_14_samoa_tahiti_south_pacific_games,1983-09-14,Samoa,Tahiti,0,2,South Pacific Games,Apia,Western Samoa,FALSE,2,-2
+same_team_multiple_matches_same_date,14287,1984_09_12_england_german_dr_friendly,1984-09-12,England,German DR,1,0,Friendly,London,England,FALSE,1,1
+same_team_multiple_matches_same_date,14289,1984_09_12_german_dr_greece_friendly,1984-09-12,German DR,Greece,1,0,Friendly,Zwickau,German DR,FALSE,1,1
+same_team_multiple_matches_same_date,16207,1988_06_19_south_korea_yemen_dpr_afc_asian_cup_qualification,1988-06-19,South Korea,Yemen DPR,1,1,AFC Asian Cup qualification,Jakarta,Indonesia,TRUE,2,0
+same_team_multiple_matches_same_date,16206,1988_06_19_south_korea_zambia_korea_cup,1988-06-19,South Korea,Zambia,4,0,Korea Cup,Suwon,South Korea,FALSE,4,4
+same_team_multiple_matches_same_date,19025,1993_05_16_kuwait_macau_fifa_world_cup_qualification,1993-05-16,Kuwait,Macau,8,0,FIFA World Cup qualification,Taif,Saudi Arabia,TRUE,8,8
+same_team_multiple_matches_same_date,19027,1993_05_16_north_korea_macau_east_asian_games,1993-05-16,North Korea,Macau,6,0,East Asian Games,Shanghai,China PR,TRUE,6,6
+same_team_multiple_matches_same_date,19029,1993_05_18_macau_malaysia_fifa_world_cup_qualification,1993-05-18,Macau,Malaysia,0,5,FIFA World Cup qualification,Taif,Saudi Arabia,TRUE,5,-5
+same_team_multiple_matches_same_date,19031,1993_05_18_mongolia_macau_east_asian_games,1993-05-18,Mongolia,Macau,4,3,East Asian Games,Shanghai,China PR,TRUE,7,1
+same_team_multiple_matches_same_date,20203,1995_03_25_nepal_bangladesh_saff_cup,1995-03-25,Nepal,Bangladesh,0,2,SAFF Cup,Colombo,Sri Lanka,TRUE,2,-2
+same_team_multiple_matches_same_date,20204,1995_03_25_pakistan_bangladesh_saff_cup,1995-03-25,Pakistan,Bangladesh,1,0,SAFF Cup,Colombo,Sri Lanka,TRUE,1,1
+same_team_multiple_matches_same_date,21955,1997_05_11_mongolia_china_pr_east_asian_games,1997-05-11,Mongolia,China PR,0,6,East Asian Games,Busan,South Korea,TRUE,6,-6
+same_team_multiple_matches_same_date,21953,1997_05_11_tajikistan_china_pr_fifa_world_cup_qualification,1997-05-11,Tajikistan,China PR,0,1,FIFA World Cup qualification,Dushanbe,Tajikistan,FALSE,1,-1
+same_team_multiple_matches_same_date,22150,1997_07_03_fr_ya_greenland_island_games,1997-07-03,Frøya,Greenland,2,1,Island Games,Grouville,Jersey,TRUE,3,1
+same_team_multiple_matches_same_date,22154,1997_07_03_fr_ya_hitra_island_games,1997-07-03,Frøya,Hitra,4,1,Island Games,Grouville,Jersey,TRUE,5,3
+same_team_multiple_matches_same_date,22156,1997_07_03_isle_of_wight_guernsey_island_games,1997-07-03,Isle of Wight,Guernsey,3,1,Island Games,St. Peter,Jersey,TRUE,4,2
+same_team_multiple_matches_same_date,22151,1997_07_03_jersey_gibraltar_island_games,1997-07-03,Jersey,Gibraltar,3,2,Island Games,St Helier,Jersey,FALSE,5,1
+same_team_multiple_matches_same_date,22155,1997_07_03_shetland_gibraltar_island_games,1997-07-03,Shetland,Gibraltar,2,1,Island Games,St. Lawrence,Jersey,TRUE,3,1
+same_team_multiple_matches_same_date,22153,1997_07_03_shetland_hitra_island_games,1997-07-03,Shetland,Hitra,2,1,Island Games,St. Lawrence,Jersey,TRUE,3,1
+same_team_multiple_matches_same_date,22152,1997_07_03_ynys_m_n_isle_of_wight_island_games,1997-07-03,Ynys Môn,Isle of Wight,0,0,Island Games,St. Peter,Jersey,TRUE,0,0
+same_team_multiple_matches_same_date,23694,1999_07_01_gotland_greenland_island_games,1999-07-01,Gotland,Greenland,7,2,Island Games,Norrbacka,Sweden,FALSE,9,5
+same_team_multiple_matches_same_date,23693,1999_07_01_gotland_land_islands_island_games,1999-07-01,Gotland,Åland Islands,1,4,Island Games,Fardhem,Sweden,FALSE,5,-3
+same_team_multiple_matches_same_date,23692,1999_07_01_greenland_rhodes_island_games,1999-07-01,Greenland,Rhodes,0,2,Island Games,Fårösund,Sweden,TRUE,2,-2
+same_team_multiple_matches_same_date,24865,2000_09_03_china_pr_iraq_friendly,2000-09-03,China PR,Iraq,4,1,Friendly,Shanghai,China PR,FALSE,5,3
+same_team_multiple_matches_same_date,24871,2000_09_03_indonesia_iraq_friendly,2000-09-03,Indonesia,Iraq,3,0,Friendly,Jakarta,Indonesia,FALSE,3,3
+same_team_multiple_matches_same_date,25133,2001_01_17_chile_uzbekistan_millennium_cup,2001-01-17,Chile,Uzbekistan,2,0,Millennium Cup,Calcutta,India,TRUE,2,2
+same_team_multiple_matches_same_date,25135,2001_01_17_israel_uzbekistan_friendly,2001-01-17,Israel,Uzbekistan,2,0,Friendly,Beit She'an,Israel,FALSE,2,2
+same_team_multiple_matches_same_date,33812,2010_05_30_chile_israel_friendly,2010-05-30,Chile,Israel,3,0,Friendly,Concepción,Chile,FALSE,3,3
+same_team_multiple_matches_same_date,33811,2010_05_30_chile_northern_ireland_friendly,2010-05-30,Chile,Northern Ireland,1,0,Friendly,Chillán,Chile,FALSE,1,1
+same_team_multiple_matches_same_date,34075,2010_09_07_el_salvador_guatemala_friendly,2010-09-07,El Salvador,Guatemala,0,2,Friendly,"Washington, D.C.",United States,TRUE,2,-2
+same_team_multiple_matches_same_date,34083,2010_09_07_japan_guatemala_friendly,2010-09-07,Japan,Guatemala,2,1,Friendly,Osaka,Japan,FALSE,3,1
+same_team_multiple_matches_same_date,34227,2010_10_12_bulgaria_saudi_arabia_friendly,2010-10-12,Bulgaria,Saudi Arabia,2,0,Friendly,Istanbul,Turkey,TRUE,2,2
+same_team_multiple_matches_same_date,34258,2010_10_12_saudi_arabia_gabon_friendly,2010-10-12,Saudi Arabia,Gabon,1,0,Friendly,Istanbul,Turkey,TRUE,1,1
+same_team_multiple_matches_same_date,47476,2024_09_02_fiji_hong_kong_tri_nations_series,2024-09-02,Fiji,Hong Kong,1,1,Tri-Nations Series,Suva,Fiji,FALSE,2,0
+same_team_multiple_matches_same_date,47475,2024_09_02_fiji_solomon_islands_tri_nations_series,2024-09-02,Fiji,Solomon Islands,1,0,Tri-Nations Series,Suva,Fiji,FALSE,1,1
+same_team_multiple_matches_same_date,48295,2025_05_25_anguilla_saint_kitts_and_nevis_friendly,2025-05-25,Anguilla,Saint Kitts and Nevis,2,4,Friendly,Quartier d'Orléans,Saint Martin,TRUE,6,-2
+same_team_multiple_matches_same_date,48296,2025_05_25_saint_vincent_and_the_grenadines_saint_kitts_and_nevis_friendly,2025-05-25,Saint Vincent and the Grenadines,Saint Kitts and Nevis,3,0,Friendly,Georgetown,Saint Vincent and the Grenadines,FALSE,3,3
+extreme_scorelines_for_review,25425,2001_04_11_australia_american_samoa_fifa_world_cup_qualification,2001-04-11,Australia,American Samoa,31,0,FIFA World Cup qualification,Coffs Harbour,Australia,FALSE,31,31
+extreme_scorelines_for_review,8551,1971_09_13_tahiti_cook_islands_south_pacific_games,1971-09-13,Tahiti,Cook Islands,30,0,South Pacific Games,Papeete,Tahiti,FALSE,30,30
+extreme_scorelines_for_review,11916,1979_08_30_fiji_kiribati_south_pacific_games,1979-08-30,Fiji,Kiribati,24,0,South Pacific Games,Nausori,Fiji,FALSE,24,24
+extreme_scorelines_for_review,25422,2001_04_09_australia_tonga_fifa_world_cup_qualification,2001-04-09,Australia,Tonga,22,0,FIFA World Cup qualification,Coffs Harbour,Australia,FALSE,22,22
+extreme_scorelines_for_review,37061,2013_06_24_provence_tibet_international_tournament_of_peoples_cultures_and_tribes,2013-06-24,Provence,Tibet,22,0,"International Tournament of Peoples, Cultures and Tribes",Marseille,France,FALSE,22,22
+extreme_scorelines_for_review,30518,2006_11_24_s_pmi_monaco_viva_world_cup,2006-11-24,Sápmi,Monaco,21,1,Viva World Cup,Hyères,France,TRUE,22,20
+extreme_scorelines_for_review,6580,1966_04_03_libya_oman_arab_cup,1966-04-03,Libya,Oman,21,0,Arab Cup,Baghdad,Iraq,TRUE,21,21
+extreme_scorelines_for_review,29045,2005_03_11_guam_north_korea_eaff_championship,2005-03-11,Guam,North Korea,0,21,EAFF Championship,Taipei,Taiwan,TRUE,21,-21
+extreme_scorelines_for_review,37059,2013_06_23_quebec_tibet_international_tournament_of_peoples_cultures_and_tribes,2013-06-23,Quebec,Tibet,21,0,"International Tournament of Peoples, Cultures and Tribes",Marseille,France,TRUE,21,21
+extreme_scorelines_for_review,21957,1997_05_13_kazakhstan_guam_east_asian_games,1997-05-13,Kazakhstan,Guam,20,1,East Asian Games,Busan,South Korea,TRUE,21,19
+extreme_scorelines_for_review,15922,1987_12_15_american_samoa_papua_new_guinea_south_pacific_games,1987-12-15,American Samoa,Papua New Guinea,0,20,South Pacific Games,Nouméa,New Caledonia,TRUE,20,-20
+extreme_scorelines_for_review,24181,2000_02_14_kuwait_bhutan_afc_asian_cup_qualification,2000-02-14,Kuwait,Bhutan,20,0,AFC Asian Cup qualification,Kuwait City,Kuwait,FALSE,20,20
+extreme_scorelines_for_review,27346,2003_06_30_sark_isle_of_wight_island_games,2003-06-30,Sark,Isle of Wight,0,20,Island Games,Saint Martin,Guernsey,TRUE,20,-20
+extreme_scorelines_for_review,37792,2014_06_01_darfur_padania_conifa_world_football_cup,2014-06-01,Darfur,Padania,0,20,CONIFA World Football Cup,Östersund,Sweden,TRUE,20,-20
+extreme_scorelines_for_review,13808,1983_08_22_niue_papua_new_guinea_south_pacific_games,1983-08-22,Niue,Papua New Guinea,0,19,South Pacific Games,Apia,Western Samoa,TRUE,19,-19
+extreme_scorelines_for_review,24094,2000_01_26_china_pr_guam_afc_asian_cup_qualification,2000-01-26,China PR,Guam,19,0,AFC Asian Cup qualification,Hanoi,Vietnam,TRUE,19,19
+extreme_scorelines_for_review,25083,2000_11_24_iran_guam_fifa_world_cup_qualification,2000-11-24,Iran,Guam,19,0,FIFA World Cup qualification,Tabriz,Iran,FALSE,19,19
+extreme_scorelines_for_review,27336,2003_06_29_gibraltar_sark_island_games,2003-06-29,Gibraltar,Sark,19,0,Island Games,Saint Martin,Guernsey,TRUE,19,19
+extreme_scorelines_for_review,37797,2014_06_02_darfur_south_ossetia_conifa_world_football_cup,2014-06-02,Darfur,South Ossetia,0,19,CONIFA World Football Cup,Östersund,Sweden,TRUE,19,-19
+extreme_scorelines_for_review,5904,1963_09_06_solomon_islands_tahiti_south_pacific_games,1963-09-06,Solomon Islands,Tahiti,0,18,South Pacific Games,Suva,Fiji,TRUE,18,-18
+extreme_scorelines_for_review,11919,1979_08_30_tahiti_tuvalu_south_pacific_games,1979-08-30,Tahiti,Tuvalu,18,0,South Pacific Games,Suva,Fiji,TRUE,18,18
+extreme_scorelines_for_review,17960,1991_09_15_guam_new_caledonia_south_pacific_games,1991-09-15,Guam,New Caledonia,0,18,South Pacific Games,Lae,Papua New Guinea,TRUE,18,-18
+extreme_scorelines_for_review,19600,1994_03_19_jersey_alderney_muratti_vase,1994-03-19,Jersey,Alderney,18,0,Muratti Vase,Jersey,Jersey,FALSE,18,18
+extreme_scorelines_for_review,27349,2003_07_01_micronesia_new_caledonia_south_pacific_games,2003-07-01,Micronesia,New Caledonia,0,18,South Pacific Games,Suva,Fiji,TRUE,18,-18
+extreme_scorelines_for_review,27408,2003_07_07_kiribati_vanuatu_south_pacific_games,2003-07-07,Kiribati,Vanuatu,0,18,South Pacific Games,Lautoka,Fiji,TRUE,18,-18
+extreme_scorelines_for_review,35901,2012_06_05_darfur_provence_viva_world_cup,2012-06-05,Darfur,Provence,0,18,Viva World Cup,Erbil,Iraq,TRUE,18,-18
+extreme_scorelines_for_review,238,1908_10_22_france_denmark_olympic_games,1908-10-22,France,Denmark,1,17,Olympic Games,London,England,TRUE,18,-16
+extreme_scorelines_for_review,35146,2011_09_03_kiribati_papua_new_guinea_pacific_games,2011-09-03,Kiribati,Papua New Guinea,1,17,Pacific Games,Boulari,New Caledonia,TRUE,18,-16
+extreme_scorelines_for_review,35173,2011_09_05_kiribati_tahiti_pacific_games,2011-09-05,Kiribati,Tahiti,1,17,Pacific Games,Boulari,New Caledonia,TRUE,18,-16
+extreme_scorelines_for_review,35579,2012_01_14_gozo_raetia_friendly,2012-01-14,Gozo,Raetia,17,1,Friendly,Xewkija,Malta,FALSE,18,16
+extreme_scorelines_for_review,21996,1997_06_02_maldives_iran_fifa_world_cup_qualification,1997-06-02,Maldives,Iran,0,17,FIFA World Cup qualification,Damascus,Syria,TRUE,17,-17
+extreme_scorelines_for_review,24651,2000_06_19_australia_cook_islands_oceania_nations_cup,2000-06-19,Australia,Cook Islands,17,0,Oceania Nations Cup,Papeete,Tahiti,TRUE,17,17
+extreme_scorelines_for_review,27340,2003_06_30_tahiti_micronesia_south_pacific_games,2003-06-30,Tahiti,Micronesia,17,0,South Pacific Games,Suva,Fiji,TRUE,17,17
+extreme_scorelines_for_review,34267,2010_10_14_dominican_republic_british_virgin_islands_cfu_caribbean_cup_qualification,2010-10-14,Dominican Republic,British Virgin Islands,17,0,CFU Caribbean Cup qualification,San Cristóbal,Dominican Republic,FALSE,17,17
+extreme_scorelines_for_review,362,1912_07_01_germany_russia_olympic_games,1912-07-01,Germany,Russia,16,0,Olympic Games,Stockholm,Sweden,TRUE,16,16
+extreme_scorelines_for_review,20541,1995_08_21_cook_islands_solomon_islands_south_pacific_games,1995-08-21,Cook Islands,Solomon Islands,0,16,South Pacific Games,Papeete,Tahiti,TRUE,16,-16
+extreme_scorelines_for_review,23094,1998_09_28_australia_cook_islands_oceania_nations_cup,1998-09-28,Australia,Cook Islands,16,0,Oceania Nations Cup,Brisbane,Australia,FALSE,16,16
+extreme_scorelines_for_review,25086,2000_11_26_tajikistan_guam_fifa_world_cup_qualification,2000-11-26,Tajikistan,Guam,16,0,FIFA World Cup qualification,Tabriz,Iran,TRUE,16,16
+extreme_scorelines_for_review,27357,2003_07_01_greenland_sark_island_games,2003-07-01,Greenland,Sark,16,0,Island Games,Saint Martin,Guernsey,TRUE,16,16
+extreme_scorelines_for_review,27589,2003_09_29_south_korea_nepal_afc_asian_cup_qualification,2003-09-29,South Korea,Nepal,16,0,AFC Asian Cup qualification,Incheon,South Korea,FALSE,16,16
+extreme_scorelines_for_review,31182,2007_08_25_fiji_tuvalu_south_pacific_games,2007-08-25,Fiji,Tuvalu,16,0,South Pacific Games,Apia,Samoa,TRUE,16,16
+extreme_scorelines_for_review,36119,2012_09_05_martinique_british_virgin_islands_cfu_caribbean_cup_qualification,2012-09-05,Martinique,British Virgin Islands,16,0,CFU Caribbean Cup qualification,Le Lamentin,Martinique,FALSE,16,16

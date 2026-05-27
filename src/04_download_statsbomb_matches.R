@@ -22,6 +22,7 @@ if (!file.exists(statsbomb_competitions_path)) {
 
 statsbomb_competitions <- readr::read_csv(
     statsbomb_competitions_path,
+    col_types = processed_csv_col_types(statsbomb_competitions_path),
     show_col_types = FALSE
 )
 
@@ -132,9 +133,9 @@ read_one_statsbomb_match_file <- function(path) {
     }
 
     out <- tibble::tibble(
-        source = "StatsBomb Open Data",
+        source = as.character("StatsBomb Open Data"),
         raw_file = as.character(path),
-        source_match_id = get_chr(dat_clean, "match_id"),
+        source_match_id = as.character(get_chr(dat_clean, "match_id")),
 
         date = suppressWarnings(as.Date(get_chr(dat_clean, "match_date"))),
         season = get_chr(dat_clean, "season_season_name"),
@@ -173,7 +174,7 @@ read_one_statsbomb_match_file <- function(path) {
             away_win = as.integer(match_result == "A"),
             goal_difference = home_score - away_score,
             total_goals = home_score + away_score,
-            neutral = NA
+            neutral = as.logical(NA)
         )
 
     bad_required <- out |>
@@ -206,6 +207,11 @@ statsbomb_matches_out <- file.path(
 readr::write_csv(
     statsbomb_matches,
     statsbomb_matches_out
+)
+
+saveRDS(
+    statsbomb_matches,
+    file.path(PROCESSED_DIR, "statsbomb_matches.rds")
 )
 
 write_source_manifest(

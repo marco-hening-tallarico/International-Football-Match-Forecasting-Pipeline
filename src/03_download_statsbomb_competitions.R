@@ -79,6 +79,11 @@ readr::write_csv(
     statsbomb_competitions_out
 )
 
+saveRDS(
+    statsbomb_competitions,
+    file.path(PROCESSED_DIR, "statsbomb_competitions.rds")
+)
+
 write_source_manifest(
     records = source_manifest,
     meta_dir = META_DIR

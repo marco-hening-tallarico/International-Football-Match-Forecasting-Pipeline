@@ -33,7 +33,10 @@ core_packages <- c(
     "ggplot2",
 
     # Miscellaneous
-    "countrycode"
+    "countrycode",
+
+    # Diagramsx
+    "DiagrammeR"
 )
 
 modeling_packages <- c(

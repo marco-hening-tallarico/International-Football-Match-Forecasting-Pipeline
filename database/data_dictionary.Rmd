@@ -1,0 +1,380 @@
+# Data Dictionary
+
+This document describes the datasets currently produced by the World Cup forecast data pipeline, the match-level features already engineered in `data/processed`, and the database documentation conventions that should be maintained as the project grows.
+
+Last reviewed: 2026-05-27
+
+## Data Inventory
+
+| Layer | Asset | Format | Rows | Grain | Producing script |
+| --- | --- | ---: | ---: | --- | --- |
+| Metadata | `data/metadata/source_manifest.csv` | CSV | 548 | One downloaded source file | `src/02_helpers.R` plus download scripts |
+| Processed | `data/processed/statsbomb_competitions.csv` | CSV | 80 | One StatsBomb competition-season | `src/03_download_statsbomb_competitions.R` |
+| Processed | `data/processed/statsbomb_competitions.rds` | RDS | 80 | R-native copy of `statsbomb_competitions.csv` | `src/03_download_statsbomb_competitions.R` |
+| Processed | `data/processed/statsbomb_matches.csv` | CSV | 3,961 | One StatsBomb match | `src/04_download_statsbomb_matches.R` |
+| Processed | `data/processed/statsbomb_matches.rds` | RDS | 3,961 | R-native copy of `statsbomb_matches.csv` | `src/04_download_statsbomb_matches.R` |
+| Processed | `data/processed/football_data_uk_matches.csv` | CSV | 177,295 | One club match from football-data.co.uk | `src/06_clean_football_data_uk.R` |
+| Processed | `data/processed/football_data_uk_matches.rds` | RDS | 177,295 | R-native copy of `football_data_uk_matches.csv` | `src/06_clean_football_data_uk.R` |
+| Processed | `data/processed/international_results.csv` | CSV | 49,257 | One international match | `src/08_clean_international_results.R` |
+| Processed | `data/processed/international_results.rds` | RDS | 49,257 | R-native copy of `international_results.csv` | `src/08_clean_international_results.R` |
+
+## Raw Sources
+
+| Source | Raw location | Description | Processed output |
+| --- | --- | --- | --- |
+| StatsBomb Open Data | `data/raw/statsbomb_open/competitions.json` | Competition and season catalogue. | `statsbomb_competitions.csv` |
+| StatsBomb Open Data | `data/raw/statsbomb_open/matches/*.json` | Match metadata by StatsBomb competition and season. | `statsbomb_matches.csv` |
+| football-data.co.uk | `data/raw/football_data_uk/{season_code}/{league_code}.csv` | Historical club match results, match statistics, and betting-market columns. The current processed table keeps match identity, score/result, and selected match stats only. | `football_data_uk_matches.csv` |
+| martj42/international_results | `data/raw/international_results/results.csv` | Historical international match results. | `international_results.csv` |
+| martj42/international_results | `data/raw/international_results/goalscorers.csv` | Raw goalscorer-level data downloaded for future use. | Not currently processed |
+| martj42/international_results | `data/raw/international_results/shootouts.csv` | Raw shootout-level data downloaded for future use. | Not currently processed |
+
+## Entity Relationship Overview
+
+```{r er-diagram, echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=7}
+library(DiagrammeR)
+
+DiagrammeR::grViz("
+digraph er {
+  graph [
+    rankdir = LR,
+    bgcolor = white,
+    layout = dot
+  ]
+
+  node [
+    shape = record,
+    fontname = Helvetica,
+    fontsize = 10
+  ]
+
+  edge [
+    fontname = Helvetica,
+    fontsize = 9
+  ]
+
+  SOURCE_MANIFEST [
+    label = '{SOURCE_MANIFEST|source_name : string PK\\lraw_file_path : string\\lsource_system : string\\lingestion_date : date\\l}'
+  ]
+
+  STATSBOMB_COMPETITIONS [
+    label = '{STATSBOMB_COMPETITIONS|competition_id : int PK\\lseason_id : int PK\\lcompetition_name : string\\lseason_name : string\\l}'
+  ]
+
+  STATSBOMB_MATCHES [
+    label = '{STATSBOMB_MATCHES|source_match_id : string PK\\lcompetition_id : int FK\\lseason_id : int FK\\ldate : date\\l}'
+  ]
+
+  FOOTBALL_DATA_UK_MATCHES [
+    label = '{FOOTBALL_DATA_UK_MATCHES|source_match_id : string PK\\lsource_league_code : string\\lsource_season_code : string\\ldate : date\\l}'
+  ]
+
+  INTERNATIONAL_RESULTS [
+    label = '{INTERNATIONAL_RESULTS|source_match_id : string PK\\ldate : date\\ltournament : string\\l}'
+  ]
+
+  SOURCE_MANIFEST -> STATSBOMB_COMPETITIONS [
+    label = 'documents raw file'
+  ]
+
+  SOURCE_MANIFEST -> STATSBOMB_MATCHES [
+    label = 'documents raw file'
+  ]
+
+  SOURCE_MANIFEST -> FOOTBALL_DATA_UK_MATCHES [
+    label = 'documents raw file'
+  ]
+
+  SOURCE_MANIFEST -> INTERNATIONAL_RESULTS [
+    label = 'documents raw file'
+  ]
+
+  STATSBOMB_COMPETITIONS -> STATSBOMB_MATCHES [
+    label = 'competition_id + season_id'
+  ]
+}
+")
+```
+
+The StatsBomb tables have a natural foreign-key relationship through `(competition_id, season_id)`. The football-data.co.uk and international-results match tables do not yet share a standardized team dimension or competition dimension, so cross-source joins should be treated as analytical matching work rather than direct database joins.
+
+The StatsBomb tables have a natural foreign-key relationship through `(competition_id, season_id)`. The football-data.co.uk and international-results match tables do not yet share a standardized team dimension or competition dimension, so cross-source joins should be treated as analytical matching work rather than direct database joins.
+
+## Common Match Feature Definitions
+
+These fields appear in more than one processed match table and are the current feature set available for modeling or exploratory work.
+
+CSV files do not carry a strict schema. For schema-sensitive loading, prefer the RDS copies or use `read_processed_csv()` from `src/02_helpers.R`, which applies explicit `readr::cols()` definitions for processed CSVs. Numeric-looking character fields such as StatsBomb `source_match_id` or season labels may otherwise be guessed as numeric by generic CSV readers.
+
+| Field | Type | Definition | Allowed values / rule |
+| --- | --- | --- | --- |
+| `source` | character | Human-readable source system name. | Examples: `StatsBomb Open Data`, `football-data.co.uk`, `international_results` |
+| `raw_file` | character | Local source file used to create the row. | Path under `data/raw` |
+| `source_match_id` | character | Source-specific unique match identifier within the processed table, stored as character in processed outputs. | Unique and non-null in match tables |
+| `date` | date | Match date. | ISO `YYYY-MM-DD` |
+| `season` | character | Generic source season label. Calendar-year seasons are also stored as character so this field can be handled consistently across match tables. | Preserve as text; values such as `0001`, `2017/2018`, and `2024` are meaningful labels |
+| `competition` | character | Source competition or league name/code. | Source-specific naming |
+| `home_team` | character | Home team name after whitespace normalization. | Non-null in match tables |
+| `away_team` | character | Away team name after whitespace normalization. | Non-null in match tables |
+| `home_score` | integer | Full-time home goals. | Non-null, >= 0 |
+| `away_score` | integer | Full-time away goals. | Non-null, >= 0 |
+| `match_result` | character | Result from the home-team perspective. | `H`, `D`, `A` |
+| `result_class` | integer | Numeric class label for result modeling. | `1` = home win, `0` = draw, `-1` = away win |
+| `home_win` | integer | One-hot target/indicator for home win. | `1` if `match_result == "H"`, else `0` |
+| `draw` | integer | One-hot target/indicator for draw. | `1` if `match_result == "D"`, else `0` |
+| `away_win` | integer | One-hot target/indicator for away win. | `1` if `match_result == "A"`, else `0` |
+| `goal_difference` | integer | Home goals minus away goals. | `home_score - away_score` |
+| `total_goals` | integer | Total full-time goals in the match. | `home_score + away_score` |
+| `neutral` | logical | Whether match was played at a neutral venue, when known. Sources without neutral-site coverage use typed logical missing values in R. | `TRUE`, `FALSE`, or `NA` when source does not provide it; all-`NA` CSV columns may still require explicit reader schema |
+
+## Processed Table Dictionaries
+
+### `statsbomb_competitions.csv`
+
+Grain: one StatsBomb competition-season.
+
+Primary key: `(competition_id, season_id)`.
+
+Foreign keys: referenced by `statsbomb_matches.csv` on `(competition_id, season_id)`.
+
+| Column | Type | Nullable | Definition |
+| --- | --- | --- | --- |
+| `competition_id` | integer | No | StatsBomb competition identifier. |
+| `season_id` | integer | No | StatsBomb season identifier. |
+| `country_name` | character | No | Country, region, or confederation associated with the competition. |
+| `competition_name` | character | No | Competition name. |
+| `competition_gender` | character | No | Competition gender classification, such as `male` or `female`. |
+| `competition_youth` | logical | No | Whether the competition is a youth competition. |
+| `competition_international` | logical | No | Whether the competition is international. |
+| `season_name` | character | No | Season label from StatsBomb. |
+| `match_updated` | timestamp-like character | No | Timestamp when match data was last updated by StatsBomb. |
+| `match_updated_360` | timestamp-like character | Yes | Timestamp when 360 data was last updated, if available. |
+| `match_available_360` | timestamp-like character | Yes | Timestamp when 360 data became available, if available. |
+| `match_available` | timestamp-like character | No | Timestamp when match data became available. |
+
+Quality notes:
+
+| Check | Current status |
+| --- | --- |
+| Primary-key duplicates | 0 duplicates for `(competition_id, season_id)` |
+| Missing values | Only 360-related timestamp fields have missing values |
+
+### `statsbomb_matches.csv`
+
+Grain: one StatsBomb match.
+
+Primary key: `source_match_id`.
+
+Foreign keys: `(competition_id, season_id)` references `statsbomb_competitions.csv`.
+
+Date range currently present: 1958-06-24 to 2025-07-27.
+
+| Column | Type | Nullable | Definition |
+| --- | --- | --- | --- |
+| `source` | character | No | Constant source name: `StatsBomb Open Data`. |
+| `raw_file` | character | No | Local StatsBomb match JSON file used to create the row. |
+| `source_match_id` | character | No | StatsBomb `match_id`, stored as source identifier. |
+| `date` | date | No | Match date. |
+| `season` | character | No | StatsBomb season label. |
+| `competition` | character | No | StatsBomb competition name. |
+| `home_team` | character | No | Home team name. |
+| `away_team` | character | No | Away team name. |
+| `home_score` | integer | No | Full-time home goals. |
+| `away_score` | integer | No | Full-time away goals. |
+| `competition_id` | integer | No | StatsBomb competition identifier. |
+| `season_id` | integer | No | StatsBomb season identifier. |
+| `match_week` | integer | No | Match week or round number from StatsBomb. |
+| `competition_country` | character | No | Country, region, or confederation attached to the competition. |
+| `stadium` | character | Yes | Stadium name, when available. |
+| `data_version` | character | Yes | StatsBomb data version metadata. |
+| `shot_fidelity_version` | character | Yes | StatsBomb shot fidelity version metadata. |
+| `xy_fidelity_version` | character | Yes | StatsBomb coordinate fidelity version metadata. |
+| `match_result` | character | No | Result from home-team perspective. |
+| `result_class` | integer | No | Numeric result class: `1`, `0`, or `-1`. |
+| `home_win` | integer | No | Home-win indicator. |
+| `draw` | integer | No | Draw indicator. |
+| `away_win` | integer | No | Away-win indicator. |
+| `goal_difference` | integer | No | `home_score - away_score`. |
+| `total_goals` | integer | No | `home_score + away_score`. |
+| `neutral` | logical | Yes | Neutral-venue flag. Currently not supplied by this processed source and set to `NA`. |
+
+Quality notes:
+
+| Check | Current status |
+| --- | --- |
+| `source_match_id` duplicates | 0 |
+| Required identity/result missingness | None after cleaning |
+| Known nullable fields | `stadium`, `data_version`, `shot_fidelity_version`, `xy_fidelity_version`, `neutral` |
+
+### `football_data_uk_matches.csv`
+
+Grain: one football-data.co.uk club match.
+
+Primary key: `source_match_id`.
+
+Date range currently present: 1993-07-23 to 2024-06-02.
+
+Important parsing note: `source_season_code` and `season` are zero-padded labels such as `0001`, `0102`, and `2324`. Read these as character strings, not numbers, so leading zeroes are preserved.
+
+| Column | Type | Nullable | Definition |
+| --- | --- | --- | --- |
+| `source` | character | No | Constant source name: `football-data.co.uk`. |
+| `raw_file` | character | No | Local raw football-data.co.uk CSV used to create the row. |
+| `source_match_id` | character | No | Generated source identifier: `{league_code}_{zero_padded_season_code}_{row_number_in_file}`, for example `D1_0001_1`. |
+| `source_league_code` | character | No | football-data.co.uk league code, such as `E0`, `SP1`, or `D1`. |
+| `source_season_code` | character | No | Four-character zero-padded football-data.co.uk season code, such as `0001`, `0102`, or `2324`. |
+| `date` | date | No | Match date parsed from the raw file. |
+| `season` | character | No | Same four-character zero-padded season label as `source_season_code`. |
+| `competition` | character | No | Raw `Div` competition/league code. Usually, but not guaranteed to be, the same value as `source_league_code`. |
+| `home_team` | character | No | Home team name. |
+| `away_team` | character | No | Away team name. |
+| `home_score` | integer | No | Full-time home goals from raw `FTHG`. |
+| `away_score` | integer | No | Full-time away goals from raw `FTAG`. |
+| `full_time_result` | character | No | Raw full-time result from raw `FTR`. |
+| `half_time_home_score` | numeric, integer-valued, nullable | Yes | Half-time home goals from raw `HTHG`, when available. |
+| `half_time_away_score` | numeric, integer-valued, nullable | Yes | Half-time away goals from raw `HTAG`, when available. |
+| `half_time_result` | character | Yes | Half-time result from raw `HTR`, when available. |
+| `home_shots` | numeric, integer-valued, nullable | Yes | Home shots from raw `HS`, when available. |
+| `away_shots` | numeric, integer-valued, nullable | Yes | Away shots from raw `AS`, when available. |
+| `home_shots_on_target` | numeric, integer-valued, nullable | Yes | Home shots on target from raw `HST`, when available. |
+| `away_shots_on_target` | numeric, integer-valued, nullable | Yes | Away shots on target from raw `AST`, when available. |
+| `home_corners` | numeric, integer-valued, nullable | Yes | Home corners from raw `HC`, when available. |
+| `away_corners` | numeric, integer-valued, nullable | Yes | Away corners from raw `AC`, when available. |
+| `home_fouls` | numeric, integer-valued, nullable | Yes | Home fouls from raw `HF`, when available. |
+| `away_fouls` | numeric, integer-valued, nullable | Yes | Away fouls from raw `AF`, when available. |
+| `home_yellow_cards` | numeric, integer-valued, nullable | Yes | Home yellow cards from raw `HY`, when available. |
+| `away_yellow_cards` | numeric, integer-valued, nullable | Yes | Away yellow cards from raw `AY`, when available. |
+| `home_red_cards` | numeric, integer-valued, nullable | Yes | Home red cards from raw `HR`, when available. |
+| `away_red_cards` | numeric, integer-valued, nullable | Yes | Away red cards from raw `AR`, when available. |
+| `match_result` | character | No | Result recalculated from scores. |
+| `result_class` | integer | No | Numeric result class: `1`, `0`, or `-1`. |
+| `home_win` | integer | No | Home-win indicator. |
+| `draw` | integer | No | Draw indicator. |
+| `away_win` | integer | No | Away-win indicator. |
+| `goal_difference` | integer | No | `home_score - away_score`. |
+| `total_goals` | integer | No | `home_score + away_score`. |
+| `neutral` | logical | Yes | Neutral-venue flag. Currently not supplied by this source and set to `NA`. |
+
+Quality notes:
+
+| Check | Current status |
+| --- | --- |
+| `source_match_id` duplicates | 0 |
+| Required identity/result missingness | None after cleaning |
+| Known nullable fields | Half-time fields, match-stat fields, and `neutral` |
+| Competition-code note | `competition` comes from raw `Div`; `source_league_code` comes from the raw filename. They are usually equal but not guaranteed to match in every football-data file. |
+| Source columns not retained | Betting odds and some historical auxiliary raw columns are downloaded but not included in the processed output |
+
+### `international_results.csv`
+
+Grain: one historical international match with a final score.
+
+Primary key: `source_match_id`.
+
+Date range currently present: 1872-11-30 to 2026-03-31.
+
+| Column | Type | Nullable | Definition |
+| --- | --- | --- | --- |
+| `source` | character | No | Constant source name: `international_results`. |
+| `raw_file` | character | No | Local raw `results.csv` file used to create the row. |
+| `source_match_id` | character | No | Generated identifier from date, home team, away team, tournament, and duplicate suffix if needed. |
+| `date` | date | No | Match date. |
+| `season` | character | No | Calendar year of the match date. |
+| `competition` | character | No | Tournament name, duplicated from `tournament` for common match-table compatibility. |
+| `home_team` | character | No | Home team name. |
+| `away_team` | character | No | Away team name. |
+| `home_score` | integer | No | Full-time home goals. |
+| `away_score` | integer | No | Full-time away goals. |
+| `match_result` | character | No | Result from home-team perspective. |
+| `result_class` | integer | No | Numeric result class: `1`, `0`, or `-1`. |
+| `home_win` | integer | No | Home-win indicator. |
+| `draw` | integer | No | Draw indicator. |
+| `away_win` | integer | No | Away-win indicator. |
+| `goal_difference` | integer | No | `home_score - away_score`. |
+| `total_goals` | integer | No | `home_score + away_score`. |
+| `neutral` | logical | No | Whether the match was played at a neutral venue. |
+| `tournament` | character | No | Original tournament name from the raw source. |
+| `city` | character | No | Host city. |
+| `country` | character | No | Host country. |
+
+Quality notes:
+
+| Check | Current status |
+| --- | --- |
+| `source_match_id` duplicates | 0 |
+| Required identity/result missingness | None after cleaning |
+| Incomplete fixtures | Rows without final scores are excluded during cleaning |
+| Neutral venue coverage | Fully populated from source |
+
+### `source_manifest.csv`
+
+Grain: one downloaded source file record.
+
+Suggested primary key: `(source, dataset, url, local_path)`.
+
+| Column | Type | Nullable | Definition |
+| --- | --- | --- | --- |
+| `source` | character | No | Source system name. |
+| `dataset` | character | No | Dataset or source-file label used by the pipeline. |
+| `url` | character | No | Remote URL used for download. |
+| `local_path` | character | No | Local raw-file path created or reused by the download script. |
+| `downloaded_at` | timestamp-like character | No | Time the manifest record was created. |
+| `notes` | character | Yes | Free-text source notes. |
+
+## Current Feature Families
+
+| Feature family | Tables | Columns | Notes |
+| --- | --- | --- | --- |
+| Match identity | Match tables | `source`, `raw_file`, `source_match_id`, `date`, `season`, `competition`, `home_team`, `away_team` | Supports provenance, ordering, and source-level uniqueness. |
+| Score outcomes | Match tables | `home_score`, `away_score`, `goal_difference`, `total_goals` | Directly derived from final score. |
+| Classification targets | Match tables | `match_result`, `result_class`, `home_win`, `draw`, `away_win` | These are target/label columns for result prediction and should not be used as pre-match model inputs. |
+| Venue context | StatsBomb and international tables | `stadium`, `city`, `country`, `competition_country`, `neutral` | Coverage differs by source. |
+| Match week context | StatsBomb matches | `match_week` | Source-provided competition week/round. |
+| Football-data match stats | football-data.co.uk matches | shots, shots on target, corners, fouls, cards | Post-match stats. These should not be used as pre-match features unless the modeling task explicitly allows in-match or post-match information. |
+| StatsBomb metadata | StatsBomb tables | `data_version`, `shot_fidelity_version`, `xy_fidelity_version`, `match_available*`, `match_updated*` | Useful for data governance and freshness checks, not soccer performance features. |
+
+## Modeling Caveats
+
+For forecasting future matches, avoid label leakage:
+
+| Leakage-prone fields | Why |
+| --- | --- |
+| `home_score`, `away_score` | Final score is unknown before kickoff. |
+| `match_result`, `result_class`, `home_win`, `draw`, `away_win` | These are labels derived from final score. |
+| `goal_difference`, `total_goals` | Directly derived from final score. |
+| football-data.co.uk match stats such as shots, corners, fouls, and cards | These are observed during or after a match. |
+
+Pre-match features still need to be engineered before training a true forecast model. Common next-step features would include team form, rolling goal averages, Elo or SPI-like ratings, rest days, home advantage, competition strength, neutral-site effects, squad strength, injuries, and tournament-stage indicators.
+
+## Database Documentation Standards To Maintain
+
+Each new table should be documented with:
+
+| Documentation field | Standard |
+| --- | --- |
+| Table name | Exact file/table name. |
+| Business purpose | What question or process the table supports. |
+| Grain | What one row represents. |
+| Primary key | Natural or generated row identifier, with duplicate-check status. |
+| Foreign keys | Join fields and referenced table, if any. |
+| Source lineage | Raw source file(s), script, and refresh process. |
+| Column dictionary | Name, type, nullable status, definition, allowed values, derivation rule, and example when helpful. |
+| Data quality rules | Required fields, uniqueness checks, value-domain checks, and known exceptions. |
+| Refresh cadence | Manual, scheduled, or source-dependent. |
+| Ownership | Person or process responsible for maintaining the table. |
+| Version notes | Date reviewed and major schema changes. |
+| Security/privacy | Classification and any restrictions. Current football datasets appear public and non-personal. |
+
+## Suggested Future Database Shape
+
+The current processed outputs are source-specific files. If this project moves toward a database or modeling warehouse, consider adding these curated tables:
+
+| Suggested table | Grain | Purpose |
+| --- | --- | --- |
+| `dim_team` | One normalized team/entity | Cross-source team matching and stable team IDs. |
+| `dim_competition` | One normalized competition | Cross-source competition mapping and competition strength features. |
+| `fact_match` | One normalized match | Unified match table across club and international sources. |
+| `fact_team_match` | One row per team per match | Easier rolling team-form and pre-match feature engineering. |
+| `feature_team_form` | One team-date or team-match snapshot | Leakage-safe rolling features available before kickoff. |
+| `feature_match_pre_game` | One match | Final model-ready pre-match feature set. |
+| `model_predictions` | One model run per match | Forecast probabilities and model metadata. |

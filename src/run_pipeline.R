@@ -13,6 +13,7 @@ scripts <- c(
     "src/06_clean_football_data_uk.R",
     "src/07_download_international_results.R",
     "src/08_clean_international_results.R",
+    "src/09_validate_international_results.R",
     "src/validation.R"
 )
 
