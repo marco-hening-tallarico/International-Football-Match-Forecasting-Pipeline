@@ -1,0 +1,30 @@
+source_guess,raw_or_processed,dataset_guess,files,total_rows,min_date,max_date,total_size_bytes,notes
+pipeline metadata,metadata,data_inventory,1,477,NA,NA,92322,NA
+pipeline metadata,metadata,source_manifest,1,10292,2026-05-27,2026-05-28,2912680,NA
+StatsBomb Open Data,processed,statsbomb_competitions,2,160,NA,NA,13375,NA
+StatsBomb Open Data,processed,statsbomb_matches,2,7922,1958-06-24,2025-07-27,1070276,NA
+football-data.co.uk,processed,football_data_uk_matches,2,354590,1993-07-23,2024-06-02,43345458,NA
+martj42/international_results,processed,international_results,2,98514,1872-11-30,2026-03-31,14845443,NA
+StatsBomb Open Data,raw,statsbomb_360_raw,426,0,NA,NA,3211858288,NA
+StatsBomb Open Data,raw,statsbomb_competitions_raw,1,0,NA,NA,34887,NA
+StatsBomb Open Data,raw,statsbomb_events_raw,3961,0,NA,NA,11992414828,NA
+StatsBomb Open Data,raw,statsbomb_lineups_raw,3958,0,NA,NA,77925516,NA
+StatsBomb Open Data,raw,statsbomb_matches_raw,80,0,NA,NA,7243210,NA
+football-data.co.uk,raw,D1,31,10585,1993-08-07,2024-05-18,2259099,NA
+football-data.co.uk,raw,D2,31,10502,1993-07-28,2024-05-19,2103412,NA
+football-data.co.uk,raw,E0,31,12519,1993-08-14,2024-05-19,2862450,NA
+football-data.co.uk,raw,E1,31,16775,1993-08-14,2024-05-04,4154527,NA
+football-data.co.uk,raw,E2,31,16375,1993-08-14,2024-04-27,4064261,NA
+football-data.co.uk,raw,E3,31,16176,1993-08-14,2024-04-27,4073430,NA
+football-data.co.uk,raw,F1,31,12119,1993-07-23,2024-05-19,2489786,NA
+football-data.co.uk,raw,F2,31,10748,1996-08-10,2024-05-17,2329885,NA
+football-data.co.uk,raw,I1,31,11810,1993-08-29,2024-06-02,2571694,NA
+football-data.co.uk,raw,I2,31,11170,1997-08-31,2024-05-10,2634662,NA
+football-data.co.uk,raw,N1,31,10728,1993-08-14,2024-05-19,1978657,NA
+football-data.co.uk,raw,P1,31,10014,1993-09-05,2024-05-18,1873060,NA
+football-data.co.uk,raw,SC0,30,7805,1994-08-13,2024-05-19,1669555,NA
+football-data.co.uk,raw,SP1,31,12515,1993-09-05,2024-05-26,2673055,NA
+football-data.co.uk,raw,SP2,31,13803,1993-09-05,2024-06-02,2976935,NA
+martj42/international_results,raw,goalscorers,1,47601,1916-07-02,2026-03-31,3256721,NA
+martj42/international_results,raw,results,1,49329,1872-11-30,2026-06-27,3717862,NA
+martj42/international_results,raw,shootouts,1,677,1967-08-22,2026-03-31,28737,NA
