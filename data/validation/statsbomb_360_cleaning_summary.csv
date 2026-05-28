@@ -1,0 +1,10 @@
+metric,value
+raw_files_found,426
+files_read_successfully,425
+files_failed,1
+output_rows,21561945
+distinct_matches,425
+distinct_events,1381467
+missing_match_id_rows,0
+missing_event_id_rows,0
+notes,missing player_id rows: 21561945; missing player_name rows: 21561945; 360 coverage is partial by design

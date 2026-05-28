@@ -14,6 +14,8 @@ scripts <- c(
     "src/04e_clean_statsbomb_events.R",
     "src/04c_download_statsbomb_lineups.R",
     "src/04f_clean_statsbomb_lineups.R",
+    "src/04d_download_statsbomb_360.R",
+    "src/04g_clean_statsbomb_360.R",
 
     "src/05_download_football_data_uk.R",
     "src/06_clean_football_data_uk.R",
