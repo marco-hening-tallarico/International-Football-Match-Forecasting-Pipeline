@@ -58,7 +58,7 @@ guess_source <- function(path) {
     # Processed files – infer from filename
     if (grepl("^statsbomb", bname)) return("StatsBomb Open Data")
     if (grepl("^football_data_uk", bname)) return("football-data.co.uk")
-    if (grepl("^international_results", bname)) return("martj42/international_results")
+    if (grepl("^international_", bname)) return("martj42/international_results")
     if (grepl("intl_", bname)) return("martj42/international_results")
 
     # Metadata / validation infrastructure

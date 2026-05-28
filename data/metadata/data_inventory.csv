@@ -1,14 +1,19 @@
 path,source_guess,dataset_guess,raw_or_processed,file_type,rows,columns,date_min,date_max,n_teams,n_competitions,file_size_bytes,modified_time,notes
-/Users/marco/Documents/Projects/worldcup-forecast-r/data/metadata/data_inventory.csv,pipeline metadata,data_inventory,metadata,csv,477,14,NA,NA,NA,NA,92322,2026-05-28 13:24:48.720781,NA
-/Users/marco/Documents/Projects/worldcup-forecast-r/data/metadata/source_manifest.csv,pipeline metadata,source_manifest,metadata,csv,10292,6,2026-05-27,2026-05-28,NA,NA,2912680,2026-05-28 13:18:11.863576,NA
-/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/statsbomb_competitions.csv,StatsBomb Open Data,statsbomb_competitions,processed,csv,80,12,NA,NA,NA,24,10923,2026-05-28 10:25:32.269315,NA
-/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/statsbomb_competitions.rds,StatsBomb Open Data,statsbomb_competitions,processed,rds,80,12,NA,NA,NA,24,2452,2026-05-28 10:25:32.269954,NA
-/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/statsbomb_matches.csv,StatsBomb Open Data,statsbomb_matches,processed,csv,3961,26,1958-06-24,2025-07-27,353,24,993877,2026-05-28 10:25:34.09425,NA
-/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/statsbomb_matches.rds,StatsBomb Open Data,statsbomb_matches,processed,rds,3961,26,1958-06-24,2025-07-27,353,24,76399,2026-05-28 10:25:34.108491,NA
-/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/football_data_uk_matches.csv,football-data.co.uk,football_data_uk_matches,processed,csv,177295,36,1993-07-23,2024-06-02,564,15,40556251,2026-05-28 10:25:44.586398,NA
-/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/football_data_uk_matches.rds,football-data.co.uk,football_data_uk_matches,processed,rds,177295,36,1993-07-23,2024-06-02,564,15,2789207,2026-05-28 10:25:45.233449,NA
-/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/international_results.csv,martj42/international_results,international_results,processed,csv,49257,21,1872-11-30,2026-03-31,336,198,13661940,2026-05-28 10:25:45.72743,NA
-/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/international_results.rds,martj42/international_results,international_results,processed,rds,49257,21,1872-11-30,2026-03-31,336,198,1183503,2026-05-28 10:25:45.907538,NA
+/Users/marco/Documents/Projects/worldcup-forecast-r/data/metadata/data_inventory.csv,pipeline metadata,data_inventory,metadata,csv,8910,14,NA,NA,NA,NA,1792666,2026-05-28 15:33:44.608439,NA
+/Users/marco/Documents/Projects/worldcup-forecast-r/data/metadata/source_manifest.csv,pipeline metadata,source_manifest,metadata,csv,10295,6,2026-05-27,2026-05-28,NA,NA,2913514,2026-05-28 13:58:44.345563,NA
+/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/statsbomb_competitions.csv,StatsBomb Open Data,statsbomb_competitions,processed,csv,80,12,NA,NA,NA,24,10923,2026-05-28 13:58:31.426168,NA
+/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/statsbomb_competitions.rds,StatsBomb Open Data,statsbomb_competitions,processed,rds,80,12,NA,NA,NA,24,2452,2026-05-28 13:58:31.426746,NA
+/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/statsbomb_events.csv,StatsBomb Open Data,statsbomb_events,processed,csv,13911986,45,NA,NA,NA,NA,6031105087,2026-05-28 15:30:43.890687,NA
+/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/statsbomb_lineups.csv,StatsBomb Open Data,statsbomb_lineups,processed,csv,152133,13,NA,NA,NA,NA,60586315,2026-05-28 15:43:18.99591,NA
+/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/statsbomb_matches.csv,StatsBomb Open Data,statsbomb_matches,processed,csv,3961,26,1958-06-24,2025-07-27,353,24,993877,2026-05-28 13:58:33.382025,NA
+/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/statsbomb_matches.rds,StatsBomb Open Data,statsbomb_matches,processed,rds,3961,26,1958-06-24,2025-07-27,353,24,76399,2026-05-28 13:58:33.426974,NA
+/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/statsbomb_shots.csv,StatsBomb Open Data,statsbomb_shots,processed,csv,101227,30,NA,NA,NA,NA,35944477,2026-05-28 15:30:43.971803,NA
+/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/football_data_uk_matches.csv,football-data.co.uk,football_data_uk_matches,processed,csv,177295,36,1993-07-23,2024-06-02,564,15,40556251,2026-05-28 13:58:43.636287,NA
+/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/football_data_uk_matches.rds,football-data.co.uk,football_data_uk_matches,processed,rds,177295,36,1993-07-23,2024-06-02,564,15,2789207,2026-05-28 13:58:44.303003,NA
+/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/international_goalscorers.csv,martj42/international_results,international_goalscorers,processed,csv,47601,14,1916-07-02,2026-03-31,220,NA,12667813,2026-05-28 13:58:45.530759,NA
+/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/international_results.csv,martj42/international_results,international_results,processed,csv,49257,21,1872-11-30,2026-03-31,336,198,13661940,2026-05-28 13:58:44.83795,NA
+/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/international_results.rds,martj42/international_results,international_results,processed,rds,49257,21,1872-11-30,2026-03-31,336,198,1183503,2026-05-28 13:58:45.021537,NA
+/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/international_shootouts.csv,martj42/international_results,international_shootouts,processed,csv,677,11,1967-08-22,2026-03-31,230,NA,164053,2026-05-28 13:58:45.634108,NA
 /Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/three-sixty/3764440.json,StatsBomb Open Data,statsbomb_360_raw,raw,json,NA,NA,NA,NA,NA,NA,10103522,2026-05-28 13:07:07.00707,NA
 /Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/three-sixty/3764661.json,StatsBomb Open Data,statsbomb_360_raw,raw,json,NA,NA,NA,NA,NA,NA,9646454,2026-05-28 13:07:07.976112,NA
 /Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/three-sixty/3773369.json,StatsBomb Open Data,statsbomb_360_raw,raw,json,NA,NA,NA,NA,NA,NA,11502409,2026-05-28 13:07:08.812465,NA
@@ -5799,6 +5804,7 @@ path,source_guess,dataset_guess,raw_or_processed,file_type,rows,columns,date_min
 /Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/lineups/3825750.json,StatsBomb Open Data,statsbomb_lineups_raw,raw,json,NA,NA,NA,NA,NA,NA,18466,2026-05-28 12:59:55.065495,NA
 /Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/lineups/3825751.json,StatsBomb Open Data,statsbomb_lineups_raw,raw,json,NA,NA,NA,NA,NA,NA,18870,2026-05-28 12:59:55.268281,NA
 /Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/lineups/3825752.json,StatsBomb Open Data,statsbomb_lineups_raw,raw,json,NA,NA,NA,NA,NA,NA,16622,2026-05-28 12:59:55.271297,NA
+/Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/lineups/3825753.json,StatsBomb Open Data,statsbomb_lineups_raw,raw,json,NA,NA,NA,NA,NA,NA,18421,2026-05-28 13:29:37.733406,NA
 /Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/lineups/3825754.json,StatsBomb Open Data,statsbomb_lineups_raw,raw,json,NA,NA,NA,NA,NA,NA,17761,2026-05-28 12:59:55.423509,NA
 /Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/lineups/3825755.json,StatsBomb Open Data,statsbomb_lineups_raw,raw,json,NA,NA,NA,NA,NA,NA,17840,2026-05-28 12:59:55.594698,NA
 /Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/lineups/3825756.json,StatsBomb Open Data,statsbomb_lineups_raw,raw,json,NA,NA,NA,NA,NA,NA,17528,2026-05-28 12:59:55.771876,NA
@@ -7502,6 +7508,7 @@ path,source_guess,dataset_guess,raw_or_processed,file_type,rows,columns,date_min
 /Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/lineups/3912239.json,StatsBomb Open Data,statsbomb_lineups_raw,raw,json,NA,NA,NA,NA,NA,NA,19896,2026-05-28 13:03:40.271457,NA
 /Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/lineups/3912240.json,StatsBomb Open Data,statsbomb_lineups_raw,raw,json,NA,NA,NA,NA,NA,NA,22171,2026-05-28 13:03:40.509151,NA
 /Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/lineups/3912241.json,StatsBomb Open Data,statsbomb_lineups_raw,raw,json,NA,NA,NA,NA,NA,NA,21385,2026-05-28 13:03:40.514957,NA
+/Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/lineups/3912242.json,StatsBomb Open Data,statsbomb_lineups_raw,raw,json,NA,NA,NA,NA,NA,NA,21473,2026-05-28 13:29:46.563253,NA
 /Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/lineups/3912243.json,StatsBomb Open Data,statsbomb_lineups_raw,raw,json,NA,NA,NA,NA,NA,NA,20643,2026-05-28 13:03:40.803365,NA
 /Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/lineups/3912244.json,StatsBomb Open Data,statsbomb_lineups_raw,raw,json,NA,NA,NA,NA,NA,NA,18234,2026-05-28 13:03:41.194647,NA
 /Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/lineups/3912245.json,StatsBomb Open Data,statsbomb_lineups_raw,raw,json,NA,NA,NA,NA,NA,NA,19622,2026-05-28 13:03:41.233841,NA
@@ -8012,6 +8019,7 @@ path,source_guess,dataset_guess,raw_or_processed,file_type,rows,columns,date_min
 /Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/lineups/69151.json,StatsBomb Open Data,statsbomb_lineups_raw,raw,json,NA,NA,NA,NA,NA,NA,19057,2026-05-28 13:04:51.960701,NA
 /Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/lineups/69153.json,StatsBomb Open Data,statsbomb_lineups_raw,raw,json,NA,NA,NA,NA,NA,NA,15010,2026-05-28 13:04:51.842807,NA
 /Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/lineups/69154.json,StatsBomb Open Data,statsbomb_lineups_raw,raw,json,NA,NA,NA,NA,NA,NA,14384,2026-05-28 13:04:51.966871,NA
+/Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/lineups/69155.json,StatsBomb Open Data,statsbomb_lineups_raw,raw,json,NA,NA,NA,NA,NA,NA,17922,2026-05-28 13:29:49.386799,NA
 /Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/lineups/69156.json,StatsBomb Open Data,statsbomb_lineups_raw,raw,json,NA,NA,NA,NA,NA,NA,17996,2026-05-28 13:04:52.119901,NA
 /Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/lineups/69157.json,StatsBomb Open Data,statsbomb_lineups_raw,raw,json,NA,NA,NA,NA,NA,NA,15913,2026-05-28 13:04:52.276021,NA
 /Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/statsbomb_open/lineups/69158.json,StatsBomb Open Data,statsbomb_lineups_raw,raw,json,NA,NA,NA,NA,NA,NA,15496,2026-05-28 13:04:52.590867,NA

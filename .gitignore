@@ -5,3 +5,11 @@ data/raw/
 data/interim/
 *.log
 .DS_Store
+
+# Large StatsBomb processed files
+data/processed/statsbomb_events.csv
+
+# Raw high-volume StatsBomb files
+data/raw/statsbomb_open/events/
+data/raw/statsbomb_open/lineups/
+data/processed/statsbomb_shots.csv

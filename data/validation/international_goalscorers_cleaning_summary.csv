@@ -1,0 +1,10 @@
+metric,value
+raw_rows,47601
+processed_rows,47601
+distinct_matches_in_raw,15440
+distinct_matches_matched_in_results,15440
+distinct_matches_unmatched_in_results,0
+rows_unmatched_in_results,0
+rows_with_non_integer_minute,0
+rows_with_missing_own_goal,0
+rows_with_missing_penalty,0

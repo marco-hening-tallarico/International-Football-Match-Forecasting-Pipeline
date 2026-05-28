@@ -1,0 +1,12 @@
+metric,value
+raw_files_found,3961
+files_read_successfully,3961
+files_failed,0
+events_rows,13911986
+shots_rows,101227
+distinct_matches,3961
+min_events_per_match,2101
+max_events_per_match,5195
+median_events_per_match,3496
+shot_events_in_events_table,101227
+shots_table_empty_review_flag,0

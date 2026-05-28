@@ -1,0 +1,9 @@
+metric,value
+raw_rows,677
+processed_rows,677
+distinct_matches_in_raw,677
+distinct_matches_matched_in_results,676
+distinct_matches_unmatched_in_results,1
+rows_unmatched_in_results,1
+rows_with_missing_winner,0
+rows_with_missing_first_shooter,430
