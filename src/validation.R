@@ -92,6 +92,8 @@ expected_processed_files <- file.path(
     PROCESSED_DIR,
     c(
         "football_data_uk_matches.csv",
+        "football_data_uk_matches_core.csv",
+        "football_data_uk_odds_wide.csv",
         "statsbomb_competitions.csv",
         "statsbomb_matches.csv",
         "international_results.csv"
@@ -267,9 +269,19 @@ statsbomb_competitions <- read_processed_csv(
     file.path(PROCESSED_DIR, "statsbomb_competitions.csv")
 )
 
-football_data_uk_matches <- read_processed_csv(
-    file.path(PROCESSED_DIR, "football_data_uk_matches.csv")
+football_data_uk_matches_path <- file.path(PROCESSED_DIR, "football_data_uk_matches.csv")
+football_data_uk_matches_core_path <- file.path(
+    PROCESSED_DIR,
+    "football_data_uk_matches_core.csv"
 )
+football_data_uk_odds_wide_path <- file.path(
+    PROCESSED_DIR,
+    "football_data_uk_odds_wide.csv"
+)
+
+football_data_uk_matches <- read_processed_csv(football_data_uk_matches_path)
+football_data_uk_matches_core <- read_processed_csv(football_data_uk_matches_core_path)
+football_data_uk_odds_wide <- read_processed_csv(football_data_uk_odds_wide_path)
 
 statsbomb_matches <- read_processed_csv(
     file.path(PROCESSED_DIR, "statsbomb_matches.csv")
@@ -310,9 +322,45 @@ assert_no_duplicates(
 )
 
 validate_match_table(
-    file.path(PROCESSED_DIR, "football_data_uk_matches.csv"),
+    football_data_uk_matches_path,
     "football_data_uk_matches.csv"
 )
+
+validate_match_table(
+    football_data_uk_matches_core_path,
+    "football_data_uk_matches_core.csv"
+)
+
+assert_true(
+    nrow(football_data_uk_matches_core) > 0L,
+    "football_data_uk_matches_core.csv has no rows."
+)
+
+assert_true(
+    nrow(football_data_uk_odds_wide) > 0L,
+    "football_data_uk_odds_wide.csv has no rows."
+)
+
+assert_no_duplicates(
+    football_data_uk_matches_core,
+    "source_match_id",
+    "football_data_uk_matches_core.csv primary key"
+)
+
+football_data_uk_odds_orphans <- football_data_uk_odds_wide |>
+    dplyr::anti_join(
+        football_data_uk_matches_core |>
+            dplyr::distinct(source_match_id),
+        by = "source_match_id"
+    )
+
+if (nrow(football_data_uk_odds_orphans) > 0L) {
+    fail(paste0(
+        "football_data_uk_odds_wide.csv has source_match_id values ",
+        "not present in football_data_uk_matches_core.csv: ",
+        nrow(football_data_uk_odds_orphans)
+    ))
+}
 
 validate_match_table(
     file.path(PROCESSED_DIR, "statsbomb_matches.csv"),
@@ -565,6 +613,8 @@ message("Processed files checked: ", length(expected_processed_files))
 message("statsbomb_competitions.csv rows: ", nrow(statsbomb_competitions))
 message("statsbomb_matches.csv rows: ", nrow(statsbomb_matches))
 message("football_data_uk_matches.csv rows: ", nrow(football_data_uk_matches))
+message("football_data_uk_matches_core.csv rows: ", nrow(football_data_uk_matches_core))
+message("football_data_uk_odds_wide.csv rows: ", nrow(football_data_uk_odds_wide))
 message("international_results.csv rows: ", nrow(international_results))
 message("football-data.co.uk raw CSV files: ", length(football_data_raw_files))
 message("StatsBomb match JSON files: ", length(statsbomb_match_raw_files))

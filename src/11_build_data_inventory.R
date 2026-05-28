@@ -306,15 +306,16 @@ inspect_one_file <- function(path) {
                 stop("Unsupported file type: ", file_type)
             }
 
-            # Route football-data.co.uk raw files through parse_fd_uk_date()
-            # so dd/mm/yy legacy dates are interpreted correctly.
-            is_fd_uk_raw <- identical(source_guess, "football-data.co.uk") &&
-                            identical(raw_or_processed, "raw")
+            # Route football-data.co.uk raw and processed files through
+            # parse_fd_uk_date() so legacy dd/mm/yy dates parse correctly.
+            is_fd_uk <- identical(source_guess, "football-data.co.uk")
+            is_fd_uk_raw <- is_fd_uk && identical(raw_or_processed, "raw")
+            is_fd_uk_processed <- is_fd_uk && identical(raw_or_processed, "processed")
 
             # Date range: isolated tryCatch so a bad date column never
             # marks the whole file as unreadable.
             dr <- tryCatch(
-                extract_date_range(dat, use_fd_uk_parser = is_fd_uk_raw),
+                extract_date_range(dat, use_fd_uk_parser = is_fd_uk_raw || is_fd_uk_processed),
                 error = function(e) {
                     list(
                         date_min  = NA_character_,

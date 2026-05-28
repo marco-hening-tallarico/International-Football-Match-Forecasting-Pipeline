@@ -9,6 +9,9 @@ data/interim/
 # Large StatsBomb processed files
 data/processed/statsbomb_events.csv
 
+# Wide football-data.co.uk odds table (exceeds GitHub file size limit)
+data/processed/football_data_uk_odds_wide.csv
+
 # Raw high-volume StatsBomb files
 data/raw/statsbomb_open/events/
 data/raw/statsbomb_open/lineups/

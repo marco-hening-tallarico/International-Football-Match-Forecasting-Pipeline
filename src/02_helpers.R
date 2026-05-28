@@ -105,30 +105,56 @@ processed_csv_col_types <- function(path) {
         ))))
     }
 
-    if (identical(table_name, "football_data_uk_matches.csv")) {
-        integer_valued_stats <- list(
-            half_time_home_score = readr::col_double(),
-            half_time_away_score = readr::col_double(),
-            home_shots = readr::col_double(),
-            away_shots = readr::col_double(),
-            home_shots_on_target = readr::col_double(),
-            away_shots_on_target = readr::col_double(),
-            home_corners = readr::col_double(),
-            away_corners = readr::col_double(),
-            home_fouls = readr::col_double(),
-            away_fouls = readr::col_double(),
-            home_yellow_cards = readr::col_double(),
-            away_yellow_cards = readr::col_double(),
-            home_red_cards = readr::col_double(),
-            away_red_cards = readr::col_double()
-        )
+    football_data_uk_match_stats <- list(
+        half_time_home_score = readr::col_double(),
+        half_time_away_score = readr::col_double(),
+        home_shots = readr::col_double(),
+        away_shots = readr::col_double(),
+        home_shots_on_target = readr::col_double(),
+        away_shots_on_target = readr::col_double(),
+        home_corners = readr::col_double(),
+        away_corners = readr::col_double(),
+        home_fouls = readr::col_double(),
+        away_fouls = readr::col_double(),
+        home_yellow_cards = readr::col_double(),
+        away_yellow_cards = readr::col_double(),
+        home_red_cards = readr::col_double(),
+        away_red_cards = readr::col_double(),
+        source_league_code = readr::col_character(),
+        source_season_code = readr::col_character(),
+        full_time_result = readr::col_character(),
+        half_time_result = readr::col_character()
+    )
 
-        return(do.call(readr::cols, c(common_match_cols, integer_valued_stats, list(
+    if (identical(table_name, "football_data_uk_matches.csv") ||
+        identical(table_name, "football_data_uk_matches_core.csv")) {
+        return(do.call(readr::cols, c(common_match_cols, football_data_uk_match_stats)))
+    }
+
+    if (identical(table_name, "football_data_uk_odds_wide.csv")) {
+        return(readr::cols(
+            source_match_id = readr::col_character(),
+            raw_file = readr::col_character(),
             source_league_code = readr::col_character(),
             source_season_code = readr::col_character(),
-            full_time_result = readr::col_character(),
-            half_time_result = readr::col_character()
-        ))))
+            date = readr::col_date(),
+            home_team = readr::col_character(),
+            away_team = readr::col_character(),
+            avg_home_odds = readr::col_double(),
+            avg_draw_odds = readr::col_double(),
+            avg_away_odds = readr::col_double(),
+            max_home_odds = readr::col_double(),
+            max_draw_odds = readr::col_double(),
+            max_away_odds = readr::col_double(),
+            closing_home_odds = readr::col_double(),
+            closing_draw_odds = readr::col_double(),
+            closing_away_odds = readr::col_double(),
+            home_implied_prob = readr::col_double(),
+            draw_implied_prob = readr::col_double(),
+            away_implied_prob = readr::col_double(),
+            market_overround = readr::col_double(),
+            .default = readr::col_guess()
+        ))
     }
 
     if (identical(table_name, "international_results.csv")) {

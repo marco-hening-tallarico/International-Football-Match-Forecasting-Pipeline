@@ -1,12 +1,15 @@
 source_guess,raw_or_processed,dataset_guess,files,total_rows,min_date,max_date,total_size_bytes,notes
-pipeline metadata,metadata,data_inventory,1,8910,NA,NA,1792666,NA
+pipeline metadata,metadata,data_inventory,1,8912,NA,NA,1793065,NA
 pipeline metadata,metadata,source_manifest,1,10295,2026-05-27,2026-05-28,2913514,NA
+StatsBomb Open Data,processed,statsbomb_360,1,21561945,NA,NA,6021589725,NA
 StatsBomb Open Data,processed,statsbomb_competitions,2,160,NA,NA,13375,NA
 StatsBomb Open Data,processed,statsbomb_events,1,13911986,NA,NA,6031105087,NA
-StatsBomb Open Data,processed,statsbomb_lineups,1,152133,NA,NA,60586315,NA
+StatsBomb Open Data,processed,statsbomb_lineups,1,152133,NA,NA,61528551,NA
 StatsBomb Open Data,processed,statsbomb_matches,2,7922,1958-06-24,2025-07-27,1070276,NA
 StatsBomb Open Data,processed,statsbomb_shots,1,101227,NA,NA,35944477,NA
 football-data.co.uk,processed,football_data_uk_matches,2,354590,1993-07-23,2024-06-02,43345458,NA
+football-data.co.uk,processed,football_data_uk_matches_core,1,177295,1993-07-23,2024-06-02,40556251,NA
+football-data.co.uk,processed,football_data_uk_odds_wide,1,177295,1993-07-23,2024-06-02,122181275,NA
 martj42/international_results,processed,international_goalscorers,1,47601,1916-07-02,2026-03-31,12667813,NA
 martj42/international_results,processed,international_results,2,98514,1872-11-30,2026-03-31,14845443,NA
 martj42/international_results,processed,international_shootouts,1,677,1967-08-22,2026-03-31,164053,NA

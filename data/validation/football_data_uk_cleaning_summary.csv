@@ -1,0 +1,8 @@
+metric,value
+raw_files,464
+matches_core_rows,177295
+odds_wide_rows,177295
+distinct_source_match_id_core,177295
+distinct_source_match_id_odds,177295
+rows_with_avg_home_odds,28571
+rows_with_any_preserved_bookmaker_odds,139753
