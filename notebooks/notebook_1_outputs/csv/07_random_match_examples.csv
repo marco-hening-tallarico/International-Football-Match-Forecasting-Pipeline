@@ -1,0 +1,31 @@
+dataset,source_match_id,date,competition,home_team,away_team,home_score,away_score,match_result,result_class,home_win,draw,away_win,goal_difference,total_goals,neutral
+statsbomb_matches,16205,2019-03-09,La Liga,Barcelona,Rayo Vallecano,3,1,H,1,1,0,0,2,4,NA
+statsbomb_matches,3900530,2015-12-01,Ligue 1,Nantes,Lyon,0,0,D,0,0,1,0,0,0,NA
+statsbomb_matches,3920415,2024-01-23,African Cup of Nations,Mauritania,Algeria,1,0,H,1,1,0,0,1,1,NA
+statsbomb_matches,3754349,2016-03-02,Premier League,West Ham United,Tottenham Hotspur,1,0,H,1,1,0,0,1,1,NA
+statsbomb_matches,3901176,2016-03-12,Ligue 1,Toulouse,Bordeaux,4,0,H,1,1,0,0,4,4,NA
+statsbomb_matches,3912202,2024-02-11,Frauen Bundesliga,SC Freiburg,Duisburg WFC,1,1,D,0,0,1,0,0,2,NA
+statsbomb_matches,3910994,2023-11-26,Liga F,Athletic Club Bilbao,Barcelona WFC,0,4,A,-1,0,0,1,-4,4,NA
+statsbomb_matches,3835327,2022-07-11,UEFA Women's Euro,England Women's,Norway Women's,8,0,H,1,1,0,0,8,8,NA
+statsbomb_matches,69327,2012-01-15,La Liga,Barcelona,Real Betis,4,2,H,1,1,0,0,2,6,NA
+statsbomb_matches,3879798,2016-04-02,Serie A,Juventus,Empoli,1,0,H,1,1,0,0,1,1,NA
+football_data_uk_matches,N1_0708_235,2008-02-29,N1,Vitesse,VVV Venlo,1,3,A,-1,0,0,1,-2,4,NA
+football_data_uk_matches,E1_1516_76,2015-09-15,E1,Cardiff,Hull,0,2,A,-1,0,0,1,-2,2,NA
+football_data_uk_matches,F1_2223_81,2022-09-30,F1,Angers,Marseille,0,3,A,-1,0,0,1,-3,3,NA
+football_data_uk_matches,E1_0001_142,2000-10-18,E1,Wimbledon,Blackburn,0,2,A,-1,0,0,1,-2,2,NA
+football_data_uk_matches,SP1_0304_222,2004-02-07,SP1,Valencia,Ath Madrid,3,0,H,1,1,0,0,3,3,NA
+football_data_uk_matches,SP1_1112_212,2012-02-11,SP1,Osasuna,Barcelona,3,2,H,1,1,0,0,1,5,NA
+football_data_uk_matches,E2_1314_96,2013-09-23,E2,Brentford,Leyton Orient,0,2,A,-1,0,0,1,-2,2,NA
+football_data_uk_matches,N1_1213_279,2013-04-21,N1,VVV Venlo,Twente,2,2,D,0,0,1,0,0,4,NA
+football_data_uk_matches,N1_0607_194,2007-01-27,N1,Willem II,Vitesse,0,0,D,0,0,1,0,0,0,NA
+football_data_uk_matches,E2_9798_551,1998-05-02,E2,Walsall,Wycombe,0,1,A,-1,0,0,1,-1,1,NA
+international_results,2005_06_18_kenya_morocco_fifa_world_cup_qualification,2005-06-18,FIFA World Cup qualification,Kenya,Morocco,0,0,D,0,0,1,0,0,0,FALSE
+international_results,2004_12_02_thailand_slovakia_king_s_cup,2004-12-02,King's Cup,Thailand,Slovakia,1,1,D,0,0,1,0,0,2,FALSE
+international_results,1938_01_11_dominica_saint_lucia_friendly,1938-01-11,Friendly,Dominica,Saint Lucia,1,0,H,1,1,0,0,1,1,FALSE
+international_results,1993_08_15_congo_guinea_african_cup_of_nations_qualification,1993-08-15,African Cup of Nations qualification,Congo,Guinea,0,0,D,0,0,1,0,0,0,FALSE
+international_results,1986_10_05_south_korea_saudi_arabia_asian_games,1986-10-05,Asian Games,South Korea,Saudi Arabia,2,0,H,1,1,0,0,2,2,FALSE
+international_results,2018_04_08_barawa_chagos_islands_friendly,2018-04-08,Friendly,Barawa,Chagos Islands,4,1,H,1,1,0,0,3,5,FALSE
+international_results,2024_01_16_saudi_arabia_oman_afc_asian_cup,2024-01-16,AFC Asian Cup,Saudi Arabia,Oman,2,1,H,1,1,0,0,1,3,TRUE
+international_results,1947_10_18_wales_england_british_home_championship,1947-10-18,British Home Championship,Wales,England,0,3,A,-1,0,0,1,-3,3,FALSE
+international_results,1982_03_10_ethiopia_zambia_african_cup_of_nations,1982-03-10,African Cup of Nations,Ethiopia,Zambia,0,1,A,-1,0,0,1,-1,1,TRUE
+international_results,2006_03_01_south_korea_angola_friendly,2006-03-01,Friendly,South Korea,Angola,1,0,H,1,1,0,0,1,1,FALSE

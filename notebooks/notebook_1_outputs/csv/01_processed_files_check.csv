@@ -1,0 +1,5 @@
+dataset,path,exists,file_size_mb
+statsbomb_competitions,/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/statsbomb_competitions.csv,TRUE,0.01
+statsbomb_matches,/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/statsbomb_matches.csv,TRUE,0.948
+football_data_uk_matches,/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/football_data_uk_matches.csv,TRUE,38.677
+international_results,/Users/marco/Documents/Projects/worldcup-forecast-r/data/processed/international_results.csv,TRUE,13.029

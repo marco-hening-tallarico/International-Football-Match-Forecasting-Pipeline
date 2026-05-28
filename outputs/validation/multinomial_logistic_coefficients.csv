@@ -1,0 +1,19 @@
+class_vs_reference,feature,coefficient
+Away win,win_rate_diff_before,4.9972266989700795
+Away win,ppg_diff_before,-2.720973749794661
+Away win,(Intercept),-0.8676298807993145
+Away win,neutral,0.5693938044815737
+Away win,ga_pg_diff_before,0.5072137981083096
+Away win,experience_log_diff,-0.20309921537722245
+Away win,gf_pg_diff_before,0.14856645388475012
+Away win,away_matches_before,0.0014489277164012894
+Away win,home_matches_before,-0.0010826872369135803
+Draw,win_rate_diff_before,3.571176133077537
+Draw,ppg_diff_before,-1.798244679103263
+Draw,(Intercept),-0.9025051279544564
+Draw,ga_pg_diff_before,0.24983462415040383
+Draw,neutral,0.20737719968040144
+Draw,experience_log_diff,-0.17951157364780834
+Draw,gf_pg_diff_before,0.13141846128231868
+Draw,away_matches_before,7.92693686952617e-4
+Draw,home_matches_before,-2.4731267502259294e-5

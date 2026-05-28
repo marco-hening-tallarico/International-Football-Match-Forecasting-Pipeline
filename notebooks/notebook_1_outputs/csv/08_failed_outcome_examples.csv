@@ -1,0 +1,1 @@
+dataset,source_match_id,date,competition,home_team,away_team,home_score,away_score,match_result,expected_match_result,result_class,expected_result_class,home_win,expected_home_win,draw,expected_draw,away_win,expected_away_win,goal_difference,expected_goal_difference,total_goals,expected_total_goals

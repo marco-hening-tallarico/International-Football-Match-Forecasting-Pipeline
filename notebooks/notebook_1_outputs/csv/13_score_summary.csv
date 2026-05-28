@@ -1,0 +1,4 @@
+dataset,rows,min_home_score,max_home_score,min_away_score,max_away_score,mean_home_score,mean_away_score,mean_total_goals,max_total_goals
+statsbomb_matches,3961,0,13,0,9,1.608,1.288,2.896,13
+football_data_uk_matches,177295,0,10,0,13,1.487,1.109,2.596,13
+international_results,49257,0,31,0,21,1.757,1.183,2.94,31

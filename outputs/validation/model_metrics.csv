@@ -1,0 +1,4 @@
+model,accuracy,log_loss,brier
+Majority class baseline,0.47533632286995514,NA,NA
+Class-prior probability baseline,0.47533632286995514,1.0529971910143963,0.6351796939497159
+Multinomial logistic regression,0.5659609969757013,0.9351783984249027,0.5530859399248774

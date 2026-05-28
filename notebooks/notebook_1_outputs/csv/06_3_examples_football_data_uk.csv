@@ -1,0 +1,11 @@
+source_match_id,date,season,competition,home_team,away_team,home_score,away_score,match_result,result_class,full_time_result,home_shots,away_shots,home_shots_on_target,away_shots_on_target
+D1_0001_1,2000-08-11,0001,D1,Dortmund,Hansa Rostock,1,0,H,1,H,17,5,7,2
+D1_0001_2,2000-08-12,0001,D1,Bayern Munich,Hertha,4,1,H,1,H,14,11,6,5
+D1_0001_3,2000-08-12,0001,D1,Freiburg,Stuttgart,4,0,H,1,H,15,18,7,5
+D1_0001_4,2000-08-12,0001,D1,Hamburg,Munich 1860,2,2,D,0,D,18,9,5,7
+D1_0001_5,2000-08-12,0001,D1,Kaiserslautern,Bochum,0,1,A,-1,A,11,5,2,2
+D1_0001_6,2000-08-12,0001,D1,Leverkusen,Wolfsburg,2,0,H,1,H,18,5,5,5
+D1_0001_7,2000-08-12,0001,D1,Werder Bremen,Cottbus,3,1,H,1,H,12,3,2,3
+D1_0001_8,2000-08-13,0001,D1,Ein Frankfurt,Unterhaching,3,0,H,1,H,7,15,5,3
+D1_0001_9,2000-08-13,0001,D1,Schalke 04,FC Koln,2,1,H,1,H,16,10,6,3
+D1_0001_10,2000-08-18,0001,D1,Cottbus,Dortmund,1,4,A,-1,A,11,10,3,5

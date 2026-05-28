@@ -1,0 +1,888 @@
+---
+title: "notebook_1"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    df_print: paged
+    theme: readable
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE
+)
+
+# notebook_1.Rmd is inside /notebooks, so ".." means project root
+PROJECT_ROOT <- normalizePath("..", winslash = "/", mustWork = TRUE)
+setwd(PROJECT_ROOT)
+
+source("src/00_project_setup.R")
+source("src/01_packages.R")
+source("src/02_helpers.R")
+
+# Save notebook outputs without changing notebook display
+NOTEBOOK_OUTPUT_DIR <- file.path(PROJECT_ROOT, "notebooks", "notebook_1_outputs")
+NOTEBOOK_CSV_DIR <- file.path(NOTEBOOK_OUTPUT_DIR, "csv")
+NOTEBOOK_PLOT_DIR <- file.path(NOTEBOOK_OUTPUT_DIR, "plots")
+
+fs::dir_create(NOTEBOOK_OUTPUT_DIR)
+fs::dir_create(NOTEBOOK_CSV_DIR)
+fs::dir_create(NOTEBOOK_PLOT_DIR)
+```
+
+# Notebook 1: Data Understanding and Type Validation
+
+This notebook checks whether the processed soccer datasets load correctly, have the expected column classes, contain plausible values, and obey the basic match-outcome logic needed for modeling.
+
+This is an inspection notebook, so it is compiled as HTML instead of PDF. HTML handles wide tables much better.
+
+All displayed validation tables are also saved under:
+
+```text
+notebooks/notebook_1_outputs/csv/
+```
+
+# 1. Processed files
+
+```{r processed-files}
+processed_files <- c(
+  statsbomb_competitions = file.path(PROCESSED_DIR, "statsbomb_competitions.csv"),
+  statsbomb_matches = file.path(PROCESSED_DIR, "statsbomb_matches.csv"),
+  football_data_uk_matches = file.path(PROCESSED_DIR, "football_data_uk_matches.csv"),
+  international_results = file.path(PROCESSED_DIR, "international_results.csv")
+)
+
+file_check <- tibble::tibble(
+  dataset = names(processed_files),
+  path = unname(processed_files),
+  exists = file.exists(processed_files),
+  file_size_mb = round(file.info(processed_files)$size / 1024^2, 3)
+)
+
+readr::write_csv(
+  file_check,
+  file.path(NOTEBOOK_CSV_DIR, "01_processed_files_check.csv")
+)
+
+file_check
+```
+
+```{r stop-if-missing-files}
+if (any(!file_check$exists)) {
+  stop("One or more processed files are missing. Run the full pipeline before knitting this notebook.")
+}
+```
+
+# 2. Load processed data
+
+Each file is loaded using `processed_csv_col_types()` from `src/02_helpers.R`.
+
+```{r load-processed-data}
+processed_data <- purrr::imap(
+  processed_files,
+  ~ readr::read_csv(
+    file = .x,
+    col_types = processed_csv_col_types(.x),
+    show_col_types = FALSE
+  )
+)
+
+loaded_data_names <- tibble::tibble(dataset = names(processed_data))
+
+readr::write_csv(
+  loaded_data_names,
+  file.path(NOTEBOOK_CSV_DIR, "02_loaded_data_names.csv")
+)
+
+names(processed_data)
+```
+
+# 3. Dataset inventory
+
+```{r dataset-inventory}
+dataset_inventory <- purrr::imap_dfr(
+  processed_data,
+  function(dat, dataset_name) {
+    tibble::tibble(
+      dataset = dataset_name,
+      rows = nrow(dat),
+      columns = ncol(dat),
+      first_date = if ("date" %in% names(dat)) as.character(min(dat$date, na.rm = TRUE)) else NA_character_,
+      last_date = if ("date" %in% names(dat)) as.character(max(dat$date, na.rm = TRUE)) else NA_character_
+    )
+  }
+)
+
+readr::write_csv(
+  dataset_inventory,
+  file.path(NOTEBOOK_CSV_DIR, "03_dataset_inventory.csv")
+)
+
+dataset_inventory
+```
+
+# 4. All columns, classes, and examples
+
+This table shows every column, its R class, storage type, missing count, unique count, and example values.
+
+```{r class-summary}
+class_summary <- purrr::imap_dfr(
+  processed_data,
+  function(dat, dataset_name) {
+    tibble::tibble(
+      dataset = dataset_name,
+      column_position = seq_along(names(dat)),
+      column = names(dat),
+      class = purrr::map_chr(dat, ~ paste(class(.x), collapse = " / ")),
+      typeof = purrr::map_chr(dat, typeof),
+      n_missing = purrr::map_int(dat, ~ sum(is.na(.x))),
+      n_unique = purrr::map_int(dat, dplyr::n_distinct),
+      example_values = purrr::map_chr(
+        dat,
+        ~ paste(utils::head(unique(na.omit(.x)), 5), collapse = ", ")
+      )
+    )
+  }
+)
+
+readr::write_csv(
+  class_summary,
+  file.path(NOTEBOOK_CSV_DIR, "04_class_summary.csv")
+)
+
+class_summary
+```
+
+# 5. Expected versus actual classes
+
+```{r expected-classes}
+expected_common_match_classes <- tibble::tribble(
+  ~column, ~expected_class,
+  "source", "character",
+  "raw_file", "character",
+  "source_match_id", "character",
+  "date", "Date",
+  "season", "character",
+  "competition", "character",
+  "home_team", "character",
+  "away_team", "character",
+  "home_score", "integer",
+  "away_score", "integer",
+  "match_result", "character",
+  "result_class", "integer",
+  "home_win", "integer",
+  "draw", "integer",
+  "away_win", "integer",
+  "goal_difference", "integer",
+  "total_goals", "integer",
+  "neutral", "logical"
+)
+
+expected_classes <- dplyr::bind_rows(
+  expected_common_match_classes |>
+    dplyr::mutate(dataset = "statsbomb_matches"),
+
+  expected_common_match_classes |>
+    dplyr::mutate(dataset = "football_data_uk_matches"),
+
+  expected_common_match_classes |>
+    dplyr::mutate(dataset = "international_results"),
+
+  tibble::tribble(
+    ~column, ~expected_class,
+    "competition_id", "integer",
+    "season_id", "integer",
+    "country_name", "character",
+    "competition_name", "character",
+    "competition_gender", "character",
+    "competition_youth", "logical",
+    "competition_international", "logical",
+    "season_name", "character",
+    "match_updated", "character",
+    "match_updated_360", "character",
+    "match_available_360", "character",
+    "match_available", "character"
+  ) |>
+    dplyr::mutate(dataset = "statsbomb_competitions")
+) |>
+  dplyr::select(dataset, column, expected_class)
+
+readr::write_csv(
+  expected_classes,
+  file.path(NOTEBOOK_CSV_DIR, "05_expected_classes.csv")
+)
+
+expected_classes
+```
+
+```{r class-validation}
+class_validation <- class_summary |>
+  dplyr::select(
+    dataset,
+    column,
+    actual_class = class,
+    typeof,
+    n_missing,
+    n_unique,
+    example_values
+  ) |>
+  dplyr::left_join(
+    expected_classes,
+    by = c("dataset", "column")
+  ) |>
+  dplyr::mutate(
+    expected_class = dplyr::coalesce(expected_class, "not specified"),
+    class_ok = dplyr::case_when(
+      expected_class == "not specified" ~ NA,
+      actual_class == expected_class ~ TRUE,
+      stringr::str_starts(actual_class, paste0(expected_class, " /")) ~ TRUE,
+      TRUE ~ FALSE
+    )
+  ) |>
+  dplyr::arrange(dataset, dplyr::desc(class_ok == FALSE), column)
+
+readr::write_csv(
+  class_validation,
+  file.path(NOTEBOOK_CSV_DIR, "05_class_validation.csv")
+)
+
+class_validation
+```
+
+```{r failed-class-checks}
+failed_class_checks <- class_validation |>
+  dplyr::filter(class_ok == FALSE)
+
+readr::write_csv(
+  failed_class_checks,
+  file.path(NOTEBOOK_CSV_DIR, "05_failed_class_checks.csv")
+)
+
+failed_class_checks
+```
+
+# 6. Compact examples from each dataset
+
+These examples use selected columns so they are readable.
+
+## 6.1 StatsBomb competitions
+
+```{r examples-statsbomb-competitions}
+examples_statsbomb_competitions <- processed_data$statsbomb_competitions |>
+  dplyr::slice_head(n = 10)
+
+readr::write_csv(
+  examples_statsbomb_competitions,
+  file.path(NOTEBOOK_CSV_DIR, "06_1_examples_statsbomb_competitions.csv")
+)
+
+examples_statsbomb_competitions
+```
+
+## 6.2 StatsBomb matches
+
+```{r examples-statsbomb-matches}
+examples_statsbomb_matches <- processed_data$statsbomb_matches |>
+  dplyr::select(
+    source_match_id,
+    date,
+    season,
+    competition,
+    home_team,
+    away_team,
+    home_score,
+    away_score,
+    match_result,
+    result_class,
+    neutral
+  ) |>
+  dplyr::slice_head(n = 10)
+
+readr::write_csv(
+  examples_statsbomb_matches,
+  file.path(NOTEBOOK_CSV_DIR, "06_2_examples_statsbomb_matches.csv")
+)
+
+examples_statsbomb_matches
+```
+
+## 6.3 football-data.co.uk matches
+
+```{r examples-football-data-uk}
+examples_football_data_uk <- processed_data$football_data_uk_matches |>
+  dplyr::select(
+    source_match_id,
+    date,
+    season,
+    competition,
+    home_team,
+    away_team,
+    home_score,
+    away_score,
+    match_result,
+    result_class,
+    full_time_result,
+    home_shots,
+    away_shots,
+    home_shots_on_target,
+    away_shots_on_target
+  ) |>
+  dplyr::slice_head(n = 10)
+
+readr::write_csv(
+  examples_football_data_uk,
+  file.path(NOTEBOOK_CSV_DIR, "06_3_examples_football_data_uk.csv")
+)
+
+examples_football_data_uk
+```
+
+## 6.4 International results
+
+```{r examples-international-results}
+examples_international_results <- processed_data$international_results |>
+  dplyr::select(
+    source_match_id,
+    date,
+    season,
+    tournament,
+    home_team,
+    away_team,
+    home_score,
+    away_score,
+    match_result,
+    result_class,
+    neutral,
+    city,
+    country
+  ) |>
+  dplyr::slice_head(n = 10)
+
+readr::write_csv(
+  examples_international_results,
+  file.path(NOTEBOOK_CSV_DIR, "06_4_examples_international_results.csv")
+)
+
+examples_international_results
+```
+
+# 7. Random examples from match datasets
+
+First rows can be misleading. Random examples help check whether values look plausible across the whole file.
+
+```{r random-match-examples}
+set.seed(2026)
+
+match_tables <- processed_data[c(
+  "statsbomb_matches",
+  "football_data_uk_matches",
+  "international_results"
+)]
+
+random_match_examples <- purrr::imap_dfr(
+  match_tables,
+  function(dat, dataset_name) {
+    dat |>
+      dplyr::select(
+        source_match_id,
+        date,
+        competition,
+        home_team,
+        away_team,
+        home_score,
+        away_score,
+        match_result,
+        result_class,
+        home_win,
+        draw,
+        away_win,
+        goal_difference,
+        total_goals,
+        neutral
+      ) |>
+      dplyr::slice_sample(n = min(10, nrow(dat))) |>
+      dplyr::mutate(dataset = dataset_name, .before = 1)
+  }
+)
+
+readr::write_csv(
+  random_match_examples,
+  file.path(NOTEBOOK_CSV_DIR, "07_random_match_examples.csv")
+)
+
+random_match_examples
+```
+
+# 8. Outcome logic validation
+
+This verifies that the derived outcome columns agree with the raw scores.
+
+Expected logic:
+
+- `home_score > away_score` means `match_result == "H"` and `result_class == 1`
+- `home_score == away_score` means `match_result == "D"` and `result_class == 0`
+- `home_score < away_score` means `match_result == "A"` and `result_class == -1`
+- `goal_difference` should equal `home_score - away_score`
+- `total_goals` should equal `home_score + away_score`
+
+```{r outcome-logic-check}
+outcome_logic_check <- purrr::imap_dfr(
+  match_tables,
+  function(dat, dataset_name) {
+    dat |>
+      dplyr::mutate(
+        expected_match_result = dplyr::case_when(
+          home_score > away_score ~ "H",
+          home_score == away_score ~ "D",
+          home_score < away_score ~ "A",
+          TRUE ~ NA_character_
+        ),
+        expected_result_class = dplyr::case_when(
+          expected_match_result == "H" ~ 1L,
+          expected_match_result == "D" ~ 0L,
+          expected_match_result == "A" ~ -1L,
+          TRUE ~ NA_integer_
+        ),
+        expected_home_win = as.integer(expected_match_result == "H"),
+        expected_draw = as.integer(expected_match_result == "D"),
+        expected_away_win = as.integer(expected_match_result == "A"),
+        expected_goal_difference = home_score - away_score,
+        expected_total_goals = home_score + away_score,
+        result_logic_ok =
+          match_result == expected_match_result &
+          result_class == expected_result_class &
+          home_win == expected_home_win &
+          draw == expected_draw &
+          away_win == expected_away_win &
+          goal_difference == expected_goal_difference &
+          total_goals == expected_total_goals
+      ) |>
+      dplyr::summarise(
+        dataset = dataset_name,
+        rows = dplyr::n(),
+        failed_rows = sum(!result_logic_ok, na.rm = TRUE),
+        missing_logic_rows = sum(is.na(result_logic_ok))
+      )
+  }
+)
+
+readr::write_csv(
+  outcome_logic_check,
+  file.path(NOTEBOOK_CSV_DIR, "08_outcome_logic_check.csv")
+)
+
+outcome_logic_check
+```
+
+```{r failed-outcome-examples}
+failed_outcome_examples <- purrr::imap_dfr(
+  match_tables,
+  function(dat, dataset_name) {
+    dat |>
+      dplyr::mutate(
+        expected_match_result = dplyr::case_when(
+          home_score > away_score ~ "H",
+          home_score == away_score ~ "D",
+          home_score < away_score ~ "A",
+          TRUE ~ NA_character_
+        ),
+        expected_result_class = dplyr::case_when(
+          expected_match_result == "H" ~ 1L,
+          expected_match_result == "D" ~ 0L,
+          expected_match_result == "A" ~ -1L,
+          TRUE ~ NA_integer_
+        ),
+        expected_home_win = as.integer(expected_match_result == "H"),
+        expected_draw = as.integer(expected_match_result == "D"),
+        expected_away_win = as.integer(expected_match_result == "A"),
+        expected_goal_difference = home_score - away_score,
+        expected_total_goals = home_score + away_score,
+        result_logic_ok =
+          match_result == expected_match_result &
+          result_class == expected_result_class &
+          home_win == expected_home_win &
+          draw == expected_draw &
+          away_win == expected_away_win &
+          goal_difference == expected_goal_difference &
+          total_goals == expected_total_goals
+      ) |>
+      dplyr::filter(!result_logic_ok | is.na(result_logic_ok)) |>
+      dplyr::select(
+        source_match_id,
+        date,
+        competition,
+        home_team,
+        away_team,
+        home_score,
+        away_score,
+        match_result,
+        expected_match_result,
+        result_class,
+        expected_result_class,
+        home_win,
+        expected_home_win,
+        draw,
+        expected_draw,
+        away_win,
+        expected_away_win,
+        goal_difference,
+        expected_goal_difference,
+        total_goals,
+        expected_total_goals
+      ) |>
+      dplyr::slice_head(n = 20) |>
+      dplyr::mutate(dataset = dataset_name, .before = 1)
+  }
+)
+
+readr::write_csv(
+  failed_outcome_examples,
+  file.path(NOTEBOOK_CSV_DIR, "08_failed_outcome_examples.csv")
+)
+
+failed_outcome_examples
+```
+
+# 9. Missingness summary
+
+```{r missingness-summary}
+missingness_summary <- purrr::imap_dfr(
+  processed_data,
+  function(dat, dataset_name) {
+    tibble::tibble(
+      dataset = dataset_name,
+      column = names(dat),
+      n_rows = nrow(dat),
+      n_missing = purrr::map_int(dat, ~ sum(is.na(.x))),
+      pct_missing = round(100 * n_missing / n_rows, 2)
+    )
+  }
+) |>
+  dplyr::arrange(dataset, dplyr::desc(pct_missing), column)
+
+readr::write_csv(
+  missingness_summary,
+  file.path(NOTEBOOK_CSV_DIR, "09_missingness_summary.csv")
+)
+
+missingness_summary
+```
+
+# 10. Duplicate checks
+
+Some repeated fixtures may be legitimate, but they should be inspected.
+
+```{r duplicate-checks}
+duplicate_checks <- purrr::imap_dfr(
+  match_tables,
+  function(dat, dataset_name) {
+    duplicate_source_ids <- dat |>
+      dplyr::count(source_match_id, name = "n") |>
+      dplyr::filter(n > 1L)
+
+    duplicate_fixture_keys <- dat |>
+      dplyr::count(
+        date,
+        home_team,
+        away_team,
+        competition,
+        name = "n"
+      ) |>
+      dplyr::filter(n > 1L)
+
+    exact_duplicate_rows <- dat |>
+      dplyr::count(
+        dplyr::across(dplyr::everything()),
+        name = "n"
+      ) |>
+      dplyr::filter(n > 1L)
+
+    tibble::tibble(
+      dataset = dataset_name,
+      duplicate_source_match_ids = nrow(duplicate_source_ids),
+      duplicate_date_home_away_competition_keys = nrow(duplicate_fixture_keys),
+      exact_duplicate_rows = nrow(exact_duplicate_rows)
+    )
+  }
+)
+
+readr::write_csv(
+  duplicate_checks,
+  file.path(NOTEBOOK_CSV_DIR, "10_duplicate_checks.csv")
+)
+
+duplicate_checks
+```
+
+# 11. football-data.co.uk numeric stat validation
+
+Some football-data.co.uk columns are read as doubles because historical files can be inconsistent. This check verifies whether those columns are still integer-valued.
+
+```{r football-data-integer-valued-check}
+football_data <- processed_data$football_data_uk_matches
+
+integer_valued_stat_cols <- c(
+  "half_time_home_score",
+  "half_time_away_score",
+  "home_shots",
+  "away_shots",
+  "home_shots_on_target",
+  "away_shots_on_target",
+  "home_corners",
+  "away_corners",
+  "home_fouls",
+  "away_fouls",
+  "home_yellow_cards",
+  "away_yellow_cards",
+  "home_red_cards",
+  "away_red_cards"
+)
+
+integer_valued_stat_cols <- intersect(integer_valued_stat_cols, names(football_data))
+
+integer_valued_check <- tibble::tibble(
+  column = integer_valued_stat_cols,
+  class = purrr::map_chr(
+    football_data[integer_valued_stat_cols],
+    ~ paste(class(.x), collapse = " / ")
+  ),
+  n_missing = purrr::map_int(
+    football_data[integer_valued_stat_cols],
+    ~ sum(is.na(.x))
+  ),
+  non_integer_values = purrr::map_int(
+    football_data[integer_valued_stat_cols],
+    ~ sum(!is.na(.x) & .x != floor(.x))
+  ),
+  min_value = purrr::map_dbl(
+    football_data[integer_valued_stat_cols],
+    ~ suppressWarnings(min(.x, na.rm = TRUE))
+  ),
+  max_value = purrr::map_dbl(
+    football_data[integer_valued_stat_cols],
+    ~ suppressWarnings(max(.x, na.rm = TRUE))
+  )
+)
+
+readr::write_csv(
+  integer_valued_check,
+  file.path(NOTEBOOK_CSV_DIR, "11_football_data_integer_valued_check.csv")
+)
+
+integer_valued_check
+```
+
+# 12. Result distribution
+
+```{r result-distribution}
+result_distribution <- purrr::imap_dfr(
+  match_tables,
+  function(dat, dataset_name) {
+    dat |>
+      dplyr::count(match_result, name = "matches") |>
+      dplyr::mutate(
+        dataset = dataset_name,
+        pct = round(100 * matches / sum(matches), 2),
+        .before = 1
+      )
+  }
+)
+
+readr::write_csv(
+  result_distribution,
+  file.path(NOTEBOOK_CSV_DIR, "12_result_distribution.csv")
+)
+
+result_distribution
+```
+
+# 13. Score and goals summary
+
+```{r score-summary}
+score_summary <- purrr::imap_dfr(
+  match_tables,
+  function(dat, dataset_name) {
+    dat |>
+      dplyr::summarise(
+        dataset = dataset_name,
+        rows = dplyr::n(),
+        min_home_score = min(home_score, na.rm = TRUE),
+        max_home_score = max(home_score, na.rm = TRUE),
+        min_away_score = min(away_score, na.rm = TRUE),
+        max_away_score = max(away_score, na.rm = TRUE),
+        mean_home_score = round(mean(home_score, na.rm = TRUE), 3),
+        mean_away_score = round(mean(away_score, na.rm = TRUE), 3),
+        mean_total_goals = round(mean(total_goals, na.rm = TRUE), 3),
+        max_total_goals = max(total_goals, na.rm = TRUE)
+      )
+  }
+)
+
+readr::write_csv(
+  score_summary,
+  file.path(NOTEBOOK_CSV_DIR, "13_score_summary.csv")
+)
+
+score_summary
+```
+
+# 14. Extreme score examples
+
+Extreme rows are useful for catching parsing problems or unusual but real matches.
+
+```{r extreme-score-examples}
+extreme_score_examples <- purrr::imap_dfr(
+  match_tables,
+  function(dat, dataset_name) {
+    dat |>
+      dplyr::arrange(dplyr::desc(total_goals)) |>
+      dplyr::select(
+        source_match_id,
+        date,
+        competition,
+        home_team,
+        away_team,
+        home_score,
+        away_score,
+        match_result,
+        result_class,
+        total_goals,
+        goal_difference,
+        neutral
+      ) |>
+      dplyr::slice_head(n = 10) |>
+      dplyr::mutate(dataset = dataset_name, .before = 1)
+  }
+)
+
+readr::write_csv(
+  extreme_score_examples,
+  file.path(NOTEBOOK_CSV_DIR, "14_extreme_score_examples.csv")
+)
+
+extreme_score_examples
+```
+
+# 15. Column display audit
+
+This section shows which columns were omitted from compact example tables. They are still loaded in `processed_data`; they were only omitted from compact displays.
+
+```{r displayed-versus-omitted-columns}
+displayed_columns <- list(
+  statsbomb_competitions = c(
+    "competition_id",
+    "season_id",
+    "country_name",
+    "competition_name",
+    "competition_gender",
+    "competition_youth",
+    "competition_international",
+    "season_name"
+  ),
+
+  statsbomb_matches = c(
+    "source_match_id",
+    "date",
+    "season",
+    "competition",
+    "home_team",
+    "away_team",
+    "home_score",
+    "away_score",
+    "match_result",
+    "result_class",
+    "neutral"
+  ),
+
+  football_data_uk_matches = c(
+    "source_match_id",
+    "date",
+    "season",
+    "competition",
+    "home_team",
+    "away_team",
+    "home_score",
+    "away_score",
+    "match_result",
+    "result_class",
+    "full_time_result",
+    "home_shots",
+    "away_shots",
+    "home_shots_on_target",
+    "away_shots_on_target"
+  ),
+
+  international_results = c(
+    "source_match_id",
+    "date",
+    "season",
+    "tournament",
+    "home_team",
+    "away_team",
+    "home_score",
+    "away_score",
+    "match_result",
+    "result_class",
+    "neutral",
+    "city",
+    "country"
+  )
+)
+
+omitted_columns_audit <- purrr::imap_dfr(
+  processed_data,
+  function(dat, dataset_name) {
+    shown <- displayed_columns[[dataset_name]]
+    all_cols <- names(dat)
+
+    tibble::tibble(
+      dataset = dataset_name,
+      n_total_columns = length(all_cols),
+      n_displayed_columns = length(intersect(shown, all_cols)),
+      n_omitted_columns = length(setdiff(all_cols, shown)),
+      omitted_columns = paste(setdiff(all_cols, shown), collapse = ", ")
+    )
+  }
+)
+
+readr::write_csv(
+  omitted_columns_audit,
+  file.path(NOTEBOOK_CSV_DIR, "15_omitted_columns_audit.csv")
+)
+
+omitted_columns_audit
+```
+
+# 16. Final checklist
+
+After knitting this notebook, check:
+
+1. All expected processed files exist.
+2. All datasets load successfully.
+3. Dates are parsed as `Date`.
+4. Team, competition, tournament, city, and country fields are character columns.
+5. Scores and result flags are integer fields where expected.
+6. `neutral` is logical.
+7. `match_result`, `result_class`, `home_win`, `draw`, and `away_win` agree with the scores.
+8. `goal_difference` equals `home_score - away_score`.
+9. `total_goals` equals `home_score + away_score`.
+10. Missingness is explainable.
+11. Duplicate checks do not reveal unexpected duplicate match identities.
+12. Random and extreme examples look like real soccer match records.
+
+# 17. Saved output files
+
+```{r saved-output-files}
+saved_output_files <- tibble::tibble(
+  file = fs::dir_ls(NOTEBOOK_OUTPUT_DIR, recurse = TRUE, type = "file")
+)
+
+readr::write_csv(
+  saved_output_files,
+  file.path(NOTEBOOK_CSV_DIR, "17_saved_output_files.csv")
+)
+
+saved_output_files

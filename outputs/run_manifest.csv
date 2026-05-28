@@ -1,0 +1,17 @@
+artifact,location
+basic_summary.csv,outputs/checks
+missing_summary.csv,outputs/checks
+duplicate_match_candidates.csv,outputs/checks
+invalid_value_checks.csv,outputs/checks
+target_distribution.csv,outputs/checks
+score_extremes_top_50.csv,outputs/checks
+team_match_counts.csv,outputs/checks
+prematch_modeling_dataset.csv,outputs/validation
+chronological_split_summary.csv,outputs/validation
+model_metrics.csv,outputs/validation
+confusion_matrix_multinomial_logistic.csv,outputs/validation
+calibration_by_confidence_bucket.csv,outputs/validation
+multinomial_logistic_coefficients.csv,outputs/validation
+walk_forward_metrics_by_season.csv,outputs/validation
+plots/*.png,outputs/plots
+multinomial_logistic_model.rds,outputs/validation

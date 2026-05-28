@@ -1,0 +1,11 @@
+source_match_id,date,season,competition,home_team,away_team,home_score,away_score,match_result,result_class,neutral
+3750234,1977-08-28,1977,North American League,NY Cosmos,Seattle Sounders,2,1,H,1,NA
+9880,2018-04-14,2017/2018,La Liga,Barcelona,Valencia,2,1,H,1,NA
+9912,2018-04-29,2017/2018,La Liga,RC Deportivo La Coruña,Barcelona,2,4,A,-1,NA
+9924,2018-05-06,2017/2018,La Liga,Barcelona,Real Madrid,2,2,D,0,NA
+9855,2018-03-18,2017/2018,La Liga,Barcelona,Athletic Club,2,0,H,1,NA
+9827,2018-03-01,2017/2018,La Liga,Las Palmas,Barcelona,1,1,D,0,NA
+9799,2018-02-17,2017/2018,La Liga,Eibar,Barcelona,0,2,A,-1,NA
+9636,2017-10-01,2017/2018,La Liga,Barcelona,Las Palmas,3,0,H,1,NA
+9609,2017-09-19,2017/2018,La Liga,Barcelona,Eibar,6,1,H,1,NA
+9575,2017-08-20,2017/2018,La Liga,Barcelona,Real Betis,2,0,H,1,NA

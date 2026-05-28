@@ -260,8 +260,10 @@ save_plot(p_goal_difference, "04_goal_difference_histogram_train.png")
 
 set.seed(20260527)
 
+score_scatter_n <- min(5000L, nrow(train_matches))
+
 score_scatter_sample <- train_matches |>
-    dplyr::slice_sample(n = min(5000L, dplyr::n()))
+    dplyr::slice_sample(n = score_scatter_n)
 
 p_score_scatter <- score_scatter_sample |>
     ggplot2::ggplot(ggplot2::aes(x = home_score, y = away_score)) +

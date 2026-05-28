@@ -1,0 +1,31 @@
+dataset,source_match_id,date,competition,home_team,away_team,home_score,away_score,match_result,result_class,total_goals,goal_difference,neutral
+statsbomb_matches,22943,2019-06-11,Women's World Cup,United States Women's,Thailand W,13,0,H,1,13,13,NA
+statsbomb_matches,3825700,2015-12-20,La Liga,Real Madrid,Rayo Vallecano,10,2,H,1,12,8,NA
+statsbomb_matches,2275104,2019-12-01,FA Women's Super League,Arsenal WFC,Bristol City WFC,11,1,H,1,12,10,NA
+statsbomb_matches,3929008,2024-05-01,Serie A Women,Sassuolo W,AS Roma W,5,6,A,-1,11,-1,NA
+statsbomb_matches,15973,2018-09-02,La Liga,Barcelona,Huesca,8,2,H,1,10,6,NA
+statsbomb_matches,3813317,2021-11-30,Indian Super league,Odisha,East Bengal,6,4,H,1,10,2,NA
+statsbomb_matches,3912207,2024-02-17,Frauen Bundesliga,Nürnberg W,VfL Wolfsburg WFC,1,9,A,-1,10,-8,NA
+statsbomb_matches,3911293,2024-01-06,Liga F,Barcelona WFC,FC Levante Badalona,9,1,H,1,10,8,NA
+statsbomb_matches,3913146,2024-03-03,FA Women's Super League,Bristol City WFC,Brighton & Hove Albion WFC,3,7,A,-1,10,-4,NA
+statsbomb_matches,3764238,2020-09-12,FA Women's Super League,West Ham United LFC,Arsenal WFC,1,9,A,-1,10,-8,NA
+football_data_uk_matches,N1_2021_45,2020-10-24,N1,VVV Venlo,Ajax,0,13,A,-1,13,-13,NA
+football_data_uk_matches,D2_9697_302,1997-06-11,D2,Kaiserslautern,Meppen,7,6,H,1,13,1,NA
+football_data_uk_matches,SC0_0910_222,2010-05-05,SC0,Motherwell,Hibernian,6,6,D,0,12,0,NA
+football_data_uk_matches,SP2_1415_190,2014-12-20,SP2,Numancia,Lugo,6,6,D,0,12,0,NA
+football_data_uk_matches,SP1_1516_158,2015-12-20,SP1,Real Madrid,Vallecano,10,2,H,1,12,8,NA
+football_data_uk_matches,E1_0203_177,2002-10-29,E1,Grimsby,Burnley,6,5,H,1,11,1,NA
+football_data_uk_matches,E1_0203_472,2003-04-05,E1,Burnley,Watford,4,7,A,-1,11,-3,NA
+football_data_uk_matches,D1_0506_185,2006-02-11,D1,Schalke 04,Leverkusen,7,4,H,1,11,3,NA
+football_data_uk_matches,E0_0708_72,2007-09-29,E0,Portsmouth,Reading,7,4,H,1,11,3,NA
+football_data_uk_matches,E3_0910_413,2010-03-13,E3,Burton,Cheltenham,5,6,A,-1,11,-1,NA
+international_results,2001_04_11_australia_american_samoa_fifa_world_cup_qualification,2001-04-11,FIFA World Cup qualification,Australia,American Samoa,31,0,H,1,31,31,FALSE
+international_results,1971_09_13_tahiti_cook_islands_south_pacific_games,1971-09-13,South Pacific Games,Tahiti,Cook Islands,30,0,H,1,30,30,FALSE
+international_results,1979_08_30_fiji_kiribati_south_pacific_games,1979-08-30,South Pacific Games,Fiji,Kiribati,24,0,H,1,24,24,FALSE
+international_results,2001_04_09_australia_tonga_fifa_world_cup_qualification,2001-04-09,FIFA World Cup qualification,Australia,Tonga,22,0,H,1,22,22,FALSE
+international_results,2006_11_24_s_pmi_monaco_viva_world_cup,2006-11-24,Viva World Cup,Sápmi,Monaco,21,1,H,1,22,20,TRUE
+international_results,2013_06_24_provence_tibet_international_tournament_of_peoples_cultures_and_tribes,2013-06-24,"International Tournament of Peoples, Cultures and Tribes",Provence,Tibet,22,0,H,1,22,22,FALSE
+international_results,1966_04_03_libya_oman_arab_cup,1966-04-03,Arab Cup,Libya,Oman,21,0,H,1,21,21,TRUE
+international_results,1997_05_13_kazakhstan_guam_east_asian_games,1997-05-13,East Asian Games,Kazakhstan,Guam,20,1,H,1,21,19,TRUE
+international_results,2005_03_11_guam_north_korea_eaff_championship,2005-03-11,EAFF Championship,Guam,North Korea,0,21,A,-1,21,-21,TRUE
+international_results,2013_06_23_quebec_tibet_international_tournament_of_peoples_cultures_and_tribes,2013-06-23,"International Tournament of Peoples, Cultures and Tribes",Quebec,Tibet,21,0,H,1,21,21,TRUE

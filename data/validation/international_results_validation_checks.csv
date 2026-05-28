@@ -1,6 +1,6 @@
 check_name,severity,status,rows_affected,details
 competition_matches_tournament,error,pass,0,competition should mirror tournament for common match-table compatibility.
-date_domain_valid_and_not_future,error,pass,0,Match dates should parse and should not be after 2026-05-27
+date_domain_valid_and_not_future,error,pass,0,Match dates should parse and should not be after 2026-05-28
 derived_result_fields_consistent,error,pass,0,"Outcome, indicator, goal-difference, and total-goals fields should match the final score."
 exact_match_rows_unique,error,pass,0,No exact duplicate match-result rows should exist.
 home_team_differs_from_away_team,error,pass,0,A team should not play itself in one match row.

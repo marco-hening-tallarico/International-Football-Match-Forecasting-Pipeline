@@ -1,0 +1,1 @@
+row_id,date,home_team,away_team,home_score,away_score,total_goals,goal_difference,result_class,home_win,draw,away_win,match_result,bad_date,bad_score,bad_total_goals,bad_goal_difference,bad_one_hot_result,bad_home_win,bad_draw,bad_away_win

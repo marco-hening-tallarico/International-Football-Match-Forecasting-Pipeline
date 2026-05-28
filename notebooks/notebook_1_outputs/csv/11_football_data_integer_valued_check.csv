@@ -1,0 +1,15 @@
+column,class,n_missing,non_integer_values,min_value,max_value
+half_time_home_score,numeric,20041,0,0,7
+half_time_away_score,numeric,20042,0,0,7
+home_shots,numeric,79199,0,0,46
+away_shots,numeric,79196,0,0,45
+home_shots_on_target,numeric,80117,0,0,27
+away_shots_on_target,numeric,80114,0,0,23
+home_corners,numeric,79571,0,0,26
+away_corners,numeric,79571,0,0,23
+home_fouls,numeric,80336,0,0,145
+away_fouls,numeric,80336,0,0,77
+home_yellow_cards,numeric,79015,0,0,11
+away_yellow_cards,numeric,79014,0,0,10
+home_red_cards,numeric,79014,0,0,3
+away_red_cards,numeric,79014,0,0,9

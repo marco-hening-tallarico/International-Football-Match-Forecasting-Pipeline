@@ -1,0 +1,5 @@
+dataset,n_total_columns,n_displayed_columns,n_omitted_columns,omitted_columns
+statsbomb_competitions,12,8,4,"match_updated, match_updated_360, match_available_360, match_available"
+statsbomb_matches,26,11,15,"source, raw_file, competition_id, season_id, match_week, competition_country, stadium, data_version, shot_fidelity_version, xy_fidelity_version, home_win, draw, away_win, goal_difference, total_goals"
+football_data_uk_matches,36,15,21,"source, raw_file, source_league_code, source_season_code, half_time_home_score, half_time_away_score, half_time_result, home_corners, away_corners, home_fouls, away_fouls, home_yellow_cards, away_yellow_cards, home_red_cards, away_red_cards, home_win, draw, away_win, goal_difference, total_goals, neutral"
+international_results,21,13,8,"source, raw_file, competition, home_win, draw, away_win, goal_difference, total_goals"

@@ -1,0 +1,5 @@
+dataset,rows,columns,first_date,last_date
+statsbomb_competitions,80,12,NA,NA
+statsbomb_matches,3961,26,1958-06-24,2025-07-27
+football_data_uk_matches,177295,36,1993-07-23,2024-06-02
+international_results,49257,21,1872-11-30,2026-03-31

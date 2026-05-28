@@ -1,0 +1,185 @@
+source_match_id,date,home_team,away_team,home_score,away_score,tournament,city,country,neutral,total_goals,goal_difference,data_split
+2001_04_11_australia_american_samoa_fifa_world_cup_qualification,2001-04-11,Australia,American Samoa,31,0,FIFA World Cup qualification,Coffs Harbour,Australia,FALSE,31,31,train
+1971_09_13_tahiti_cook_islands_south_pacific_games,1971-09-13,Tahiti,Cook Islands,30,0,South Pacific Games,Papeete,Tahiti,FALSE,30,30,train
+1979_08_30_fiji_kiribati_south_pacific_games,1979-08-30,Fiji,Kiribati,24,0,South Pacific Games,Nausori,Fiji,FALSE,24,24,train
+2001_04_09_australia_tonga_fifa_world_cup_qualification,2001-04-09,Australia,Tonga,22,0,FIFA World Cup qualification,Coffs Harbour,Australia,FALSE,22,22,train
+2013_06_24_provence_tibet_international_tournament_of_peoples_cultures_and_tribes,2013-06-24,Provence,Tibet,22,0,"International Tournament of Peoples, Cultures and Tribes",Marseille,France,FALSE,22,22,train
+2006_11_24_s_pmi_monaco_viva_world_cup,2006-11-24,Sápmi,Monaco,21,1,Viva World Cup,Hyères,France,TRUE,22,20,train
+1966_04_03_libya_oman_arab_cup,1966-04-03,Libya,Oman,21,0,Arab Cup,Baghdad,Iraq,TRUE,21,21,train
+2005_03_11_guam_north_korea_eaff_championship,2005-03-11,Guam,North Korea,0,21,EAFF Championship,Taipei,Taiwan,TRUE,21,-21,train
+2013_06_23_quebec_tibet_international_tournament_of_peoples_cultures_and_tribes,2013-06-23,Quebec,Tibet,21,0,"International Tournament of Peoples, Cultures and Tribes",Marseille,France,TRUE,21,21,train
+1997_05_13_kazakhstan_guam_east_asian_games,1997-05-13,Kazakhstan,Guam,20,1,East Asian Games,Busan,South Korea,TRUE,21,19,train
+1987_12_15_american_samoa_papua_new_guinea_south_pacific_games,1987-12-15,American Samoa,Papua New Guinea,0,20,South Pacific Games,Nouméa,New Caledonia,TRUE,20,-20,train
+2000_02_14_kuwait_bhutan_afc_asian_cup_qualification,2000-02-14,Kuwait,Bhutan,20,0,AFC Asian Cup qualification,Kuwait City,Kuwait,FALSE,20,20,train
+2003_06_30_sark_isle_of_wight_island_games,2003-06-30,Sark,Isle of Wight,0,20,Island Games,Saint Martin,Guernsey,TRUE,20,-20,train
+2014_06_01_darfur_padania_conifa_world_football_cup,2014-06-01,Darfur,Padania,0,20,CONIFA World Football Cup,Östersund,Sweden,TRUE,20,-20,train
+1983_08_22_niue_papua_new_guinea_south_pacific_games,1983-08-22,Niue,Papua New Guinea,0,19,South Pacific Games,Apia,Western Samoa,TRUE,19,-19,train
+2000_01_26_china_pr_guam_afc_asian_cup_qualification,2000-01-26,China PR,Guam,19,0,AFC Asian Cup qualification,Hanoi,Vietnam,TRUE,19,19,train
+2000_11_24_iran_guam_fifa_world_cup_qualification,2000-11-24,Iran,Guam,19,0,FIFA World Cup qualification,Tabriz,Iran,FALSE,19,19,train
+2003_06_29_gibraltar_sark_island_games,2003-06-29,Gibraltar,Sark,19,0,Island Games,Saint Martin,Guernsey,TRUE,19,19,train
+2014_06_02_darfur_south_ossetia_conifa_world_football_cup,2014-06-02,Darfur,South Ossetia,0,19,CONIFA World Football Cup,Östersund,Sweden,TRUE,19,-19,train
+1963_09_06_solomon_islands_tahiti_south_pacific_games,1963-09-06,Solomon Islands,Tahiti,0,18,South Pacific Games,Suva,Fiji,TRUE,18,-18,train
+1979_08_30_tahiti_tuvalu_south_pacific_games,1979-08-30,Tahiti,Tuvalu,18,0,South Pacific Games,Suva,Fiji,TRUE,18,18,train
+1991_09_15_guam_new_caledonia_south_pacific_games,1991-09-15,Guam,New Caledonia,0,18,South Pacific Games,Lae,Papua New Guinea,TRUE,18,-18,train
+1994_03_19_jersey_alderney_muratti_vase,1994-03-19,Jersey,Alderney,18,0,Muratti Vase,Jersey,Jersey,FALSE,18,18,train
+2003_07_01_micronesia_new_caledonia_south_pacific_games,2003-07-01,Micronesia,New Caledonia,0,18,South Pacific Games,Suva,Fiji,TRUE,18,-18,train
+2003_07_07_kiribati_vanuatu_south_pacific_games,2003-07-07,Kiribati,Vanuatu,0,18,South Pacific Games,Lautoka,Fiji,TRUE,18,-18,train
+2012_06_05_darfur_provence_viva_world_cup,2012-06-05,Darfur,Provence,0,18,Viva World Cup,Erbil,Iraq,TRUE,18,-18,train
+1908_10_22_france_denmark_olympic_games,1908-10-22,France,Denmark,1,17,Olympic Games,London,England,TRUE,18,-16,train
+2011_09_03_kiribati_papua_new_guinea_pacific_games,2011-09-03,Kiribati,Papua New Guinea,1,17,Pacific Games,Boulari,New Caledonia,TRUE,18,-16,train
+2011_09_05_kiribati_tahiti_pacific_games,2011-09-05,Kiribati,Tahiti,1,17,Pacific Games,Boulari,New Caledonia,TRUE,18,-16,train
+2012_01_14_gozo_raetia_friendly,2012-01-14,Gozo,Raetia,17,1,Friendly,Xewkija,Malta,FALSE,18,16,train
+1997_06_02_maldives_iran_fifa_world_cup_qualification,1997-06-02,Maldives,Iran,0,17,FIFA World Cup qualification,Damascus,Syria,TRUE,17,-17,train
+2000_06_19_australia_cook_islands_oceania_nations_cup,2000-06-19,Australia,Cook Islands,17,0,Oceania Nations Cup,Papeete,Tahiti,TRUE,17,17,train
+2003_06_30_tahiti_micronesia_south_pacific_games,2003-06-30,Tahiti,Micronesia,17,0,South Pacific Games,Suva,Fiji,TRUE,17,17,train
+2010_10_14_dominican_republic_british_virgin_islands_cfu_caribbean_cup_qualification,2010-10-14,Dominican Republic,British Virgin Islands,17,0,CFU Caribbean Cup qualification,San Cristóbal,Dominican Republic,FALSE,17,17,train
+1971_09_11_cook_islands_papua_new_guinea_south_pacific_games,1971-09-11,Cook Islands,Papua New Guinea,1,16,South Pacific Games,Papeete,Tahiti,TRUE,17,-15,train
+2012_09_28_saint_pierre_and_miquelon_new_caledonia_coupe_de_l_outre_mer,2012-09-28,Saint Pierre and Miquelon,New Caledonia,1,16,Coupe de l'Outre-Mer,Clairefontaine-en-Yvelines,France,TRUE,17,-15,train
+1917_05_07_japan_philippines_friendly,1917-05-07,Japan,Philippines,2,15,Friendly,Tokyo,Japan,FALSE,17,-13,train
+1917_05_10_japan_philippines_far_eastern_championship_games,1917-05-10,Japan,Philippines,2,15,Far Eastern Championship Games,Tokyo,Japan,FALSE,17,-13,train
+1950_04_14_mauritius_r_union_friendly,1950-04-14,Mauritius,Réunion,15,2,Friendly,Antananarivo,Madagascar,TRUE,17,13,train
+1998_08_01_palau_guam_friendly,1998-08-01,Palau,Guam,2,15,Friendly,Koror,Palau,FALSE,17,-13,train
+1912_07_01_germany_russia_olympic_games,1912-07-01,Germany,Russia,16,0,Olympic Games,Stockholm,Sweden,TRUE,16,16,train
+1995_08_21_cook_islands_solomon_islands_south_pacific_games,1995-08-21,Cook Islands,Solomon Islands,0,16,South Pacific Games,Papeete,Tahiti,TRUE,16,-16,train
+1998_09_28_australia_cook_islands_oceania_nations_cup,1998-09-28,Australia,Cook Islands,16,0,Oceania Nations Cup,Brisbane,Australia,FALSE,16,16,train
+2000_11_26_tajikistan_guam_fifa_world_cup_qualification,2000-11-26,Tajikistan,Guam,16,0,FIFA World Cup qualification,Tabriz,Iran,TRUE,16,16,train
+2003_07_01_greenland_sark_island_games,2003-07-01,Greenland,Sark,16,0,Island Games,Saint Martin,Guernsey,TRUE,16,16,train
+2003_09_29_south_korea_nepal_afc_asian_cup_qualification,2003-09-29,South Korea,Nepal,16,0,AFC Asian Cup qualification,Incheon,South Korea,FALSE,16,16,train
+2007_08_25_fiji_tuvalu_south_pacific_games,2007-08-25,Fiji,Tuvalu,16,0,South Pacific Games,Apia,Samoa,TRUE,16,16,train
+2012_09_05_martinique_british_virgin_islands_cfu_caribbean_cup_qualification,2012-09-05,Martinique,British Virgin Islands,16,0,CFU Caribbean Cup qualification,Le Lamentin,Martinique,FALSE,16,16,train
+1962_08_26_malaysia_philippines_asian_games,1962-08-26,Malaysia,Philippines,15,1,Asian Games,Jakarta,Indonesia,TRUE,16,14,train
+1971_09_15_cook_islands_fiji_south_pacific_games,1971-09-15,Cook Islands,Fiji,1,15,South Pacific Games,Papeete,Tahiti,TRUE,16,-14,train
+1973_08_17_algeria_yemen_palestine_cup,1973-08-17,Algeria,Yemen,15,1,Palestine Cup,Benghazi,Libya,TRUE,16,14,train
+2007_06_21_hong_kong_guam_eaff_championship,2007-06-21,Hong Kong,Guam,15,1,EAFF Championship,Macau,Macau,TRUE,16,14,train
+1967_08_23_denmark_iceland_friendly,1967-08-23,Denmark,Iceland,14,2,Friendly,Copenhagen,Denmark,FALSE,16,12,train
+1963_11_15_egypt_laos_friendly,1963-11-15,Egypt,Laos,15,0,Friendly,Jakarta,Indonesia,TRUE,15,15,train
+1991_09_09_guam_tahiti_south_pacific_games,1991-09-09,Guam,Tahiti,0,15,South Pacific Games,Lae,Papua New Guinea,TRUE,15,-15,train
+1998_12_05_mongolia_uzbekistan_asian_games,1998-12-05,Mongolia,Uzbekistan,0,15,Asian Games,Chiang Mai,Thailand,TRUE,15,-15,train
+2003_07_03_fr_ya_sark_island_games,2003-07-03,Frøya,Sark,15,0,Island Games,Alderney,Guernsey,TRUE,15,15,train
+2005_03_07_guam_hong_kong_eaff_championship,2005-03-07,Guam,Hong Kong,0,15,EAFF Championship,Taipei,Taiwan,TRUE,15,-15,train
+2007_08_29_american_samoa_vanuatu_south_pacific_games,2007-08-29,American Samoa,Vanuatu,0,15,South Pacific Games,Apia,Samoa,TRUE,15,-15,train
+2012_06_04_northern_cyprus_darfur_viva_world_cup,2012-06-04,Northern Cyprus,Darfur,15,0,Viva World Cup,Erbil,Iraq,TRUE,15,15,train
+2015_09_03_qatar_bhutan_fifa_world_cup_qualification,2015-09-03,Qatar,Bhutan,15,0,FIFA World Cup qualification,Doha,Qatar,FALSE,15,15,train
+2019_11_10_trinidad_and_tobago_anguilla_friendly,2019-11-10,Trinidad and Tobago,Anguilla,15,0,Friendly,Couva,Trinidad and Tobago,FALSE,15,15,test
+1991_09_12_fiji_guam_south_pacific_games,1991-09-12,Fiji,Guam,14,1,South Pacific Games,Lae,Papua New Guinea,TRUE,15,13,train
+1998_04_15_grenada_anguilla_cfu_caribbean_cup_qualification,1998-04-15,Grenada,Anguilla,14,1,CFU Caribbean Cup qualification,St. John's,Antigua and Barbuda,TRUE,15,13,train
+2001_04_14_saint_lucia_united_states_virgin_islands_cfu_caribbean_cup_qualification,2001-04-14,Saint Lucia,United States Virgin Islands,14,1,CFU Caribbean Cup qualification,Port-au-Prince,Haiti,TRUE,15,13,train
+1899_02_18_england_northern_ireland_british_home_championship,1899-02-18,England,Northern Ireland,13,2,British Home Championship,Sunderland,England,FALSE,15,11,train
+1965_12_11_kenya_ghana_friendly,1965-12-11,Kenya,Ghana,2,13,Friendly,Nairobi,Kenya,FALSE,15,-11,train
+1946_12_15_cura_ao_puerto_rico_central_american_and_caribbean_games,1946-12-15,Curaçao,Puerto Rico,14,0,Central American and Caribbean Games,Barranquilla,Colombia,TRUE,14,14,train
+1963_11_11_north_korea_somalia_friendly,1963-11-11,North Korea,Somalia,14,0,Friendly,Jakarta,Indonesia,TRUE,14,14,train
+1966_11_30_north_korea_yemen_ganefo,1966-11-30,North Korea,Yemen,14,0,GaNEFo,Phnom Penh,Cambodia,TRUE,14,14,train
+1983_08_20_niue_tahiti_south_pacific_games,1983-08-20,Niue,Tahiti,0,14,South Pacific Games,Apia,Western Samoa,TRUE,14,-14,train
+1998_04_19_guyana_anguilla_cfu_caribbean_cup_qualification,1998-04-19,Guyana,Anguilla,14,0,CFU Caribbean Cup qualification,St. John's,Antigua and Barbuda,TRUE,14,14,train
+2005_05_03_occitania_chechnya_friendly,2005-05-03,Occitania,Chechnya,14,0,Friendly,Occitania,France,FALSE,14,14,train
+2006_11_23_s_pmi_monaco_viva_world_cup,2006-11-23,Sápmi,Monaco,14,0,Viva World Cup,Hyères,France,TRUE,14,14,train
+2017_03_28_oman_bhutan_afc_asian_cup_qualification,2017-03-28,Oman,Bhutan,14,0,AFC Asian Cup qualification,Muscat,Oman,FALSE,14,14,train
+2019_07_15_tonga_vanuatu_pacific_games,2019-07-15,Tonga,Vanuatu,0,14,Pacific Games,Apia,Samoa,TRUE,14,-14,test
+2019_10_10_iran_cambodia_fifa_world_cup_qualification,2019-10-10,Iran,Cambodia,14,0,FIFA World Cup qualification,Tehran,Iran,FALSE,14,14,test
+2021_03_30_japan_mongolia_fifa_world_cup_qualification,2021-03-30,Japan,Mongolia,14,0,FIFA World Cup qualification,Chiba,Japan,FALSE,14,14,test
+2023_11_18_france_gibraltar_uefa_euro_qualification,2023-11-18,France,Gibraltar,14,0,UEFA Euro qualification,Nice,France,FALSE,14,14,test
+1927_06_12_hungary_france_friendly,1927-06-12,Hungary,France,13,1,Friendly,Budapest,Hungary,FALSE,14,12,train
+1932_08_25_uganda_kenya_friendly,1932-08-25,Uganda,Kenya,13,1,Friendly,Kampala,Uganda,FALSE,14,12,train
+1981_07_07_vanuatu_samoa_south_pacific_mini_games,1981-07-07,Vanuatu,Samoa,13,1,South Pacific Mini Games,Honiara,Solomon Islands,TRUE,14,12,train
+2002_12_23_indonesia_philippines_aff_championship,2002-12-23,Indonesia,Philippines,13,1,AFF Championship,Jakarta,Indonesia,FALSE,14,12,train
+2006_02_18_monaco_chechnya_friendly,2006-02-18,Monaco,Chechnya,13,1,Friendly,Cap-d'Ail,France,TRUE,14,12,train
+1882_02_18_northern_ireland_england_friendly,1882-02-18,Northern Ireland,England,0,13,Friendly,Belfast,Ireland,FALSE,13,-13,train
+1933_05_21_spain_bulgaria_friendly,1933-05-21,Spain,Bulgaria,13,0,Friendly,Madrid,Spain,FALSE,13,13,train
+1940_09_01_germany_finland_friendly,1940-09-01,Germany,Finland,13,0,Friendly,Leipzig,Germany,FALSE,13,13,train
+1966_04_06_libya_yemen_arab_cup,1966-04-06,Libya,Yemen,13,0,Arab Cup,Kut,Iraq,TRUE,13,13,train
+1979_08_31_kiribati_papua_new_guinea_south_pacific_games,1979-08-31,Kiribati,Papua New Guinea,0,13,South Pacific Games,Suva,Fiji,TRUE,13,-13,train
+1981_07_08_tahiti_samoa_south_pacific_mini_games,1981-07-08,Tahiti,Samoa,13,0,South Pacific Mini Games,Honiara,Solomon Islands,TRUE,13,13,train
+1981_08_16_new_zealand_fiji_fifa_world_cup_qualification,1981-08-16,New Zealand,Fiji,13,0,FIFA World Cup qualification,Auckland,New Zealand,FALSE,13,13,train
+1992_08_18_ethiopia_iraq_jordan_international_tournament,1992-08-18,Ethiopia,Iraq,0,13,Jordan International Tournament,Irbid,Jordan,TRUE,13,-13,train
+1995_08_17_tahiti_wallis_islands_and_futuna_south_pacific_games,1995-08-17,Tahiti,Wallis Islands and Futuna,13,0,South Pacific Games,Papeete,Tahiti,FALSE,13,13,train
+1997_06_11_australia_solomon_islands_fifa_world_cup_qualification,1997-06-11,Australia,Solomon Islands,13,0,FIFA World Cup qualification,Sydney,Australia,FALSE,13,13,train
+1999_06_28_hitra_isle_of_man_island_games,1999-06-28,Hitra,Isle of Man,0,13,Island Games,Fardhem,Sweden,TRUE,13,-13,train
+2001_04_07_fiji_american_samoa_fifa_world_cup_qualification,2001-04-07,Fiji,American Samoa,13,0,FIFA World Cup qualification,Coffs Harbour,Australia,TRUE,13,13,train
+2004_02_29_bermuda_montserrat_fifa_world_cup_qualification,2004-02-29,Bermuda,Montserrat,13,0,FIFA World Cup qualification,Hamilton,Bermuda,FALSE,13,13,train
+2006_09_06_san_marino_germany_uefa_euro_qualification,2006-09-06,San Marino,Germany,0,13,UEFA Euro qualification,Serravalle,San Marino,FALSE,13,-13,train
+2012_09_22_guadeloupe_saint_pierre_and_miquelon_coupe_de_l_outre_mer,2012-09-22,Guadeloupe,Saint Pierre and Miquelon,13,0,Coupe de l'Outre-Mer,Versailles,France,TRUE,13,13,train
+2018_09_10_haiti_sint_maarten_concacaf_nations_league_qualification,2018-09-10,Haiti,Sint Maarten,13,0,CONCACAF Nations League qualification,Port-au-Prince,Haiti,FALSE,13,13,test
+2019_07_08_tuvalu_solomon_islands_pacific_games,2019-07-08,Tuvalu,Solomon Islands,0,13,Pacific Games,Apia,Samoa,TRUE,13,-13,test
+2019_07_15_solomon_islands_american_samoa_pacific_games,2019-07-15,Solomon Islands,American Samoa,13,0,Pacific Games,Apia,Samoa,TRUE,13,13,test
+2021_06_05_panama_anguilla_fifa_world_cup_qualification,2021-06-05,Panama,Anguilla,13,0,FIFA World Cup qualification,Panama City,Panama,FALSE,13,13,test
+1946_12_13_panama_puerto_rico_central_american_and_caribbean_games,1946-12-13,Panama,Puerto Rico,12,1,Central American and Caribbean Games,Barranquilla,Colombia,TRUE,13,11,train
+1964_01_12_sri_lanka_german_dr_friendly,1964-01-12,Sri Lanka,German DR,1,12,Friendly,Colombo,Ceylon,FALSE,13,-11,train
+1980_02_27_solomon_islands_tahiti_oceania_nations_cup,1980-02-27,Solomon Islands,Tahiti,1,12,Oceania Nations Cup,Nouméa,New Caledonia,TRUE,13,-11,train
+1983_12_21_spain_malta_uefa_euro_qualification,1983-12-21,Spain,Malta,12,1,UEFA Euro qualification,Seville,Spain,FALSE,13,11,train
+1993_12_11_solomon_islands_guam_south_pacific_mini_games,1993-12-11,Solomon Islands,Guam,12,1,South Pacific Mini Games,Port Vila,Vanuatu,TRUE,13,11,train
+1995_08_16_solomon_islands_wallis_islands_and_futuna_south_pacific_games,1995-08-16,Solomon Islands,Wallis Islands and Futuna,12,1,South Pacific Games,Papeete,Tahiti,TRUE,13,11,train
+1999_06_27_gotland_hitra_island_games,1999-06-27,Gotland,Hitra,12,1,Island Games,Gutavallen,Sweden,FALSE,13,11,train
+2001_04_10_haiti_united_states_virgin_islands_cfu_caribbean_cup_qualification,2001-04-10,Haiti,United States Virgin Islands,12,1,CFU Caribbean Cup qualification,Port-au-Prince,Haiti,FALSE,13,11,train
+2007_08_25_solomon_islands_american_samoa_south_pacific_games,2007-08-25,Solomon Islands,American Samoa,12,1,South Pacific Games,Apia,Samoa,TRUE,13,11,train
+1912_07_14_russia_hungary_friendly,1912-07-14,Russia,Hungary,0,12,Friendly,Moscow,Russia,FALSE,12,-12,train
+1917_10_07_denmark_norway_friendly,1917-10-07,Denmark,Norway,12,0,Friendly,Copenhagen,Denmark,FALSE,12,12,train
+1927_05_29_sweden_latvia_friendly,1927-05-29,Sweden,Latvia,12,0,Friendly,Stockholm,Sweden,FALSE,12,12,train
+1942_01_22_argentina_ecuador_copa_am_rica,1942-01-22,Argentina,Ecuador,12,0,Copa América,Montevideo,Uruguay,TRUE,12,12,train
+1942_08_10_japan_mongolia_friendly,1942-08-10,Japan,Mongolia,12,0,Friendly,Xinjing,Manchuria,TRUE,12,12,train
+1946_06_28_norway_finland_friendly,1946-06-28,Norway,Finland,12,0,Friendly,Bergen,Norway,FALSE,12,12,train
+1946_12_10_costa_rica_puerto_rico_central_american_and_caribbean_games,1946-12-10,Costa Rica,Puerto Rico,12,0,Central American and Caribbean Games,Barranquilla,Colombia,TRUE,12,12,train
+1950_09_24_hungary_albania_friendly,1950-09-24,Hungary,Albania,12,0,Friendly,Budapest,Hungary,FALSE,12,12,train
+1962_10_15_malawi_ghana_friendly,1962-10-15,Malawi,Ghana,0,12,Friendly,Blantyre,Nyasaland,FALSE,12,-12,train
+1969_05_21_germany_cyprus_fifa_world_cup_qualification,1969-05-21,Germany,Cyprus,12,0,FIFA World Cup qualification,Essen,Germany,FALSE,12,12,train
+1978_04_01_guernsey_alderney_muratti_vase,1978-04-01,Guernsey,Alderney,12,0,Muratti Vase,Guernsey,Guernsey,FALSE,12,12,train
+1979_08_31_solomon_islands_samoa_south_pacific_games,1979-08-31,Solomon Islands,Samoa,12,0,South Pacific Games,Suva,Fiji,TRUE,12,12,train
+1993_12_13_fiji_guam_south_pacific_mini_games,1993-12-13,Fiji,Guam,12,0,South Pacific Mini Games,Port Vila,Vanuatu,TRUE,12,12,train
+1994_03_04_jamaica_british_virgin_islands_cfu_caribbean_cup_qualification,1994-03-04,Jamaica,British Virgin Islands,12,0,CFU Caribbean Cup qualification,George Town,Cayman Islands,TRUE,12,12,train
+1997_05_11_guam_japan_east_asian_games,1997-05-11,Guam,Japan,0,12,East Asian Games,Busan,South Korea,TRUE,12,-12,train
+1997_06_04_syria_maldives_fifa_world_cup_qualification,1997-06-04,Syria,Maldives,12,0,FIFA World Cup qualification,Damascus,Syria,FALSE,12,12,train
+1997_06_09_maldives_syria_fifa_world_cup_qualification,1997-06-09,Maldives,Syria,0,12,FIFA World Cup qualification,Tehran,Iran,TRUE,12,-12,train
+1998_09_07_tahiti_american_samoa_oceania_nations_cup_qualification,1998-09-07,Tahiti,American Samoa,12,0,Oceania Nations Cup qualification,Avarua,Cook Islands,TRUE,12,12,train
+2001_04_14_brunei_united_arab_emirates_fifa_world_cup_qualification,2001-04-14,Brunei,United Arab Emirates,0,12,FIFA World Cup qualification,Bandar Seri Begawan,Brunei,FALSE,12,-12,train
+2001_04_30_oman_laos_fifa_world_cup_qualification,2001-04-30,Oman,Laos,12,0,FIFA World Cup qualification,Muscat,Oman,FALSE,12,12,train
+2001_04_30_syria_philippines_fifa_world_cup_qualification,2001-04-30,Syria,Philippines,12,0,FIFA World Cup qualification,Aleppo,Syria,FALSE,12,12,train
+2001_07_08_jersey_orkney_island_games,2001-07-08,Jersey,Orkney,12,0,Island Games,Douglas,Isle of Man,TRUE,12,12,train
+2003_07_05_fiji_kiribati_south_pacific_games,2003-07-05,Fiji,Kiribati,12,0,South Pacific Games,Nausori,Fiji,FALSE,12,12,train
+2003_12_03_maldives_mongolia_fifa_world_cup_qualification,2003-12-03,Maldives,Mongolia,12,0,FIFA World Cup qualification,Malé,Maldives,FALSE,12,12,train
+2004_11_24_jamaica_saint_martin_cfu_caribbean_cup_qualification,2004-11-24,Jamaica,Saint Martin,12,0,CFU Caribbean Cup qualification,Kingston,Jamaica,FALSE,12,12,train
+2008_02_06_el_salvador_anguilla_fifa_world_cup_qualification,2008-02-06,El Salvador,Anguilla,12,0,FIFA World Cup qualification,San Salvador,El Salvador,FALSE,12,12,train
+2009_08_27_hong_kong_guam_eaff_championship,2009-08-27,Hong Kong,Guam,12,0,EAFF Championship,Kaohsiung,Taiwan,TRUE,12,12,train
+2013_07_15_greenland_fr_ya_island_games,2013-07-15,Greenland,Frøya,12,0,Island Games,Hamilton,Bermuda,TRUE,12,12,train
+2014_06_05_darfur_artsakh_conifa_world_football_cup,2014-06-05,Darfur,Artsakh,0,12,CONIFA World Football Cup,Östersund,Sweden,TRUE,12,-12,train
+2015_11_12_china_pr_bhutan_fifa_world_cup_qualification,2015-11-12,China PR,Bhutan,12,0,FIFA World Cup qualification,Changsha,China PR,FALSE,12,12,train
+2016_05_30_chagos_islands_western_armenia_conifa_world_football_cup,2016-05-30,Chagos Islands,Western Armenia,0,12,CONIFA World Football Cup,Sukhumi,Georgia,TRUE,12,-12,train
+2018_10_12_bermuda_sint_maarten_concacaf_nations_league_qualification,2018-10-12,Bermuda,Sint Maarten,12,0,CONCACAF Nations League qualification,Hamilton,Bermuda,FALSE,12,12,test
+1888_03_03_wales_northern_ireland_british_home_championship,1888-03-03,Wales,Northern Ireland,11,0,British Home Championship,Wrexham,Wales,FALSE,11,11,train
+1901_02_23_scotland_northern_ireland_british_home_championship,1901-02-23,Scotland,Northern Ireland,11,0,British Home Championship,Glasgow,Scotland,FALSE,11,11,train
+1919_06_26_france_greece_inter_allied_games,1919-06-26,France,Greece,11,0,Inter-Allied Games,Paris,France,FALSE,11,11,train
+1938_02_16_panama_costa_rica_central_american_and_caribbean_games,1938-02-16,Panama,Costa Rica,0,11,Central American and Caribbean Games,Panama City,Panama,FALSE,11,-11,train
+1948_08_06_norway_united_states_friendly,1948-08-06,Norway,United States,11,0,Friendly,Oslo,Norway,FALSE,11,11,train
+1954_07_18_mauritius_r_union_friendly,1954-07-18,Mauritius,Réunion,11,0,Friendly,Curepipe,Mauritius,FALSE,11,11,train
+1964_03_28_congo_chad_friendly,1964-03-28,Congo,Chad,11,0,Friendly,Brazzaville,Congo,FALSE,11,11,train
+1969_08_18_fiji_new_caledonia_south_pacific_games,1969-08-18,Fiji,New Caledonia,0,11,South Pacific Games,Port Moresby,Papua New Guinea,TRUE,11,-11,train
+1971_03_25_jersey_alderney_muratti_vase,1971-03-25,Jersey,Alderney,11,0,Muratti Vase,Jersey,Jersey,FALSE,11,11,train
+1974_09_07_malaysia_philippines_asian_games,1974-09-07,Malaysia,Philippines,11,0,Asian Games,Tehran,Iran,TRUE,11,11,train
+1975_08_04_guam_fiji_south_pacific_games,1975-08-04,Guam,Fiji,0,11,South Pacific Games,Tamuning,Guam,FALSE,11,-11,train
+1975_08_10_argentina_venezuela_copa_am_rica,1975-08-10,Argentina,Venezuela,11,0,Copa América,Rosario,Argentina,FALSE,11,11,train
+1979_09_03_new_caledonia_tuvalu_south_pacific_games,1979-09-03,New Caledonia,Tuvalu,11,0,South Pacific Games,Suva,Fiji,TRUE,11,11,train
+1984_10_26_united_arab_emirates_nepal_afc_asian_cup_qualification,1984-10-26,United Arab Emirates,Nepal,11,0,AFC Asian Cup qualification,Jeddah,Saudi Arabia,TRUE,11,11,train
+1989_04_23_trinidad_and_tobago_aruba_cfu_caribbean_cup_qualification,1989-04-23,Trinidad and Tobago,Aruba,11,0,CFU Caribbean Cup qualification,Arima,Trinidad and Tobago,FALSE,11,11,train
+1992_12_06_mexico_saint_vincent_and_the_grenadines_fifa_world_cup_qualification,1992-12-06,Mexico,Saint Vincent and the Grenadines,11,0,FIFA World Cup qualification,Mexico City,Mexico,FALSE,11,11,train
+1993_05_12_china_pr_macau_east_asian_games,1993-05-12,China PR,Macau,11,0,East Asian Games,Shanghai,China PR,FALSE,11,11,train
+1993_12_07_tahiti_guam_south_pacific_mini_games,1993-12-07,Tahiti,Guam,11,0,South Pacific Mini Games,Port Vila,Vanuatu,TRUE,11,11,train
+1993_12_13_new_caledonia_tonga_south_pacific_mini_games,1993-12-13,New Caledonia,Tonga,11,0,South Pacific Mini Games,Port Vila,Vanuatu,TRUE,11,11,train
+1994_10_01_south_korea_nepal_asian_games,1994-10-01,South Korea,Nepal,11,0,Asian Games,Onomichi,Japan,TRUE,11,11,train
+1995_08_22_tahiti_cook_islands_south_pacific_games,1995-08-22,Tahiti,Cook Islands,11,0,South Pacific Games,Papeete,Tahiti,FALSE,11,11,train
+1998_12_01_mongolia_kuwait_asian_games,1998-12-01,Mongolia,Kuwait,0,11,Asian Games,Chiang Mai,Thailand,TRUE,11,-11,train
+2000_01_23_vietnam_guam_afc_asian_cup_qualification,2000-01-23,Vietnam,Guam,11,0,AFC Asian Cup qualification,Hanoi,Vietnam,FALSE,11,11,train
+2001_04_12_guadeloupe_united_states_virgin_islands_cfu_caribbean_cup_qualification,2001-04-12,Guadeloupe,United States Virgin Islands,11,0,CFU Caribbean Cup qualification,Port-au-Prince,Haiti,TRUE,11,11,train
+2001_04_16_australia_samoa_fifa_world_cup_qualification,2001-04-16,Australia,Samoa,11,0,FIFA World Cup qualification,Coffs Harbour,Australia,FALSE,11,11,train
+2001_05_07_syria_laos_fifa_world_cup_qualification,2001-05-07,Syria,Laos,11,0,FIFA World Cup qualification,Aleppo,Syria,FALSE,11,11,train
+2002_07_08_australia_new_caledonia_oceania_nations_cup,2002-07-08,Australia,New Caledonia,11,0,Oceania Nations Cup,Auckland,New Zealand,TRUE,11,11,train
+2003_03_02_hong_kong_guam_eaff_championship,2003-03-02,Hong Kong,Guam,11,0,EAFF Championship,So Kon Po,Hong Kong,FALSE,11,11,train
+2003_11_19_turkmenistan_afghanistan_fifa_world_cup_qualification,2003-11-19,Turkmenistan,Afghanistan,11,0,FIFA World Cup qualification,Ashgabat,Turkmenistan,FALSE,11,11,train
+2004_05_15_fiji_american_samoa_fifa_world_cup_qualification,2004-05-15,Fiji,American Samoa,11,0,FIFA World Cup qualification,Apia,Samoa,TRUE,11,11,train
+2004_11_24_haiti_united_states_virgin_islands_cfu_caribbean_cup_qualification,2004-11-24,Haiti,United States Virgin Islands,11,0,CFU Caribbean Cup qualification,Kingston,Jamaica,TRUE,11,11,train
+2006_04_01_palestine_guam_afc_challenge_cup,2006-04-01,Palestine,Guam,11,0,AFC Challenge Cup,Dhaka,Bangladesh,TRUE,11,11,train
+2007_01_15_singapore_laos_aff_championship,2007-01-15,Singapore,Laos,11,0,AFF Championship,Singapore,Singapore,FALSE,11,11,train
+2010_09_22_r_union_saint_pierre_and_miquelon_coupe_de_l_outre_mer,2010-09-22,Réunion,Saint Pierre and Miquelon,11,0,Coupe de l'Outre-Mer,Val-d'Oise,France,TRUE,11,11,train
+2011_09_02_netherlands_san_marino_uefa_euro_qualification,2011-09-02,Netherlands,San Marino,11,0,UEFA Euro qualification,Eindhoven,Netherlands,FALSE,11,11,train
+2018_09_08_cuba_turks_and_caicos_islands_concacaf_nations_league_qualification,2018-09-08,Cuba,Turks and Caicos Islands,11,0,CONCACAF Nations League qualification,Havana,Cuba,FALSE,11,11,test
+2019_07_18_samoa_vanuatu_pacific_games,2019-07-18,Samoa,Vanuatu,0,11,Pacific Games,Apia,Samoa,FALSE,11,-11,test
+2019_07_18_new_caledonia_tuvalu_pacific_games,2019-07-18,New Caledonia,Tuvalu,11,0,Pacific Games,Apia,Samoa,TRUE,11,11,test
+2021_03_29_cayman_islands_canada_fifa_world_cup_qualification,2021-03-29,Cayman Islands,Canada,0,11,FIFA World Cup qualification,Bradenton,United States,TRUE,11,-11,test
+2023_11_23_solomon_islands_american_samoa_pacific_games,2023-11-23,Solomon Islands,American Samoa,11,0,Pacific Games,Honiara,Solomon Islands,FALSE,11,11,test
