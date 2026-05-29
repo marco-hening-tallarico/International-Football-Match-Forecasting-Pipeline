@@ -1,0 +1,3 @@
+data_split,rows,rows_with_both_ratings,missing_either_rating,rating_coverage
+test,7961,7384,577,0.9275216681321442
+train,41296,36744,4552,0.8897714064316157

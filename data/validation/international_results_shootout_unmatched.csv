@@ -1,0 +1,2 @@
+source,raw_file,source_shootout_id,source_match_key,date,home_team,away_team,winner,first_shooter,match_found_in_results,notes
+international_results,/Users/marco/Documents/Projects/worldcup-forecast-r/data/raw/international_results/shootouts.csv,2011_06_29_saare_county_land_islands_shootout_001,2011_06_29_saare_county_land_islands,2011-06-29,Saare County,Åland Islands,Åland Islands,NA,FALSE,NA

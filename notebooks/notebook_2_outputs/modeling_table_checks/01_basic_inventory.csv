@@ -1,0 +1,12 @@
+metric,value
+rows,49257
+columns,42
+min_date,1872-11-30
+max_date,2026-03-31
+unique_source_match_ids,49257
+duplicate_source_match_ids,0
+unique_home_teams,327
+unique_away_teams,321
+unique_tournaments,198
+rows_with_both_ratings,44128
+rating_coverage,0.8959

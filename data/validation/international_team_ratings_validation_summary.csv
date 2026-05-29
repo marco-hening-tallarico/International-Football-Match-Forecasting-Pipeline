@@ -1,0 +1,10 @@
+metric,value
+rating_rows,103853
+rating_teams,248
+min_rating_date,1872-11-30
+max_rating_date,2026-05-28
+match_teams,336
+unmatched_match_teams,108
+duplicate_team_date_keys,0
+matches_with_both_prior_ratings,44128
+pct_matches_with_both_prior_ratings,89.59

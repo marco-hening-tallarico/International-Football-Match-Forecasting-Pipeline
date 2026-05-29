@@ -1,0 +1,2 @@
+rows,rows_with_home_rating,rows_with_away_rating,rows_with_both_ratings,missing_either_rating,rating_coverage
+49257,46313,46151,44128,5129,0.8958726678441643

@@ -1,0 +1,16 @@
+output,description
+eda_target_construction_check.csv,Checks how raw target values were mapped to H/D/A.
+eda_target_balance.csv,Overall H/D/A class balance.
+eda_target_balance_by_split.csv,H/D/A balance by validation/test split.
+eda_target_balance_by_season.csv,Outcome rates over time by season.
+eda_model_feature_missingness.csv,Missingness and cardinality for approved model features.
+eda_numeric_feature_summary.csv,Distribution summary for numeric model features.
+eda_numeric_features_by_outcome.csv,Numeric feature summaries grouped by outcome.
+eda_categorical_feature_summary.csv,Cardinality and top levels for categorical model features.
+eda_categorical_features_by_outcome.csv,Categorical feature outcome rates by level.
+eda_rating_diff_bucket_outcome_rates.csv,Outcome rates across signed rating-diff buckets.
+eda_draw_rate_by_abs_rating_diff_bucket.csv,Draw rate across absolute rating-diff buckets.
+eda_neutral_outcome_rates.csv,Outcome rates for neutral vs non-neutral matches.
+eda_rating_age_days_by_outcome.csv,Rating freshness summaries by outcome.
+eda_numeric_feature_split_drift.csv,Numeric feature distribution drift by split.
+eda_numeric_feature_correlations.csv,Pairwise correlations among numeric model features.

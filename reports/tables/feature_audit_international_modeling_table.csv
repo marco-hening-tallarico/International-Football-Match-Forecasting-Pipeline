@@ -1,0 +1,40 @@
+column,r_class,non_missing_n,missing_n,missing_prop,n_distinct,example_values,feature_role,notes
+source_match_id,character,49257,0,0,49257,1872_11_30_scotland_england_friendly; 1873_03_08_england_scotland_friendly; 1874_03_07_scotland_england_friendly; 1875_03_06_england_scotland_friendly; 1876_03_04_scotland_england_friendly,identifier,NA
+date,Date,49257,0,0,16434,1872-11-30; 1873-03-08; 1874-03-07; 1875-03-06; 1876-03-04,date,NA
+season,numeric,49257,0,0,155,1872; 1873; 1874; 1875; 1876,unknown_review_required,NA
+competition,character,49257,0,0,198,Friendly; British Home Championship; Évence Coppée Trophy; Muratti Vase; Copa Lipton,unknown_review_required,NA
+tournament,character,49257,0,0,198,Friendly; British Home Championship; Évence Coppée Trophy; Muratti Vase; Copa Lipton,unknown_review_required,NA
+home_team,character,49257,0,0,327,Scotland; England; Wales; Northern Ireland; United States,identifier,NA
+away_team,character,49257,0,0,321,England; Scotland; Wales; Northern Ireland; Canada,identifier,NA
+home_score,numeric,49257,0,0,26,0; 1; 2; 3; 4,post_match_leakage,Known post-match outcome or score column; do not use as a predictor.
+away_score,numeric,49257,0,0,22,0; 1; 2; 3; 4,post_match_leakage,Known post-match outcome or score column; do not use as a predictor.
+match_result,character,49257,0,0,3,D; H; A,target,Multiclass outcome label (H / D / A).
+result_class,numeric,49257,0,0,3,-1; 0; 1,post_match_leakage,Known post-match outcome or score column; do not use as a predictor.
+home_win,numeric,49257,0,0,2,0; 1,unknown_review_required,NA
+draw,numeric,49257,0,0,2,0; 1,unknown_review_required,NA
+away_win,numeric,49257,0,0,2,0; 1,unknown_review_required,NA
+neutral,logical,49257,0,0,2,FALSE; TRUE,allowed_pre_match_feature,NA
+city,character,49257,0,0,2138,Glasgow; London; Wrexham; Blackburn; Belfast,unknown_review_required,NA
+country,character,49257,0,0,269,Scotland; England; Wales; Ireland; United States,unknown_review_required,NA
+shootout_played,logical,49257,0,0,2,FALSE; TRUE,unknown_review_required,NA
+shootout_winner,character,676,48581,0.9862760622855635,182,Taiwan; South Korea; Iraq; Thailand; Ghana,post_match_leakage,Known post-match outcome or score column; do not use as a predictor.
+home_won_shootout,numeric,49257,0,0,2,0; 1,post_match_leakage,Known post-match outcome or score column; do not use as a predictor.
+away_won_shootout,numeric,49257,0,0,2,0; 1,post_match_leakage,Known post-match outcome or score column; do not use as a predictor.
+home_team_clean,character,49257,0,0,327,scotland; england; wales; northern_ireland; united_states,unknown_review_required,NA
+away_team_clean,character,49257,0,0,321,england; scotland; wales; northern_ireland; canada,unknown_review_required,NA
+home_rating_pre_match,numeric,46313,2944,0.059768154780031266,1637,396; 403; 404; 433; 434,unknown_review_required,Not auto-classified; name suggests a pre-match field. Review before using in models.
+home_rating_date,Date,46313,2944,0.059768154780031266,14290,1872-11-30; 1873-03-08; 1874-03-07; 1875-03-06; 1876-03-04,unknown_review_required,Not auto-classified; name suggests a pre-match field. Review before using in models.
+away_rating_pre_match,numeric,46151,3106,0.06305702742757374,1653,405; 406; 412; 451; 454,unknown_review_required,Not auto-classified; name suggests a pre-match field. Review before using in models.
+away_rating_date,Date,46151,3106,0.06305702742757374,14184,1872-11-30; 1873-03-08; 1874-03-07; 1875-03-06; 1876-03-25,unknown_review_required,Not auto-classified; name suggests a pre-match field. Review before using in models.
+home_rank_pre_match,logical,0,49257,1,0,NA,unknown_review_required,Not auto-classified; name suggests a pre-match field. Review before using in models.
+away_rank_pre_match,logical,0,49257,1,0,NA,unknown_review_required,Not auto-classified; name suggests a pre-match field. Review before using in models.
+rating_diff,numeric,44128,5129,0.10412733215583572,1798,-1238; -1218; -1179; -1159; -1093,allowed_pre_match_feature,NA
+rank_diff,logical,0,49257,1,0,NA,unknown_review_required,NA
+rating_age_days_home,numeric,46313,2944,0.059768154780031266,957,1; 2; 3; 4; 5,unknown_review_required,NA
+rating_age_days_away,numeric,46151,3106,0.06305702742757374,1025,1; 2; 3; 4; 5,unknown_review_required,NA
+data_split,character,49257,0,0,2,train; test,split,Train / test assignment for held-out evaluation.
+is_friendly,logical,49257,0,0,2,FALSE; TRUE,unknown_review_required,Tournament or match-type flag; review for pre-match use.
+is_world_cup,logical,49257,0,0,2,FALSE; TRUE,unknown_review_required,Tournament or match-type flag; review for pre-match use.
+is_world_cup_qualifier,logical,49257,0,0,2,FALSE; TRUE,unknown_review_required,Tournament or match-type flag; review for pre-match use.
+is_continental_qualifier,logical,49257,0,0,2,FALSE; TRUE,unknown_review_required,Tournament or match-type flag; review for pre-match use.
+is_continental_tournament,logical,49257,0,0,2,FALSE; TRUE,unknown_review_required,Tournament or match-type flag; review for pre-match use.

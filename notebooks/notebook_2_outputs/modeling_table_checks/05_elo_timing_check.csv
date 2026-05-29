@@ -1,0 +1,2 @@
+rows,home_same_day,away_same_day,home_after_match,away_after_match,home_age_nonpositive,away_age_nonpositive,min_home_age,median_home_age,max_home_age,min_away_age,median_away_age,max_away_age
+49257,0,0,0,0,0,0,1,14,16275,1,14,21079

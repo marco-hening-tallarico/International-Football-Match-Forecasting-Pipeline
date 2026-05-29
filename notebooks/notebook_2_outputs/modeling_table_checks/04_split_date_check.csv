@@ -1,0 +1,2 @@
+train_rows_on_or_after_2018,test_rows_before_2018,train_min_date,train_max_date,test_min_date,test_max_date
+0,0,1872-11-30,2017-12-29,2018-01-02,2026-03-31

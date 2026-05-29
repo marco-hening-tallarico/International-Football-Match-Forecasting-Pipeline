@@ -1,0 +1,7 @@
+filter_name,n_rows,share_of_all_rows
+all_rows,49257,1
+complete_rating_diff,44128,0.8958726678441643
+complete_ratings_and_rating_ages,44128,0.8958726678441643
+complete_ratings_age_lte_3650,44063,0.8945530584485454
+complete_ratings_age_lte_730,43553,0.8841992001136895
+complete_ratings_age_lte_365,42526,0.8633493716629108

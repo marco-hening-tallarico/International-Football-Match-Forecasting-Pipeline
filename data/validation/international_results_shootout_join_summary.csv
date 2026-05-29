@@ -1,0 +1,11 @@
+metric,value
+results_rows,49257
+shootouts_rows,677
+output_rows,49257
+join_method,"date, home_team, away_team, tournament"
+shootout_played_rows,676
+matched_shootout_rows,676
+unmatched_shootout_rows,1
+duplicate_source_match_id_groups,0
+invalid_shootout_winner_rows,0
+regulation_match_result_unchanged,TRUE

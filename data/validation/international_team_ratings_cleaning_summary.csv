@@ -1,0 +1,10 @@
+metric,value
+input_rows,103853
+output_rows,103853
+n_teams,248
+min_rating_date,1872-11-30
+max_rating_date,2026-05-28
+rows_dropped,0
+duplicate_key_groups,0
+crosswalk_rows,356
+crosswalk_review_rows,0

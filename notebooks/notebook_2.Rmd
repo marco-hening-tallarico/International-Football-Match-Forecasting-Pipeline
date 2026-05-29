@@ -1,0 +1,733 @@
+---
+title: "Notebook 2: International Modeling Table EDA"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    number_sections: true
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  fig.width = 9,
+  fig.height = 5
+)
+
+PROJECT_ROOT <- normalizePath(
+  "~/Documents/Projects/worldcup-forecast-r",
+  winslash = "/",
+  mustWork = TRUE
+)
+
+setwd(PROJECT_ROOT)
+
+source("src/00_project_setup.R")
+source("src/01_packages.R")
+source("src/02_helpers.R")
+
+OUTPUT_DIR <- file.path(
+  PROJECT_ROOT,
+  "notebooks",
+  "notebook_2_outputs"
+)
+
+CHECK_DIR <- file.path(
+  OUTPUT_DIR,
+  "modeling_table_checks"
+)
+
+dir.create(OUTPUT_DIR, recursive = TRUE, showWarnings = FALSE)
+dir.create(CHECK_DIR, recursive = TRUE, showWarnings = FALSE)
+```
+
+# 1. Notebook purpose
+
+This notebook inspects the first international modeling table:
+
+```text
+data/processed/international_modeling_table.csv
+```
+
+The goal is to verify that:
+
+* the table loads correctly;
+* the train/test split is correct;
+* pre-match Elo ratings do not leak same-day or post-match information;
+* rating coverage is good enough for a first model;
+* the outcome distribution is sensible;
+* a first-model candidate dataset can be created.
+
+This notebook does **not** fit a model.
+
+# 2. Load modeling table
+
+```{r load-modeling-table}
+modeling_path <- file.path(PROCESSED_DIR, "international_modeling_table.csv")
+
+if (!file.exists(modeling_path)) {
+  stop("Modeling file not found: ", modeling_path)
+}
+
+matches <- read_processed_csv(modeling_path) |>
+  dplyr::mutate(
+    date = as.Date(date),
+    home_rating_date = as.Date(home_rating_date),
+    away_rating_date = as.Date(away_rating_date),
+    year = lubridate::year(date),
+    decade = floor(year / 10) * 10,
+    data_split = as.character(data_split),
+    match_result = as.character(match_result),
+    result_class = as.integer(result_class),
+    neutral = as.logical(neutral),
+    shootout_played = as.logical(shootout_played),
+    home_rating_pre_match = as.numeric(home_rating_pre_match),
+    away_rating_pre_match = as.numeric(away_rating_pre_match),
+    rating_diff = as.numeric(rating_diff),
+    rating_age_days_home = as.numeric(rating_age_days_home),
+    rating_age_days_away = as.numeric(rating_age_days_away),
+    rating_available = !is.na(home_rating_pre_match) & !is.na(away_rating_pre_match)
+  )
+
+dplyr::glimpse(matches)
+```
+
+# 3. Basic inventory
+
+```{r basic-inventory}
+basic_inventory <- tibble::tibble(
+  metric = c(
+    "rows",
+    "columns",
+    "min_date",
+    "max_date",
+    "unique_source_match_ids",
+    "duplicate_source_match_ids",
+    "unique_home_teams",
+    "unique_away_teams",
+    "unique_tournaments",
+    "rows_with_both_ratings",
+    "rating_coverage"
+  ),
+  value = c(
+    nrow(matches),
+    ncol(matches),
+    as.character(min(matches$date, na.rm = TRUE)),
+    as.character(max(matches$date, na.rm = TRUE)),
+    dplyr::n_distinct(matches$source_match_id),
+    sum(duplicated(matches$source_match_id)),
+    dplyr::n_distinct(matches$home_team),
+    dplyr::n_distinct(matches$away_team),
+    dplyr::n_distinct(matches$tournament),
+    sum(matches$rating_available),
+    round(mean(matches$rating_available), 4)
+  )
+)
+
+basic_inventory
+
+readr::write_csv(
+  basic_inventory,
+  file.path(CHECK_DIR, "01_basic_inventory.csv")
+)
+```
+
+# 4. Core validation checks
+
+```{r core-validation-checks}
+core_checks <- tibble::tibble(
+  check = c(
+    "duplicate_source_match_id",
+    "missing_date",
+    "missing_home_team",
+    "missing_away_team",
+    "invalid_result_class",
+    "invalid_data_split"
+  ),
+  rows_affected = c(
+    sum(duplicated(matches$source_match_id)),
+    sum(is.na(matches$date)),
+    sum(is.na(matches$home_team) | matches$home_team == ""),
+    sum(is.na(matches$away_team) | matches$away_team == ""),
+    sum(!matches$result_class %in% c(-1L, 0L, 1L), na.rm = TRUE),
+    sum(!matches$data_split %in% c("train", "test"), na.rm = TRUE)
+  )
+)
+
+core_checks
+
+readr::write_csv(
+  core_checks,
+  file.path(CHECK_DIR, "02_core_validation_checks.csv")
+)
+
+if (any(core_checks$rows_affected > 0)) {
+  stop("Core modeling-table validation failed. Inspect 02_core_validation_checks.csv.")
+}
+```
+
+# 5. Train/test split check
+
+```{r split-summary}
+split_summary <- matches |>
+  dplyr::count(data_split, name = "matches") |>
+  dplyr::mutate(prop = matches / sum(matches))
+
+split_summary
+
+readr::write_csv(
+  split_summary,
+  file.path(CHECK_DIR, "03_split_summary.csv")
+)
+```
+
+```{r split-date-check}
+split_date_check <- matches |>
+  dplyr::summarise(
+    train_rows_on_or_after_2018 = sum(
+      data_split == "train" & date >= as.Date("2018-01-01"),
+      na.rm = TRUE
+    ),
+    test_rows_before_2018 = sum(
+      data_split == "test" & date < as.Date("2018-01-01"),
+      na.rm = TRUE
+    ),
+    train_min_date = min(date[data_split == "train"], na.rm = TRUE),
+    train_max_date = max(date[data_split == "train"], na.rm = TRUE),
+    test_min_date = min(date[data_split == "test"], na.rm = TRUE),
+    test_max_date = max(date[data_split == "test"], na.rm = TRUE)
+  )
+
+split_date_check
+
+readr::write_csv(
+  split_date_check,
+  file.path(CHECK_DIR, "04_split_date_check.csv")
+)
+
+if (
+  split_date_check$train_rows_on_or_after_2018 > 0 ||
+  split_date_check$test_rows_before_2018 > 0
+) {
+  stop("Train/test split date check failed.")
+}
+```
+
+# 6. Pre-match Elo timing check
+
+This is the most important leakage check. A valid pre-match rating must be dated strictly before the match date.
+
+```{r elo-timing-check}
+elo_timing_check <- matches |>
+  dplyr::summarise(
+    rows = dplyr::n(),
+    home_same_day = sum(!is.na(home_rating_date) & home_rating_date == date),
+    away_same_day = sum(!is.na(away_rating_date) & away_rating_date == date),
+    home_after_match = sum(!is.na(home_rating_date) & home_rating_date > date),
+    away_after_match = sum(!is.na(away_rating_date) & away_rating_date > date),
+    home_age_nonpositive = sum(
+      !is.na(rating_age_days_home) & rating_age_days_home <= 0
+    ),
+    away_age_nonpositive = sum(
+      !is.na(rating_age_days_away) & rating_age_days_away <= 0
+    ),
+    min_home_age = min(rating_age_days_home, na.rm = TRUE),
+    median_home_age = median(rating_age_days_home, na.rm = TRUE),
+    max_home_age = max(rating_age_days_home, na.rm = TRUE),
+    min_away_age = min(rating_age_days_away, na.rm = TRUE),
+    median_away_age = median(rating_age_days_away, na.rm = TRUE),
+    max_away_age = max(rating_age_days_away, na.rm = TRUE)
+  )
+
+elo_timing_check
+
+readr::write_csv(
+  elo_timing_check,
+  file.path(CHECK_DIR, "05_elo_timing_check.csv")
+)
+
+if (
+  elo_timing_check$home_same_day > 0 ||
+  elo_timing_check$away_same_day > 0 ||
+  elo_timing_check$home_after_match > 0 ||
+  elo_timing_check$away_after_match > 0 ||
+  elo_timing_check$home_age_nonpositive > 0 ||
+  elo_timing_check$away_age_nonpositive > 0
+) {
+  stop("Elo timing check failed: same-day, after-match, or non-positive rating ages found.")
+}
+```
+
+# 7. Rating-difference arithmetic check
+
+```{r rating-arithmetic-check}
+rating_arithmetic_check <- matches |>
+  dplyr::filter(
+    !is.na(home_rating_pre_match),
+    !is.na(away_rating_pre_match),
+    !is.na(rating_diff)
+  ) |>
+  dplyr::summarise(
+    checked_rows = dplyr::n(),
+    bad_rating_diff_rows = sum(
+      abs(rating_diff - (home_rating_pre_match - away_rating_pre_match)) > 1e-9
+    )
+  )
+
+rating_arithmetic_check
+
+readr::write_csv(
+  rating_arithmetic_check,
+  file.path(CHECK_DIR, "06_rating_arithmetic_check.csv")
+)
+
+if (rating_arithmetic_check$bad_rating_diff_rows > 0) {
+  stop("Rating arithmetic check failed.")
+}
+```
+
+# 8. Rating coverage
+
+```{r rating-coverage-summary}
+rating_coverage_summary <- matches |>
+  dplyr::summarise(
+    rows = dplyr::n(),
+    rows_with_home_rating = sum(!is.na(home_rating_pre_match)),
+    rows_with_away_rating = sum(!is.na(away_rating_pre_match)),
+    rows_with_both_ratings = sum(rating_available),
+    missing_either_rating = sum(!rating_available),
+    rating_coverage = mean(rating_available)
+  )
+
+rating_coverage_summary
+
+readr::write_csv(
+  rating_coverage_summary,
+  file.path(CHECK_DIR, "07_rating_coverage_summary.csv")
+)
+```
+
+```{r rating-coverage-by-split}
+rating_coverage_by_split <- matches |>
+  dplyr::group_by(data_split) |>
+  dplyr::summarise(
+    rows = dplyr::n(),
+    rows_with_both_ratings = sum(rating_available),
+    missing_either_rating = sum(!rating_available),
+    rating_coverage = mean(rating_available),
+    .groups = "drop"
+  )
+
+rating_coverage_by_split
+
+readr::write_csv(
+  rating_coverage_by_split,
+  file.path(CHECK_DIR, "08_rating_coverage_by_split.csv")
+)
+```
+
+```{r rating-coverage-by-decade}
+rating_coverage_by_decade <- matches |>
+  dplyr::group_by(decade) |>
+  dplyr::summarise(
+    rows = dplyr::n(),
+    rows_with_both_ratings = sum(rating_available),
+    missing_either_rating = sum(!rating_available),
+    rating_coverage = mean(rating_available),
+    .groups = "drop"
+  ) |>
+  dplyr::arrange(decade)
+
+rating_coverage_by_decade
+
+readr::write_csv(
+  rating_coverage_by_decade,
+  file.path(CHECK_DIR, "09_rating_coverage_by_decade.csv")
+)
+```
+
+# 9. Outcome distribution
+
+```{r outcome-by-split}
+outcome_by_split <- matches |>
+  dplyr::count(data_split, match_result, name = "rows") |>
+  dplyr::group_by(data_split) |>
+  dplyr::mutate(prop = rows / sum(rows)) |>
+  dplyr::ungroup()
+
+outcome_by_split
+
+readr::write_csv(
+  outcome_by_split,
+  file.path(CHECK_DIR, "10_outcome_by_split.csv")
+)
+```
+
+```{r outcome-plot}
+p_outcome <- outcome_by_split |>
+  ggplot2::ggplot(
+    ggplot2::aes(
+      x = match_result,
+      y = prop
+    )
+  ) +
+  ggplot2::geom_col() +
+  ggplot2::facet_wrap(~ data_split) +
+  ggplot2::scale_y_continuous(labels = scales::percent_format()) +
+  ggplot2::labs(
+    title = "Outcome distribution by split",
+    x = "Match result",
+    y = "Proportion"
+  )
+
+p_outcome
+
+ggplot2::ggsave(
+  filename = file.path(CHECK_DIR, "plot_01_outcome_distribution_by_split.png"),
+  plot = p_outcome,
+  width = 9,
+  height = 5
+)
+```
+
+# 10. Elo rating difference distribution
+
+```{r rating-diff-summary}
+rating_diff_summary <- matches |>
+  dplyr::filter(rating_available) |>
+  dplyr::summarise(
+    rows = dplyr::n(),
+    min_rating_diff = min(rating_diff, na.rm = TRUE),
+    q25_rating_diff = quantile(rating_diff, 0.25, na.rm = TRUE),
+    median_rating_diff = median(rating_diff, na.rm = TRUE),
+    mean_rating_diff = mean(rating_diff, na.rm = TRUE),
+    q75_rating_diff = quantile(rating_diff, 0.75, na.rm = TRUE),
+    max_rating_diff = max(rating_diff, na.rm = TRUE)
+  )
+
+rating_diff_summary
+
+readr::write_csv(
+  rating_diff_summary,
+  file.path(CHECK_DIR, "11_rating_diff_summary.csv")
+)
+```
+
+```{r rating-diff-plot}
+p_rating_diff <- matches |>
+  dplyr::filter(
+    data_split == "train",
+    rating_available
+  ) |>
+  ggplot2::ggplot(
+    ggplot2::aes(x = rating_diff)
+  ) +
+  ggplot2::geom_histogram(bins = 60) +
+  ggplot2::labs(
+    title = "Training-set Elo rating difference distribution",
+    subtitle = "rating_diff = home pre-match Elo - away pre-match Elo",
+    x = "Rating difference",
+    y = "Matches"
+  )
+
+p_rating_diff
+
+ggplot2::ggsave(
+  filename = file.path(CHECK_DIR, "plot_02_rating_diff_train.png"),
+  plot = p_rating_diff,
+  width = 9,
+  height = 5
+)
+```
+
+# 11. Outcomes by Elo rating-difference bin
+
+```{r rating-bin-outcomes}
+rating_bin_outcomes <- matches |>
+  dplyr::filter(
+    data_split == "train",
+    rating_available,
+    !is.na(rating_diff),
+    match_result %in% c("H", "D", "A")
+  ) |>
+  dplyr::mutate(
+    rating_diff_bin = dplyr::case_when(
+      rating_diff <= -300 ~ "<= -300",
+      rating_diff <= -150 ~ "-300 to -151",
+      rating_diff <= -50 ~ "-150 to -51",
+      rating_diff < 50 ~ "-50 to 49",
+      rating_diff < 150 ~ "50 to 149",
+      rating_diff < 300 ~ "150 to 299",
+      TRUE ~ ">= 300"
+    ),
+    rating_diff_bin = factor(
+      rating_diff_bin,
+      levels = c(
+        "<= -300",
+        "-300 to -151",
+        "-150 to -51",
+        "-50 to 49",
+        "50 to 149",
+        "150 to 299",
+        ">= 300"
+      )
+    )
+  ) |>
+  dplyr::count(rating_diff_bin, match_result, name = "rows") |>
+  dplyr::group_by(rating_diff_bin) |>
+  dplyr::mutate(prop = rows / sum(rows)) |>
+  dplyr::ungroup()
+
+rating_bin_outcomes
+
+readr::write_csv(
+  rating_bin_outcomes,
+  file.path(CHECK_DIR, "12_rating_bin_outcomes_train.csv")
+)
+```
+
+```{r rating-bin-plot}
+p_rating_bin <- rating_bin_outcomes |>
+  ggplot2::ggplot(
+    ggplot2::aes(
+      x = rating_diff_bin,
+      y = prop,
+      fill = match_result
+    )
+  ) +
+  ggplot2::geom_col(position = "fill") +
+  ggplot2::scale_y_continuous(labels = scales::percent_format()) +
+  ggplot2::labs(
+    title = "Training-set outcomes by Elo rating-difference bin",
+    x = "Home Elo - Away Elo",
+    y = "Outcome share",
+    fill = "Result"
+  ) +
+  ggplot2::theme(
+    axis.text.x = ggplot2::element_text(angle = 30, hjust = 1)
+  )
+
+p_rating_bin
+
+ggplot2::ggsave(
+  filename = file.path(CHECK_DIR, "plot_03_outcomes_by_rating_diff_bin_train.png"),
+  plot = p_rating_bin,
+  width = 10,
+  height = 5
+)
+```
+
+# 12. Missing rating audit
+
+```{r missing-rating-summary}
+missing_ratings <- matches |>
+  dplyr::filter(!rating_available) |>
+  dplyr::mutate(
+    missing_home_rating = is.na(home_rating_pre_match),
+    missing_away_rating = is.na(away_rating_pre_match)
+  )
+
+missing_rating_summary <- missing_ratings |>
+  dplyr::summarise(
+    rows = dplyr::n(),
+    missing_home = sum(missing_home_rating),
+    missing_away = sum(missing_away_rating),
+    min_date = min(date, na.rm = TRUE),
+    max_date = max(date, na.rm = TRUE)
+  )
+
+missing_rating_summary
+
+readr::write_csv(
+  missing_rating_summary,
+  file.path(CHECK_DIR, "13_missing_rating_summary.csv")
+)
+```
+
+```{r unmatched-team-counts}
+unmatched_team_counts <- missing_ratings |>
+  dplyr::select(
+    home_team,
+    away_team,
+    home_rating_pre_match,
+    away_rating_pre_match
+  ) |>
+  dplyr::mutate(row_id = dplyr::row_number()) |>
+  tidyr::pivot_longer(
+    cols = c(home_team, away_team),
+    names_to = "side",
+    values_to = "team"
+  ) |>
+  dplyr::mutate(
+    missing_rating = dplyr::case_when(
+      side == "home_team" ~ is.na(home_rating_pre_match),
+      side == "away_team" ~ is.na(away_rating_pre_match),
+      TRUE ~ FALSE
+    )
+  ) |>
+  dplyr::filter(missing_rating) |>
+  dplyr::count(team, sort = TRUE, name = "missing_rating_appearances")
+
+head(unmatched_team_counts, 50)
+
+readr::write_csv(
+  unmatched_team_counts,
+  file.path(CHECK_DIR, "14_unmatched_team_counts.csv")
+)
+```
+
+# 13. Tournament flags
+
+```{r tournament-flag-summary}
+tournament_flag_summary <- matches |>
+  dplyr::summarise(
+    rows = dplyr::n(),
+    friendlies = sum(is_friendly, na.rm = TRUE),
+    world_cup = sum(is_world_cup, na.rm = TRUE),
+    world_cup_qualifier = sum(is_world_cup_qualifier, na.rm = TRUE),
+    continental_tournament = sum(is_continental_tournament, na.rm = TRUE),
+    continental_qualifier = sum(is_continental_qualifier, na.rm = TRUE)
+  )
+
+tournament_flag_summary
+
+readr::write_csv(
+  tournament_flag_summary,
+  file.path(CHECK_DIR, "15_tournament_flag_summary.csv")
+)
+```
+
+```{r top-tournaments}
+top_tournaments <- matches |>
+  dplyr::count(tournament, sort = TRUE, name = "matches") |>
+  dplyr::slice_head(n = 25)
+
+top_tournaments
+
+readr::write_csv(
+  top_tournaments,
+  file.path(CHECK_DIR, "16_top_tournaments.csv")
+)
+```
+
+# 14. Raw Elo file inspection
+
+This confirms the raw Elo file schema. It is useful because the model table should use only lagged, pre-match ratings.
+
+```{r raw-elo-inspection}
+ratings_raw_path <- file.path(
+  RAW_DIR,
+  "international_ratings",
+  "world_football_elo.csv"
+)
+
+if (!file.exists(ratings_raw_path)) {
+  stop("Raw Elo file not found: ", ratings_raw_path)
+}
+
+ratings_raw <- readr::read_csv(
+  ratings_raw_path,
+  show_col_types = FALSE
+)
+
+names(ratings_raw)
+
+dplyr::glimpse(ratings_raw)
+
+head(ratings_raw, 20)
+```
+
+# 15. Candidate first-model dataset
+
+The first candidate model dataset uses only rows where both teams have pre-match Elo ratings and the result is one of home win, draw, or away win.
+
+```{r candidate-first-model-dataset}
+first_model_data <- matches |>
+  dplyr::filter(
+    rating_available,
+    match_result %in% c("H", "D", "A"),
+    !is.na(rating_diff),
+    data_split %in% c("train", "test")
+  )
+
+first_model_summary <- first_model_data |>
+  dplyr::count(data_split, name = "rows") |>
+  dplyr::mutate(prop = rows / sum(rows))
+
+first_model_summary
+
+readr::write_csv(
+  first_model_summary,
+  file.path(CHECK_DIR, "17_first_model_summary.csv")
+)
+
+readr::write_csv(
+  first_model_data,
+  file.path(OUTPUT_DIR, "international_first_model_candidate.csv")
+)
+```
+
+# 16. Final pass/fail message
+
+```{r final-message}
+cat("\nMODELING TABLE CHECK PASSED\n")
+cat("Rows:", nrow(matches), "\n")
+cat("Rows with both ratings:", sum(matches$rating_available), "\n")
+cat("Rating coverage:", round(mean(matches$rating_available) * 100, 2), "%\n")
+cat("First-model rows:", nrow(first_model_data), "\n")
+cat("First-model train rows:", sum(first_model_data$data_split == "train"), "\n")
+cat("First-model test rows:", sum(first_model_data$data_split == "test"), "\n")
+cat("Outputs written to:", OUTPUT_DIR, "\n")
+cat("Check files written to:", CHECK_DIR, "\n")
+```
+
+# 17. Modeling notes
+
+```{r write-notes}
+eda_notes <- c(
+  "# Notebook 2 EDA Notes",
+  "",
+  "This notebook inspects `data/processed/international_modeling_table.csv`.",
+  "",
+  "Main validation findings to confirm:",
+  "- `source_match_id` is unique.",
+  "- `data_split` follows the chronological split.",
+  "- Elo ratings are strictly pre-match.",
+  "- No same-day or post-match Elo ratings are used.",
+  "- `rating_diff` equals home pre-match Elo minus away pre-match Elo.",
+  "",
+  "Main modeling-safe rule:",
+  "- Use the train split for model development.",
+  "- Keep the 2018+ test split untouched for final evaluation.",
+  "",
+  "First candidate model dataset:",
+  "- Rows with both home and away pre-match Elo ratings.",
+  "- Valid `match_result` in H/D/A.",
+  "- Non-missing `rating_diff`.",
+  "",
+  "Recommended first model:",
+  "- Multinomial logistic regression.",
+  "- Target: `match_result`.",
+  "- Predictors: `rating_diff`, `neutral`, and tournament flags.",
+  "",
+  "Do not use post-match columns as predictors:",
+  "- `home_score`",
+  "- `away_score`",
+  "- `goal_difference`",
+  "- `total_goals`",
+  "- `shootout_winner`",
+  "- `home_won_shootout`",
+  "- `away_won_shootout`"
+)
+
+writeLines(
+  eda_notes,
+  con = file.path(OUTPUT_DIR, "notebook_2_eda_notes.md")
+)
+
+eda_notes
+```
+
