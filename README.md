@@ -12,6 +12,56 @@ Predict **home win / draw / away win** probabilities for international associati
 
 See [reports/final/final_results_summary.md](reports/final/final_results_summary.md) and [MODEL_CARD.md](MODEL_CARD.md) for headline metrics.
 
+## Results at a glance
+
+The project forecasts three-class match outcomes — **home win (H), draw (D), and away win (A)** — as calibrated probabilities, not just predicted labels. Models are trained and compared on **chronological train, validation, and test splits** so that pre-match features never use information from future matches. **Log loss** is the primary selection metric because the deliverable is probabilistic; accuracy and macro F1 are reported for context. The figures below walk through data scale, incremental improvement, calibration quality, class-level behavior (including the draw-class difficulty), and feature interpretability.
+
+### Data scale and chronological splits
+
+![International matches by year with train, validation, and test split boundaries](reports/figures/international_results/09_matches_by_year_full_data_with_split.png)
+
+The modeling dataset spans decades of international matches, with volume increasing in recent eras. Vertical split boundaries mark the chronological train, validation, and test partitions used throughout the project. This design mirrors real forecasting: models are fit on the past and evaluated on held-out future matches, reducing the risk of optimistic metrics from random or leaky splits.
+
+### Incremental model improvement
+
+![Test-set log loss across modeling stages and feature tiers](reports/figures/final_incremental_test_log_loss.png)
+
+Test-set log loss tracks performance as feature tiers are added — from Elo baselines through safe pre-match features to compact lagged form. Improvements are **modest but meaningful**: strong Elo-only baselines already explain much of the signal, and supervised models refine probabilities rather than replacing that foundation. The best incremental gain came from compact lagged form features (Model 28: LightGBM, test log loss **0.874**), not from adding every available feature tier.
+
+### Probabilistic calibration
+
+![Calibration plot for the selected final model on the test split](reports/figures/final_model_calibration_plot.png)
+
+Because the model outputs **H / D / A probabilities**, calibration matters as much as headline accuracy. This plot compares predicted probability bins to observed outcome frequencies on the held-out test set. Well-calibrated forecasts mean that when the model assigns ~60% to a class, that class occurs roughly 60% of the time — a requirement for downstream uses such as simulation or risk-aware decision-making.
+
+### Class-level behavior and draw difficulty
+
+![Confusion matrix heatmap for the selected final model on the test split](reports/figures/final_model_confusion_heatmap.png)
+
+The confusion matrix shows where the model gets each outcome right or wrong at the class level. Home and away wins are predicted more reliably than draws; **draws remain the hardest class** and are often under-ranked as the top predicted label even when draw probability is in a plausible range. This is an honest limitation of the current feature set and class structure, not a reason to overstate overall performance.
+
+### Feature interpretability
+
+![Feature importance for the selected LightGBM model](reports/figures/final_model/08_feature_importance.png)
+
+Feature importance highlights which pre-match signals the tree model relies on most — primarily Elo rating differences, tournament context, and compact lagged form metrics. These rankings support **interpretability** (the model uses plausible football signals) but should not be read as **causal proof** that changing a feature would change match outcomes. Importance reflects predictive contribution within this dataset and evaluation setup.
+
+### Pipeline overview
+
+```mermaid
+flowchart LR
+    A[Raw match data] --> B[Clean processed tables]
+    B --> C[Validation checks]
+    C --> D[Leakage-safe feature engineering]
+    D --> E[Chronological train / validation / test split]
+    E --> F[Baseline models]
+    E --> G[Regularized and tree-based models]
+    F --> H[Model comparison]
+    G --> H
+    H --> I[Calibration, confusion matrix, feature importance]
+    I --> J[Final report and README figures]
+```
+
 ## Reproduce
 
 From the project root (R ≥ 4.2 recommended):
