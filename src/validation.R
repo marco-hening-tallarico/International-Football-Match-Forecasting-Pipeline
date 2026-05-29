@@ -1,7 +1,11 @@
-# ============================================================
 # validation.R
-# Hard validation checks for the reproducible data pipeline
-# ============================================================
+#
+# End-of-pipeline checks on processed tables: required files, row counts,
+# schema columns, and basic value domains. Stops on hard failures.
+#
+# Reads: data/processed/*.csv (per check block)
+#
+# Writes: console messages only; individual checks stop() on failure
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")
@@ -88,19 +92,54 @@ normalize_possible_path <- function(path) {
     normalizePath(candidate, winslash = "/", mustWork = FALSE)
 }
 
-expected_processed_files <- file.path(
+required_processed_files <- file.path(
     PROCESSED_DIR,
     c(
+        "statsbomb_competitions.csv",
+        "statsbomb_matches.csv",
         "football_data_uk_matches.csv",
         "football_data_uk_matches_core.csv",
         "football_data_uk_odds_wide.csv",
-        "statsbomb_competitions.csv",
-        "statsbomb_matches.csv",
-        "international_results.csv"
+        "football_data_uk_modeling_table.csv",
+        "international_results.csv",
+        "international_goalscorers.csv",
+        "international_shootouts.csv",
+        "international_results_with_shootouts.csv"
     )
 )
 
-assert_files_exist(expected_processed_files, "Processed data")
+# Built by run_statsbomb_pipeline.R; event/360 cleaning is slow and memory-heavy.
+# Missing files here are acceptable after run_light_pipeline.R or run_club_pipeline.R
+# alone — validation skips extended StatsBomb checks and reports that explicitly.
+statsbomb_heavy_processed_files <- file.path(
+    PROCESSED_DIR,
+    c(
+        "statsbomb_events.csv",
+        "statsbomb_shots.csv",
+        "statsbomb_lineups.csv",
+        "statsbomb_360.csv"
+    )
+)
+
+expected_processed_files <- c(required_processed_files, statsbomb_heavy_processed_files)
+
+assert_files_exist(required_processed_files, "Required processed data")
+
+missing_statsbomb_heavy <- statsbomb_heavy_processed_files[
+    !file.exists(statsbomb_heavy_processed_files)
+]
+
+skip_statsbomb_heavy_validation <- length(missing_statsbomb_heavy) > 0L
+
+if (skip_statsbomb_heavy_validation) {
+    message(
+        "NOTE: StatsBomb heavy outputs are missing (expected if ",
+        "src/run_statsbomb_pipeline.R was not run recently):\n",
+        paste(missing_statsbomb_heavy, collapse = "\n")
+    )
+} else {
+    message("StatsBomb heavy processed files found; running extended checks.")
+}
 
 football_data_raw_files <- fs::dir_ls(
     file.path(RAW_DIR, "football_data_uk"),
@@ -579,6 +618,46 @@ if (length(missing_manifest_cols) > 0) {
 manifest_paths <- normalize_possible_path(source_manifest$local_path)
 missing_manifest_paths <- source_manifest$local_path[!file.exists(manifest_paths)]
 
+# StatsBomb 360: manifest may list paths from an earlier download pass after
+# raw JSON was removed or never persisted. Only fail when coverage says the
+# file should exist on disk.
+statsbomb_360_coverage_path <- file.path(
+    VALIDATION_DIR,
+    "statsbomb_360_download_coverage.csv"
+)
+three_sixty_manifest_marker <- "/statsbomb_open/three-sixty/"
+
+if (length(missing_manifest_paths) > 0L &&
+        file.exists(statsbomb_360_coverage_path)) {
+    statsbomb_360_coverage <- readr::read_csv(
+        statsbomb_360_coverage_path,
+        show_col_types = FALSE
+    )
+    available_360_paths <- normalize_possible_path(
+        statsbomb_360_coverage$local_path[
+            statsbomb_360_coverage$file_exists %in% TRUE
+        ]
+    )
+
+    stale_360_manifest_paths <- missing_manifest_paths[
+        grepl(three_sixty_manifest_marker, missing_manifest_paths, fixed = TRUE) &
+            !(normalize_possible_path(missing_manifest_paths) %in% available_360_paths)
+    ]
+
+    if (length(stale_360_manifest_paths) > 0L) {
+        message(
+            "NOTE: source_manifest.csv lists ",
+            length(stale_360_manifest_paths),
+            " StatsBomb 360 paths with no on-disk file (stale manifest). ",
+            "Re-run src/04d_download_statsbomb_360.R to refresh the manifest."
+        )
+        missing_manifest_paths <- setdiff(
+            missing_manifest_paths,
+            stale_360_manifest_paths
+        )
+    }
+}
+
 if (length(missing_manifest_paths) > 0) {
     fail(paste0(
         "source_manifest.csv contains local_path values that do not exist:\n",
@@ -597,7 +676,8 @@ expected_manifest_files <- c(
 # no intentional manifest exceptions at present; a future exception should name
 # the file pattern and reason here, then keep this failure message explicit.
 expected_manifest_norm <- normalize_existing_path(expected_manifest_files)
-manifest_norm <- normalize_existing_path(manifest_paths)
+manifest_paths_on_disk <- manifest_paths[file.exists(manifest_paths)]
+manifest_norm <- normalize_existing_path(manifest_paths_on_disk)
 missing_from_manifest <- setdiff(expected_manifest_norm, manifest_norm)
 
 if (length(missing_from_manifest) > 0) {
@@ -608,6 +688,377 @@ if (length(missing_from_manifest) > 0) {
     ))
 }
 
+international_goalscorers <- read_processed_csv(
+    file.path(PROCESSED_DIR, "international_goalscorers.csv")
+)
+
+international_shootouts <- read_processed_csv(
+    file.path(PROCESSED_DIR, "international_shootouts.csv")
+)
+
+international_results_with_shootouts <- read_processed_csv(
+    file.path(PROCESSED_DIR, "international_results_with_shootouts.csv")
+)
+
+football_data_uk_modeling_table <- read_processed_csv(
+    file.path(PROCESSED_DIR, "football_data_uk_modeling_table.csv")
+)
+
+assert_true(
+    nrow(international_goalscorers) > 0L,
+    "international_goalscorers.csv has no rows."
+)
+
+assert_true(
+    nrow(international_shootouts) > 0L,
+    "international_shootouts.csv has no rows."
+)
+
+assert_true(
+    nrow(football_data_uk_modeling_table) > 0L,
+    "football_data_uk_modeling_table.csv has no rows."
+)
+
+assert_count(
+    nrow(international_results_with_shootouts),
+    nrow(international_results),
+    "international_results_with_shootouts.csv row (vs international_results.csv)"
+)
+
+shootout_required_cols <- c(
+    "shootout_played",
+    "shootout_winner",
+    "home_won_shootout",
+    "away_won_shootout"
+)
+
+missing_shootout_cols <- setdiff(
+    shootout_required_cols,
+    names(international_results_with_shootouts)
+)
+
+if (length(missing_shootout_cols) > 0L) {
+    fail(paste0(
+        "international_results_with_shootouts.csv is missing required columns: ",
+        paste(missing_shootout_cols, collapse = ", ")
+    ))
+}
+
+assert_no_duplicates(
+    international_results_with_shootouts,
+    "source_match_id",
+    "international_results_with_shootouts.csv primary key"
+)
+
+home_won_shootout <- suppressWarnings(as.integer(
+    international_results_with_shootouts$home_won_shootout
+))
+away_won_shootout <- suppressWarnings(as.integer(
+    international_results_with_shootouts$away_won_shootout
+))
+
+assert_integer_valued(
+    home_won_shootout,
+    "international_results_with_shootouts.csv home_won_shootout"
+)
+assert_integer_valued(
+    away_won_shootout,
+    "international_results_with_shootouts.csv away_won_shootout"
+)
+
+invalid_shootout_flags <- sum(
+    !(home_won_shootout %in% c(0L, 1L)) | !(away_won_shootout %in% c(0L, 1L))
+)
+
+if (invalid_shootout_flags > 0L) {
+    fail(paste0(
+        "international_results_with_shootouts.csv home_won_shootout / ",
+        "away_won_shootout must be 0 or 1 only: ",
+        invalid_shootout_flags,
+        " invalid rows."
+    ))
+}
+
+shootout_played <- as.logical(
+    international_results_with_shootouts$shootout_played
+)
+
+bad_shootout_indicator_rows <- sum(
+    shootout_played &
+        (home_won_shootout + away_won_shootout != 1L),
+    na.rm = TRUE
+)
+
+if (bad_shootout_indicator_rows > 0L) {
+    fail(paste0(
+        "international_results_with_shootouts.csv has ",
+        bad_shootout_indicator_rows,
+        " shootout_played rows where home_won_shootout + away_won_shootout != 1."
+    ))
+}
+
+no_shootout_with_winner <- sum(
+    !shootout_played &
+        !is.na(international_results_with_shootouts$shootout_winner) &
+        international_results_with_shootouts$shootout_winner != "",
+    na.rm = TRUE
+)
+
+if (no_shootout_with_winner > 0L) {
+    fail(paste0(
+        "international_results_with_shootouts.csv has ",
+        no_shootout_with_winner,
+        " rows with shootout_winner set but shootout_played = FALSE."
+    ))
+}
+
+if (!all(
+    international_results$match_result ==
+        international_results_with_shootouts$match_result,
+    na.rm = TRUE
+)) {
+    fail(
+        "international_results_with_shootouts.csv altered match_result relative to international_results.csv."
+    )
+}
+
+result_class_base <- suppressWarnings(as.integer(
+    international_results$result_class
+))
+result_class_joined <- suppressWarnings(as.integer(
+    international_results_with_shootouts$result_class
+))
+
+if (!all(result_class_base == result_class_joined, na.rm = TRUE)) {
+    fail(
+        "international_results_with_shootouts.csv altered result_class relative to international_results.csv."
+    )
+}
+
+ratings_raw_path <- file.path(
+    RAW_DIR,
+    "international_ratings",
+    "world_football_elo.csv"
+)
+international_team_ratings_path <- file.path(
+    PROCESSED_DIR,
+    "international_team_ratings.csv"
+)
+international_modeling_table_path <- file.path(
+    PROCESSED_DIR,
+    "international_modeling_table.csv"
+)
+
+if (file.exists(ratings_raw_path) && file.exists(international_team_ratings_path)) {
+    international_team_ratings <- readr::read_csv(
+        international_team_ratings_path,
+        show_col_types = FALSE
+    )
+
+    required_rating_cols <- c(
+        "rating_date",
+        "team",
+        "team_clean",
+        "rating",
+        "rank",
+        "source"
+    )
+
+    missing_rating_cols <- setdiff(
+        required_rating_cols,
+        names(international_team_ratings)
+    )
+
+    if (length(missing_rating_cols) > 0L) {
+        fail(paste0(
+            "international_team_ratings.csv is missing required columns: ",
+            paste(missing_rating_cols, collapse = ", ")
+        ))
+    }
+
+    rating_dates <- suppressWarnings(
+        as.Date(international_team_ratings$rating_date)
+    )
+    ratings_numeric <- suppressWarnings(
+        as.numeric(international_team_ratings$rating)
+    )
+
+    if (any(is.na(rating_dates))) {
+        fail("international_team_ratings.csv rating_date does not parse as Date.")
+    }
+
+    if (any(is.na(ratings_numeric))) {
+        fail("international_team_ratings.csv rating has missing or non-numeric values.")
+    }
+
+    if (any(
+        is.na(international_team_ratings$team_clean) |
+            international_team_ratings$team_clean == "",
+        na.rm = TRUE
+    )) {
+        fail("international_team_ratings.csv team_clean has missing values.")
+    }
+
+    assert_no_duplicates(
+        international_team_ratings,
+        c("team_clean", "rating_date"),
+        "international_team_ratings.csv primary key"
+    )
+
+    message(
+        "international_team_ratings.csv rows: ",
+        nrow(international_team_ratings)
+    )
+} else if (file.exists(ratings_raw_path)) {
+    message(
+        "NOTE: international_team_ratings.csv missing while ratings raw exists; ",
+        "run src/16_clean_international_ratings.R."
+    )
+}
+
+if (file.exists(international_team_ratings_path) &&
+        file.exists(international_modeling_table_path)) {
+    international_modeling_table <- readr::read_csv(
+        international_modeling_table_path,
+        show_col_types = FALSE
+    )
+
+    assert_true(
+        nrow(international_modeling_table) > 0L,
+        "international_modeling_table.csv has no rows."
+    )
+
+    assert_no_duplicates(
+        international_modeling_table,
+        "source_match_id",
+        "international_modeling_table.csv primary key"
+    )
+
+    assert_count(
+        nrow(international_modeling_table),
+        nrow(international_results_with_shootouts),
+        "international_modeling_table.csv row (vs international_results_with_shootouts.csv)"
+    )
+
+    if (!all(
+        international_modeling_table$data_split %in% c("train", "test"),
+        na.rm = TRUE
+    )) {
+        fail("international_modeling_table.csv data_split must be only train or test.")
+    }
+
+    both_ratings_present <- !is.na(
+        international_modeling_table$home_rating_pre_match
+    ) & !is.na(international_modeling_table$away_rating_pre_match)
+
+    bad_rating_diff <- sum(
+        both_ratings_present &
+            abs(
+                international_modeling_table$rating_diff -
+                    (
+                        international_modeling_table$home_rating_pre_match -
+                            international_modeling_table$away_rating_pre_match
+                    )
+            ) > 1e-9,
+        na.rm = TRUE
+    )
+
+    if (bad_rating_diff > 0L) {
+        fail(
+            "international_modeling_table.csv rating_diff does not match home minus away ratings."
+        )
+    }
+
+    match_dates <- suppressWarnings(
+        as.Date(international_modeling_table$date)
+    )
+    home_rating_dates <- suppressWarnings(
+        as.Date(international_modeling_table$home_rating_date)
+    )
+    away_rating_dates <- suppressWarnings(
+        as.Date(international_modeling_table$away_rating_date)
+    )
+
+    home_rating_on_or_after_match <- sum(
+        !is.na(home_rating_dates) & home_rating_dates >= match_dates,
+        na.rm = TRUE
+    )
+    if (home_rating_on_or_after_match > 0L) {
+        fail(paste0(
+            "international_modeling_table.csv has ",
+            home_rating_on_or_after_match,
+            " rows with home_rating_date on or after match date."
+        ))
+    }
+
+    away_rating_on_or_after_match <- sum(
+        !is.na(away_rating_dates) & away_rating_dates >= match_dates,
+        na.rm = TRUE
+    )
+    if (away_rating_on_or_after_match > 0L) {
+        fail(paste0(
+            "international_modeling_table.csv has ",
+            away_rating_on_or_after_match,
+            " rows with away_rating_date on or after match date."
+        ))
+    }
+
+    rating_age_days_home <- suppressWarnings(as.integer(
+        international_modeling_table$rating_age_days_home
+    ))
+    rating_age_days_away <- suppressWarnings(as.integer(
+        international_modeling_table$rating_age_days_away
+    ))
+
+    if (any(
+        !is.na(rating_age_days_home) & rating_age_days_home <= 0L,
+        na.rm = TRUE
+    )) {
+        fail(
+            "international_modeling_table.csv has non-positive rating_age_days_home."
+        )
+    }
+
+    if (any(
+        !is.na(rating_age_days_away) & rating_age_days_away <= 0L,
+        na.rm = TRUE
+    )) {
+        fail(
+            "international_modeling_table.csv has non-positive rating_age_days_away."
+        )
+    }
+
+    message(
+        "international_modeling_table.csv rows: ",
+        nrow(international_modeling_table)
+    )
+} else if (file.exists(international_team_ratings_path)) {
+    message(
+        "NOTE: international_modeling_table.csv missing while ratings processed file exists; ",
+        "run src/18_build_international_modeling_table.R."
+    )
+}
+
+if (!skip_statsbomb_heavy_validation) {
+    statsbomb_events <- read_processed_csv(
+        file.path(PROCESSED_DIR, "statsbomb_events.csv")
+    )
+    statsbomb_shots <- read_processed_csv(
+        file.path(PROCESSED_DIR, "statsbomb_shots.csv")
+    )
+    statsbomb_lineups <- read_processed_csv(
+        file.path(PROCESSED_DIR, "statsbomb_lineups.csv")
+    )
+    statsbomb_360 <- read_processed_csv(
+        file.path(PROCESSED_DIR, "statsbomb_360.csv")
+    )
+
+    assert_true(nrow(statsbomb_events) > 0L, "statsbomb_events.csv has no rows.")
+    assert_true(nrow(statsbomb_shots) > 0L, "statsbomb_shots.csv has no rows.")
+    assert_true(nrow(statsbomb_lineups) > 0L, "statsbomb_lineups.csv has no rows.")
+    assert_true(nrow(statsbomb_360) > 0L, "statsbomb_360.csv has no rows.")
+}
+
 message("Validation passed.")
 message("Processed files checked: ", length(expected_processed_files))
 message("statsbomb_competitions.csv rows: ", nrow(statsbomb_competitions))
@@ -616,6 +1067,22 @@ message("football_data_uk_matches.csv rows: ", nrow(football_data_uk_matches))
 message("football_data_uk_matches_core.csv rows: ", nrow(football_data_uk_matches_core))
 message("football_data_uk_odds_wide.csv rows: ", nrow(football_data_uk_odds_wide))
 message("international_results.csv rows: ", nrow(international_results))
+message(
+    "international_results_with_shootouts.csv rows: ",
+    nrow(international_results_with_shootouts)
+)
+message("international_goalscorers.csv rows: ", nrow(international_goalscorers))
+message("international_shootouts.csv rows: ", nrow(international_shootouts))
+message(
+    "football_data_uk_modeling_table.csv rows: ",
+    nrow(football_data_uk_modeling_table)
+)
+if (skip_statsbomb_heavy_validation) {
+    message(
+        "StatsBomb heavy files skipped (missing): ",
+        length(missing_statsbomb_heavy)
+    )
+}
 message("football-data.co.uk raw CSV files: ", length(football_data_raw_files))
 message("StatsBomb match JSON files: ", length(statsbomb_match_raw_files))
 message("international_results raw files: ", length(international_raw_files))

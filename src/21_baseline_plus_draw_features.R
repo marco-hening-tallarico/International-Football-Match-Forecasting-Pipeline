@@ -1,21 +1,16 @@
-# ============================================================
 # 21_baseline_plus_draw_features.R
-# Draw-aware baseline models for international match outcomes
 #
-# Extends src/19_baseline.R with simple features that may help
-# predict draws: |rating_diff| and rating_diff^2.
+# Extends 19_baseline.R with |rating_diff| and rating_diff^2 to see whether
+# simple draw-aware terms help before the full Model 26 feature variants.
 #
-# Model selection uses validation log loss (not accuracy).
+# Reads: data/processed/international_modeling_table.csv
 #
-# Outputs:
-#   reports/tables/baseline_plus_*.csv
-#   reports/figures/baseline_plus_*.png
-# ============================================================
-
-
-# -----------------------------
-# 0. Setup
-# -----------------------------
+# Writes:
+# - reports/tables/baseline_plus_*.csv
+# - reports/figures/baseline_plus_*.png
+#
+# Notes:
+# - Model selection uses validation log loss, not accuracy.
 
 set.seed(20240529)
 
@@ -51,9 +46,7 @@ dir.create("reports/tables", recursive = TRUE, showWarnings = FALSE)
 dir.create("reports/figures", recursive = TRUE, showWarnings = FALSE)
 
 
-# -----------------------------
 # 1. Load data
-# -----------------------------
 
 data_path <- "data/processed/international_modeling_table.csv"
 
@@ -80,9 +73,7 @@ if (length(missing_required) > 0) {
 }
 
 
-# -----------------------------
 # 2. Filter candidate rows
-# -----------------------------
 
 target_levels <- c("H", "D", "A")
 
@@ -113,9 +104,7 @@ if (!identical(levels(df$match_result), target_levels)) {
 }
 
 
-# -----------------------------
 # 3. Neutral handling (same logic as 19_baseline.R)
-# -----------------------------
 
 coerce_neutral_model <- function(neutral_vector) {
     if (is.logical(neutral_vector)) {
@@ -167,9 +156,7 @@ if ("neutral" %in% names(df)) {
 }
 
 
-# -----------------------------
 # 4. Leakage guard
-# -----------------------------
 
 leakage_cols <- c(
     "home_score",
@@ -228,9 +215,7 @@ for (allowlist_name in names(predictor_allowlists)) {
 }
 
 
-# -----------------------------
 # 5. Train / test split
-# -----------------------------
 
 train_full <- df %>%
     filter(data_split == "train")
@@ -247,9 +232,7 @@ if (nrow(test_df) == 0) {
 }
 
 
-# -----------------------------
 # 6. Chronological validation split
-# -----------------------------
 
 if ("date" %in% names(train_full)) {
     train_full <- train_full %>%
@@ -300,9 +283,7 @@ message("Validation rows: ", nrow(validation_df))
 message("Test rows: ", nrow(test_df))
 
 
-# -----------------------------
 # 7. Utility functions (aligned with 19_baseline.R)
-# -----------------------------
 
 prob_cols <- c(".pred_H", ".pred_D", ".pred_A")
 prob_drift_tolerance <- 1e-6
@@ -688,9 +669,7 @@ draw_aware_model_names <- c(
 )
 
 
-# -----------------------------
 # 8. Class-frequency baseline
-# -----------------------------
 
 class_probs_inner <- estimate_class_probabilities(inner_train)
 
@@ -723,9 +702,7 @@ metrics_table <- append_metrics_row(
 )
 
 
-# -----------------------------
 # 9. rating_diff (+ neutral) baseline
-# -----------------------------
 
 if (neutral_model_valid) {
     baseline_fit <- fit_and_store_multinom(
@@ -747,9 +724,7 @@ prediction_store <- baseline_fit$prediction_store
 metrics_table <- baseline_fit$metrics_table
 
 
-# -----------------------------
 # 10. Draw-aware multinomial models
-# -----------------------------
 
 if (neutral_model_valid) {
     abs_formula <- match_result ~ rating_diff + abs_rating_diff + neutral_model
@@ -780,9 +755,7 @@ prediction_store <- quad_fit$prediction_store
 metrics_table <- quad_fit$metrics_table
 
 
-# -----------------------------
 # 11. Save tables
-# -----------------------------
 
 metrics_table <- metrics_table %>%
     arrange(model, split)
@@ -927,9 +900,7 @@ readr::write_csv(
 )
 
 
-# -----------------------------
 # 12. Plots
-# -----------------------------
 
 make_metric_comparison_plot <- function(metrics_long, title_text, subtitle_text) {
     ggplot(metrics_long, aes(x = reorder(model, value), y = value, fill = split)) +
@@ -1069,9 +1040,7 @@ ggsave(
 )
 
 
-# -----------------------------
 # 13. Draw probability curve
-# -----------------------------
 
 draw_aware_models_available <- intersect(
     draw_aware_model_names,
@@ -1133,9 +1102,7 @@ ggsave(
 )
 
 
-# -----------------------------
 # 14. Final summary
-# -----------------------------
 
 best_validation_row <- metrics_table %>%
     filter(split == "validation") %>%

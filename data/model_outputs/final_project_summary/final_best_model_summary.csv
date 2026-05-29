@@ -1,0 +1,3 @@
+selection_basis,model,feature_set,split,n,log_loss,brier_score,accuracy,macro_f1
+validation_log_loss,lightgbm,rating_plus_form,validation,7334,0.8888414893516045,0.524115623583397,0.5863103354240523,0.44896648717605026
+test_log_loss,lightgbm,rating_plus_form,test,7384,0.8696477798767818,0.5121250958673574,0.6023835319609967,0.4629142765914528

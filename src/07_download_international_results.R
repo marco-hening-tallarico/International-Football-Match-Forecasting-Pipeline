@@ -1,7 +1,9 @@
-# ============================================================
 # 07_download_international_results.R
-# Download historical international football results
-# ============================================================
+#
+# Downloads martj42/international_results raw CSVs (results, goalscorers,
+# shootouts) into data/raw/international_results/.
+#
+# Writes: data/raw/international_results/*.csv
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")

@@ -1,0 +1,401 @@
+source_match_id,date,home_team,away_team,team_side,feature,stored_value,recomputed_value,difference,passed
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,home,home_unique_scorers_last_10,0,0,0,TRUE
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,home,home_goals_by_top_scorer_last_10,0,0,0,TRUE
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,home,home_non_penalty_goals_last_10,0,0,0,TRUE
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,home,home_penalty_goals_last_10,0,0,0,TRUE
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,home,home_unique_scorers_365d,0,0,0,TRUE
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,home,home_goals_by_top_scorer_365d,0,0,0,TRUE
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,home,home_non_penalty_goals_365d,0,0,0,TRUE
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,home,home_penalty_goals_365d,0,0,0,TRUE
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,away,away_unique_scorers_last_10,1,1,0,TRUE
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,away,away_goals_by_top_scorer_last_10,1,1,0,TRUE
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,away,away_non_penalty_goals_last_10,1,1,0,TRUE
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,away,away_penalty_goals_last_10,0,0,0,TRUE
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,away,away_unique_scorers_365d,0,0,0,TRUE
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,away,away_goals_by_top_scorer_365d,0,0,0,TRUE
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,away,away_non_penalty_goals_365d,0,0,0,TRUE
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,away,away_penalty_goals_365d,0,0,0,TRUE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,home_unique_scorers_last_10,4,4,0,TRUE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,home_goals_by_top_scorer_last_10,3,3,0,TRUE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,home_non_penalty_goals_last_10,1,1,0,TRUE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,home_penalty_goals_last_10,0,0,0,TRUE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,home_unique_scorers_365d,4,4,0,TRUE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,home_goals_by_top_scorer_365d,3,3,0,TRUE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,home_non_penalty_goals_365d,1,1,0,TRUE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,home_penalty_goals_365d,0,0,0,TRUE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,away,away_unique_scorers_last_10,2,2,0,TRUE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,away,away_goals_by_top_scorer_last_10,1,1,0,TRUE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,away,away_non_penalty_goals_last_10,1,1,0,TRUE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,away,away_penalty_goals_last_10,0,0,0,TRUE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,away,away_unique_scorers_365d,2,2,0,TRUE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,away,away_goals_by_top_scorer_365d,1,1,0,TRUE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,away,away_non_penalty_goals_365d,1,1,0,TRUE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,away,away_penalty_goals_365d,0,0,0,TRUE
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,home,home_unique_scorers_last_10,0,0,0,TRUE
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,home,home_goals_by_top_scorer_last_10,0,0,0,TRUE
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,home,home_non_penalty_goals_last_10,0,0,0,TRUE
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,home,home_penalty_goals_last_10,0,0,0,TRUE
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,home,home_unique_scorers_365d,0,0,0,TRUE
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,home,home_goals_by_top_scorer_365d,0,0,0,TRUE
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,home,home_non_penalty_goals_365d,0,0,0,TRUE
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,home,home_penalty_goals_365d,0,0,0,TRUE
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,away,away_unique_scorers_last_10,0,0,0,TRUE
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,away,away_goals_by_top_scorer_last_10,0,0,0,TRUE
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,away,away_non_penalty_goals_last_10,0,0,0,TRUE
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,away,away_penalty_goals_last_10,0,0,0,TRUE
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,away,away_unique_scorers_365d,0,0,0,TRUE
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,away,away_goals_by_top_scorer_365d,0,0,0,TRUE
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,away,away_non_penalty_goals_365d,0,0,0,TRUE
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,away,away_penalty_goals_365d,0,0,0,TRUE
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,home,home_unique_scorers_last_10,0,0,0,TRUE
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,home,home_goals_by_top_scorer_last_10,0,0,0,TRUE
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,home,home_non_penalty_goals_last_10,0,0,0,TRUE
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,home,home_penalty_goals_last_10,0,0,0,TRUE
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,home,home_unique_scorers_365d,0,0,0,TRUE
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,home,home_goals_by_top_scorer_365d,0,0,0,TRUE
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,home,home_non_penalty_goals_365d,0,0,0,TRUE
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,home,home_penalty_goals_365d,0,0,0,TRUE
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,away,away_unique_scorers_last_10,2,2,0,TRUE
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,away,away_goals_by_top_scorer_last_10,1,1,0,TRUE
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,away,away_non_penalty_goals_last_10,1,1,0,TRUE
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,away,away_penalty_goals_last_10,0,0,0,TRUE
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,away,away_unique_scorers_365d,0,0,0,TRUE
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,away,away_goals_by_top_scorer_365d,0,0,0,TRUE
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,away,away_non_penalty_goals_365d,0,0,0,TRUE
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,away,away_penalty_goals_365d,0,0,0,TRUE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,home_unique_scorers_last_10,4,4,0,TRUE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,home_goals_by_top_scorer_last_10,2,2,0,TRUE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,home_non_penalty_goals_last_10,1,1,0,TRUE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,home_penalty_goals_last_10,0,0,0,TRUE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,home_unique_scorers_365d,2,2,0,TRUE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,home_goals_by_top_scorer_365d,2,2,0,TRUE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,home_non_penalty_goals_365d,1,1,0,TRUE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,home_penalty_goals_365d,0,0,0,TRUE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,away_unique_scorers_last_10,6,6,0,TRUE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,away_goals_by_top_scorer_last_10,1,1,0,TRUE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,away_non_penalty_goals_last_10,1,1,0,TRUE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,away_penalty_goals_last_10,0,0,0,TRUE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,away_unique_scorers_365d,12,12,0,TRUE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,away_goals_by_top_scorer_365d,6,6,0,TRUE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,away_non_penalty_goals_365d,1,1,0,TRUE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,away_penalty_goals_365d,0,0,0,TRUE
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,home,home_unique_scorers_last_10,0,0,0,TRUE
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,home,home_goals_by_top_scorer_last_10,0,0,0,TRUE
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,home,home_non_penalty_goals_last_10,0,0,0,TRUE
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,home,home_penalty_goals_last_10,0,0,0,TRUE
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,home,home_unique_scorers_365d,0,0,0,TRUE
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,home,home_goals_by_top_scorer_365d,0,0,0,TRUE
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,home,home_non_penalty_goals_365d,0,0,0,TRUE
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,home,home_penalty_goals_365d,0,0,0,TRUE
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,away,away_unique_scorers_last_10,0,0,0,TRUE
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,away,away_goals_by_top_scorer_last_10,0,0,0,TRUE
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,away,away_non_penalty_goals_last_10,0,0,0,TRUE
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,away,away_penalty_goals_last_10,0,0,0,TRUE
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,away,away_unique_scorers_365d,0,0,0,TRUE
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,away,away_goals_by_top_scorer_365d,0,0,0,TRUE
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,away,away_non_penalty_goals_365d,0,0,0,TRUE
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,away,away_penalty_goals_365d,0,0,0,TRUE
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,home,home_unique_scorers_last_10,0,0,0,TRUE
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,home,home_goals_by_top_scorer_last_10,0,0,0,TRUE
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,home,home_non_penalty_goals_last_10,0,0,0,TRUE
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,home,home_penalty_goals_last_10,0,0,0,TRUE
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,home,home_unique_scorers_365d,0,0,0,TRUE
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,home,home_goals_by_top_scorer_365d,0,0,0,TRUE
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,home,home_non_penalty_goals_365d,0,0,0,TRUE
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,home,home_penalty_goals_365d,0,0,0,TRUE
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,away,away_unique_scorers_last_10,0,0,0,TRUE
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,away,away_goals_by_top_scorer_last_10,0,0,0,TRUE
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,away,away_non_penalty_goals_last_10,0,0,0,TRUE
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,away,away_penalty_goals_last_10,0,0,0,TRUE
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,away,away_unique_scorers_365d,0,0,0,TRUE
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,away,away_goals_by_top_scorer_365d,0,0,0,TRUE
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,away,away_non_penalty_goals_365d,0,0,0,TRUE
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,away,away_penalty_goals_365d,0,0,0,TRUE
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,home,home_unique_scorers_last_10,0,0,0,TRUE
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,home,home_goals_by_top_scorer_last_10,0,0,0,TRUE
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,home,home_non_penalty_goals_last_10,0,0,0,TRUE
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,home,home_penalty_goals_last_10,0,0,0,TRUE
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,home,home_unique_scorers_365d,0,0,0,TRUE
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,home,home_goals_by_top_scorer_365d,0,0,0,TRUE
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,home,home_non_penalty_goals_365d,0,0,0,TRUE
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,home,home_penalty_goals_365d,0,0,0,TRUE
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,away,away_unique_scorers_last_10,0,0,0,TRUE
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,away,away_goals_by_top_scorer_last_10,0,0,0,TRUE
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,away,away_non_penalty_goals_last_10,0,0,0,TRUE
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,away,away_penalty_goals_last_10,0,0,0,TRUE
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,away,away_unique_scorers_365d,0,0,0,TRUE
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,away,away_goals_by_top_scorer_365d,0,0,0,TRUE
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,away,away_non_penalty_goals_365d,0,0,0,TRUE
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,away,away_penalty_goals_365d,0,0,0,TRUE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,home_unique_scorers_last_10,4,4,0,TRUE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,home_goals_by_top_scorer_last_10,3,3,0,TRUE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,home_non_penalty_goals_last_10,1,1,0,TRUE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,home_penalty_goals_last_10,0,0,0,TRUE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,home_unique_scorers_365d,4,4,0,TRUE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,home_goals_by_top_scorer_365d,3,3,0,TRUE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,home_non_penalty_goals_365d,1,1,0,TRUE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,home_penalty_goals_365d,0,0,0,TRUE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,away_unique_scorers_last_10,4,4,0,TRUE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,away_goals_by_top_scorer_last_10,3,3,0,TRUE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,away_non_penalty_goals_last_10,1,1,0,TRUE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,away_penalty_goals_last_10,0,0,0,TRUE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,away_unique_scorers_365d,4,4,0,TRUE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,away_goals_by_top_scorer_365d,2,2,0,TRUE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,away_non_penalty_goals_365d,1,1,0,TRUE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,away_penalty_goals_365d,0,0,0,TRUE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,home,home_unique_scorers_last_10,0,0,0,TRUE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,home,home_goals_by_top_scorer_last_10,0,0,0,TRUE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,home,home_non_penalty_goals_last_10,0,0,0,TRUE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,home,home_penalty_goals_last_10,0,0,0,TRUE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,home,home_unique_scorers_365d,0,0,0,TRUE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,home,home_goals_by_top_scorer_365d,0,0,0,TRUE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,home,home_non_penalty_goals_365d,0,0,0,TRUE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,home,home_penalty_goals_365d,0,0,0,TRUE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,away_unique_scorers_last_10,2,2,0,TRUE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,away_goals_by_top_scorer_last_10,2,2,0,TRUE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,away_non_penalty_goals_last_10,1,1,0,TRUE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,away_penalty_goals_last_10,0,0,0,TRUE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,away_unique_scorers_365d,2,2,0,TRUE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,away_goals_by_top_scorer_365d,2,2,0,TRUE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,away_non_penalty_goals_365d,1,1,0,TRUE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,away_penalty_goals_365d,0,0,0,TRUE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,home_unique_scorers_last_10,7,7,0,TRUE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,home_goals_by_top_scorer_last_10,1,1,0,TRUE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,home_non_penalty_goals_last_10,1,1,0,TRUE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,home_penalty_goals_last_10,0,0,0,TRUE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,home_unique_scorers_365d,6,6,0,TRUE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,home_goals_by_top_scorer_365d,1,1,0,TRUE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,home_non_penalty_goals_365d,1,1,0,TRUE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,home_penalty_goals_365d,0,0,0,TRUE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,away_unique_scorers_last_10,4,4,0,TRUE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,away_goals_by_top_scorer_last_10,2,2,0,TRUE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,away_non_penalty_goals_last_10,1,1,0,TRUE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,away_penalty_goals_last_10,0,0,0,TRUE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,away_unique_scorers_365d,1,1,0,TRUE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,away_goals_by_top_scorer_365d,1,1,0,TRUE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,away_non_penalty_goals_365d,1,1,0,TRUE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,away_penalty_goals_365d,0,0,0,TRUE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,home_unique_scorers_last_10,3,3,0,TRUE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,home_goals_by_top_scorer_last_10,2,2,0,TRUE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,home_non_penalty_goals_last_10,1,1,0,TRUE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,home_penalty_goals_last_10,0,0,0,TRUE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,home_unique_scorers_365d,3,3,0,TRUE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,home_goals_by_top_scorer_365d,2,2,0,TRUE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,home_non_penalty_goals_365d,1,1,0,TRUE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,home_penalty_goals_365d,0,0,0,TRUE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,away,away_unique_scorers_last_10,1,1,0,TRUE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,away,away_goals_by_top_scorer_last_10,1,1,0,TRUE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,away,away_non_penalty_goals_last_10,1,1,0,TRUE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,away,away_penalty_goals_last_10,0,0,0,TRUE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,away,away_unique_scorers_365d,1,1,0,TRUE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,away,away_goals_by_top_scorer_365d,1,1,0,TRUE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,away,away_non_penalty_goals_365d,1,1,0,TRUE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,away,away_penalty_goals_365d,0,0,0,TRUE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,home_unique_scorers_last_10,3,3,0,TRUE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,home_goals_by_top_scorer_last_10,2,2,0,TRUE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,home_non_penalty_goals_last_10,1,1,0,TRUE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,home_penalty_goals_last_10,0,0,0,TRUE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,home_unique_scorers_365d,3,3,0,TRUE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,home_goals_by_top_scorer_365d,2,2,0,TRUE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,home_non_penalty_goals_365d,1,1,0,TRUE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,home_penalty_goals_365d,0,0,0,TRUE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,away_unique_scorers_last_10,5,5,0,TRUE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,away_goals_by_top_scorer_last_10,5,5,0,TRUE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,away_non_penalty_goals_last_10,1,1,0,TRUE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,away_penalty_goals_last_10,0,0,0,TRUE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,away_unique_scorers_365d,5,5,0,TRUE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,away_goals_by_top_scorer_365d,5,5,0,TRUE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,away_non_penalty_goals_365d,1,1,0,TRUE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,away_penalty_goals_365d,0,0,0,TRUE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,home_unique_scorers_last_10,6,6,0,TRUE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,home_goals_by_top_scorer_last_10,2,2,0,TRUE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,home_non_penalty_goals_last_10,1,1,0,TRUE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,home_penalty_goals_last_10,0,0,0,TRUE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,home_unique_scorers_365d,0,0,0,TRUE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,home_goals_by_top_scorer_365d,0,0,0,TRUE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,home_non_penalty_goals_365d,0,0,0,TRUE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,home_penalty_goals_365d,0,0,0,TRUE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,away,away_unique_scorers_last_10,2,2,0,TRUE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,away,away_goals_by_top_scorer_last_10,1,1,0,TRUE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,away,away_non_penalty_goals_last_10,1,1,0,TRUE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,away,away_penalty_goals_last_10,0,0,0,TRUE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,away,away_unique_scorers_365d,0,0,0,TRUE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,away,away_goals_by_top_scorer_365d,0,0,0,TRUE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,away,away_non_penalty_goals_365d,0,0,0,TRUE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,away,away_penalty_goals_365d,0,0,0,TRUE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,home,home_unique_scorers_last_10,3,3,0,TRUE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,home,home_goals_by_top_scorer_last_10,2,2,0,TRUE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,home,home_non_penalty_goals_last_10,1,1,0,TRUE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,home,home_penalty_goals_last_10,0,0,0,TRUE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,home,home_unique_scorers_365d,0,0,0,TRUE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,home,home_goals_by_top_scorer_365d,0,0,0,TRUE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,home,home_non_penalty_goals_365d,0,0,0,TRUE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,home,home_penalty_goals_365d,0,0,0,TRUE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,away_unique_scorers_last_10,4,4,0,TRUE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,away_goals_by_top_scorer_last_10,2,2,0,TRUE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,away_non_penalty_goals_last_10,1,1,0,TRUE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,away_penalty_goals_last_10,0,0,0,TRUE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,away_unique_scorers_365d,0,0,0,TRUE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,away_goals_by_top_scorer_365d,0,0,0,TRUE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,away_non_penalty_goals_365d,0,0,0,TRUE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,away_penalty_goals_365d,0,0,0,TRUE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,home_unique_scorers_last_10,6,6,0,TRUE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,home_goals_by_top_scorer_last_10,3,3,0,TRUE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,home_non_penalty_goals_last_10,1,1,0,TRUE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,home_penalty_goals_last_10,0,0,0,TRUE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,home_unique_scorers_365d,6,6,0,TRUE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,home_goals_by_top_scorer_365d,3,3,0,TRUE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,home_non_penalty_goals_365d,1,1,0,TRUE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,home_penalty_goals_365d,0,0,0,TRUE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,away_unique_scorers_last_10,9,9,0,TRUE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,away_goals_by_top_scorer_last_10,3,3,0,TRUE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,away_non_penalty_goals_last_10,1,1,0,TRUE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,away_penalty_goals_last_10,0,0,0,TRUE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,away_unique_scorers_365d,9,9,0,TRUE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,away_goals_by_top_scorer_365d,3,3,0,TRUE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,away_non_penalty_goals_365d,1,1,0,TRUE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,away_penalty_goals_365d,0,0,0,TRUE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,home_unique_scorers_last_10,3,3,0,TRUE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,home_goals_by_top_scorer_last_10,1,1,0,TRUE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,home_non_penalty_goals_last_10,1,1,0,TRUE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,home_penalty_goals_last_10,0,0,0,TRUE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,home_unique_scorers_365d,3,3,0,TRUE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,home_goals_by_top_scorer_365d,1,1,0,TRUE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,home_non_penalty_goals_365d,1,1,0,TRUE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,home_penalty_goals_365d,0,0,0,TRUE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,away,away_unique_scorers_last_10,0,0,0,TRUE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,away,away_goals_by_top_scorer_last_10,0,0,0,TRUE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,away,away_non_penalty_goals_last_10,0,0,0,TRUE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,away,away_penalty_goals_last_10,0,0,0,TRUE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,away,away_unique_scorers_365d,0,0,0,TRUE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,away,away_goals_by_top_scorer_365d,0,0,0,TRUE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,away,away_non_penalty_goals_365d,0,0,0,TRUE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,away,away_penalty_goals_365d,0,0,0,TRUE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,home_unique_scorers_last_10,5,5,0,TRUE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,home_goals_by_top_scorer_last_10,4,4,0,TRUE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,home_non_penalty_goals_last_10,1,1,0,TRUE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,home_penalty_goals_last_10,0,0,0,TRUE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,home_unique_scorers_365d,3,3,0,TRUE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,home_goals_by_top_scorer_365d,2,2,0,TRUE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,home_non_penalty_goals_365d,1,1,0,TRUE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,home_penalty_goals_365d,0,0,0,TRUE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,away_unique_scorers_last_10,5,5,0,TRUE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,away_goals_by_top_scorer_last_10,1,1,0,TRUE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,away_non_penalty_goals_last_10,1,1,0,TRUE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,away_penalty_goals_last_10,0,0,0,TRUE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,away_unique_scorers_365d,11,11,0,TRUE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,away_goals_by_top_scorer_365d,7,7,0,TRUE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,away_non_penalty_goals_365d,1,1,0,TRUE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,away_penalty_goals_365d,0,0,0,TRUE
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,home,home_unique_scorers_last_10,2,2,0,TRUE
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,home,home_goals_by_top_scorer_last_10,1,1,0,TRUE
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,home,home_non_penalty_goals_last_10,1,1,0,TRUE
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,home,home_penalty_goals_last_10,0,0,0,TRUE
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,home,home_unique_scorers_365d,2,2,0,TRUE
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,home,home_goals_by_top_scorer_365d,1,1,0,TRUE
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,home,home_non_penalty_goals_365d,1,1,0,TRUE
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,home,home_penalty_goals_365d,0,0,0,TRUE
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,away,away_unique_scorers_last_10,0,0,0,TRUE
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,away,away_goals_by_top_scorer_last_10,0,0,0,TRUE
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,away,away_non_penalty_goals_last_10,0,0,0,TRUE
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,away,away_penalty_goals_last_10,0,0,0,TRUE
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,away,away_unique_scorers_365d,0,0,0,TRUE
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,away,away_goals_by_top_scorer_365d,0,0,0,TRUE
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,away,away_non_penalty_goals_365d,0,0,0,TRUE
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,away,away_penalty_goals_365d,0,0,0,TRUE
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,home,home_unique_scorers_last_10,0,0,0,TRUE
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,home,home_goals_by_top_scorer_last_10,0,0,0,TRUE
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,home,home_non_penalty_goals_last_10,0,0,0,TRUE
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,home,home_penalty_goals_last_10,0,0,0,TRUE
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,home,home_unique_scorers_365d,0,0,0,TRUE
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,home,home_goals_by_top_scorer_365d,0,0,0,TRUE
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,home,home_non_penalty_goals_365d,0,0,0,TRUE
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,home,home_penalty_goals_365d,0,0,0,TRUE
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,away,away_unique_scorers_last_10,0,0,0,TRUE
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,away,away_goals_by_top_scorer_last_10,0,0,0,TRUE
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,away,away_non_penalty_goals_last_10,0,0,0,TRUE
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,away,away_penalty_goals_last_10,0,0,0,TRUE
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,away,away_unique_scorers_365d,0,0,0,TRUE
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,away,away_goals_by_top_scorer_365d,0,0,0,TRUE
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,away,away_non_penalty_goals_365d,0,0,0,TRUE
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,away,away_penalty_goals_365d,0,0,0,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,home_unique_scorers_last_10,6,6,0,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,home_goals_by_top_scorer_last_10,3,3,0,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,home_non_penalty_goals_last_10,1,1,0,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,home_penalty_goals_last_10,0,0,0,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,home_unique_scorers_365d,6,6,0,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,home_goals_by_top_scorer_365d,3,3,0,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,home_non_penalty_goals_365d,1,1,0,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,home_penalty_goals_365d,0,0,0,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,away_unique_scorers_last_10,8,8,0,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,away_goals_by_top_scorer_last_10,4,4,0,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,away_non_penalty_goals_last_10,1,1,0,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,away_penalty_goals_last_10,0,0,0,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,away_unique_scorers_365d,8,8,0,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,away_goals_by_top_scorer_365d,4,4,0,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,away_non_penalty_goals_365d,1,1,0,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,away_penalty_goals_365d,0,0,0,TRUE
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,home,home_unique_scorers_last_10,3,3,0,TRUE
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,home,home_goals_by_top_scorer_last_10,2,2,0,TRUE
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,home,home_non_penalty_goals_last_10,1,1,0,TRUE
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,home,home_penalty_goals_last_10,0,0,0,TRUE
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,home,home_unique_scorers_365d,0,0,0,TRUE
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,home,home_goals_by_top_scorer_365d,0,0,0,TRUE
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,home,home_non_penalty_goals_365d,0,0,0,TRUE
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,home,home_penalty_goals_365d,0,0,0,TRUE
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,away,away_unique_scorers_last_10,0,0,0,TRUE
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,away,away_goals_by_top_scorer_last_10,0,0,0,TRUE
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,away,away_non_penalty_goals_last_10,0,0,0,TRUE
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,away,away_penalty_goals_last_10,0,0,0,TRUE
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,away,away_unique_scorers_365d,0,0,0,TRUE
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,away,away_goals_by_top_scorer_365d,0,0,0,TRUE
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,away,away_non_penalty_goals_365d,0,0,0,TRUE
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,away,away_penalty_goals_365d,0,0,0,TRUE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,home,home_unique_scorers_last_10,0,0,0,TRUE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,home,home_goals_by_top_scorer_last_10,0,0,0,TRUE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,home,home_non_penalty_goals_last_10,0,0,0,TRUE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,home,home_penalty_goals_last_10,0,0,0,TRUE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,home,home_unique_scorers_365d,2,2,0,TRUE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,home,home_goals_by_top_scorer_365d,1,1,0,TRUE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,home,home_non_penalty_goals_365d,1,1,0,TRUE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,home,home_penalty_goals_365d,0,0,0,TRUE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,away_unique_scorers_last_10,5,5,0,TRUE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,away_goals_by_top_scorer_last_10,3,3,0,TRUE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,away_non_penalty_goals_last_10,1,1,0,TRUE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,away_penalty_goals_last_10,0,0,0,TRUE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,away_unique_scorers_365d,5,5,0,TRUE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,away_goals_by_top_scorer_365d,4,4,0,TRUE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,away_non_penalty_goals_365d,1,1,0,TRUE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,away_penalty_goals_365d,0,0,0,TRUE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,home_unique_scorers_last_10,5,5,0,TRUE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,home_goals_by_top_scorer_last_10,2,2,0,TRUE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,home_non_penalty_goals_last_10,1,1,0,TRUE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,home_penalty_goals_last_10,0,0,0,TRUE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,home_unique_scorers_365d,5,5,0,TRUE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,home_goals_by_top_scorer_365d,2,2,0,TRUE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,home_non_penalty_goals_365d,1,1,0,TRUE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,home_penalty_goals_365d,0,0,0,TRUE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,away,away_unique_scorers_last_10,1,1,0,TRUE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,away,away_goals_by_top_scorer_last_10,1,1,0,TRUE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,away,away_non_penalty_goals_last_10,1,1,0,TRUE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,away,away_penalty_goals_last_10,0,0,0,TRUE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,away,away_unique_scorers_365d,1,1,0,TRUE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,away,away_goals_by_top_scorer_365d,1,1,0,TRUE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,away,away_non_penalty_goals_365d,1,1,0,TRUE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,away,away_penalty_goals_365d,0,0,0,TRUE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,home_unique_scorers_last_10,9,9,0,TRUE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,home_goals_by_top_scorer_last_10,6,6,0,TRUE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,home_non_penalty_goals_last_10,1,1,0,TRUE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,home_penalty_goals_last_10,0,0,0,TRUE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,home_unique_scorers_365d,4,4,0,TRUE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,home_goals_by_top_scorer_365d,3,3,0,TRUE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,home_non_penalty_goals_365d,1,1,0,TRUE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,home_penalty_goals_365d,0,0,0,TRUE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,away_unique_scorers_last_10,6,6,0,TRUE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,away_goals_by_top_scorer_last_10,2,2,0,TRUE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,away_non_penalty_goals_last_10,1,1,0,TRUE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,away_penalty_goals_last_10,0,0,0,TRUE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,away_unique_scorers_365d,1,1,0,TRUE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,away_goals_by_top_scorer_365d,2,2,0,TRUE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,away_non_penalty_goals_365d,1,1,0,TRUE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,away_penalty_goals_365d,0,0,0,TRUE

@@ -1,0 +1,13 @@
+item,value
+final_selected_model,lightgbm
+final_selected_feature_variant,safe_plus_form_compact
+selection_rule,best validation log loss within model_28_metrics.csv
+validation_log_loss,0.891516977759173
+test_log_loss,0.874400161680251
+test_accuracy,0.594868980655783
+test_macro_f1,0.438137189289285
+test_draw_recall,0.00232018561484918
+test_predicted_draw_rate,0.00233228152009877
+baseline_files_available,TRUE
+stages_included,baseline; model_24_safe_features; model_26_draw_aware_elo; model_28_lagged_form
+baseline_note,Baseline comparison files were loaded for incremental staging.

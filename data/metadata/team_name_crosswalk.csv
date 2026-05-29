@@ -1,0 +1,357 @@
+source,raw_team,team_clean,canonical_team,notes
+world_football_elo,Abkhazia,abkhazia,Abkhazia,auto_initialized
+world_football_elo,Afghanistan,afghanistan,Afghanistan,auto_initialized
+world_football_elo,Albania,albania,Albania,auto_initialized
+world_football_elo,Alderney,alderney,Alderney,auto_initialized
+world_football_elo,Algeria,algeria,Algeria,auto_initialized
+world_football_elo,Ambazonia,ambazonia,Ambazonia,auto_initialized
+world_football_elo,American Samoa,american_samoa,American Samoa,auto_initialized
+world_football_elo,Andalusia,andalusia,Andalusia,auto_initialized
+world_football_elo,Andorra,andorra,Andorra,auto_initialized
+world_football_elo,Angola,angola,Angola,auto_initialized
+world_football_elo,Anguilla,anguilla,Anguilla,auto_initialized
+world_football_elo,Antigua and Barbuda,antigua_and_barbuda,Antigua and Barbuda,auto_initialized
+world_football_elo,Arameans Suryoye,arameans_suryoye,Arameans Suryoye,auto_initialized
+world_football_elo,Argentina,argentina,Argentina,auto_initialized
+world_football_elo,Armenia,armenia,Armenia,auto_initialized
+world_football_elo,Artsakh,artsakh,Artsakh,auto_initialized
+world_football_elo,Aruba,aruba,Aruba,auto_initialized
+world_football_elo,Asturias,asturias,Asturias,auto_initialized
+world_football_elo,Australia,australia,Australia,auto_initialized
+world_football_elo,Austria,austria,Austria,auto_initialized
+world_football_elo,Aymara,aymara,Aymara,auto_initialized
+world_football_elo,Azerbaijan,azerbaijan,Azerbaijan,auto_initialized
+world_football_elo,Bahamas,bahamas,Bahamas,auto_initialized
+world_football_elo,Bahrain,bahrain,Bahrain,auto_initialized
+world_football_elo,Bangladesh,bangladesh,Bangladesh,auto_initialized
+world_football_elo,Barawa,barawa,Barawa,auto_initialized
+world_football_elo,Barbados,barbados,Barbados,auto_initialized
+world_football_elo,Basque Country,basque_country,Basque Country,auto_initialized
+world_football_elo,Belarus,belarus,Belarus,auto_initialized
+world_football_elo,Belgium,belgium,Belgium,auto_initialized
+world_football_elo,Belize,belize,Belize,auto_initialized
+world_football_elo,Benin,benin,Benin,auto_initialized
+world_football_elo,Bermuda,bermuda,Bermuda,auto_initialized
+world_football_elo,Bhutan,bhutan,Bhutan,auto_initialized
+world_football_elo,Biafra,biafra,Biafra,auto_initialized
+world_football_elo,Bolivia,bolivia,Bolivia,auto_initialized
+world_football_elo,Bonaire,bonaire,Bonaire,auto_initialized
+world_football_elo,Bosnia and Herzegovina,bosnia_and_herzegovina,Bosnia and Herzegovina,auto_initialized
+world_football_elo,Botswana,botswana,Botswana,auto_initialized
+world_football_elo,Brazil,brazil,Brazil,auto_initialized
+world_football_elo,British Virgin Islands,british_virgin_islands,British Virgin Islands,auto_initialized
+world_football_elo,Brittany,brittany,Brittany,auto_initialized
+world_football_elo,Brunei,brunei,Brunei,auto_initialized
+world_football_elo,Bulgaria,bulgaria,Bulgaria,auto_initialized
+world_football_elo,Burkina Faso,burkina_faso,Burkina Faso,auto_initialized
+world_football_elo,Burundi,burundi,Burundi,auto_initialized
+world_football_elo,Cambodia,cambodia,Cambodia,auto_initialized
+world_football_elo,Cameroon,cameroon,Cameroon,auto_initialized
+world_football_elo,Canada,canada,Canada,auto_initialized
+world_football_elo,Canary Islands,canary_islands,Canary Islands,auto_initialized
+world_football_elo,Cape Verde,cape_verde,Cape Verde,auto_initialized
+world_football_elo,Cascadia,cascadia,Cascadia,auto_initialized
+world_football_elo,Catalonia,catalonia,Catalonia,auto_initialized
+world_football_elo,Cayman Islands,cayman_islands,Cayman Islands,auto_initialized
+world_football_elo,Central African Republic,central_african_republic,Central African Republic,auto_initialized
+world_football_elo,Central Spain,central_spain,Central Spain,auto_initialized
+world_football_elo,Chad,chad,Chad,auto_initialized
+world_football_elo,Chagos Islands,chagos_islands,Chagos Islands,auto_initialized
+world_football_elo,Chameria,chameria,Chameria,auto_initialized
+world_football_elo,Chechnya,chechnya,Chechnya,auto_initialized
+world_football_elo,Chile,chile,Chile,auto_initialized
+world_football_elo,China,china,China,auto_initialized
+world_football_elo,China PR,china_pr,China PR,auto_initialized
+world_football_elo,Christmas Island,christmas_island,Christmas Island,auto_initialized
+world_football_elo,Cilento,cilento,Cilento,auto_initialized
+world_football_elo,Cocos Islands,cocos_islands,Cocos Islands,auto_initialized
+world_football_elo,Colombia,colombia,Colombia,auto_initialized
+world_football_elo,Comoros,comoros,Comoros,auto_initialized
+world_football_elo,Congo,congo,Congo,auto_initialized
+world_football_elo,Cook Islands,cook_islands,Cook Islands,auto_initialized
+world_football_elo,Corsica,corsica,Corsica,auto_initialized
+world_football_elo,Costa Rica,costa_rica,Costa Rica,auto_initialized
+world_football_elo,County of Nice,county_of_nice,County of Nice,auto_initialized
+world_football_elo,Crimea,crimea,Crimea,auto_initialized
+world_football_elo,Croatia,croatia,Croatia,auto_initialized
+world_football_elo,Cuba,cuba,Cuba,auto_initialized
+world_football_elo,Curaçao,cura_ao,Curaçao,auto_initialized
+world_football_elo,Cyprus,cyprus,Cyprus,auto_initialized
+world_football_elo,Czech Republic,czech_republic,Czech Republic,auto_initialized
+world_football_elo,Czechia,czechia,Czechia,auto_initialized
+world_football_elo,Czechoslovakia,czechoslovakia,Czechoslovakia,auto_initialized
+world_football_elo,Délvidék,d_lvid_k,Délvidék,auto_initialized
+world_football_elo,Darfur,darfur,Darfur,auto_initialized
+world_football_elo,Denmark,denmark,Denmark,auto_initialized
+world_football_elo,Djibouti,djibouti,Djibouti,auto_initialized
+world_football_elo,Dominica,dominica,Dominica,auto_initialized
+world_football_elo,Dominican Republic,dominican_republic,Dominican Republic,auto_initialized
+world_football_elo,Donetsk PR,donetsk_pr,Donetsk PR,auto_initialized
+world_football_elo,DR Congo,dr_congo,DR Congo,auto_initialized
+world_football_elo,East Germany,east_germany,East Germany,auto_initialized
+world_football_elo,East Timor,east_timor,East Timor,auto_initialized
+world_football_elo,East Turkestan,east_turkestan,East Turkestan,auto_initialized
+world_football_elo,Eastern Samoa,eastern_samoa,Eastern Samoa,auto_initialized
+world_football_elo,Ecuador,ecuador,Ecuador,auto_initialized
+world_football_elo,Egypt,egypt,Egypt,auto_initialized
+world_football_elo,El Salvador,el_salvador,El Salvador,auto_initialized
+world_football_elo,Elba Island,elba_island,Elba Island,auto_initialized
+world_football_elo,Ellan Vannin,ellan_vannin,Ellan Vannin,auto_initialized
+world_football_elo,England,england,England,auto_initialized
+world_football_elo,Equatorial Guinea,equatorial_guinea,Equatorial Guinea,auto_initialized
+world_football_elo,Eritrea,eritrea,Eritrea,auto_initialized
+world_football_elo,Estonia,estonia,Estonia,auto_initialized
+world_football_elo,Eswatini,eswatini,Eswatini,auto_initialized
+world_football_elo,Ethiopia,ethiopia,Ethiopia,auto_initialized
+world_football_elo,Falkland Islands,falkland_islands,Falkland Islands,auto_initialized
+world_football_elo,Faroe Islands,faroe_islands,Faroe Islands,auto_initialized
+world_football_elo,Felvidék,felvid_k,Felvidék,auto_initialized
+world_football_elo,Fiji,fiji,Fiji,auto_initialized
+world_football_elo,Finland,finland,Finland,auto_initialized
+world_football_elo,Frøya,fr_ya,Frøya,auto_initialized
+world_football_elo,France,france,France,auto_initialized
+world_football_elo,Franconia,franconia,Franconia,auto_initialized
+world_football_elo,French Guiana,french_guiana,French Guiana,auto_initialized
+world_football_elo,FS Micronesia,fs_micronesia,FS Micronesia,auto_initialized
+world_football_elo,Găgăuzia,g_g_uzia,Găgăuzia,auto_initialized
+world_football_elo,Gabon,gabon,Gabon,auto_initialized
+world_football_elo,Galicia,galicia,Galicia,auto_initialized
+world_football_elo,Gambia,gambia,Gambia,auto_initialized
+world_football_elo,Georgia,georgia,Georgia,auto_initialized
+world_football_elo,German DR,german_dr,German DR,auto_initialized
+world_football_elo,Germany,germany,Germany,auto_initialized
+world_football_elo,Ghana,ghana,Ghana,auto_initialized
+world_football_elo,Gibraltar,gibraltar,Gibraltar,auto_initialized
+world_football_elo,Gotland,gotland,Gotland,auto_initialized
+world_football_elo,Gozo,gozo,Gozo,auto_initialized
+world_football_elo,Greece,greece,Greece,auto_initialized
+world_football_elo,Greenland,greenland,Greenland,auto_initialized
+world_football_elo,Grenada,grenada,Grenada,auto_initialized
+world_football_elo,Guadeloupe,guadeloupe,Guadeloupe,auto_initialized
+world_football_elo,Guam,guam,Guam,auto_initialized
+world_football_elo,Guatemala,guatemala,Guatemala,auto_initialized
+world_football_elo,Guernsey,guernsey,Guernsey,auto_initialized
+world_football_elo,Guinea,guinea,Guinea,auto_initialized
+world_football_elo,Guinea-Bissau,guinea_bissau,Guinea-Bissau,auto_initialized
+world_football_elo,Guyana,guyana,Guyana,auto_initialized
+world_football_elo,Haiti,haiti,Haiti,auto_initialized
+world_football_elo,Hitra,hitra,Hitra,auto_initialized
+world_football_elo,Hmong,hmong,Hmong,auto_initialized
+world_football_elo,Honduras,honduras,Honduras,auto_initialized
+world_football_elo,Hong Kong,hong_kong,Hong Kong,auto_initialized
+world_football_elo,Hungary,hungary,Hungary,auto_initialized
+world_football_elo,Iceland,iceland,Iceland,auto_initialized
+world_football_elo,India,india,India,auto_initialized
+world_football_elo,Indonesia,indonesia,Indonesia,auto_initialized
+world_football_elo,Iran,iran,Iran,auto_initialized
+world_football_elo,Iraq,iraq,Iraq,auto_initialized
+world_football_elo,Iraqi Kurdistan,iraqi_kurdistan,Iraqi Kurdistan,auto_initialized
+world_football_elo,Ireland,ireland,Ireland,auto_initialized
+world_football_elo,Isle of Man,isle_of_man,Isle of Man,auto_initialized
+world_football_elo,Isle of Wight,isle_of_wight,Isle of Wight,auto_initialized
+world_football_elo,Israel,israel,Israel,auto_initialized
+world_football_elo,Italy,italy,Italy,auto_initialized
+world_football_elo,Ivory Coast,ivory_coast,Ivory Coast,auto_initialized
+world_football_elo,Jamaica,jamaica,Jamaica,auto_initialized
+world_football_elo,Japan,japan,Japan,auto_initialized
+world_football_elo,Jersey,jersey,Jersey,auto_initialized
+world_football_elo,Jordan,jordan,Jordan,auto_initialized
+world_football_elo,Kárpátalja,k_rp_talja,Kárpátalja,auto_initialized
+world_football_elo,Kabylia,kabylia,Kabylia,auto_initialized
+world_football_elo,Kazakhstan,kazakhstan,Kazakhstan,auto_initialized
+world_football_elo,Kenya,kenya,Kenya,auto_initialized
+world_football_elo,Kernow,kernow,Kernow,auto_initialized
+world_football_elo,Kiribati,kiribati,Kiribati,auto_initialized
+world_football_elo,Kosovo,kosovo,Kosovo,auto_initialized
+world_football_elo,Kurdistan,kurdistan,Kurdistan,auto_initialized
+world_football_elo,Kuwait,kuwait,Kuwait,auto_initialized
+world_football_elo,Kyrgyzstan,kyrgyzstan,Kyrgyzstan,auto_initialized
+world_football_elo,Åland Islands,land_islands,Åland Islands,auto_initialized
+world_football_elo,Laos,laos,Laos,auto_initialized
+world_football_elo,Latvia,latvia,Latvia,auto_initialized
+world_football_elo,Lebanon,lebanon,Lebanon,auto_initialized
+world_football_elo,Lesotho,lesotho,Lesotho,auto_initialized
+world_football_elo,Liberia,liberia,Liberia,auto_initialized
+world_football_elo,Libya,libya,Libya,auto_initialized
+world_football_elo,Liechtenstein,liechtenstein,Liechtenstein,auto_initialized
+world_football_elo,Lithuania,lithuania,Lithuania,auto_initialized
+world_football_elo,Luhansk PR,luhansk_pr,Luhansk PR,auto_initialized
+world_football_elo,Luxembourg,luxembourg,Luxembourg,auto_initialized
+world_football_elo,Macao,macao,Macao,auto_initialized
+world_football_elo,Macau,macau,Macau,auto_initialized
+world_football_elo,Madagascar,madagascar,Madagascar,auto_initialized
+world_football_elo,Madrid,madrid,Madrid,auto_initialized
+world_football_elo,Malawi,malawi,Malawi,auto_initialized
+world_football_elo,Malaysia,malaysia,Malaysia,auto_initialized
+world_football_elo,Maldives,maldives,Maldives,auto_initialized
+world_football_elo,Mali,mali,Mali,auto_initialized
+world_football_elo,Malta,malta,Malta,auto_initialized
+world_football_elo,Manchukuo,manchukuo,Manchukuo,auto_initialized
+world_football_elo,Mapuche,mapuche,Mapuche,auto_initialized
+world_football_elo,Marshall Islands,marshall_islands,Marshall Islands,auto_initialized
+world_football_elo,Martinique,martinique,Martinique,auto_initialized
+world_football_elo,Matabeleland,matabeleland,Matabeleland,auto_initialized
+world_football_elo,Maule Sur,maule_sur,Maule Sur,auto_initialized
+world_football_elo,Mauritania,mauritania,Mauritania,auto_initialized
+world_football_elo,Mauritius,mauritius,Mauritius,auto_initialized
+world_football_elo,Mayotte,mayotte,Mayotte,auto_initialized
+world_football_elo,Menorca,menorca,Menorca,auto_initialized
+world_football_elo,Mexico,mexico,Mexico,auto_initialized
+world_football_elo,Micronesia,micronesia,Micronesia,auto_initialized
+world_football_elo,Moldova,moldova,Moldova,auto_initialized
+world_football_elo,Monaco,monaco,Monaco,auto_initialized
+world_football_elo,Mongolia,mongolia,Mongolia,auto_initialized
+world_football_elo,Montenegro,montenegro,Montenegro,auto_initialized
+world_football_elo,Montserrat,montserrat,Montserrat,auto_initialized
+world_football_elo,Morocco,morocco,Morocco,auto_initialized
+world_football_elo,Mozambique,mozambique,Mozambique,auto_initialized
+world_football_elo,Myanmar,myanmar,Myanmar,auto_initialized
+world_football_elo,Namibia,namibia,Namibia,auto_initialized
+world_football_elo,Nepal,nepal,Nepal,auto_initialized
+world_football_elo,Netherlands,netherlands,Netherlands,auto_initialized
+world_football_elo,New Caledonia,new_caledonia,New Caledonia,auto_initialized
+world_football_elo,New Zealand,new_zealand,New Zealand,auto_initialized
+world_football_elo,Nicaragua,nicaragua,Nicaragua,auto_initialized
+world_football_elo,Niger,niger,Niger,auto_initialized
+world_football_elo,Nigeria,nigeria,Nigeria,auto_initialized
+world_football_elo,Niue,niue,Niue,auto_initialized
+world_football_elo,North Korea,north_korea,North Korea,auto_initialized
+world_football_elo,North Macedonia,north_macedonia,North Macedonia,auto_initialized
+world_football_elo,North Vietnam,north_vietnam,North Vietnam,auto_initialized
+world_football_elo,North Yemen,north_yemen,North Yemen,auto_initialized
+world_football_elo,Northern Cyprus,northern_cyprus,Northern Cyprus,auto_initialized
+world_football_elo,Northern Ireland,northern_ireland,Northern Ireland,auto_initialized
+world_football_elo,Northern Mariana Islands,northern_mariana_islands,Northern Mariana Islands,auto_initialized
+world_football_elo,Norway,norway,Norway,auto_initialized
+world_football_elo,Occitania,occitania,Occitania,auto_initialized
+world_football_elo,Oman,oman,Oman,auto_initialized
+world_football_elo,Orkney,orkney,Orkney,auto_initialized
+world_football_elo,Padania,padania,Padania,auto_initialized
+world_football_elo,Pakistan,pakistan,Pakistan,auto_initialized
+world_football_elo,Palau,palau,Palau,auto_initialized
+world_football_elo,Palestine,palestine,Palestine,auto_initialized
+world_football_elo,Panama,panama,Panama,auto_initialized
+world_football_elo,Panjab,panjab,Panjab,auto_initialized
+world_football_elo,Papua New Guinea,papua_new_guinea,Papua New Guinea,auto_initialized
+world_football_elo,Paraguay,paraguay,Paraguay,auto_initialized
+world_football_elo,Parishes of Jersey,parishes_of_jersey,Parishes of Jersey,auto_initialized
+world_football_elo,Peru,peru,Peru,auto_initialized
+world_football_elo,Philippines,philippines,Philippines,auto_initialized
+world_football_elo,Poland,poland,Poland,auto_initialized
+world_football_elo,Portugal,portugal,Portugal,auto_initialized
+world_football_elo,Provence,provence,Provence,auto_initialized
+world_football_elo,Puerto Rico,puerto_rico,Puerto Rico,auto_initialized
+world_football_elo,Qatar,qatar,Qatar,auto_initialized
+world_football_elo,Quebec,quebec,Quebec,auto_initialized
+world_football_elo,Réunion,r_union,Réunion,auto_initialized
+world_football_elo,Raetia,raetia,Raetia,auto_initialized
+world_football_elo,Republic of Ireland,republic_of_ireland,Republic of Ireland,auto_initialized
+world_football_elo,Republic of St. Pauli,republic_of_st_pauli,Republic of St. Pauli,auto_initialized
+world_football_elo,Reunion,reunion,Reunion,auto_initialized
+world_football_elo,Rhodes,rhodes,Rhodes,auto_initialized
+world_football_elo,Romani people,romani_people,Romani people,auto_initialized
+world_football_elo,Romania,romania,Romania,auto_initialized
+world_football_elo,Russia,russia,Russia,auto_initialized
+world_football_elo,Rwanda,rwanda,Rwanda,auto_initialized
+world_football_elo,Ryūkyū,ry_ky,Ryūkyū,auto_initialized
+world_football_elo,São Tomé and Príncipe,s_o_tom_and_pr_ncipe,São Tomé and Príncipe,auto_initialized
+world_football_elo,Sápmi,s_pmi,Sápmi,auto_initialized
+world_football_elo,Saar,saar,Saar,auto_initialized
+world_football_elo,Saare County,saare_county,Saare County,auto_initialized
+world_football_elo,Saarland,saarland,Saarland,auto_initialized
+world_football_elo,Saba,saba,Saba,auto_initialized
+world_football_elo,Saint Barthélemy,saint_barth_lemy,Saint Barthélemy,auto_initialized
+world_football_elo,Saint Barthelemy,saint_barthelemy,Saint Barthelemy,auto_initialized
+world_football_elo,Saint Helena,saint_helena,Saint Helena,auto_initialized
+world_football_elo,Saint Kitts and Nevis,saint_kitts_and_nevis,Saint Kitts and Nevis,auto_initialized
+world_football_elo,Saint Lucia,saint_lucia,Saint Lucia,auto_initialized
+world_football_elo,Saint Martin,saint_martin,Saint Martin,auto_initialized
+world_football_elo,Saint Pierre and Miquelon,saint_pierre_and_miquelon,Saint Pierre and Miquelon,auto_initialized
+world_football_elo,Saint Vincent and the Grenadines,saint_vincent_and_the_grenadines,Saint Vincent and the Grenadines,auto_initialized
+world_football_elo,Samoa,samoa,Samoa,auto_initialized
+world_football_elo,San Marino,san_marino,San Marino,auto_initialized
+world_football_elo,Sao Tome and Principe,sao_tome_and_principe,Sao Tome and Principe,auto_initialized
+world_football_elo,Sark,sark,Sark,auto_initialized
+world_football_elo,Saudi Arabia,saudi_arabia,Saudi Arabia,auto_initialized
+world_football_elo,Saugeais,saugeais,Saugeais,auto_initialized
+world_football_elo,Scotland,scotland,Scotland,auto_initialized
+world_football_elo,Sealand,sealand,Sealand,auto_initialized
+world_football_elo,Seborga,seborga,Seborga,auto_initialized
+world_football_elo,Senegal,senegal,Senegal,auto_initialized
+world_football_elo,Serbia,serbia,Serbia,auto_initialized
+world_football_elo,Seychelles,seychelles,Seychelles,auto_initialized
+world_football_elo,Shetland,shetland,Shetland,auto_initialized
+world_football_elo,Sierra Leone,sierra_leone,Sierra Leone,auto_initialized
+world_football_elo,Silesia,silesia,Silesia,auto_initialized
+world_football_elo,Singapore,singapore,Singapore,auto_initialized
+world_football_elo,Sint Eustatius,sint_eustatius,Sint Eustatius,auto_initialized
+world_football_elo,Sint Maarten,sint_maarten,Sint Maarten,auto_initialized
+world_football_elo,Slovakia,slovakia,Slovakia,auto_initialized
+world_football_elo,Slovenia,slovenia,Slovenia,auto_initialized
+world_football_elo,Solomon Islands,solomon_islands,Solomon Islands,auto_initialized
+world_football_elo,Somalia,somalia,Somalia,auto_initialized
+world_football_elo,Somaliland,somaliland,Somaliland,auto_initialized
+world_football_elo,South Africa,south_africa,South Africa,auto_initialized
+world_football_elo,South Korea,south_korea,South Korea,auto_initialized
+world_football_elo,South Ossetia,south_ossetia,South Ossetia,auto_initialized
+world_football_elo,South Sudan,south_sudan,South Sudan,auto_initialized
+world_football_elo,South Yemen,south_yemen,South Yemen,auto_initialized
+world_football_elo,Spain,spain,Spain,auto_initialized
+world_football_elo,Sri Lanka,sri_lanka,Sri Lanka,auto_initialized
+world_football_elo,Sudan,sudan,Sudan,auto_initialized
+world_football_elo,Suriname,suriname,Suriname,auto_initialized
+world_football_elo,Surrey,surrey,Surrey,auto_initialized
+world_football_elo,Sweden,sweden,Sweden,auto_initialized
+world_football_elo,Switzerland,switzerland,Switzerland,auto_initialized
+world_football_elo,Syria,syria,Syria,auto_initialized
+world_football_elo,Székely Land,sz_kely_land,Székely Land,auto_initialized
+world_football_elo,Tahiti,tahiti,Tahiti,auto_initialized
+world_football_elo,Taiwan,taiwan,Taiwan,auto_initialized
+world_football_elo,Tajikistan,tajikistan,Tajikistan,auto_initialized
+world_football_elo,Tamil Eelam,tamil_eelam,Tamil Eelam,auto_initialized
+world_football_elo,Tanzania,tanzania,Tanzania,auto_initialized
+world_football_elo,Thailand,thailand,Thailand,auto_initialized
+world_football_elo,Tibet,tibet,Tibet,auto_initialized
+world_football_elo,Ticino,ticino,Ticino,auto_initialized
+world_football_elo,Timor-Leste,timor_leste,Timor-Leste,auto_initialized
+world_football_elo,Togo,togo,Togo,auto_initialized
+world_football_elo,Tonga,tonga,Tonga,auto_initialized
+world_football_elo,Trinidad and Tobago,trinidad_and_tobago,Trinidad and Tobago,auto_initialized
+world_football_elo,Tunisia,tunisia,Tunisia,auto_initialized
+world_football_elo,Turkey,turkey,Turkey,auto_initialized
+world_football_elo,Turkmenistan,turkmenistan,Turkmenistan,auto_initialized
+world_football_elo,Turks and Caicos Islands,turks_and_caicos_islands,Turks and Caicos Islands,auto_initialized
+world_football_elo,Tuvalu,tuvalu,Tuvalu,auto_initialized
+world_football_elo,Two Sicilies,two_sicilies,Two Sicilies,auto_initialized
+world_football_elo,Uganda,uganda,Uganda,auto_initialized
+world_football_elo,Ukraine,ukraine,Ukraine,auto_initialized
+world_football_elo,United Arab Emirates,united_arab_emirates,United Arab Emirates,auto_initialized
+world_football_elo,United Koreans in Japan,united_koreans_in_japan,United Koreans in Japan,auto_initialized
+world_football_elo,United States,united_states,United States,auto_initialized
+world_football_elo,United States Virgin Islands,united_states_virgin_islands,United States Virgin Islands,auto_initialized
+world_football_elo,Uruguay,uruguay,Uruguay,auto_initialized
+world_football_elo,US Virgin Islands,us_virgin_islands,US Virgin Islands,auto_initialized
+world_football_elo,Uzbekistan,uzbekistan,Uzbekistan,auto_initialized
+world_football_elo,Vanuatu,vanuatu,Vanuatu,auto_initialized
+world_football_elo,Vatican,vatican,Vatican,auto_initialized
+world_football_elo,Vatican City,vatican_city,Vatican City,auto_initialized
+world_football_elo,Venezuela,venezuela,Venezuela,auto_initialized
+world_football_elo,Vietnam,vietnam,Vietnam,auto_initialized
+world_football_elo,Vietnam Republic,vietnam_republic,Vietnam Republic,auto_initialized
+world_football_elo,Wales,wales,Wales,auto_initialized
+world_football_elo,Wallis and Futuna,wallis_and_futuna,Wallis and Futuna,auto_initialized
+world_football_elo,Wallis Islands and Futuna,wallis_islands_and_futuna,Wallis Islands and Futuna,auto_initialized
+world_football_elo,West Papua,west_papua,West Papua,auto_initialized
+world_football_elo,Western Armenia,western_armenia,Western Armenia,auto_initialized
+world_football_elo,Western Australia,western_australia,Western Australia,auto_initialized
+world_football_elo,Western Isles,western_isles,Western Isles,auto_initialized
+world_football_elo,Western Sahara,western_sahara,Western Sahara,auto_initialized
+world_football_elo,Yemen,yemen,Yemen,auto_initialized
+world_football_elo,Yemen DPR,yemen_dpr,Yemen DPR,auto_initialized
+world_football_elo,Ynys Môn,ynys_m_n,Ynys Môn,auto_initialized
+world_football_elo,Yorkshire,yorkshire,Yorkshire,auto_initialized
+world_football_elo,Yoruba Nation,yoruba_nation,Yoruba Nation,auto_initialized
+world_football_elo,Yugoslavia,yugoslavia,Yugoslavia,auto_initialized
+world_football_elo,Zambia,zambia,Zambia,auto_initialized
+world_football_elo,Zanzibar,zanzibar,Zanzibar,auto_initialized
+world_football_elo,Zimbabwe,zimbabwe,Zimbabwe,auto_initialized

@@ -1,7 +1,11 @@
-# ============================================================
 # 08b_clean_international_goalscorers.R
-# Clean martj42/international_results goalscorers into one table
-# ============================================================
+#
+# Cleans martj42/international_results goalscorer records into one table
+# keyed for joins on match date and teams.
+#
+# Reads: data/raw/international_results/goalscorers.csv
+#
+# Writes: data/processed/international_goalscorers.csv
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")
@@ -225,11 +229,11 @@ cleaning_summary <- tibble::tibble(
 
 goalscorers_out <- file.path(PROCESSED_DIR, "international_goalscorers.csv")
 summary_out <- file.path(
-    VALIDATION_DIR,
+    VALIDATION_PROCESSED_DIR,
     "international_goalscorers_cleaning_summary.csv"
 )
 unmatched_out <- file.path(
-    VALIDATION_DIR,
+    VALIDATION_PROCESSED_DIR,
     "international_goalscorers_unmatched_matches.csv"
 )
 

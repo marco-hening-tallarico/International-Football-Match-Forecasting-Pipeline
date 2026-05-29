@@ -17,20 +17,11 @@ knitr::opts_chunk$set(
   fig.height = 5
 )
 
-PROJECT_ROOT <- normalizePath(
-  "~/Documents/Projects/worldcup-forecast-r",
-  winslash = "/",
-  mustWork = TRUE
-)
-
-setwd(PROJECT_ROOT)
-
 source("src/00_project_setup.R")
 source("src/01_packages.R")
 source("src/02_helpers.R")
 
 OUTPUT_DIR <- file.path(
-  PROJECT_ROOT,
   "notebooks",
   "notebook_2_outputs"
 )

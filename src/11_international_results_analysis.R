@@ -1,26 +1,21 @@
-# ============================================================
-# International Football Results: Data Checks, Graphs, Validation
-# Author: generated for R ML Sport workflow
+# 11_international_results_analysis.R
 #
-# Input expected:
-#   international_results.csv
+# Exploratory checks, plots, and chronological validation helpers for
+# international_results.csv. Team-strength style features, if built here,
+# use only matches before the current fixture date.
 #
-# Outputs:
-#   outputs/
-#     checks/*.csv
-#     plots/*.png
-#     validation/*.csv
-#     validation/*.rds
+# Reads: data/processed/international_results.csv (or path passed in workflow)
+#
+# Writes: reports/tables/legacy_analysis/, reports/figures/legacy_analysis/
 #
 # Notes:
-#   - Validation is chronological to mimic deployment.
-#   - Team-strength features are created using only matches played
-#     before the current match to avoid target leakage.
-# ============================================================
+# - Validation splits follow match date order, not random shuffling.
 
-# -----------------------------
 # 0. Setup
-# -----------------------------
+
+source("src/00_project_setup.R")
+source("src/01_packages.R")
+source("src/02_helpers.R")
 
 required_packages <- c(
   "readr", "dplyr", "tidyr", "ggplot2", "lubridate",
@@ -67,10 +62,10 @@ if (!file.exists(input_file)) {
   )
 }
 
-output_dir <- "outputs"
-checks_dir <- file.path(output_dir, "checks")
-plots_dir <- file.path(output_dir, "plots")
-validation_dir <- file.path(output_dir, "validation")
+output_dir <- file.path(REPORTS_TABLES_DIR, "legacy_analysis")
+checks_dir <- output_dir
+plots_dir <- file.path(REPORTS_FIGURES_DIR, "legacy_analysis")
+validation_dir <- file.path(VALIDATION_MODELING_DIR, "legacy_baseline")
 
 dir.create(output_dir, showWarnings = FALSE)
 dir.create(checks_dir, showWarnings = FALSE, recursive = TRUE)
@@ -91,9 +86,7 @@ safe_divide <- function(x, y) {
   ifelse(is.na(y) | y == 0, NA_real_, x / y)
 }
 
-# -----------------------------
 # 1. Load and type data
-# -----------------------------
 
 raw <- readr::read_csv(input_file, show_col_types = FALSE)
 
@@ -148,9 +141,7 @@ df <- raw %>%
   ) %>%
   arrange(date, source_match_id)
 
-# -----------------------------
 # 2. Data quality checks
-# -----------------------------
 
 basic_summary <- tibble(
   n_rows = nrow(df),
@@ -227,9 +218,7 @@ readr::write_csv(target_distribution, file.path(checks_dir, "target_distribution
 readr::write_csv(score_extremes, file.path(checks_dir, "score_extremes_top_50.csv"))
 readr::write_csv(team_match_counts, file.path(checks_dir, "team_match_counts.csv"))
 
-# -----------------------------
 # 3. Graphing / EDA
-# -----------------------------
 
 matches_by_year <- df %>%
   mutate(year = year(date)) %>%
@@ -365,9 +354,7 @@ p_score_heatmap <- ggplot(score_heatmap, aes(x = home_score, y = away_score, fil
 
 save_plot(p_score_heatmap, "scoreline_heatmap_0_to_8.png", width = 8, height = 7)
 
-# -----------------------------
 # 4. Leakage-safe feature engineering
-# -----------------------------
 # Unit of observation: one match.
 # Target: result_label = Home win / Draw / Away win.
 # Prediction horizon: pre-match.
@@ -488,9 +475,7 @@ readr::write_csv(
   file.path(validation_dir, "prematch_modeling_dataset.csv")
 )
 
-# -----------------------------
 # 5. Chronological validation split
-# -----------------------------
 
 model_ready <- model_df %>%
   filter(
@@ -518,9 +503,7 @@ split_summary <- tibble(
 
 readr::write_csv(split_summary, file.path(validation_dir, "chronological_split_summary.csv"))
 
-# -----------------------------
 # 6. Baselines
-# -----------------------------
 
 # Baseline 1: always predict the most common training class.
 majority_class <- train %>%
@@ -555,9 +538,7 @@ baseline_prior_probs <- test %>%
     prob_away_win = class_priors$prob[class_priors$result_label == "Away win"]
   )
 
-# -----------------------------
 # 7. Multinomial logistic model
-# -----------------------------
 
 feature_cols <- c(
   "neutral",
@@ -629,9 +610,7 @@ model_predictions <- test_x %>%
 
 readr::write_csv(model_predictions, file.path(validation_dir, "multinomial_logistic_predictions.csv"))
 
-# -----------------------------
 # 8. Metrics
-# -----------------------------
 
 accuracy_score <- function(actual, pred) {
   mean(actual == pred, na.rm = TRUE)
@@ -800,9 +779,7 @@ p_coef <- coef_table %>%
 
 save_plot(p_coef, "multinomial_logistic_coefficients.png", width = 11, height = 7)
 
-# -----------------------------
 # 9. Simple walk-forward backtest by season
-# -----------------------------
 # Expanding-window season backtest:
 # train on all prior seasons, test on the next season.
 # This is more realistic than one static split, but early seasons with
@@ -909,9 +886,7 @@ if (nrow(walk_forward_metrics) > 0) {
   save_plot(p_walk_forward_accuracy, "walk_forward_accuracy_by_season.png")
 }
 
-# -----------------------------
 # 10. Write final run manifest
-# -----------------------------
 
 manifest <- tibble(
   artifact = c(

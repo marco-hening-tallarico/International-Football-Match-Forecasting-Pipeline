@@ -1,0 +1,13 @@
+metric,value
+input_rows,49257
+output_rows,49257
+number_of_teams,336
+min_date,1872-11-30
+max_date,2026-03-31
+added_form_features,34
+rows_with_5_prior_matches_both_teams,47944
+rows_with_10_prior_matches_both_teams,46846
+percent_rows_complete_last_5_form,99.3868891731125
+percent_rows_complete_last_10_form,99.3868891731125
+total_missing_values_all_form_features,6984
+overall_missing_rate_all_form_features,0.00417020453348524

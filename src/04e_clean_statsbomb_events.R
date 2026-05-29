@@ -1,17 +1,16 @@
-# ============================================================
 # 04e_clean_statsbomb_events.R
-# Flatten StatsBomb raw event JSON into processed event and shot tables
 #
-# Inputs:
-#   data/raw/statsbomb_open/events/{match_id}.json
-#   data/processed/statsbomb_matches.csv  (lineage reference)
+# Flattens raw StatsBomb event JSON into long event and shot tables.
 #
-# Outputs:
-#   data/processed/statsbomb_events.csv
-#   data/processed/statsbomb_shots.csv
-#   data/validation/statsbomb_events_cleaning_summary.csv
-#   data/validation/statsbomb_events_schema_audit.csv
-# ============================================================
+# Reads:
+# - data/raw/statsbomb_open/events/{match_id}.json
+# - data/processed/statsbomb_matches.csv (lineage)
+#
+# Writes:
+# - data/processed/statsbomb_events.csv
+# - data/processed/statsbomb_shots.csv
+# - data/validation/statsbomb_events_cleaning_summary.csv
+# - data/validation/statsbomb_events_schema_audit.csv
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")
@@ -29,9 +28,7 @@ AUDIT_OUT <- file.path(VALIDATION_DIR, "statsbomb_events_schema_audit.csv")
 CHUNK_SIZE <- 50L
 PROGRESS_EVERY <- 100L
 
-# ============================================================
 # Safe column accessors
-# ============================================================
 
 get_chr <- function(df, col, n = nrow(df)) {
     if (col %in% names(df)) {
@@ -165,9 +162,7 @@ extract_match_id_from_path <- function(path) {
     tools::file_path_sans_ext(basename(path))
 }
 
-# ============================================================
 # Transform one raw event file
-# ============================================================
 
 transform_statsbomb_events_file <- function(path) {
     raw_file <- normalizePath(path, winslash = "/", mustWork = FALSE)
@@ -466,9 +461,7 @@ transform_statsbomb_events_file <- function(path) {
     )
 }
 
-# ============================================================
 # Discover raw files
-# ============================================================
 
 if (!dir.exists(EVENTS_RAW_DIR)) {
     stop(

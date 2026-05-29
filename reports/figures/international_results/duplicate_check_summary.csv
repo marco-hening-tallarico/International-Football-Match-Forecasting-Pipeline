@@ -1,0 +1,5 @@
+check,rows_affected
+duplicate_source_match_id,0
+exact_duplicate_match_rows,0
+same_date_home_away_tournament,1
+same_team_multiple_matches_same_day,139

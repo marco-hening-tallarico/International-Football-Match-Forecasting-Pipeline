@@ -1,16 +1,14 @@
-# ============================================================
 # 04c_download_statsbomb_lineups.R
-# Download StatsBomb lineup JSON files for every match in
-# data/processed/statsbomb_matches.csv.
 #
-# Lineups are expected to exist for every StatsBomb match.
-# Failures are recorded as "failed" in the coverage CSV.
+# Downloads raw StatsBomb lineup JSON for every match in the processed match
+# table. Failed downloads are logged in the coverage CSV.
 #
-# Outputs:
-#   data/raw/statsbomb_open/lineups/{match_id}.json
-#   data/validation/statsbomb_lineups_download_coverage.csv
-#   data/metadata/source_manifest.csv  (updated)
-# ============================================================
+# Reads: data/processed/statsbomb_matches.csv
+#
+# Writes:
+# - data/raw/statsbomb_open/lineups/{match_id}.json
+# - data/validation/statsbomb_lineups_download_coverage.csv
+# - data/metadata/source_manifest.csv (updated)
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")
@@ -20,9 +18,7 @@ source_manifest <- read_or_create_manifest(META_DIR)
 
 STATSBOMB_BASE <- "https://raw.githubusercontent.com/statsbomb/open-data/master/data"
 
-# ============================================================
 # Resolve match IDs from the processed match table
-# ============================================================
 
 matches_path <- file.path(PROCESSED_DIR, "statsbomb_matches.csv")
 
@@ -45,9 +41,7 @@ n_matches  <- length(match_ids)
 
 message("StatsBomb matches found: ", n_matches)
 
-# ============================================================
 # Prepare output directories
-# ============================================================
 
 lineups_dir   <- file.path(RAW_DIR, "statsbomb_open", "lineups")
 coverage_path <- file.path(VALIDATION_DIR, "statsbomb_lineups_download_coverage.csv")
@@ -55,9 +49,7 @@ coverage_path <- file.path(VALIDATION_DIR, "statsbomb_lineups_download_coverage.
 dir.create(lineups_dir,   recursive = TRUE, showWarnings = FALSE)
 dir.create(VALIDATION_DIR, recursive = TRUE, showWarnings = FALSE)
 
-# ============================================================
 # Download one lineup file → one coverage-row tibble
-# ============================================================
 
 download_one_lineup <- function(match_id) {
     url        <- glue::glue("{STATSBOMB_BASE}/lineups/{match_id}.json")
@@ -101,17 +93,13 @@ download_one_lineup <- function(match_id) {
     )
 }
 
-# ============================================================
 # Run downloads
-# ============================================================
 
 message("Downloading lineup files for ", n_matches, " matches...")
 
 coverage <- purrr::map_dfr(match_ids, download_one_lineup)
 
-# ============================================================
 # Update source manifest for all files that now exist on disk
-# ============================================================
 
 new_manifest_records <- coverage |>
     dplyr::filter(file_exists) |>
@@ -127,15 +115,11 @@ new_manifest_records <- coverage |>
 source_manifest <- dplyr::bind_rows(source_manifest, new_manifest_records)
 write_source_manifest(records = source_manifest, meta_dir = META_DIR)
 
-# ============================================================
 # Write coverage CSV
-# ============================================================
 
 readr::write_csv(coverage, coverage_path)
 
-# ============================================================
 # Summary
-# ============================================================
 
 n_existing   <- sum(coverage$status == "found_existing", na.rm = TRUE)
 n_downloaded <- sum(coverage$status == "downloaded",     na.rm = TRUE)

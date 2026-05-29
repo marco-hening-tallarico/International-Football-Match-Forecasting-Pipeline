@@ -1,18 +1,18 @@
-# ============================================================
 # 04d_download_statsbomb_360.R
-# Download StatsBomb three-sixty (360°) freeze-frame JSON files
-# for every match in data/processed/statsbomb_matches.csv.
 #
-# IMPORTANT: 360 files are only available for selected matches
-# (e.g. EURO 2020, FIFA World Cup 2022, Women's World Cup 2023).
-# Missing files are recorded as "unavailable" – this is normal
-# and is NOT treated as an error.
+# Downloads StatsBomb 360 freeze-frame JSON for every match in the processed
+# match table. Many matches have no 360 file; those are logged as unavailable,
+# not as errors.
 #
-# Outputs:
-#   data/raw/statsbomb_open/three-sixty/{match_id}.json
-#   data/validation/statsbomb_360_download_coverage.csv
-#   data/metadata/source_manifest.csv  (updated, available files only)
-# ============================================================
+# Reads: data/processed/statsbomb_matches.csv
+#
+# Writes:
+# - data/raw/statsbomb_open/three-sixty/{match_id}.json (when available)
+# - data/validation/statsbomb_360_download_coverage.csv
+# - data/metadata/source_manifest.csv (updated for files on disk)
+#
+# Notes:
+# - 360 coverage is limited to selected tournaments (e.g. EURO 2020, WC 2022).
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")
@@ -22,9 +22,7 @@ source_manifest <- read_or_create_manifest(META_DIR)
 
 STATSBOMB_BASE <- "https://raw.githubusercontent.com/statsbomb/open-data/master/data"
 
-# ============================================================
 # Resolve match IDs from the processed match table
-# ============================================================
 
 matches_path <- file.path(PROCESSED_DIR, "statsbomb_matches.csv")
 
@@ -51,9 +49,7 @@ message(
     "Missing files will be recorded as 'unavailable'."
 )
 
-# ============================================================
 # Prepare output directories
-# ============================================================
 
 # The StatsBomb repo uses a hyphen in the directory name.
 threesixty_dir <- file.path(RAW_DIR, "statsbomb_open", "three-sixty")
@@ -62,9 +58,7 @@ coverage_path  <- file.path(VALIDATION_DIR, "statsbomb_360_download_coverage.csv
 dir.create(threesixty_dir, recursive = TRUE, showWarnings = FALSE)
 dir.create(VALIDATION_DIR,  recursive = TRUE, showWarnings = FALSE)
 
-# ============================================================
 # Download one 360 file → one coverage-row tibble
-# ============================================================
 #
 # Failures are EXPECTED (only a subset of matches have 360 data),
 # so we suppress the download warning and record status as
@@ -115,17 +109,13 @@ download_one_360 <- function(match_id) {
     )
 }
 
-# ============================================================
 # Run downloads
-# ============================================================
 
 message("Attempting 360 downloads for ", n_matches, " matches...")
 
 coverage <- purrr::map_dfr(match_ids, download_one_360)
 
-# ============================================================
 # Update source manifest – only for files that actually exist
-# ============================================================
 
 new_manifest_records <- coverage |>
     dplyr::filter(file_exists) |>
@@ -141,15 +131,11 @@ new_manifest_records <- coverage |>
 source_manifest <- dplyr::bind_rows(source_manifest, new_manifest_records)
 write_source_manifest(records = source_manifest, meta_dir = META_DIR)
 
-# ============================================================
 # Write coverage CSV
-# ============================================================
 
 readr::write_csv(coverage, coverage_path)
 
-# ============================================================
 # Summary
-# ============================================================
 
 n_existing    <- sum(coverage$status == "found_existing", na.rm = TRUE)
 n_downloaded  <- sum(coverage$status == "downloaded",     na.rm = TRUE)

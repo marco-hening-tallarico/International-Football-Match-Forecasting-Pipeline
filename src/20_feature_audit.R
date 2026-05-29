@@ -1,18 +1,12 @@
-# ============================================================
 # 20_feature_audit.R
-# Column-level audit of the international modeling table
 #
-# Reads:
-#   data/processed/international_modeling_table.csv
+# Column-level audit of the international modeling table: types, missingness,
+# cardinality, and a first-pass keep/exclude recommendation per column.
 #
-# Writes:
-#   reports/tables/feature_audit_international_modeling_table.csv
-# ============================================================
+# Reads: data/processed/international_modeling_table.csv
+#
+# Writes: reports/tables/feature_audit_international_modeling_table.csv
 
-
-# -----------------------------
-# 0. Setup
-# -----------------------------
 
 suppressPackageStartupMessages({
     library(tidyverse)
@@ -29,9 +23,7 @@ if (!file.exists(data_path)) {
 modeling_table <- readr::read_csv(data_path, show_col_types = FALSE)
 
 
-# -----------------------------
 # 1. Classify feature roles
-# -----------------------------
 
 TARGET_COLUMNS <- "match_result"
 SPLIT_COLUMNS <- "data_split"
@@ -149,9 +141,7 @@ format_example_values <- function(column_vector, max_examples = 5L) {
 }
 
 
-# -----------------------------
 # 2. Build audit table
-# -----------------------------
 
 feature_audit_table <- purrr::map_dfr(names(modeling_table), function(column_name) {
     column_vector <- modeling_table[[column_name]]
@@ -176,9 +166,7 @@ output_path <- "reports/tables/feature_audit_international_modeling_table.csv"
 readr::write_csv(feature_audit_table, output_path)
 
 
-# -----------------------------
 # 3. Summary
-# -----------------------------
 
 role_summary <- feature_audit_table %>%
     count(feature_role, name = "n_columns") %>%

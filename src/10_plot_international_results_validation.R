@@ -1,7 +1,11 @@
-# ============================================================
 # 10_plot_international_results_validation.R
-# Basic validation plots for international match results
-# ============================================================
+#
+# Basic EDA plots for international results: volume by year, score
+# distributions, train/test split view, and duplicate-check summaries.
+#
+# Reads: data/processed/international_results.csv
+#
+# Writes: reports/figures/international_results/*
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")
@@ -17,16 +21,12 @@ if (!file.exists(processed_path)) {
     fail("Missing processed international_results.csv. Run src/08_clean_international_results.R first.")
 }
 
-# ------------------------------------------------------------
 # Output folder
-# ------------------------------------------------------------
 
-graphs_dir <- file.path(PROJECT_ROOT, "graphs", "international_results")
+graphs_dir <- file.path(REPORTS_FIGURES_DIR, "international_results")
 fs::dir_create(graphs_dir)
 
-# ------------------------------------------------------------
 # Load data
-# ------------------------------------------------------------
 
 matches <- read_processed_csv(processed_path) |>
     dplyr::mutate(
@@ -42,9 +42,7 @@ matches <- read_processed_csv(processed_path) |>
         year = lubridate::year(date)
     )
 
-# ------------------------------------------------------------
 # Basic preprocessing / duplicate checks before plotting
-# ------------------------------------------------------------
 
 duplicate_source_ids <- matches |>
     dplyr::count(source_match_id, name = "n") |>
@@ -125,10 +123,8 @@ readr::write_csv(
     file.path(graphs_dir, "same_team_multiple_matches_same_day.csv")
 )
 
-# ------------------------------------------------------------
 # Basic modeling-safe split
 # Chronological split avoids future information leaking backward.
-# ------------------------------------------------------------
 
 split_year <- 2018L
 
@@ -158,9 +154,7 @@ readr::write_csv(
     file.path(graphs_dir, "international_results_train_test_split.csv")
 )
 
-# ------------------------------------------------------------
 # Plot theme
-# ------------------------------------------------------------
 
 base_theme <- ggplot2::theme_minimal(base_size = 12) +
     ggplot2::theme(
@@ -179,10 +173,8 @@ save_plot <- function(plot, filename, width = 9, height = 6) {
     )
 }
 
-# ------------------------------------------------------------
 # 1. Matches by year
 # Training data only for modeling-safe EDA.
-# ------------------------------------------------------------
 
 p_matches_by_year <- train_matches |>
     dplyr::count(year, name = "matches") |>
@@ -198,9 +190,7 @@ p_matches_by_year <- train_matches |>
 
 save_plot(p_matches_by_year, "01_matches_by_year_train.png")
 
-# ------------------------------------------------------------
 # 2. Match result distribution
-# ------------------------------------------------------------
 
 p_result_distribution <- train_matches |>
     dplyr::count(match_result, name = "matches") |>
@@ -218,9 +208,7 @@ p_result_distribution <- train_matches |>
 
 save_plot(p_result_distribution, "02_result_distribution_train.png")
 
-# ------------------------------------------------------------
 # 3. Total goals histogram
-# ------------------------------------------------------------
 
 p_total_goals <- train_matches |>
     ggplot2::ggplot(ggplot2::aes(x = total_goals)) +
@@ -235,10 +223,8 @@ p_total_goals <- train_matches |>
 
 save_plot(p_total_goals, "03_total_goals_histogram_train.png")
 
-# ------------------------------------------------------------
 # 4. Goal difference histogram
 # Positive means home team scored more.
-# ------------------------------------------------------------
 
 p_goal_difference <- train_matches |>
     ggplot2::ggplot(ggplot2::aes(x = goal_difference)) +
@@ -253,10 +239,8 @@ p_goal_difference <- train_matches |>
 
 save_plot(p_goal_difference, "04_goal_difference_histogram_train.png")
 
-# ------------------------------------------------------------
 # 5. Home score vs away score
 # Sampled for readability, not leakage prevention.
-# ------------------------------------------------------------
 
 set.seed(20260527)
 
@@ -279,9 +263,7 @@ p_score_scatter <- score_scatter_sample |>
 
 save_plot(p_score_scatter, "05_home_score_vs_away_score_train_sample.png")
 
-# ------------------------------------------------------------
 # 6. Neutral-site distribution
-# ------------------------------------------------------------
 
 p_neutral_distribution <- train_matches |>
     dplyr::count(neutral, name = "matches") |>
@@ -302,9 +284,7 @@ p_neutral_distribution <- train_matches |>
 
 save_plot(p_neutral_distribution, "06_neutral_site_distribution_train.png")
 
-# ------------------------------------------------------------
 # 7. Top tournaments by match count
-# ------------------------------------------------------------
 
 p_top_tournaments <- train_matches |>
     dplyr::count(tournament, name = "matches") |>
@@ -324,10 +304,8 @@ p_top_tournaments <- train_matches |>
 
 save_plot(p_top_tournaments, "07_top_tournaments_train.png")
 
-# ------------------------------------------------------------
 # 8. Extreme scorelines
 # These are not automatically errors; they are QA review cases.
-# ------------------------------------------------------------
 
 extreme_scorelines <- matches |>
     dplyr::filter(total_goals > 15L | abs(goal_difference) > 10L) |>
@@ -373,10 +351,8 @@ p_extreme_scorelines <- extreme_scorelines |>
 
 save_plot(p_extreme_scorelines, "08_extreme_scorelines_full_data.png", width = 11, height = 8)
 
-# ------------------------------------------------------------
 # 9. Full-data coverage plot
 # This is acceptable as pure data validation, not model EDA.
-# ------------------------------------------------------------
 
 p_full_matches_by_year <- matches |>
     dplyr::count(year, name = "matches") |>
@@ -393,9 +369,7 @@ p_full_matches_by_year <- matches |>
 
 save_plot(p_full_matches_by_year, "09_matches_by_year_full_data_with_split.png")
 
-# ------------------------------------------------------------
 # Final console summary
-# ------------------------------------------------------------
 
 message("Validation plots saved to: ", graphs_dir)
 message("Duplicate check summary saved to: ", file.path(graphs_dir, "duplicate_check_summary.csv"))

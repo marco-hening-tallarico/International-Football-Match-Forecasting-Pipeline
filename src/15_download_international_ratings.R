@@ -1,11 +1,12 @@
-# ============================================================
 # 15_download_international_ratings.R
-# Download World Football Elo historical ratings from eloratings.net
 #
-# Primary source: http://www.eloratings.net/ (per-team match-history TSV)
-# Output:
-#   data/raw/international_ratings/world_football_elo.csv
-# ============================================================
+# Downloads World Football Elo per-team match-history TSV files from
+# eloratings.net and combines them into one raw ratings CSV.
+#
+# Writes: data/raw/international_ratings/world_football_elo.csv
+#
+# Notes:
+# - Falls back to manual-download instructions if automated fetch fails.
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")

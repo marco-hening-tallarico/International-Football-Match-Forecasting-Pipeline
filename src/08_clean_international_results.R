@@ -1,7 +1,11 @@
-# ============================================================
 # 08_clean_international_results.R
-# Clean historical international football results into one table
-# ============================================================
+#
+# Cleans martj42/international_results into one match-level table with
+# normalized text, derived outcome columns, and stable source_match_id keys.
+#
+# Reads: data/raw/international_results/results.csv
+#
+# Writes: data/processed/international_results.csv
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")

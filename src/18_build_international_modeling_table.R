@@ -1,16 +1,20 @@
-# ============================================================
 # 18_build_international_modeling_table.R
-# Build modeling-ready international match table with pre-match Elo
 #
-# Inputs:
-#   data/processed/international_results_with_shootouts.csv
-#   data/processed/international_team_ratings.csv
+# Builds the international modeling table with pre-match Elo for both teams,
+# rating age, tournament flags, and chronological train/validation/test labels.
 #
-# Outputs:
-#   data/processed/international_modeling_table.csv
-#   data/validation/international_modeling_table_summary.csv
-#   data/validation/international_modeling_table_unmatched_ratings.csv
-# ============================================================
+# Reads:
+# - data/processed/international_results_with_shootouts.csv
+# - data/processed/international_team_ratings.csv
+#
+# Writes:
+# - data/processed/international_modeling_table.csv
+# - data/validation/international_modeling_table_summary.csv
+# - data/validation/international_modeling_table_unmatched_ratings.csv
+#
+# Notes:
+# - Ratings are the latest Elo on or before each match date.
+# - Split date is CHRONOLOGICAL_SPLIT_DATE (2018-01-01).
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")
@@ -25,11 +29,11 @@ MATCHES_PATH <- file.path(
 RATINGS_PATH <- file.path(PROCESSED_DIR, "international_team_ratings.csv")
 OUTPUT_PATH <- file.path(PROCESSED_DIR, "international_modeling_table.csv")
 SUMMARY_PATH <- file.path(
-    VALIDATION_DIR,
+    VALIDATION_PROCESSED_DIR,
     "international_modeling_table_summary.csv"
 )
 UNMATCHED_PATH <- file.path(
-    VALIDATION_DIR,
+    VALIDATION_PROCESSED_DIR,
     "international_modeling_table_unmatched_ratings.csv"
 )
 

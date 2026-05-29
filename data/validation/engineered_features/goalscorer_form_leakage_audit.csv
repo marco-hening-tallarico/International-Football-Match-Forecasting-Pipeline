@@ -1,0 +1,26 @@
+source_match_id,date,home_team,away_team,result_class,home_max_prior_goal_date_used,away_max_prior_goal_date_used,home_leakage_violation,away_leakage_violation,home_goals_used_count,away_goals_used_count,home_latest_goal_date_strictly_before_match,away_latest_goal_date_strictly_before_match,audit_passed
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,0,NA,NA,FALSE,FALSE,0,0,NA,NA,TRUE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,1,1924-06-02,1924-05-28,FALSE,FALSE,4,6,1924-06-02,1924-05-28,TRUE
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,1,NA,NA,FALSE,FALSE,0,0,NA,NA,TRUE
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,-1,NA,NA,FALSE,FALSE,0,0,NA,NA,TRUE
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,0,NA,1934-05-24,FALSE,FALSE,0,20,NA,1934-05-24,TRUE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,1,1947-12-02,1947-11-30,FALSE,FALSE,234,14,1947-12-02,1947-11-30,TRUE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,-1,NA,1954-03-14,FALSE,FALSE,0,3,NA,1954-03-14,TRUE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,1,1973-03-11,1973-03-11,FALSE,FALSE,18,6,1973-03-11,1973-03-11,TRUE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,0,1977-09-03,1977-09-07,FALSE,FALSE,146,65,1977-09-03,1977-09-07,TRUE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,1,1979-10-13,1979-09-12,FALSE,FALSE,134,81,1979-10-13,1979-09-12,TRUE
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,0,1981-11-21,1963-03-29,FALSE,FALSE,39,8,1981-11-21,1963-03-29,TRUE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,1,1992-12-20,1993-01-17,FALSE,FALSE,144,12,1992-12-20,1993-01-17,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,0,1993-05-12,1993-08-22,FALSE,FALSE,203,273,1993-05-12,1993-08-22,TRUE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,1,1997-08-16,1997-08-17,FALSE,FALSE,121,30,1997-08-16,1997-08-17,TRUE
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,1,1996-06-30,NA,FALSE,FALSE,66,0,1996-06-30,NA,TRUE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,1,2004-02-11,2004-02-11,FALSE,FALSE,163,160,2004-02-11,2004-02-11,TRUE
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,1,2004-07-03,1980-07-27,FALSE,FALSE,34,1,2004-07-03,1980-07-27,TRUE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,-1,2004-11-17,2005-06-08,FALSE,FALSE,117,279,2004-11-17,2005-06-08,TRUE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,1,2007-07-15,2004-10-13,FALSE,FALSE,80,43,2007-07-15,2004-10-13,TRUE
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,1,2011-07-28,2011-07-28,FALSE,FALSE,73,17,2011-07-28,2011-07-28,TRUE
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,1,2011-07-28,2011-07-03,FALSE,FALSE,73,19,2011-07-28,2011-07-03,TRUE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,-1,2015-11-17,2015-10-13,FALSE,FALSE,338,109,2015-11-17,2015-10-13,TRUE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,1,2017-06-13,2017-11-15,FALSE,FALSE,400,323,2017-06-13,2017-11-15,TRUE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,0,2021-07-18,2022-03-30,FALSE,FALSE,19,216,2021-07-18,2022-03-30,TRUE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,1,2023-11-21,2023-11-21,FALSE,FALSE,78,111,2023-11-21,2023-11-21,TRUE

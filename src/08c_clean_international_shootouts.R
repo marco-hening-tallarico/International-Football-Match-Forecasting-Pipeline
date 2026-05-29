@@ -1,7 +1,11 @@
-# ============================================================
 # 08c_clean_international_shootouts.R
-# Clean martj42/international_results shootouts into one table
-# ============================================================
+#
+# Cleans martj42/international_results penalty-shootout records into one
+# table for joining onto match results.
+#
+# Reads: data/raw/international_results/shootouts.csv
+#
+# Writes: data/processed/international_shootouts.csv
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")
@@ -201,11 +205,11 @@ cleaning_summary <- tibble::tibble(
 
 shootouts_out <- file.path(PROCESSED_DIR, "international_shootouts.csv")
 summary_out <- file.path(
-    VALIDATION_DIR,
+    VALIDATION_PROCESSED_DIR,
     "international_shootouts_cleaning_summary.csv"
 )
 unmatched_out <- file.path(
-    VALIDATION_DIR,
+    VALIDATION_PROCESSED_DIR,
     "international_shootouts_unmatched_matches.csv"
 )
 

@@ -1,15 +1,14 @@
-# ============================================================
 # 16_clean_international_ratings.R
-# Clean World Football Elo ratings for modeling joins
 #
-# Input:
-#   data/raw/international_ratings/world_football_elo.csv
+# Cleans World Football Elo ratings for modeling joins: normalized team names,
+# rating dates, and a crosswalk for names that differ from match results.
 #
-# Outputs:
-#   data/processed/international_team_ratings.csv
-#   data/validation/international_team_ratings_cleaning_summary.csv
-#   data/metadata/team_name_crosswalk.csv (created or updated)
-# ============================================================
+# Reads: data/raw/international_ratings/world_football_elo.csv
+#
+# Writes:
+# - data/processed/international_team_ratings.csv
+# - data/validation/international_team_ratings_cleaning_summary.csv
+# - data/metadata/team_name_crosswalk.csv (created or updated)
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")
@@ -22,7 +21,7 @@ RAW_RATINGS_PATH <- file.path(
 )
 OUTPUT_PATH <- file.path(PROCESSED_DIR, "international_team_ratings.csv")
 SUMMARY_PATH <- file.path(
-    VALIDATION_DIR,
+    VALIDATION_PROCESSED_DIR,
     "international_team_ratings_cleaning_summary.csv"
 )
 CROSSWALK_PATH <- file.path(META_DIR, "team_name_crosswalk.csv")

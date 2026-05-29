@@ -1,40 +1,17 @@
-# ============================================================
 # 19_baseline.R
-# Baseline models for international soccer match outcome prediction
 #
-# Target:
-#   match_result ∈ {H, D, A}
+# Simple baselines for international match outcomes (H/D/A): class frequencies,
+# majority class, and Elo rating_diff logistic models. Establishes the
+# chronological split and calibration workflow used by later models.
 #
-# Models:
-#   1. Class-frequency baseline
-#   2. Majority-class baseline with epsilon smoothing
-#   3. rating_diff multinomial logistic regression
-#   4. rating_diff + neutral multinomial logistic regression (if neutral valid)
+# Reads: data/processed/international_modeling_table.csv
 #
-# Outputs:
-#   reports/tables/baseline_model_comparison.csv
-#   reports/tables/baseline_validation_calibration.csv
-#   reports/tables/baseline_test_calibration.csv
+# Writes:
+# - reports/tables/baseline_*.csv
+# - reports/figures/baseline_*.png
 #
-#   reports/figures/baseline_class_distribution.png
-#   reports/figures/baseline_rating_diff_by_result.png
-#   reports/figures/baseline_elo_probability_curves.png
-#   reports/figures/baseline_validation_calibration.png
-#   reports/figures/baseline_test_calibration.png
-#   reports/figures/baseline_metric_comparison.png
-#   reports/figures/baseline_metric_comparison_lower_is_better.png
-#   reports/figures/baseline_metric_comparison_higher_is_better.png
-#   reports/figures/baseline_confusion_matrix.png
-#
-#   reports/tables/baseline_classwise_metrics.csv
-#   reports/tables/baseline_confusion_matrix.csv
-#   reports/tables/baseline_confident_wrong_predictions.csv
-# ============================================================
-
-
-# -----------------------------
-# 0. Setup
-# -----------------------------
+# Notes:
+# - Target is match_result; model selection uses validation log loss.
 
 set.seed(20240529)
 
@@ -70,9 +47,7 @@ dir.create("reports/tables", recursive = TRUE, showWarnings = FALSE)
 dir.create("reports/figures", recursive = TRUE, showWarnings = FALSE)
 
 
-# -----------------------------
 # 1. Load data
-# -----------------------------
 
 data_path <- "data/processed/international_modeling_table.csv"
 
@@ -99,9 +74,7 @@ if (length(missing_required) > 0) {
 }
 
 
-# -----------------------------
 # 2. Filter candidate rows
-# -----------------------------
 
 target_levels <- c("H", "D", "A")
 
@@ -125,9 +98,7 @@ if (!identical(levels(df$match_result), target_levels)) {
 }
 
 
-# -----------------------------
 # 3. Neutral handling
-# -----------------------------
 
 coerce_neutral_model <- function(neutral_vector) {
     if (is.logical(neutral_vector)) {
@@ -179,9 +150,7 @@ if ("neutral" %in% names(df)) {
 }
 
 
-# -----------------------------
 # 4. Leakage guard
-# -----------------------------
 
 leakage_cols <- c(
     "home_score",
@@ -227,9 +196,7 @@ for (allowlist_name in names(predictor_allowlists)) {
 }
 
 
-# -----------------------------
 # 5. Train / test split
-# -----------------------------
 
 train_full <- df %>%
     filter(data_split == "train")
@@ -246,9 +213,7 @@ if (nrow(test_df) == 0) {
 }
 
 
-# -----------------------------
 # 6. Chronological validation split
-# -----------------------------
 
 if ("date" %in% names(train_full)) {
     train_full <- train_full %>%
@@ -299,9 +264,7 @@ message("Validation rows: ", nrow(validation_df))
 message("Test rows: ", nrow(test_df))
 
 
-# -----------------------------
 # 7. Utility functions
-# -----------------------------
 
 prob_cols <- c(".pred_H", ".pred_D", ".pred_A")
 prob_drift_tolerance <- 1e-6
@@ -671,9 +634,7 @@ prediction_store <- list()
 metrics_table <- tibble()
 
 
-# -----------------------------
 # 8. Class-frequency baseline
-# -----------------------------
 
 class_probs_inner <- estimate_class_probabilities(inner_train)
 
@@ -706,9 +667,7 @@ metrics_table <- append_metrics_row(
 )
 
 
-# -----------------------------
 # 9. Majority-class baseline
-# -----------------------------
 
 epsilon <- 0.01
 majority_probs_inner <- make_majority_probs(inner_train, epsilon = epsilon)
@@ -742,9 +701,7 @@ metrics_table <- append_metrics_row(
 )
 
 
-# -----------------------------
 # 10. rating_diff multinomial logistic regression
-# -----------------------------
 
 rating_diff_model <- nnet::multinom(
     match_result ~ rating_diff,
@@ -782,9 +739,7 @@ metrics_table <- append_metrics_row(
 )
 
 
-# -----------------------------
 # 11. rating_diff + neutral multinomial logistic regression
-# -----------------------------
 
 if (neutral_model_valid) {
     rating_diff_neutral_model <- nnet::multinom(
@@ -826,9 +781,7 @@ if (neutral_model_valid) {
 }
 
 
-# -----------------------------
 # 12. Save model comparison table
-# -----------------------------
 
 metrics_table <- metrics_table %>%
     arrange(model, split)
@@ -841,9 +794,7 @@ readr::write_csv(
 print(metrics_table)
 
 
-# -----------------------------
 # 12b. Classwise metrics and confusion matrices
-# -----------------------------
 
 baseline_splits <- c("validation", "test")
 
@@ -945,9 +896,7 @@ readr::write_csv(
 )
 
 
-# -----------------------------
 # 13. Calibration tables
-# -----------------------------
 
 validation_calibration <- purrr::map_dfr(
     names(prediction_store),
@@ -982,9 +931,7 @@ readr::write_csv(
 )
 
 
-# -----------------------------
 # 14. Plots
-# -----------------------------
 
 class_distribution_plot <- df %>%
     count(data_split, match_result) %>%
@@ -1248,9 +1195,7 @@ ggsave(
 )
 
 
-# -----------------------------
 # 15. Final summary
-# -----------------------------
 
 best_validation_row <- metrics_table %>%
     filter(split == "validation") %>%

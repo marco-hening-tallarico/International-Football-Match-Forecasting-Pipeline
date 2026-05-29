@@ -1,5 +1,6 @@
 # reports/tables/approved_feature_sets_final.R
-# Final approved feature sets after manual review
+#
+# Final approved feature lists after manual review. Loaded by Model 24+ scripts.
 
 safe_features <- c(
   "rating_diff",

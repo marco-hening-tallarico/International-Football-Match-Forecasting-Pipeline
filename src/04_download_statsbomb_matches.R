@@ -1,7 +1,14 @@
-# ============================================================
 # 04_download_statsbomb_matches.R
-# Download and clean StatsBomb match metadata
-# ============================================================
+#
+# Downloads StatsBomb match metadata for each competition-season and builds
+# the processed match table used by event, lineup, and 360 download scripts.
+#
+# Reads: data/processed/statsbomb_competitions.csv
+#
+# Writes:
+# - data/processed/statsbomb_matches.csv
+# - data/processed/statsbomb_matches.rds
+# - data/metadata/source_manifest.csv (updated)
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")

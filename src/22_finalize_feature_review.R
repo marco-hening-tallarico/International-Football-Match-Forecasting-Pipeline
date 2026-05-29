@@ -1,4 +1,16 @@
-# src/22_feature_review_helper.R
+# 22_finalize_feature_review.R
+#
+# Combines the feature audit with manual review rules and writes approved
+# feature lists for downstream EDA and modeling scripts.
+#
+# Reads:
+# - data/processed/international_modeling_table.csv
+# - reports/tables/feature_audit_international_modeling_table.csv (if present)
+#
+# Writes:
+# - reports/tables/feature_review_all_columns.csv
+# - reports/feature_review_international_modeling_table.md
+# - reports/tables/approved_feature_sets.R
 
 suppressPackageStartupMessages({
     library(readr)
@@ -27,9 +39,7 @@ audit <- if (file.exists(audit_path)) {
     tibble(column = names(model_df))
 }
 
-# -----------------------------
 # Helpers
-# -----------------------------
 
 safe_examples <- function(x, n = 6) {
     vals <- x[!is.na(x)]
@@ -132,9 +142,7 @@ guess_reason <- function(col, decision) {
     )
 }
 
-# -----------------------------
 # Column inspection table
-# -----------------------------
 
 column_report <- tibble(column = names(model_df)) |>
     mutate(
@@ -176,9 +184,7 @@ review_table <- column_report |>
 
 write_csv(review_table, out_csv)
 
-# -----------------------------
 # Feature vectors
-# -----------------------------
 
 safe_features <- review_table |>
     filter(final_decision == "keep") |>
@@ -215,9 +221,7 @@ feature_set_lines <- c(
 
 writeLines(feature_set_lines, out_r)
 
-# -----------------------------
 # Markdown review doc
-# -----------------------------
 
 md_header <- c(
     "# Feature Review: international_modeling_table.csv",
@@ -294,9 +298,7 @@ md_sets <- c(
 
 writeLines(c(md_header, md_rows, md_sets), out_md)
 
-# -----------------------------
 # Console output
-# -----------------------------
 
 cat("\nWrote feature review table:\n")
 cat(out_csv, "\n")

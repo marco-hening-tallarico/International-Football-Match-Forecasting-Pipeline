@@ -1,16 +1,16 @@
-# ============================================================
 # 04g_clean_statsbomb_360.R
-# Flatten StatsBomb raw 360 freeze-frame JSON into processed rows
 #
-# Inputs:
-#   data/raw/statsbomb_open/three-sixty/{match_id}.json
-#   data/processed/statsbomb_matches.csv  (lineage reference)
+# Flattens StatsBomb 360 freeze-frame JSON where raw files exist. Skips
+# matches without 360 data (expected for most of the corpus).
 #
-# Outputs:
-#   data/processed/statsbomb_360.csv
-#   data/validation/statsbomb_360_cleaning_summary.csv
-#   data/validation/statsbomb_360_schema_audit.csv
-# ============================================================
+# Reads:
+# - data/raw/statsbomb_open/three-sixty/{match_id}.json
+# - data/processed/statsbomb_matches.csv (lineage)
+#
+# Writes:
+# - data/processed/statsbomb_360.csv
+# - data/validation/statsbomb_360_cleaning_summary.csv
+# - data/validation/statsbomb_360_schema_audit.csv
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")
@@ -43,9 +43,7 @@ THREESIXTY_COLUMNS <- c(
     "location_y"
 )
 
-# ============================================================
 # Safe column accessors
-# ============================================================
 
 get_chr <- function(df, col, n = nrow(df)) {
     if (col %in% names(df)) {
@@ -217,9 +215,7 @@ expand_events_to_freeze_rows <- function(
     )
 }
 
-# ============================================================
 # Transform one raw 360 file
-# ============================================================
 
 transform_statsbomb_360_file <- function(path) {
     raw_file <- normalizePath(path, winslash = "/", mustWork = FALSE)
@@ -322,9 +318,7 @@ transform_statsbomb_360_file <- function(path) {
     )
 }
 
-# ============================================================
 # Discover raw files
-# ============================================================
 
 dir.create(PROCESSED_DIR, recursive = TRUE, showWarnings = FALSE)
 dir.create(VALIDATION_DIR, recursive = TRUE, showWarnings = FALSE)

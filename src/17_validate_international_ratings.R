@@ -1,16 +1,16 @@
-# ============================================================
 # 17_validate_international_ratings.R
-# Validate cleaned international team ratings and match coverage
 #
-# Inputs:
-#   data/processed/international_team_ratings.csv
-#   data/processed/international_results_with_shootouts.csv
+# Checks cleaned Elo ratings and reports how well they cover teams and decades
+# in international_results_with_shootouts.csv.
 #
-# Outputs:
-#   data/validation/international_team_ratings_validation_summary.csv
-#   data/validation/international_team_ratings_unmatched_teams.csv
-#   data/validation/international_team_ratings_coverage_by_decade.csv
-# ============================================================
+# Reads:
+# - data/processed/international_team_ratings.csv
+# - data/processed/international_results_with_shootouts.csv
+#
+# Writes:
+# - data/validation/international_team_ratings_validation_summary.csv
+# - data/validation/international_team_ratings_unmatched_teams.csv
+# - data/validation/international_team_ratings_coverage_by_decade.csv
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")
@@ -22,15 +22,15 @@ MATCHES_PATH <- file.path(
     "international_results_with_shootouts.csv"
 )
 SUMMARY_PATH <- file.path(
-    VALIDATION_DIR,
+    VALIDATION_PROCESSED_DIR,
     "international_team_ratings_validation_summary.csv"
 )
 UNMATCHED_TEAMS_PATH <- file.path(
-    VALIDATION_DIR,
+    VALIDATION_PROCESSED_DIR,
     "international_team_ratings_unmatched_teams.csv"
 )
 COVERAGE_BY_DECADE_PATH <- file.path(
-    VALIDATION_DIR,
+    VALIDATION_PROCESSED_DIR,
     "international_team_ratings_coverage_by_decade.csv"
 )
 

@@ -1,16 +1,16 @@
-# ============================================================
 # 14_join_international_shootouts_to_results.R
-# Join processed international shootouts onto match results
 #
-# Inputs:
-#   data/processed/international_results.csv
-#   data/processed/international_shootouts.csv
+# Left-joins processed shootout outcomes onto international match results
+# so knockout matches retain penalty-winner information without changing
+# regulation-time scores.
 #
-# Outputs:
-#   data/processed/international_results_with_shootouts.csv
-#   data/validation/international_results_shootout_join_summary.csv
-#   data/validation/international_results_shootout_unmatched.csv
-# ============================================================
+# Reads:
+# - data/processed/international_results.csv
+# - data/processed/international_shootouts.csv
+#
+# Writes:
+# - data/processed/international_results_with_shootouts.csv
+# - data/validation/processed_data/international_results_shootout_*.csv
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")
@@ -23,11 +23,11 @@ OUTPUT_PATH <- file.path(
     "international_results_with_shootouts.csv"
 )
 SUMMARY_PATH <- file.path(
-    VALIDATION_DIR,
+    VALIDATION_PROCESSED_DIR,
     "international_results_shootout_join_summary.csv"
 )
 UNMATCHED_PATH <- file.path(
-    VALIDATION_DIR,
+    VALIDATION_PROCESSED_DIR,
     "international_results_shootout_unmatched.csv"
 )
 

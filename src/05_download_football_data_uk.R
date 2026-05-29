@@ -1,7 +1,11 @@
-# ============================================================
 # 05_download_football_data_uk.R
-# Download high-volume match-level data from football-data.co.uk
-# ============================================================
+#
+# Downloads season CSV files from football-data.co.uk into data/raw.
+# Does not clean or reshape; see 06_clean_football_data_uk.R.
+#
+# Writes:
+# - data/raw/football_data_uk/*.csv
+# - data/metadata/source_manifest.csv (updated)
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")

@@ -1,0 +1,884 @@
+source_match_id,date,home_team,away_team,team_side,team,example_type,prior_match_date,prior_match_key,goal_date,scorer,minute,own_goal,penalty
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,home,Malaysia,prior_match,2012-11-28,2012_06_01_malaysia_philippines,NA,NA,NA,NA,NA
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,home,Malaysia,prior_match,2012-11-28,2012_06_08_singapore_malaysia,NA,NA,NA,NA,NA
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,home,Malaysia,prior_match,2012-11-28,2012_06_12_malaysia_singapore,NA,NA,NA,NA,NA
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,home,Malaysia,prior_match,2012-11-28,2012_09_11_malaysia_vietnam,NA,NA,NA,NA,NA
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,home,Malaysia,prior_match,2012-11-28,2012_10_16_hong_kong_malaysia,NA,NA,NA,NA,NA
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,home,Malaysia,prior_match,2012-11-28,2012_11_03_vietnam_malaysia,NA,NA,NA,NA,NA
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,home,Malaysia,prior_match,2012-11-28,2012_11_07_thailand_malaysia,NA,NA,NA,NA,NA
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,home,Malaysia,prior_match,2012-11-28,2012_11_14_malaysia_hong_kong,NA,NA,NA,NA,NA
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,home,Malaysia,prior_match,2012-11-28,2012_11_20_malaysia_bangladesh,NA,NA,NA,NA,NA
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,home,Malaysia,prior_match,2012-11-28,2012_11_25_malaysia_singapore,NA,NA,NA,NA,NA
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,away,Laos,prior_match,2012-11-28,2011_07_28_laos_china_pr,NA,NA,NA,NA,NA
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,away,Laos,prior_match,2012-11-28,2012_09_10_laos_philippines,NA,NA,NA,NA,NA
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,away,Laos,prior_match,2012-11-28,2012_09_12_thailand_laos,NA,NA,NA,NA,NA
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,away,Laos,prior_match,2012-11-28,2012_10_07_laos_cambodia,NA,NA,NA,NA,NA
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,away,Laos,prior_match,2012-11-28,2012_10_09_timor_leste_laos,NA,NA,NA,NA,NA
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,away,Laos,prior_match,2012-11-28,2012_10_11_brunei_laos,NA,NA,NA,NA,NA
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,away,Laos,prior_match,2012-11-28,2012_10_13_myanmar_laos,NA,NA,NA,NA,NA
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,away,Laos,prior_match,2012-11-28,2012_10_26_vietnam_laos,NA,NA,NA,NA,NA
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,away,Laos,prior_match,2012-11-28,2012_10_28_laos_turkmenistan,NA,NA,NA,NA,NA
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,away,Laos,prior_match,2012-11-28,2012_11_25_indonesia_laos,NA,NA,NA,NA,NA
+2012_11_28_malaysia_laos_aff_championship,2012-11-28,Malaysia,Laos,away,Laos,goal_last_10,NA,2011_07_28_laos_china_pr,2011-07-28,Visay Phaphouvanin,47,FALSE,FALSE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,Egypt,prior_match,1993-01-31,1992_09_12_egypt_kuwait,NA,NA,NA,NA,NA
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,Egypt,prior_match,1993-01-31,1992_09_15_syria_egypt,NA,NA,NA,NA,NA
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,Egypt,prior_match,1993-01-31,1992_09_17_egypt_saudi_arabia,NA,NA,NA,NA,NA
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,Egypt,prior_match,1993-01-31,1992_10_11_egypt_angola,NA,NA,NA,NA,NA
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,Egypt,prior_match,1993-01-31,1992_10_25_togo_egypt,NA,NA,NA,NA,NA
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,Egypt,prior_match,1993-01-31,1992_11_02_egypt_kuwait,NA,NA,NA,NA,NA
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,Egypt,prior_match,1993-01-31,1992_11_08_morocco_egypt,NA,NA,NA,NA,NA
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,Egypt,prior_match,1993-01-31,1992_11_20_egypt_kuwait,NA,NA,NA,NA,NA
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,Egypt,prior_match,1993-01-31,1992_12_20_zimbabwe_egypt,NA,NA,NA,NA,NA
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,Egypt,prior_match,1993-01-31,1993_01_18_angola_egypt,NA,NA,NA,NA,NA
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,Egypt,goal_last_10,NA,1992_10_11_egypt_angola,1992-10-11,Hossam Hassan,63,FALSE,FALSE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,Egypt,goal_last_10,NA,1992_10_25_togo_egypt,1992-10-25,Ayman Mansour,24,FALSE,FALSE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,Egypt,goal_last_10,NA,1992_10_25_togo_egypt,1992-10-25,Hossam Hassan,32,FALSE,FALSE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,Egypt,goal_last_10,NA,1992_10_25_togo_egypt,1992-10-25,Hany Ramzy,84,FALSE,FALSE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,Egypt,goal_last_10,NA,1992_10_25_togo_egypt,1992-10-25,Hossam Hassan,89,FALSE,TRUE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,Egypt,goal_last_10,NA,1992_12_20_zimbabwe_egypt,1992-12-20,Ahmed El-Kass,64,FALSE,FALSE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,Egypt,goal_365d,NA,1992_10_11_egypt_angola,1992-10-11,Hossam Hassan,63,FALSE,FALSE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,Egypt,goal_365d,NA,1992_10_25_togo_egypt,1992-10-25,Ayman Mansour,24,FALSE,FALSE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,Egypt,goal_365d,NA,1992_10_25_togo_egypt,1992-10-25,Hossam Hassan,32,FALSE,FALSE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,Egypt,goal_365d,NA,1992_10_25_togo_egypt,1992-10-25,Hany Ramzy,84,FALSE,FALSE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,Egypt,goal_365d,NA,1992_10_25_togo_egypt,1992-10-25,Hossam Hassan,89,FALSE,TRUE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,home,Egypt,goal_365d,NA,1992_12_20_zimbabwe_egypt,1992-12-20,Ahmed El-Kass,64,FALSE,FALSE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,away,Togo,prior_match,1993-01-31,1990_10_14_benin_togo,NA,NA,NA,NA,NA
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,away,Togo,prior_match,1993-01-31,1991_01_27_togo_nigeria,NA,NA,NA,NA,NA
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,away,Togo,prior_match,1993-01-31,1991_04_21_togo_burkina_faso,NA,NA,NA,NA,NA
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,away,Togo,prior_match,1993-01-31,1991_04_29_ghana_togo,NA,NA,NA,NA,NA
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,away,Togo,prior_match,1993-01-31,1991_07_14_togo_benin,NA,NA,NA,NA,NA
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,away,Togo,prior_match,1993-01-31,1992_04_05_togo_ghana,NA,NA,NA,NA,NA
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,away,Togo,prior_match,1993-01-31,1992_06_14_gabon_togo,NA,NA,NA,NA,NA
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,away,Togo,prior_match,1993-01-31,1992_10_09_zimbabwe_togo,NA,NA,NA,NA,NA
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,away,Togo,prior_match,1993-01-31,1992_10_25_togo_egypt,NA,NA,NA,NA,NA
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,away,Togo,prior_match,1993-01-31,1993_01_17_togo_zimbabwe,NA,NA,NA,NA,NA
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,away,Togo,goal_last_10,NA,1992_10_25_togo_egypt,1992-10-25,Tadjou Salou,80,FALSE,FALSE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,away,Togo,goal_last_10,NA,1993_01_17_togo_zimbabwe,1993-01-17,Salissou Ali,69,FALSE,FALSE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,away,Togo,goal_365d,NA,1992_10_25_togo_egypt,1992-10-25,Tadjou Salou,80,FALSE,FALSE
+1993_01_31_egypt_togo_fifa_world_cup_qualification,1993-01-31,Egypt,Togo,away,Togo,goal_365d,NA,1993_01_17_togo_zimbabwe,1993-01-17,Salissou Ali,69,FALSE,FALSE
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,home,Guyana,prior_match,1932-04-23,1929_11_03_trinidad_and_tobago_guyana,NA,NA,NA,NA,NA
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,home,Guyana,prior_match,1932-04-23,1929_11_11_trinidad_and_tobago_guyana,NA,NA,NA,NA,NA
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,home,Guyana,prior_match,1932-04-23,1929_11_12_trinidad_and_tobago_guyana,NA,NA,NA,NA,NA
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,home,Guyana,prior_match,1932-04-23,1931_03_05_guyana_trinidad_and_tobago,NA,NA,NA,NA,NA
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,home,Guyana,prior_match,1932-04-23,1931_03_08_guyana_trinidad_and_tobago,NA,NA,NA,NA,NA
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,home,Guyana,prior_match,1932-04-23,1931_03_10_guyana_barbados,NA,NA,NA,NA,NA
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,home,Guyana,prior_match,1932-04-23,1931_03_14_guyana_barbados,NA,NA,NA,NA,NA
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,home,Guyana,prior_match,1932-04-23,1932_04_15_guyana_trinidad_and_tobago,NA,NA,NA,NA,NA
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,home,Guyana,prior_match,1932-04-23,1932_04_19_barbados_guyana,NA,NA,NA,NA,NA
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,home,Guyana,prior_match,1932-04-23,1932_04_21_barbados_guyana,NA,NA,NA,NA,NA
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,away,Trinidad and Tobago,prior_match,1932-04-23,1929_11_02_trinidad_and_tobago_guyana,NA,NA,NA,NA,NA
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,away,Trinidad and Tobago,prior_match,1932-04-23,1929_11_03_trinidad_and_tobago_guyana,NA,NA,NA,NA,NA
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,away,Trinidad and Tobago,prior_match,1932-04-23,1929_11_11_trinidad_and_tobago_guyana,NA,NA,NA,NA,NA
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,away,Trinidad and Tobago,prior_match,1932-04-23,1929_11_12_trinidad_and_tobago_guyana,NA,NA,NA,NA,NA
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,away,Trinidad and Tobago,prior_match,1932-04-23,1931_03_05_guyana_trinidad_and_tobago,NA,NA,NA,NA,NA
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,away,Trinidad and Tobago,prior_match,1932-04-23,1931_03_06_barbados_trinidad_and_tobago,NA,NA,NA,NA,NA
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,away,Trinidad and Tobago,prior_match,1932-04-23,1931_03_08_guyana_trinidad_and_tobago,NA,NA,NA,NA,NA
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,away,Trinidad and Tobago,prior_match,1932-04-23,1931_03_09_barbados_trinidad_and_tobago,NA,NA,NA,NA,NA
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,away,Trinidad and Tobago,prior_match,1932-04-23,1932_04_15_guyana_trinidad_and_tobago,NA,NA,NA,NA,NA
+1932_04_23_guyana_trinidad_and_tobago_friendly,1932-04-23,Guyana,Trinidad and Tobago,away,Trinidad and Tobago,prior_match,1932-04-23,1932_04_17_barbados_trinidad_and_tobago,NA,NA,NA,NA,NA
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,home,Malaysia,prior_match,2014-09-20,2013_09_10_china_pr_malaysia,NA,NA,NA,NA,NA
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,home,Malaysia,prior_match,2014-09-20,2013_10_15_malaysia_bahrain,NA,NA,NA,NA,NA
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,home,Malaysia,prior_match,2014-09-20,2013_11_08_kuwait_malaysia,NA,NA,NA,NA,NA
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,home,Malaysia,prior_match,2014-09-20,2013_11_15_bahrain_malaysia,NA,NA,NA,NA,NA
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,home,Malaysia,prior_match,2014-09-20,2013_11_19_malaysia_qatar,NA,NA,NA,NA,NA
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,home,Malaysia,prior_match,2014-09-20,2014_03_01_malaysia_philippines,NA,NA,NA,NA,NA
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,home,Malaysia,prior_match,2014-09-20,2014_03_05_yemen_malaysia,NA,NA,NA,NA,NA
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,home,Malaysia,prior_match,2014-09-20,2014_04_27_philippines_malaysia,NA,NA,NA,NA,NA
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,home,Malaysia,prior_match,2014-09-20,2014_08_08_tajikistan_malaysia,NA,NA,NA,NA,NA
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,home,Malaysia,prior_match,2014-09-20,2014_09_14_indonesia_malaysia,NA,NA,NA,NA,NA
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,away,Cambodia,prior_match,2014-09-20,2011_07_03_laos_cambodia,NA,NA,NA,NA,NA
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,away,Cambodia,prior_match,2014-09-20,2012_09_05_cambodia_philippines,NA,NA,NA,NA,NA
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,away,Cambodia,prior_match,2014-09-20,2012_10_05_cambodia_timor_leste,NA,NA,NA,NA,NA
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,away,Cambodia,prior_match,2014-09-20,2012_10_07_laos_cambodia,NA,NA,NA,NA,NA
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,away,Cambodia,prior_match,2014-09-20,2012_10_09_cambodia_brunei,NA,NA,NA,NA,NA
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,away,Cambodia,prior_match,2014-09-20,2012_10_11_myanmar_cambodia,NA,NA,NA,NA,NA
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,away,Cambodia,prior_match,2014-09-20,2013_03_22_turkmenistan_cambodia,NA,NA,NA,NA,NA
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,away,Cambodia,prior_match,2014-09-20,2013_03_24_philippines_cambodia,NA,NA,NA,NA,NA
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,away,Cambodia,prior_match,2014-09-20,2013_11_19_cambodia_guam,NA,NA,NA,NA,NA
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,away,Cambodia,prior_match,2014-09-20,2013_11_24_singapore_cambodia,NA,NA,NA,NA,NA
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,away,Cambodia,goal_last_10,NA,2011_07_03_laos_cambodia,2011-07-03,Chhin Chhoeun,45,FALSE,FALSE
+2014_09_20_malaysia_cambodia_friendly,2014-09-20,Malaysia,Cambodia,away,Cambodia,goal_last_10,NA,2011_07_03_laos_cambodia,2011-07-03,Kouch Sokumpheak,75,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,Martinique,prior_match,2022-06-12,2019_06_23_martinique_mexico,NA,NA,NA,NA,NA
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,Martinique,prior_match,2022-06-12,2019_09_06_martinique_trinidad_and_tobago,NA,NA,NA,NA,NA
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,Martinique,prior_match,2022-06-12,2019_09_09_trinidad_and_tobago_martinique,NA,NA,NA,NA,NA
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,Martinique,prior_match,2022-06-12,2019_10_13_honduras_martinique,NA,NA,NA,NA,NA
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,Martinique,prior_match,2022-06-12,2019_11_14_martinique_honduras,NA,NA,NA,NA,NA
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,Martinique,prior_match,2022-06-12,2021_07_11_canada_martinique,NA,NA,NA,NA,NA
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,Martinique,prior_match,2022-06-12,2021_07_15_united_states_martinique,NA,NA,NA,NA,NA
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,Martinique,prior_match,2022-06-12,2021_07_18_martinique_haiti,NA,NA,NA,NA,NA
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,Martinique,prior_match,2022-06-12,2022_06_05_costa_rica_martinique,NA,NA,NA,NA,NA
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,Martinique,prior_match,2022-06-12,2022_06_09_panama_martinique,NA,NA,NA,NA,NA
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,Martinique,goal_last_10,NA,2019_06_23_martinique_mexico,2019-06-23,Kévin Parsemain,56,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,Martinique,goal_last_10,NA,2019_06_23_martinique_mexico,2019-06-23,Jordy Delem,84,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,Martinique,goal_last_10,NA,2021_07_11_canada_martinique,2021-07-11,Emmanuel Rivière,10,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,Martinique,goal_last_10,NA,2021_07_15_united_states_martinique,2021-07-15,Emmanuel Rivière,64,FALSE,TRUE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,Martinique,goal_last_10,NA,2021_07_18_martinique_haiti,2021-07-18,Kévin Fortuné,53,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,Martinique,goal_365d,NA,2021_07_11_canada_martinique,2021-07-11,Emmanuel Rivière,10,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,Martinique,goal_365d,NA,2021_07_15_united_states_martinique,2021-07-15,Emmanuel Rivière,64,FALSE,TRUE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,home,Martinique,goal_365d,NA,2021_07_18_martinique_haiti,2021-07-18,Kévin Fortuné,53,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,prior_match,2022-06-12,2022_01_16_peru_panama,NA,NA,NA,NA,NA
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,prior_match,2022-06-12,2022_01_27_costa_rica_panama,NA,NA,NA,NA,NA
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,prior_match,2022-06-12,2022_01_30_panama_jamaica,NA,NA,NA,NA,NA
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,prior_match,2022-06-12,2022_02_02_mexico_panama,NA,NA,NA,NA,NA
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,prior_match,2022-06-12,2022_03_24_panama_honduras,NA,NA,NA,NA,NA
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,prior_match,2022-06-12,2022_03_27_united_states_panama,NA,NA,NA,NA,NA
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,prior_match,2022-06-12,2022_03_30_panama_canada,NA,NA,NA,NA,NA
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,prior_match,2022-06-12,2022_06_02_panama_costa_rica,NA,NA,NA,NA,NA
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,prior_match,2022-06-12,2022_06_09_panama_martinique,NA,NA,NA,NA,NA
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,prior_match,2022-06-12,2022_06_11_uruguay_panama,NA,NA,NA,NA,NA
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_last_10,NA,2022_01_30_panama_jamaica,2022-01-30,Javain Brown,43,TRUE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_last_10,NA,2022_01_30_panama_jamaica,2022-01-30,Eric Davis,51,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_last_10,NA,2022_01_30_panama_jamaica,2022-01-30,Azmahar Ariano,69,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_last_10,NA,2022_03_24_panama_honduras,2022-03-24,Rolando Blackburn,23,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_last_10,NA,2022_03_27_united_states_panama,2022-03-27,Aníbal Godoy,86,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_last_10,NA,2022_03_30_panama_canada,2022-03-30,Gabriel Torres,49,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2021_06_12_panama_cura_ao,2021-06-12,Alberto Quintero,55,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2021_06_12_panama_cura_ao,2021-06-12,Cecilio Waterman,77,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2021_07_13_qatar_panama,2021-07-13,Rolando Blackburn,51,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2021_07_13_qatar_panama,2021-07-13,Rolando Blackburn,58,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2021_07_13_qatar_panama,2021-07-13,Eric Davis,79,FALSE,TRUE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2021_07_17_panama_honduras,2021-07-17,Eric Davis,32,FALSE,TRUE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2021_07_17_panama_honduras,2021-07-17,César Yanis,45,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2021_07_20_panama_grenada,2021-07-20,Alberto Quintero,7,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2021_07_20_panama_grenada,2021-07-20,José Luis Rodríguez,27,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2021_07_20_panama_grenada,2021-07-20,José Luis Rodríguez,64,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2021_09_05_jamaica_panama,2021-09-05,Andrés Andrade,14,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2021_09_05_jamaica_panama,2021-09-05,Rolando Blackburn,39,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2021_09_05_jamaica_panama,2021-09-05,Cecilio Waterman,82,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2021_09_08_panama_mexico,2021-09-08,Rolando Blackburn,28,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2021_10_10_panama_united_states,2021-10-10,Aníbal Godoy,54,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2021_10_13_canada_panama,2021-10-13,Rolando Blackburn,5,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2021_11_12_honduras_panama,2021-11-12,Cecilio Waterman,77,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2021_11_12_honduras_panama,2021-11-12,César Yanis,81,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2021_11_12_honduras_panama,2021-11-12,Eric Davis,85,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2021_11_16_panama_el_salvador,2021-11-16,Cecilio Waterman,50,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2021_11_16_panama_el_salvador,2021-11-16,Freddy Góndola,52,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2022_01_30_panama_jamaica,2022-01-30,Javain Brown,43,TRUE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2022_01_30_panama_jamaica,2022-01-30,Eric Davis,51,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2022_01_30_panama_jamaica,2022-01-30,Azmahar Ariano,69,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2022_03_24_panama_honduras,2022-03-24,Rolando Blackburn,23,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2022_03_27_united_states_panama,2022-03-27,Aníbal Godoy,86,FALSE,FALSE
+2022_06_12_martinique_panama_concacaf_nations_league,2022-06-12,Martinique,Panama,away,Panama,goal_365d,NA,2022_03_30_panama_canada,2022-03-30,Gabriel Torres,49,FALSE,FALSE
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,home,Haiti,prior_match,1999-03-21,1997_10_22_haiti_martinique,NA,NA,NA,NA,NA
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,home,Haiti,prior_match,1999-03-21,1998_03_11_haiti_puerto_rico,NA,NA,NA,NA,NA
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,home,Haiti,prior_match,1999-03-21,1998_03_15_haiti_dominican_republic,NA,NA,NA,NA,NA
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,home,Haiti,prior_match,1999-03-21,1998_07_22_cura_ao_haiti,NA,NA,NA,NA,NA
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,home,Haiti,prior_match,1999-03-21,1998_07_24_cayman_islands_haiti,NA,NA,NA,NA,NA
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,home,Haiti,prior_match,1999-03-21,1998_07_26_jamaica_haiti,NA,NA,NA,NA,NA
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,home,Haiti,prior_match,1999-03-21,1998_07_29_trinidad_and_tobago_haiti,NA,NA,NA,NA,NA
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,home,Haiti,prior_match,1999-03-21,1998_07_31_antigua_and_barbuda_haiti,NA,NA,NA,NA,NA
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,home,Haiti,prior_match,1999-03-21,1999_03_17_haiti_puerto_rico,NA,NA,NA,NA,NA
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,home,Haiti,prior_match,1999-03-21,1999_03_19_haiti_dominican_republic,NA,NA,NA,NA,NA
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,away,British Virgin Islands,prior_match,1999-03-21,1998_03_22_united_states_virgin_islands_british_virgin_islands,NA,NA,NA,NA,NA
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,away,British Virgin Islands,prior_match,1999-03-21,1998_04_01_saint_kitts_and_nevis_british_virgin_islands,NA,NA,NA,NA,NA
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,away,British Virgin Islands,prior_match,1999-03-21,1998_04_03_guadeloupe_british_virgin_islands,NA,NA,NA,NA,NA
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,away,British Virgin Islands,prior_match,1999-03-21,1998_04_05_dominica_british_virgin_islands,NA,NA,NA,NA,NA
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,away,British Virgin Islands,prior_match,1999-03-21,1998_12_06_british_virgin_islands_saint_vincent_and_the_grenadines,NA,NA,NA,NA,NA
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,away,British Virgin Islands,prior_match,1999-03-21,1999_02_05_british_virgin_islands_montserrat,NA,NA,NA,NA,NA
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,away,British Virgin Islands,prior_match,1999-03-21,1999_02_07_british_virgin_islands_montserrat,NA,NA,NA,NA,NA
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,away,British Virgin Islands,prior_match,1999-03-21,1999_02_28_british_virgin_islands_antigua_and_barbuda,NA,NA,NA,NA,NA
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,away,British Virgin Islands,prior_match,1999-03-21,1999_03_17_british_virgin_islands_dominican_republic,NA,NA,NA,NA,NA
+1999_03_21_haiti_british_virgin_islands_cfu_caribbean_cup_qualification,1999-03-21,Haiti,British Virgin Islands,away,British Virgin Islands,prior_match,1999-03-21,1999_03_19_british_virgin_islands_puerto_rico,NA,NA,NA,NA,NA
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,home,Wales,prior_match,1892-02-27,1888_03_10_scotland_wales,NA,NA,NA,NA,NA
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,home,Wales,prior_match,1892-02-27,1889_02_23_england_wales,NA,NA,NA,NA,NA
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,home,Wales,prior_match,1892-02-27,1889_04_15_wales_scotland,NA,NA,NA,NA,NA
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,home,Wales,prior_match,1892-02-27,1889_04_27_northern_ireland_wales,NA,NA,NA,NA,NA
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,home,Wales,prior_match,1892-02-27,1890_02_08_wales_northern_ireland,NA,NA,NA,NA,NA
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,home,Wales,prior_match,1892-02-27,1890_03_15_wales_england,NA,NA,NA,NA,NA
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,home,Wales,prior_match,1892-02-27,1890_03_22_scotland_wales,NA,NA,NA,NA,NA
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,home,Wales,prior_match,1892-02-27,1891_02_07_northern_ireland_wales,NA,NA,NA,NA,NA
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,home,Wales,prior_match,1892-02-27,1891_03_07_england_wales,NA,NA,NA,NA,NA
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,home,Wales,prior_match,1892-02-27,1891_03_21_wales_scotland,NA,NA,NA,NA,NA
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,away,Northern Ireland,prior_match,1892-02-27,1888_04_07_northern_ireland_england,NA,NA,NA,NA,NA
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,away,Northern Ireland,prior_match,1892-02-27,1889_03_02_england_northern_ireland,NA,NA,NA,NA,NA
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,away,Northern Ireland,prior_match,1892-02-27,1889_03_09_scotland_northern_ireland,NA,NA,NA,NA,NA
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,away,Northern Ireland,prior_match,1892-02-27,1889_04_27_northern_ireland_wales,NA,NA,NA,NA,NA
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,away,Northern Ireland,prior_match,1892-02-27,1890_02_08_wales_northern_ireland,NA,NA,NA,NA,NA
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,away,Northern Ireland,prior_match,1892-02-27,1890_03_15_northern_ireland_england,NA,NA,NA,NA,NA
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,away,Northern Ireland,prior_match,1892-02-27,1890_03_29_northern_ireland_scotland,NA,NA,NA,NA,NA
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,away,Northern Ireland,prior_match,1892-02-27,1891_02_07_northern_ireland_wales,NA,NA,NA,NA,NA
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,away,Northern Ireland,prior_match,1892-02-27,1891_03_07_england_northern_ireland,NA,NA,NA,NA,NA
+1892_02_27_wales_northern_ireland_british_home_championship,1892-02-27,Wales,Northern Ireland,away,Northern Ireland,prior_match,1892-02-27,1891_03_28_scotland_northern_ireland,NA,NA,NA,NA,NA
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,home,Scotland,prior_match,1926-10-30,1923_04_14_scotland_england,NA,NA,NA,NA,NA
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,home,Scotland,prior_match,1926-10-30,1924_02_16_wales_scotland,NA,NA,NA,NA,NA
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,home,Scotland,prior_match,1926-10-30,1924_03_01_scotland_northern_ireland,NA,NA,NA,NA,NA
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,home,Scotland,prior_match,1926-10-30,1924_04_12_england_scotland,NA,NA,NA,NA,NA
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,home,Scotland,prior_match,1926-10-30,1925_02_14_scotland_wales,NA,NA,NA,NA,NA
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,home,Scotland,prior_match,1926-10-30,1925_02_28_northern_ireland_scotland,NA,NA,NA,NA,NA
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,home,Scotland,prior_match,1926-10-30,1925_04_04_scotland_england,NA,NA,NA,NA,NA
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,home,Scotland,prior_match,1926-10-30,1925_10_31_wales_scotland,NA,NA,NA,NA,NA
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,home,Scotland,prior_match,1926-10-30,1926_02_27_scotland_northern_ireland,NA,NA,NA,NA,NA
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,home,Scotland,prior_match,1926-10-30,1926_04_17_england_scotland,NA,NA,NA,NA,NA
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,away,Wales,prior_match,1926-10-30,1923_04_14_wales_northern_ireland,NA,NA,NA,NA,NA
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,away,Wales,prior_match,1926-10-30,1924_02_16_wales_scotland,NA,NA,NA,NA,NA
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,away,Wales,prior_match,1926-10-30,1924_03_03_england_wales,NA,NA,NA,NA,NA
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,away,Wales,prior_match,1926-10-30,1924_03_15_northern_ireland_wales,NA,NA,NA,NA,NA
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,away,Wales,prior_match,1926-10-30,1925_02_14_scotland_wales,NA,NA,NA,NA,NA
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,away,Wales,prior_match,1926-10-30,1925_02_28_wales_england,NA,NA,NA,NA,NA
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,away,Wales,prior_match,1926-10-30,1925_04_18_wales_northern_ireland,NA,NA,NA,NA,NA
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,away,Wales,prior_match,1926-10-30,1925_10_31_wales_scotland,NA,NA,NA,NA,NA
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,away,Wales,prior_match,1926-10-30,1926_02_13_northern_ireland_wales,NA,NA,NA,NA,NA
+1926_10_30_scotland_wales_british_home_championship,1926-10-30,Scotland,Wales,away,Wales,prior_match,1926-10-30,1926_03_01_england_wales,NA,NA,NA,NA,NA
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,prior_match,1998-01-14,1997_04_06_gabon_morocco,NA,NA,NA,NA,NA
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,prior_match,1998-01-14,1997_04_26_sierra_leone_morocco,NA,NA,NA,NA,NA
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,prior_match,1998-01-14,1997_05_31_morocco_ethiopia,NA,NA,NA,NA,NA
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,prior_match,1998-01-14,1997_06_08_morocco_ghana,NA,NA,NA,NA,NA
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,prior_match,1998-01-14,1997_06_21_morocco_egypt,NA,NA,NA,NA,NA
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,prior_match,1998-01-14,1997_07_13_ethiopia_morocco,NA,NA,NA,NA,NA
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,prior_match,1998-01-14,1997_07_27_morocco_senegal,NA,NA,NA,NA,NA
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,prior_match,1998-01-14,1997_08_16_morocco_gabon,NA,NA,NA,NA,NA
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,prior_match,1998-01-14,1997_10_09_brazil_morocco,NA,NA,NA,NA,NA
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,prior_match,1998-01-14,1997_11_26_morocco_togo,NA,NA,NA,NA,NA
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,goal_last_10,NA,1997_04_06_gabon_morocco,1997-04-06,Ahmed Bahja,2,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,goal_last_10,NA,1997_04_06_gabon_morocco,1997-04-06,Ahmed Bahja,5,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,goal_last_10,NA,1997_04_06_gabon_morocco,1997-04-06,Salaheddine Bassir,44,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,goal_last_10,NA,1997_04_06_gabon_morocco,1997-04-06,Salaheddine Bassir,45,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,goal_last_10,NA,1997_04_26_sierra_leone_morocco,1997-04-26,Salaheddine Bassir,40,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,goal_last_10,NA,1997_06_08_morocco_ghana,1997-06-08,Khalid Raghib,67,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,goal_last_10,NA,1997_08_16_morocco_gabon,1997-08-16,Noureddine Naybet,24,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,goal_last_10,NA,1997_08_16_morocco_gabon,1997-08-16,Ahmed Bahja,45,FALSE,TRUE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,goal_365d,NA,1997_04_06_gabon_morocco,1997-04-06,Ahmed Bahja,2,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,goal_365d,NA,1997_04_06_gabon_morocco,1997-04-06,Ahmed Bahja,5,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,goal_365d,NA,1997_04_06_gabon_morocco,1997-04-06,Salaheddine Bassir,44,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,goal_365d,NA,1997_04_06_gabon_morocco,1997-04-06,Salaheddine Bassir,45,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,goal_365d,NA,1997_04_26_sierra_leone_morocco,1997-04-26,Salaheddine Bassir,40,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,goal_365d,NA,1997_06_08_morocco_ghana,1997-06-08,Khalid Raghib,67,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,goal_365d,NA,1997_08_16_morocco_gabon,1997-08-16,Noureddine Naybet,24,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,home,Morocco,goal_365d,NA,1997_08_16_morocco_gabon,1997-08-16,Ahmed Bahja,45,FALSE,TRUE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,Angola,prior_match,1998-01-14,1996_10_06_ghana_angola,NA,NA,NA,NA,NA
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,Angola,prior_match,1998-01-14,1996_11_10_angola_zimbabwe,NA,NA,NA,NA,NA
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,Angola,prior_match,1998-01-14,1997_01_12_cameroon_angola,NA,NA,NA,NA,NA
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,Angola,prior_match,1998-01-14,1997_02_23_zimbabwe_angola,NA,NA,NA,NA,NA
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,Angola,prior_match,1998-01-14,1997_04_06_angola_togo,NA,NA,NA,NA,NA
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,Angola,prior_match,1998-01-14,1997_04_27_zimbabwe_angola,NA,NA,NA,NA,NA
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,Angola,prior_match,1998-01-14,1997_06_08_angola_cameroon,NA,NA,NA,NA,NA
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,Angola,prior_match,1998-01-14,1997_06_22_angola_ghana,NA,NA,NA,NA,NA
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,Angola,prior_match,1998-01-14,1997_07_27_angola_zimbabwe,NA,NA,NA,NA,NA
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,Angola,prior_match,1998-01-14,1997_08_17_togo_angola,NA,NA,NA,NA,NA
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,Angola,goal_last_10,NA,1996_11_10_angola_zimbabwe,1996-11-10,Akwá,43,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,Angola,goal_last_10,NA,1996_11_10_angola_zimbabwe,1996-11-10,Paulo António Alves,51,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,Angola,goal_last_10,NA,1997_04_06_angola_togo,1997-04-06,Paulo António Alves,29,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,Angola,goal_last_10,NA,1997_04_06_angola_togo,1997-04-06,Akwá,45,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,Angola,goal_last_10,NA,1997_04_06_angola_togo,1997-04-06,Fernando Manuel Sousa,51,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,Angola,goal_last_10,NA,1997_06_08_angola_cameroon,1997-06-08,Akwá,55,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,Angola,goal_last_10,NA,1997_08_17_togo_angola,1997-08-17,Joaquim Alberto Silva,43,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,Angola,goal_365d,NA,1997_04_06_angola_togo,1997-04-06,Paulo António Alves,29,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,Angola,goal_365d,NA,1997_04_06_angola_togo,1997-04-06,Akwá,45,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,Angola,goal_365d,NA,1997_04_06_angola_togo,1997-04-06,Fernando Manuel Sousa,51,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,Angola,goal_365d,NA,1997_06_08_angola_cameroon,1997-06-08,Akwá,55,FALSE,FALSE
+1998_01_14_morocco_angola_friendly,1998-01-14,Morocco,Angola,away,Angola,goal_365d,NA,1997_08_17_togo_angola,1997-08-17,Joaquim Alberto Silva,43,FALSE,FALSE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,home,Myanmar,prior_match,1955-01-11,1953_10_24_myanmar_sri_lanka,NA,NA,NA,NA,NA
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,home,Myanmar,prior_match,1955-01-11,1953_10_28_myanmar_pakistan,NA,NA,NA,NA,NA
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,home,Myanmar,prior_match,1955-01-11,1953_10_31_myanmar_india,NA,NA,NA,NA,NA
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,home,Myanmar,prior_match,1955-01-11,1954_05_04_myanmar_singapore,NA,NA,NA,NA,NA
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,home,Myanmar,prior_match,1955-01-11,1954_05_05_myanmar_pakistan,NA,NA,NA,NA,NA
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,home,Myanmar,prior_match,1955-01-11,1954_05_07_myanmar_south_korea,NA,NA,NA,NA,NA
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,home,Myanmar,prior_match,1955-01-11,1954_05_08_indonesia_myanmar,NA,NA,NA,NA,NA
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,home,Myanmar,prior_match,1955-01-11,1954_12_19_india_myanmar,NA,NA,NA,NA,NA
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,home,Myanmar,prior_match,1955-01-11,1954_12_23_myanmar_pakistan,NA,NA,NA,NA,NA
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,home,Myanmar,prior_match,1955-01-11,1954_12_25_myanmar_sri_lanka,NA,NA,NA,NA,NA
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,Japan,prior_match,1955-01-11,1942_08_08_china_pr_japan,NA,NA,NA,NA,NA
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,Japan,prior_match,1955-01-11,1942_08_09_manchukuo_japan,NA,NA,NA,NA,NA
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,Japan,prior_match,1955-01-11,1942_08_10_japan_mongolia,NA,NA,NA,NA,NA
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,Japan,prior_match,1955-01-11,1951_03_07_iran_japan,NA,NA,NA,NA,NA
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,Japan,prior_match,1955-01-11,1951_03_08_iran_japan,NA,NA,NA,NA,NA
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,Japan,prior_match,1955-01-11,1951_03_09_japan_afghanistan,NA,NA,NA,NA,NA
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,Japan,prior_match,1955-01-11,1954_03_07_japan_south_korea,NA,NA,NA,NA,NA
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,Japan,prior_match,1955-01-11,1954_03_14_japan_south_korea,NA,NA,NA,NA,NA
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,Japan,prior_match,1955-01-11,1954_05_01_japan_indonesia,NA,NA,NA,NA,NA
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,Japan,prior_match,1955-01-11,1954_05_03_india_japan,NA,NA,NA,NA,NA
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,Japan,goal_last_10,NA,1954_03_07_japan_south_korea,1954-03-07,Ken Naganuma,16,FALSE,FALSE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,Japan,goal_last_10,NA,1954_03_14_japan_south_korea,1954-03-14,Toshio Iwatani,17,FALSE,FALSE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,Japan,goal_last_10,NA,1954_03_14_japan_south_korea,1954-03-14,Toshio Iwatani,61,FALSE,FALSE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,Japan,goal_365d,NA,1954_03_07_japan_south_korea,1954-03-07,Ken Naganuma,16,FALSE,FALSE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,Japan,goal_365d,NA,1954_03_14_japan_south_korea,1954-03-14,Toshio Iwatani,17,FALSE,FALSE
+1955_01_11_myanmar_japan_friendly,1955-01-11,Myanmar,Japan,away,Japan,goal_365d,NA,1954_03_14_japan_south_korea,1954-03-14,Toshio Iwatani,61,FALSE,FALSE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,prior_match,1980-04-01,1978_10_11_switzerland_netherlands,NA,NA,NA,NA,NA
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,prior_match,1980-04-01,1978_11_15_poland_switzerland,NA,NA,NA,NA,NA
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,prior_match,1980-04-01,1979_03_28_netherlands_switzerland,NA,NA,NA,NA,NA
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,prior_match,1980-04-01,1979_05_05_switzerland_german_dr,NA,NA,NA,NA,NA
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,prior_match,1980-04-01,1979_05_22_switzerland_iceland,NA,NA,NA,NA,NA
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,prior_match,1980-04-01,1979_06_09_iceland_switzerland,NA,NA,NA,NA,NA
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,prior_match,1980-04-01,1979_09_12_switzerland_poland,NA,NA,NA,NA,NA
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,prior_match,1980-04-01,1979_10_13_german_dr_switzerland,NA,NA,NA,NA,NA
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,prior_match,1980-04-01,1979_11_17_italy_switzerland,NA,NA,NA,NA,NA
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,prior_match,1980-04-01,1980_03_26_switzerland_czechoslovakia,NA,NA,NA,NA,NA
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,goal_last_10,NA,1978_10_11_switzerland_netherlands,1978-10-11,Markus Tanner,32,FALSE,FALSE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,goal_last_10,NA,1979_05_22_switzerland_iceland,1979-05-22,Herbert Hermann,27,FALSE,FALSE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,goal_last_10,NA,1979_05_22_switzerland_iceland,1979-05-22,Gianpetro Zappa,53,FALSE,FALSE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,goal_last_10,NA,1979_06_09_iceland_switzerland,1979-06-09,Raimondo Ponte,59,FALSE,FALSE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,goal_last_10,NA,1979_06_09_iceland_switzerland,1979-06-09,Heinz Hermann,61,FALSE,FALSE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,goal_last_10,NA,1979_10_13_german_dr_switzerland,1979-10-13,Umberto Barberis,19,FALSE,FALSE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,goal_last_10,NA,1979_10_13_german_dr_switzerland,1979-10-13,Hans-Jörg Pfister,72,FALSE,FALSE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,goal_365d,NA,1979_05_22_switzerland_iceland,1979-05-22,Herbert Hermann,27,FALSE,FALSE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,goal_365d,NA,1979_05_22_switzerland_iceland,1979-05-22,Gianpetro Zappa,53,FALSE,FALSE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,goal_365d,NA,1979_06_09_iceland_switzerland,1979-06-09,Raimondo Ponte,59,FALSE,FALSE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,goal_365d,NA,1979_06_09_iceland_switzerland,1979-06-09,Heinz Hermann,61,FALSE,FALSE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,goal_365d,NA,1979_10_13_german_dr_switzerland,1979-10-13,Umberto Barberis,19,FALSE,FALSE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,home,Switzerland,goal_365d,NA,1979_10_13_german_dr_switzerland,1979-10-13,Hans-Jörg Pfister,72,FALSE,FALSE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,Greece,prior_match,1980-04-01,1978_10_28_greece_hungary,NA,NA,NA,NA,NA
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,Greece,prior_match,1980-04-01,1978_11_15_yugoslavia_greece,NA,NA,NA,NA,NA
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,Greece,prior_match,1980-04-01,1978_12_13_greece_romania,NA,NA,NA,NA,NA
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,Greece,prior_match,1980-04-01,1979_02_07_libya_greece,NA,NA,NA,NA,NA
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,Greece,prior_match,1980-04-01,1979_02_14_israel_greece,NA,NA,NA,NA,NA
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,Greece,prior_match,1980-04-01,1979_03_21_romania_greece,NA,NA,NA,NA,NA
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,Greece,prior_match,1980-04-01,1979_05_02_hungary_greece,NA,NA,NA,NA,NA
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,Greece,prior_match,1980-04-01,1979_09_12_greece_russia,NA,NA,NA,NA,NA
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,Greece,prior_match,1980-04-01,1980_01_16_cyprus_greece,NA,NA,NA,NA,NA
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,Greece,prior_match,1980-04-01,1980_02_27_france_greece,NA,NA,NA,NA,NA
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,Greece,goal_last_10,NA,1978_10_28_greece_hungary,1978-10-28,Maik Galakos,58,FALSE,FALSE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,Greece,goal_last_10,NA,1978_10_28_greece_hungary,1978-10-28,Maik Galakos,67,FALSE,FALSE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,Greece,goal_last_10,NA,1978_10_28_greece_hungary,1978-10-28,Christos Ardizoglou,71,FALSE,FALSE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,Greece,goal_last_10,NA,1978_10_28_greece_hungary,1978-10-28,Thomas Mavros,89,FALSE,FALSE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,Greece,goal_last_10,NA,1979_09_12_greece_russia,1979-09-12,Takis Nikoloudis,25,FALSE,FALSE
+1980_04_01_switzerland_greece_friendly,1980-04-01,Switzerland,Greece,away,Greece,goal_365d,NA,1979_09_12_greece_russia,1979-09-12,Takis Nikoloudis,25,FALSE,FALSE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,Australia,prior_match,1973-03-13,1972_10_09_australia_new_zealand,NA,NA,NA,NA,NA
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,Australia,prior_match,1973-03-13,1972_10_15_vietnam_republic_australia,NA,NA,NA,NA,NA
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,Australia,prior_match,1973-03-13,1972_10_22_south_korea_australia,NA,NA,NA,NA,NA
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,Australia,prior_match,1973-03-13,1972_10_24_south_korea_australia,NA,NA,NA,NA,NA
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,Australia,prior_match,1973-03-13,1972_10_29_philippines_australia,NA,NA,NA,NA,NA
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,Australia,prior_match,1973-03-13,1973_02_14_australia_bulgaria,NA,NA,NA,NA,NA
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,Australia,prior_match,1973-03-13,1973_02_16_australia_bulgaria,NA,NA,NA,NA,NA
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,Australia,prior_match,1973-03-13,1973_02_18_australia_bulgaria,NA,NA,NA,NA,NA
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,Australia,prior_match,1973-03-13,1973_03_04_new_zealand_australia,NA,NA,NA,NA,NA
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,Australia,prior_match,1973-03-13,1973_03_11_australia_iraq,NA,NA,NA,NA,NA
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,Australia,goal_last_10,NA,1973_03_04_new_zealand_australia,1973-03-04,Ernie Campbell,85,FALSE,FALSE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,Australia,goal_last_10,NA,1973_03_11_australia_iraq,1973-03-11,Ray Richards,49,FALSE,FALSE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,Australia,goal_last_10,NA,1973_03_11_australia_iraq,1973-03-11,Adrian Alston,80,FALSE,FALSE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,Australia,goal_last_10,NA,1973_03_11_australia_iraq,1973-03-11,Adrian Alston,85,FALSE,FALSE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,Australia,goal_365d,NA,1973_03_04_new_zealand_australia,1973-03-04,Ernie Campbell,85,FALSE,FALSE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,Australia,goal_365d,NA,1973_03_11_australia_iraq,1973-03-11,Ray Richards,49,FALSE,FALSE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,Australia,goal_365d,NA,1973_03_11_australia_iraq,1973-03-11,Adrian Alston,80,FALSE,FALSE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,home,Australia,goal_365d,NA,1973_03_11_australia_iraq,1973-03-11,Adrian Alston,85,FALSE,FALSE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,away,Indonesia,prior_match,1973-03-13,1972_09_28_indonesia_malaysia,NA,NA,NA,NA,NA
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,away,Indonesia,prior_match,1973-03-13,1972_09_30_myanmar_indonesia,NA,NA,NA,NA,NA
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,away,Indonesia,prior_match,1973-03-13,1972_10_07_indonesia_australia,NA,NA,NA,NA,NA
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,away,Indonesia,prior_match,1973-03-13,1972_10_11_indonesia_new_zealand,NA,NA,NA,NA,NA
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,away,Indonesia,prior_match,1973-03-13,1972_11_20_indonesia_singapore,NA,NA,NA,NA,NA
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,away,Indonesia,prior_match,1973-03-13,1972_11_22_indonesia_south_korea,NA,NA,NA,NA,NA
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,away,Indonesia,prior_match,1973-03-13,1972_11_24_thailand_indonesia,NA,NA,NA,NA,NA
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,away,Indonesia,prior_match,1973-03-13,1972_11_26_indonesia_malaysia,NA,NA,NA,NA,NA
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,away,Indonesia,prior_match,1973-03-13,1973_02_04_indonesia_bulgaria,NA,NA,NA,NA,NA
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,away,Indonesia,prior_match,1973-03-13,1973_03_11_indonesia_new_zealand,NA,NA,NA,NA,NA
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,away,Indonesia,goal_last_10,NA,1973_03_11_indonesia_new_zealand,1973-03-11,Sarman Panggabean,13,FALSE,FALSE
+1973_03_13_australia_indonesia_fifa_world_cup_qualification,1973-03-13,Australia,Indonesia,away,Indonesia,goal_365d,NA,1973_03_11_indonesia_new_zealand,1973-03-11,Sarman Panggabean,13,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,Egypt,prior_match,2016-01-27,2014_10_10_botswana_egypt,NA,NA,NA,NA,NA
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,Egypt,prior_match,2016-01-27,2014_10_15_egypt_botswana,NA,NA,NA,NA,NA
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,Egypt,prior_match,2016-01-27,2014_11_15_egypt_senegal,NA,NA,NA,NA,NA
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,Egypt,prior_match,2016-01-27,2014_11_19_tunisia_egypt,NA,NA,NA,NA,NA
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,Egypt,prior_match,2016-01-27,2015_03_26_egypt_equatorial_guinea,NA,NA,NA,NA,NA
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,Egypt,prior_match,2016-01-27,2015_06_08_egypt_malawi,NA,NA,NA,NA,NA
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,Egypt,prior_match,2016-01-27,2015_06_14_egypt_tanzania,NA,NA,NA,NA,NA
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,Egypt,prior_match,2016-01-27,2015_10_11_egypt_zambia,NA,NA,NA,NA,NA
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,Egypt,prior_match,2016-01-27,2015_11_14_chad_egypt,NA,NA,NA,NA,NA
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,Egypt,prior_match,2016-01-27,2015_11_17_egypt_chad,NA,NA,NA,NA,NA
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,Egypt,goal_last_10,NA,2015_11_17_egypt_chad,2015-11-17,Mohamed Elneny,5,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,Egypt,goal_last_10,NA,2015_11_17_egypt_chad,2015-11-17,Abdallah El Said,10,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,Egypt,goal_last_10,NA,2015_11_17_egypt_chad,2015-11-17,Ahmed Hassan Mahgoub,36,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,Egypt,goal_last_10,NA,2015_11_17_egypt_chad,2015-11-17,Ahmed Hassan Mahgoub,40,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,Egypt,goal_365d,NA,2015_11_17_egypt_chad,2015-11-17,Mohamed Elneny,5,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,Egypt,goal_365d,NA,2015_11_17_egypt_chad,2015-11-17,Abdallah El Said,10,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,Egypt,goal_365d,NA,2015_11_17_egypt_chad,2015-11-17,Ahmed Hassan Mahgoub,36,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,home,Egypt,goal_365d,NA,2015_11_17_egypt_chad,2015-11-17,Ahmed Hassan Mahgoub,40,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,prior_match,2016-01-27,2015_06_05_jordan_kuwait,NA,NA,NA,NA,NA
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,prior_match,2016-01-27,2015_06_11_tajikistan_jordan,NA,NA,NA,NA,NA
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,prior_match,2016-01-27,2015_06_16_jordan_trinidad_and_tobago,NA,NA,NA,NA,NA
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,prior_match,2016-01-27,2015_09_03_jordan_kyrgyzstan,NA,NA,NA,NA,NA
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,prior_match,2016-01-27,2015_09_08_bangladesh_jordan,NA,NA,NA,NA,NA
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,prior_match,2016-01-27,2015_10_03_jordan_iraq,NA,NA,NA,NA,NA
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,prior_match,2016-01-27,2015_10_08_jordan_australia,NA,NA,NA,NA,NA
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,prior_match,2016-01-27,2015_10_13_jordan_tajikistan,NA,NA,NA,NA,NA
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,prior_match,2016-01-27,2015_11_11_jordan_malta,NA,NA,NA,NA,NA
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,prior_match,2016-01-27,2015_11_17_kyrgyzstan_jordan,NA,NA,NA,NA,NA
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_last_10,NA,2015_06_11_tajikistan_jordan,2015-06-11,Hassan Abdel-Fattah,29,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_last_10,NA,2015_06_11_tajikistan_jordan,2015-06-11,Hassan Abdel-Fattah,63,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_last_10,NA,2015_06_11_tajikistan_jordan,2015-06-11,Hassan Abdel-Fattah,88,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_last_10,NA,2015_09_08_bangladesh_jordan,2015-09-08,Abdallah Deeb,13,FALSE,TRUE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_last_10,NA,2015_09_08_bangladesh_jordan,2015-09-08,Munther Abu Amarah,33,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_last_10,NA,2015_09_08_bangladesh_jordan,2015-09-08,Abdallah Deeb,56,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_last_10,NA,2015_09_08_bangladesh_jordan,2015-09-08,Yaseen Al-Bakhit,58,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_last_10,NA,2015_10_08_jordan_australia,2015-10-08,Hassan Abdel-Fattah,47,FALSE,TRUE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_last_10,NA,2015_10_08_jordan_australia,2015-10-08,Hamza Al-Dardour,84,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_last_10,NA,2015_10_13_jordan_tajikistan,2015-10-13,Hamza Al-Dardour,65,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_last_10,NA,2015_10_13_jordan_tajikistan,2015-10-13,Hassan Abdel-Fattah,67,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_last_10,NA,2015_10_13_jordan_tajikistan,2015-10-13,Hamza Al-Dardour,90,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_365d,NA,2015_06_11_tajikistan_jordan,2015-06-11,Hassan Abdel-Fattah,29,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_365d,NA,2015_06_11_tajikistan_jordan,2015-06-11,Hassan Abdel-Fattah,63,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_365d,NA,2015_06_11_tajikistan_jordan,2015-06-11,Hassan Abdel-Fattah,88,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_365d,NA,2015_09_08_bangladesh_jordan,2015-09-08,Abdallah Deeb,13,FALSE,TRUE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_365d,NA,2015_09_08_bangladesh_jordan,2015-09-08,Munther Abu Amarah,33,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_365d,NA,2015_09_08_bangladesh_jordan,2015-09-08,Abdallah Deeb,56,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_365d,NA,2015_09_08_bangladesh_jordan,2015-09-08,Yaseen Al-Bakhit,58,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_365d,NA,2015_10_08_jordan_australia,2015-10-08,Hassan Abdel-Fattah,47,FALSE,TRUE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_365d,NA,2015_10_08_jordan_australia,2015-10-08,Hamza Al-Dardour,84,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_365d,NA,2015_10_13_jordan_tajikistan,2015-10-13,Hamza Al-Dardour,65,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_365d,NA,2015_10_13_jordan_tajikistan,2015-10-13,Hassan Abdel-Fattah,67,FALSE,FALSE
+2016_01_27_egypt_jordan_friendly,2016-01-27,Egypt,Jordan,away,Jordan,goal_365d,NA,2015_10_13_jordan_tajikistan,2015-10-13,Hamza Al-Dardour,90,FALSE,FALSE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,Belgium,prior_match,1978-09-20,1976_09_05_iceland_belgium,NA,NA,NA,NA,NA
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,Belgium,prior_match,1978-09-20,1976_11_10_belgium_northern_ireland,NA,NA,NA,NA,NA
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,Belgium,prior_match,1978-09-20,1977_01_26_italy_belgium,NA,NA,NA,NA,NA
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,Belgium,prior_match,1978-09-20,1977_03_26_belgium_netherlands,NA,NA,NA,NA,NA
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,Belgium,prior_match,1978-09-20,1977_09_03_belgium_iceland,NA,NA,NA,NA,NA
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,Belgium,prior_match,1978-09-20,1977_10_26_netherlands_belgium,NA,NA,NA,NA,NA
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,Belgium,prior_match,1978-09-20,1977_11_16_northern_ireland_belgium,NA,NA,NA,NA,NA
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,Belgium,prior_match,1978-09-20,1977_12_21_belgium_italy,NA,NA,NA,NA,NA
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,Belgium,prior_match,1978-09-20,1978_03_22_belgium_austria,NA,NA,NA,NA,NA
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,Belgium,prior_match,1978-09-20,1978_04_19_german_dr_belgium,NA,NA,NA,NA,NA
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,Belgium,goal_last_10,NA,1976_09_05_iceland_belgium,1976-09-05,François Van der Elst,73,FALSE,FALSE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,Belgium,goal_last_10,NA,1976_11_10_belgium_northern_ireland,1976-11-10,Roger Van Gool,29,FALSE,FALSE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,Belgium,goal_last_10,NA,1976_11_10_belgium_northern_ireland,1976-11-10,Raoul Lambert,52,FALSE,FALSE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,Belgium,goal_last_10,NA,1977_09_03_belgium_iceland,1977-09-03,Gilbert Van Binst,15,FALSE,FALSE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,Belgium,goal_last_10,NA,1977_09_03_belgium_iceland,1977-09-03,Maurice Martens,20,FALSE,FALSE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,Belgium,goal_last_10,NA,1977_09_03_belgium_iceland,1977-09-03,Paul Courant,60,FALSE,FALSE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,home,Belgium,goal_last_10,NA,1977_09_03_belgium_iceland,1977-09-03,Raoul Lambert,65,FALSE,FALSE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,away,Norway,prior_match,1978-09-20,1977_06_01_norway_denmark,NA,NA,NA,NA,NA
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,away,Norway,prior_match,1978-09-20,1977_06_30_iceland_norway,NA,NA,NA,NA,NA
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,away,Norway,prior_match,1978-09-20,1977_08_18_norway_finland,NA,NA,NA,NA,NA
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,away,Norway,prior_match,1978-09-20,1977_09_07_norway_sweden,NA,NA,NA,NA,NA
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,away,Norway,prior_match,1978-09-20,1977_10_30_switzerland_norway,NA,NA,NA,NA,NA
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,away,Norway,prior_match,1978-09-20,1978_03_29_spain_norway,NA,NA,NA,NA,NA
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,away,Norway,prior_match,1978-09-20,1978_05_21_norway_republic_of_ireland,NA,NA,NA,NA,NA
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,away,Norway,prior_match,1978-09-20,1978_05_31_norway_denmark,NA,NA,NA,NA,NA
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,away,Norway,prior_match,1978-09-20,1978_08_09_finland_norway,NA,NA,NA,NA,NA
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,away,Norway,prior_match,1978-09-20,1978_08_30_norway_austria,NA,NA,NA,NA,NA
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,away,Norway,goal_last_10,NA,1977_09_07_norway_sweden,1977-09-07,Rune Ottesen,34,FALSE,FALSE
+1978_09_20_belgium_norway_uefa_euro_qualification,1978-09-20,Belgium,Norway,away,Norway,goal_last_10,NA,1977_09_07_norway_sweden,1977-09-07,Odd Iversen,66,FALSE,FALSE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,home,Italy,prior_match,1926-01-17,1924_05_25_italy_spain,NA,NA,NA,NA,NA
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,home,Italy,prior_match,1926-01-17,1924_05_29_italy_luxembourg,NA,NA,NA,NA,NA
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,home,Italy,prior_match,1926-01-17,1924_06_02_switzerland_italy,NA,NA,NA,NA,NA
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,home,Italy,prior_match,1926-01-17,1924_11_16_italy_sweden,NA,NA,NA,NA,NA
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,home,Italy,prior_match,1926-01-17,1924_11_23_germany_italy,NA,NA,NA,NA,NA
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,home,Italy,prior_match,1926-01-17,1925_03_22_italy_france,NA,NA,NA,NA,NA
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,home,Italy,prior_match,1926-01-17,1925_06_14_spain_italy,NA,NA,NA,NA,NA
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,home,Italy,prior_match,1926-01-17,1925_06_18_portugal_italy,NA,NA,NA,NA,NA
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,home,Italy,prior_match,1926-01-17,1925_11_04_italy_yugoslavia,NA,NA,NA,NA,NA
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,home,Italy,prior_match,1926-01-17,1925_11_08_hungary_italy,NA,NA,NA,NA,NA
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,home,Italy,goal_last_10,NA,1924_05_25_italy_spain,1924-05-25,Pedro Vallana,84,TRUE,FALSE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,home,Italy,goal_last_10,NA,1924_05_29_italy_luxembourg,1924-05-29,Adolfo Baloncieri,20,FALSE,FALSE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,home,Italy,goal_last_10,NA,1924_05_29_italy_luxembourg,1924-05-29,Giuseppe Della Valle,38,FALSE,FALSE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,home,Italy,goal_last_10,NA,1924_06_02_switzerland_italy,1924-06-02,Giuseppe Della Valle,52,FALSE,FALSE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,Czechoslovakia,prior_match,1926-01-17,1923_10_28_czechoslovakia_yugoslavia,NA,NA,NA,NA,NA
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,Czechoslovakia,prior_match,1926-01-17,1924_05_25_czechoslovakia_turkey,NA,NA,NA,NA,NA
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,Czechoslovakia,prior_match,1926-01-17,1924_05_28_switzerland_czechoslovakia,NA,NA,NA,NA,NA
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,Czechoslovakia,prior_match,1926-01-17,1924_05_30_switzerland_czechoslovakia,NA,NA,NA,NA,NA
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,Czechoslovakia,prior_match,1926-01-17,1924_08_31_czechoslovakia_romania,NA,NA,NA,NA,NA
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,Czechoslovakia,prior_match,1926-01-17,1924_09_28_yugoslavia_czechoslovakia,NA,NA,NA,NA,NA
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,Czechoslovakia,prior_match,1926-01-17,1925_05_24_czechoslovakia_austria,NA,NA,NA,NA,NA
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,Czechoslovakia,prior_match,1926-01-17,1925_10_11_czechoslovakia_hungary,NA,NA,NA,NA,NA
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,Czechoslovakia,prior_match,1926-01-17,1925_10_28_czechoslovakia_yugoslavia,NA,NA,NA,NA,NA
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,Czechoslovakia,prior_match,1926-01-17,1925_12_13_catalonia_czechoslovakia,NA,NA,NA,NA,NA
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,Czechoslovakia,goal_last_10,NA,1924_05_25_czechoslovakia_turkey,1924-05-25,Rudolf Sloup,21,FALSE,FALSE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,Czechoslovakia,goal_last_10,NA,1924_05_25_czechoslovakia_turkey,1924-05-25,Josef Sedláček,28,FALSE,FALSE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,Czechoslovakia,goal_last_10,NA,1924_05_25_czechoslovakia_turkey,1924-05-25,Josef Sedláček,37,FALSE,FALSE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,Czechoslovakia,goal_last_10,NA,1924_05_25_czechoslovakia_turkey,1924-05-25,Jan Novák,64,FALSE,FALSE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,Czechoslovakia,goal_last_10,NA,1924_05_25_czechoslovakia_turkey,1924-05-25,Josef Čapek,74,FALSE,FALSE
+1926_01_17_italy_czechoslovakia_friendly,1926-01-17,Italy,Czechoslovakia,away,Czechoslovakia,goal_last_10,NA,1924_05_28_switzerland_czechoslovakia,1924-05-28,Rudolf Sloup,21,FALSE,TRUE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,prior_match,2004-02-14,2003_10_08_tunisia_japan,NA,NA,NA,NA,NA
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,prior_match,2004-02-14,2003_10_11_tunisia_morocco,NA,NA,NA,NA,NA
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,prior_match,2004-02-14,2003_11_19_tunisia_south_africa,NA,NA,NA,NA,NA
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,prior_match,2004-02-14,2004_01_14_tunisia_benin,NA,NA,NA,NA,NA
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,prior_match,2004-02-14,2004_01_17_tunisia_benin,NA,NA,NA,NA,NA
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,prior_match,2004-02-14,2004_01_24_tunisia_rwanda,NA,NA,NA,NA,NA
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,prior_match,2004-02-14,2004_01_28_tunisia_dr_congo,NA,NA,NA,NA,NA
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,prior_match,2004-02-14,2004_02_01_tunisia_guinea,NA,NA,NA,NA,NA
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,prior_match,2004-02-14,2004_02_07_tunisia_senegal,NA,NA,NA,NA,NA
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,prior_match,2004-02-14,2004_02_11_tunisia_nigeria,NA,NA,NA,NA,NA
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,goal_last_10,NA,2004_01_24_tunisia_rwanda,2004-01-24,Ziad Jaziri,27,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,goal_last_10,NA,2004_01_24_tunisia_rwanda,2004-01-24,Francileudo Santos,57,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,goal_last_10,NA,2004_01_28_tunisia_dr_congo,2004-01-28,Francileudo Santos,55,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,goal_last_10,NA,2004_01_28_tunisia_dr_congo,2004-01-28,Najeh Braham,65,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,goal_last_10,NA,2004_01_28_tunisia_dr_congo,2004-01-28,Francileudo Santos,87,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,goal_last_10,NA,2004_02_01_tunisia_guinea,2004-02-01,Selim Benachour,58,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,goal_last_10,NA,2004_02_07_tunisia_senegal,2004-02-07,Jawhar Mnari,65,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,goal_last_10,NA,2004_02_11_tunisia_nigeria,2004-02-11,Khaled Badra,82,FALSE,TRUE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,goal_365d,NA,2004_01_24_tunisia_rwanda,2004-01-24,Ziad Jaziri,27,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,goal_365d,NA,2004_01_24_tunisia_rwanda,2004-01-24,Francileudo Santos,57,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,goal_365d,NA,2004_01_28_tunisia_dr_congo,2004-01-28,Francileudo Santos,55,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,goal_365d,NA,2004_01_28_tunisia_dr_congo,2004-01-28,Najeh Braham,65,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,goal_365d,NA,2004_01_28_tunisia_dr_congo,2004-01-28,Francileudo Santos,87,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,goal_365d,NA,2004_02_01_tunisia_guinea,2004-02-01,Selim Benachour,58,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,goal_365d,NA,2004_02_07_tunisia_senegal,2004-02-07,Jawhar Mnari,65,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,home,Tunisia,goal_365d,NA,2004_02_11_tunisia_nigeria,2004-02-11,Khaled Badra,82,FALSE,TRUE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,prior_match,2004-02-14,2003_07_06_equatorial_guinea_morocco,NA,NA,NA,NA,NA
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,prior_match,2004-02-14,2003_09_10_morocco_trinidad_and_tobago,NA,NA,NA,NA,NA
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,prior_match,2004-02-14,2003_10_11_tunisia_morocco,NA,NA,NA,NA,NA
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,prior_match,2004-02-14,2003_11_15_morocco_burkina_faso,NA,NA,NA,NA,NA
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,prior_match,2004-02-14,2003_11_19_morocco_mali,NA,NA,NA,NA,NA
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,prior_match,2004-02-14,2004_01_27_nigeria_morocco,NA,NA,NA,NA,NA
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,prior_match,2004-02-14,2004_01_31_morocco_benin,NA,NA,NA,NA,NA
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,prior_match,2004-02-14,2004_02_04_morocco_south_africa,NA,NA,NA,NA,NA
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,prior_match,2004-02-14,2004_02_08_morocco_algeria,NA,NA,NA,NA,NA
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,prior_match,2004-02-14,2004_02_11_morocco_mali,NA,NA,NA,NA,NA
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_last_10,NA,2004_01_27_nigeria_morocco,2004-01-27,Youssouf Hadji,77,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_last_10,NA,2004_01_31_morocco_benin,2004-01-31,Marouane Chamakh,17,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_last_10,NA,2004_01_31_morocco_benin,2004-01-31,Anicet Adjamossi,73,TRUE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_last_10,NA,2004_01_31_morocco_benin,2004-01-31,Abdeslam Ouaddou,75,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_last_10,NA,2004_01_31_morocco_benin,2004-01-31,Talal El Karkouri,80,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_last_10,NA,2004_02_04_morocco_south_africa,2004-02-04,Youssef Safri,38,FALSE,TRUE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_last_10,NA,2004_02_08_morocco_algeria,2004-02-08,Marouane Chamakh,90,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_last_10,NA,2004_02_08_morocco_algeria,2004-02-08,Youssouf Hadji,113,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_last_10,NA,2004_02_08_morocco_algeria,2004-02-08,Jaouad Zairi,120,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_last_10,NA,2004_02_11_morocco_mali,2004-02-11,Youssef Mokhtari,14,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_last_10,NA,2004_02_11_morocco_mali,2004-02-11,Youssef Mokhtari,58,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_last_10,NA,2004_02_11_morocco_mali,2004-02-11,Youssouf Hadji,80,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_last_10,NA,2004_02_11_morocco_mali,2004-02-11,Nabil Baha,90,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_365d,NA,2004_01_27_nigeria_morocco,2004-01-27,Youssouf Hadji,77,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_365d,NA,2004_01_31_morocco_benin,2004-01-31,Marouane Chamakh,17,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_365d,NA,2004_01_31_morocco_benin,2004-01-31,Anicet Adjamossi,73,TRUE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_365d,NA,2004_01_31_morocco_benin,2004-01-31,Abdeslam Ouaddou,75,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_365d,NA,2004_01_31_morocco_benin,2004-01-31,Talal El Karkouri,80,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_365d,NA,2004_02_04_morocco_south_africa,2004-02-04,Youssef Safri,38,FALSE,TRUE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_365d,NA,2004_02_08_morocco_algeria,2004-02-08,Marouane Chamakh,90,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_365d,NA,2004_02_08_morocco_algeria,2004-02-08,Youssouf Hadji,113,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_365d,NA,2004_02_08_morocco_algeria,2004-02-08,Jaouad Zairi,120,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_365d,NA,2004_02_11_morocco_mali,2004-02-11,Youssef Mokhtari,14,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_365d,NA,2004_02_11_morocco_mali,2004-02-11,Youssef Mokhtari,58,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_365d,NA,2004_02_11_morocco_mali,2004-02-11,Youssouf Hadji,80,FALSE,FALSE
+2004_02_14_tunisia_morocco_african_cup_of_nations,2004-02-14,Tunisia,Morocco,away,Morocco,goal_365d,NA,2004_02_11_morocco_mali,2004-02-11,Nabil Baha,90,FALSE,FALSE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,Bahrain,prior_match,2007-10-04,2007_01_18_saudi_arabia_bahrain,NA,NA,NA,NA,NA
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,Bahrain,prior_match,2007-10-04,2007_01_21_bahrain_iraq,NA,NA,NA,NA,NA
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,Bahrain,prior_match,2007-10-04,2007_01_24_qatar_bahrain,NA,NA,NA,NA,NA
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,Bahrain,prior_match,2007-10-04,2007_01_27_oman_bahrain,NA,NA,NA,NA,NA
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,Bahrain,prior_match,2007-10-04,2007_06_27_united_arab_emirates_bahrain,NA,NA,NA,NA,NA
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,Bahrain,prior_match,2007-10-04,2007_06_30_vietnam_bahrain,NA,NA,NA,NA,NA
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,Bahrain,prior_match,2007-10-04,2007_07_10_indonesia_bahrain,NA,NA,NA,NA,NA
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,Bahrain,prior_match,2007-10-04,2007_07_15_bahrain_south_korea,NA,NA,NA,NA,NA
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,Bahrain,prior_match,2007-10-04,2007_07_18_saudi_arabia_bahrain,NA,NA,NA,NA,NA
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,Bahrain,prior_match,2007-10-04,2007_09_07_bahrain_jordan,NA,NA,NA,NA,NA
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,Bahrain,goal_last_10,NA,2007_07_10_indonesia_bahrain,2007-07-10,Sayed Mahmood Jalal,27,FALSE,FALSE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,Bahrain,goal_last_10,NA,2007_07_15_bahrain_south_korea,2007-07-15,Salman Isa,43,FALSE,FALSE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,Bahrain,goal_last_10,NA,2007_07_15_bahrain_south_korea,2007-07-15,Ismail Abdullatif,85,FALSE,FALSE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,Bahrain,goal_365d,NA,2007_07_10_indonesia_bahrain,2007-07-10,Sayed Mahmood Jalal,27,FALSE,FALSE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,Bahrain,goal_365d,NA,2007_07_15_bahrain_south_korea,2007-07-15,Salman Isa,43,FALSE,FALSE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,home,Bahrain,goal_365d,NA,2007_07_15_bahrain_south_korea,2007-07-15,Ismail Abdullatif,85,FALSE,FALSE
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,away,Singapore,prior_match,2007-10-04,2007_01_17_singapore_indonesia,NA,NA,NA,NA,NA
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,away,Singapore,prior_match,2007-10-04,2007_01_23_malaysia_singapore,NA,NA,NA,NA,NA
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,away,Singapore,prior_match,2007-10-04,2007_01_27_singapore_malaysia,NA,NA,NA,NA,NA
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,away,Singapore,prior_match,2007-10-04,2007_01_31_singapore_thailand,NA,NA,NA,NA,NA
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,away,Singapore,prior_match,2007-10-04,2007_02_04_thailand_singapore,NA,NA,NA,NA,NA
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,away,Singapore,prior_match,2007-10-04,2007_06_27_singapore_saudi_arabia,NA,NA,NA,NA,NA
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,away,Singapore,prior_match,2007-10-04,2007_06_30_singapore_australia,NA,NA,NA,NA,NA
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,away,Singapore,prior_match,2007-10-04,2007_08_21_singapore_zimbabwe,NA,NA,NA,NA,NA
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,away,Singapore,prior_match,2007-10-04,2007_08_23_singapore_bangladesh,NA,NA,NA,NA,NA
+2007_10_04_bahrain_singapore_friendly,2007-10-04,Bahrain,Singapore,away,Singapore,prior_match,2007-10-04,2007_09_12_singapore_united_arab_emirates,NA,NA,NA,NA,NA
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,Canada,prior_match,2005-07-07,2004_06_16_canada_belize,NA,NA,NA,NA,NA
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,Canada,prior_match,2005-07-07,2004_08_18_canada_guatemala,NA,NA,NA,NA,NA
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,Canada,prior_match,2005-07-07,2004_09_04_canada_honduras,NA,NA,NA,NA,NA
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,Canada,prior_match,2005-07-07,2004_09_08_costa_rica_canada,NA,NA,NA,NA,NA
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,Canada,prior_match,2005-07-07,2004_10_09_honduras_canada,NA,NA,NA,NA,NA
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,Canada,prior_match,2005-07-07,2004_10_13_canada_costa_rica,NA,NA,NA,NA,NA
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,Canada,prior_match,2005-07-07,2004_11_17_guatemala_canada,NA,NA,NA,NA,NA
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,Canada,prior_match,2005-07-07,2005_02_09_northern_ireland_canada,NA,NA,NA,NA,NA
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,Canada,prior_match,2005-07-07,2005_03_26_portugal_canada,NA,NA,NA,NA,NA
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,Canada,prior_match,2005-07-07,2005_07_02_canada_honduras,NA,NA,NA,NA,NA
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,Canada,goal_last_10,NA,2004_06_16_canada_belize,2004-06-16,Tomasz Radzinski,45,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,Canada,goal_last_10,NA,2004_06_16_canada_belize,2004-06-16,Dwayne De Rosario,63,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,Canada,goal_last_10,NA,2004_06_16_canada_belize,2004-06-16,Dwayne De Rosario,73,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,Canada,goal_last_10,NA,2004_06_16_canada_belize,2004-06-16,Jim Brennan,85,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,Canada,goal_last_10,NA,2004_09_04_canada_honduras,2004-09-04,Jason de Vos,82,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,Canada,goal_last_10,NA,2004_10_09_honduras_canada,2004-10-09,Atiba Hutchinson,73,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,Canada,goal_last_10,NA,2004_10_13_canada_costa_rica,2004-10-13,Dwayne De Rosario,12,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,Canada,goal_last_10,NA,2004_11_17_guatemala_canada,2004-11-17,Dwayne De Rosario,57,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,Canada,goal_365d,NA,2004_09_04_canada_honduras,2004-09-04,Jason de Vos,82,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,Canada,goal_365d,NA,2004_10_09_honduras_canada,2004-10-09,Atiba Hutchinson,73,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,Canada,goal_365d,NA,2004_10_13_canada_costa_rica,2004-10-13,Dwayne De Rosario,12,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,home,Canada,goal_365d,NA,2004_11_17_guatemala_canada,2004-11-17,Dwayne De Rosario,57,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,prior_match,2005-07-07,2005_02_23_panama_costa_rica,NA,NA,NA,NA,NA
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,prior_match,2005-07-07,2005_02_25_guatemala_costa_rica,NA,NA,NA,NA,NA
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,prior_match,2005-07-07,2005_02_27_costa_rica_honduras,NA,NA,NA,NA,NA
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,prior_match,2005-07-07,2005_03_26_costa_rica_panama,NA,NA,NA,NA,NA
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,prior_match,2005-07-07,2005_03_30_trinidad_and_tobago_costa_rica,NA,NA,NA,NA,NA
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,prior_match,2005-07-07,2005_05_24_norway_costa_rica,NA,NA,NA,NA,NA
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,prior_match,2005-07-07,2005_06_04_united_states_costa_rica,NA,NA,NA,NA,NA
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,prior_match,2005-07-07,2005_06_08_costa_rica_guatemala,NA,NA,NA,NA,NA
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,prior_match,2005-07-07,2005_06_19_china_pr_costa_rica,NA,NA,NA,NA,NA
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,prior_match,2005-07-07,2005_06_22_china_pr_costa_rica,NA,NA,NA,NA,NA
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_last_10,NA,2005_03_26_costa_rica_panama,2005-03-26,Whayne Wilson,40,FALSE,TRUE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_last_10,NA,2005_03_26_costa_rica_panama,2005-03-26,Roy Myrie,90,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_last_10,NA,2005_06_08_costa_rica_guatemala,2005-06-08,Carlos Hernández,34,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_last_10,NA,2005_06_08_costa_rica_guatemala,2005-06-08,Rónald Gómez,65,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_last_10,NA,2005_06_08_costa_rica_guatemala,2005-06-08,Paulo Wanchope,90,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_365d,NA,2004_07_11_brazil_costa_rica,2004-07-11,Luis Marín Murillo,81,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_365d,NA,2004_07_14_costa_rica_chile,2004-07-14,Mauricio Wright,60,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_365d,NA,2004_07_14_costa_rica_chile,2004-07-14,Andy Herron,90,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_365d,NA,2004_08_18_costa_rica_honduras,2004-08-18,Andy Herron,20,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_365d,NA,2004_08_18_costa_rica_honduras,2004-08-18,Andy Herron,36,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_365d,NA,2004_09_05_guatemala_costa_rica,2004-09-05,Alonso Solís,24,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_365d,NA,2004_09_08_costa_rica_canada,2004-09-08,Paulo Wanchope,46,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_365d,NA,2004_10_09_costa_rica_guatemala,2004-10-09,Carlos Hernández,19,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_365d,NA,2004_10_09_costa_rica_guatemala,2004-10-09,Paulo Wanchope,36,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_365d,NA,2004_10_09_costa_rica_guatemala,2004-10-09,Paulo Wanchope,62,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_365d,NA,2004_10_09_costa_rica_guatemala,2004-10-09,Paulo Wanchope,69,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_365d,NA,2004_10_09_costa_rica_guatemala,2004-10-09,Rolando Fonseca,83,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_365d,NA,2004_10_13_canada_costa_rica,2004-10-13,Paulo Wanchope,49,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_365d,NA,2004_10_13_canada_costa_rica,2004-10-13,William Sunsing,81,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_365d,NA,2004_10_13_canada_costa_rica,2004-10-13,Carlos Hernández,87,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_365d,NA,2005_02_09_costa_rica_mexico,2005-02-09,Paulo Wanchope,38,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_365d,NA,2005_03_26_costa_rica_panama,2005-03-26,Whayne Wilson,40,FALSE,TRUE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_365d,NA,2005_03_26_costa_rica_panama,2005-03-26,Roy Myrie,90,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_365d,NA,2005_06_08_costa_rica_guatemala,2005-06-08,Carlos Hernández,34,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_365d,NA,2005_06_08_costa_rica_guatemala,2005-06-08,Rónald Gómez,65,FALSE,FALSE
+2005_07_07_canada_costa_rica_gold_cup,2005-07-07,Canada,Costa Rica,away,Costa Rica,goal_365d,NA,2005_06_08_costa_rica_guatemala,2005-06-08,Paulo Wanchope,90,FALSE,FALSE
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,home,Uganda,prior_match,2004-12-12,2004_05_28_rwanda_uganda,NA,NA,NA,NA,NA
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,home,Uganda,prior_match,2004-12-12,2004_06_06_uganda_dr_congo,NA,NA,NA,NA,NA
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,home,Uganda,prior_match,2004-12-12,2004_06_19_cape_verde_uganda,NA,NA,NA,NA,NA
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,home,Uganda,prior_match,2004-12-12,2004_07_03_uganda_ghana,NA,NA,NA,NA,NA
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,home,Uganda,prior_match,2004-12-12,2004_08_07_uganda_kenya,NA,NA,NA,NA,NA
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,home,Uganda,prior_match,2004-12-12,2004_08_14_uganda_rwanda,NA,NA,NA,NA,NA
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,home,Uganda,prior_match,2004-12-12,2004_08_18_kenya_uganda,NA,NA,NA,NA,NA
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,home,Uganda,prior_match,2004-12-12,2004_08_22_zimbabwe_uganda,NA,NA,NA,NA,NA
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,home,Uganda,prior_match,2004-12-12,2004_09_04_burkina_faso_uganda,NA,NA,NA,NA,NA
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,home,Uganda,prior_match,2004-12-12,2004_10_10_uganda_south_africa,NA,NA,NA,NA,NA
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,home,Uganda,goal_last_10,NA,2004_06_06_uganda_dr_congo,2004-06-06,Ibrahim Sekagya,75,FALSE,FALSE
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,home,Uganda,goal_last_10,NA,2004_07_03_uganda_ghana,2004-07-03,David Obua,45,FALSE,FALSE
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,home,Uganda,goal_365d,NA,2004_06_06_uganda_dr_congo,2004-06-06,Ibrahim Sekagya,75,FALSE,FALSE
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,home,Uganda,goal_365d,NA,2004_07_03_uganda_ghana,2004-07-03,David Obua,45,FALSE,FALSE
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,away,Somalia,prior_match,2004-12-12,2000_11_23_uganda_somalia,NA,NA,NA,NA,NA
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,away,Somalia,prior_match,2004-12-12,2001_12_08_rwanda_somalia,NA,NA,NA,NA,NA
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,away,Somalia,prior_match,2004-12-12,2001_12_12_kenya_somalia,NA,NA,NA,NA,NA
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,away,Somalia,prior_match,2004-12-12,2001_12_14_eritrea_somalia,NA,NA,NA,NA,NA
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,away,Somalia,prior_match,2004-12-12,2002_12_01_somalia_uganda,NA,NA,NA,NA,NA
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,away,Somalia,prior_match,2004-12-12,2002_12_03_somalia_rwanda,NA,NA,NA,NA,NA
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,away,Somalia,prior_match,2004-12-12,2002_12_05_zanzibar_somalia,NA,NA,NA,NA,NA
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,away,Somalia,prior_match,2004-12-12,2002_12_07_ethiopia_somalia,NA,NA,NA,NA,NA
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,away,Somalia,prior_match,2004-12-12,2003_11_16_ghana_somalia,NA,NA,NA,NA,NA
+2004_12_12_uganda_somalia_cecafa_cup,2004-12-12,Uganda,Somalia,away,Somalia,prior_match,2004-12-12,2003_11_19_ghana_somalia,NA,NA,NA,NA,NA
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,home,Panama,prior_match,1938-02-20,1938_02_12_panama_venezuela,NA,NA,NA,NA,NA
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,home,Panama,prior_match,1938-02-20,1938_02_14_panama_colombia,NA,NA,NA,NA,NA
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,home,Panama,prior_match,1938-02-20,1938_02_16_panama_costa_rica,NA,NA,NA,NA,NA
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,away,Mexico,prior_match,1938-02-20,1935_04_02_mexico_costa_rica,NA,NA,NA,NA,NA
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,away,Mexico,prior_match,1938-02-20,1937_09_12_mexico_united_states,NA,NA,NA,NA,NA
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,away,Mexico,prior_match,1938-02-20,1937_09_19_mexico_united_states,NA,NA,NA,NA,NA
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,away,Mexico,prior_match,1938-02-20,1937_11_28_mexico_basque_country,NA,NA,NA,NA,NA
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,away,Mexico,prior_match,1938-02-20,1937_12_05_mexico_basque_country,NA,NA,NA,NA,NA
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,away,Mexico,prior_match,1938-02-20,1937_12_12_mexico_basque_country,NA,NA,NA,NA,NA
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,away,Mexico,prior_match,1938-02-20,1938_01_09_mexico_basque_country,NA,NA,NA,NA,NA
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,away,Mexico,prior_match,1938-02-20,1938_02_10_mexico_colombia,NA,NA,NA,NA,NA
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,away,Mexico,prior_match,1938-02-20,1938_02_14_mexico_venezuela,NA,NA,NA,NA,NA
+1938_02_20_panama_mexico_central_american_and_caribbean_games,1938-02-20,Panama,Mexico,away,Mexico,prior_match,1938-02-20,1938_02_18_mexico_el_salvador,NA,NA,NA,NA,NA
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,prior_match,1993-09-08,1992_09_09_bulgaria_france,NA,NA,NA,NA,NA
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,prior_match,1993-09-08,1992_10_07_sweden_bulgaria,NA,NA,NA,NA,NA
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,prior_match,1993-09-08,1992_11_11_bulgaria_portugal,NA,NA,NA,NA,NA
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,prior_match,1993-09-08,1992_12_02_israel_bulgaria,NA,NA,NA,NA,NA
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,prior_match,1993-09-08,1993_01_10_tunisia_bulgaria,NA,NA,NA,NA,NA
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,prior_match,1993-09-08,1993_02_18_united_arab_emirates_bulgaria,NA,NA,NA,NA,NA
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,prior_match,1993-09-08,1993_02_20_united_arab_emirates_bulgaria,NA,NA,NA,NA,NA
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,prior_match,1993-09-08,1993_04_14_austria_bulgaria,NA,NA,NA,NA,NA
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,prior_match,1993-09-08,1993_04_28_bulgaria_finland,NA,NA,NA,NA,NA
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,prior_match,1993-09-08,1993_05_12_bulgaria_israel,NA,NA,NA,NA,NA
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,goal_last_10,NA,1992_09_09_bulgaria_france,1992-09-09,Hristo Stoichkov,21,FALSE,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,goal_last_10,NA,1992_09_09_bulgaria_france,1992-09-09,Krasimir Balakov,29,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,goal_last_10,NA,1992_12_02_israel_bulgaria,1992-12-02,Nasko Sirakov,56,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,goal_last_10,NA,1992_12_02_israel_bulgaria,1992-12-02,Lyuboslav Penev,83,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,goal_last_10,NA,1993_04_14_austria_bulgaria,1993-04-14,Trifon Ivanov,54,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,goal_last_10,NA,1993_04_28_bulgaria_finland,1993-04-28,Hristo Stoichkov,15,FALSE,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,goal_last_10,NA,1993_04_28_bulgaria_finland,1993-04-28,Zlatko Yankov,43,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,goal_last_10,NA,1993_05_12_bulgaria_israel,1993-05-12,Hristo Stoichkov,35,FALSE,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,goal_last_10,NA,1993_05_12_bulgaria_israel,1993-05-12,Nasko Sirakov,60,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,goal_365d,NA,1992_09_09_bulgaria_france,1992-09-09,Hristo Stoichkov,21,FALSE,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,goal_365d,NA,1992_09_09_bulgaria_france,1992-09-09,Krasimir Balakov,29,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,goal_365d,NA,1992_12_02_israel_bulgaria,1992-12-02,Nasko Sirakov,56,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,goal_365d,NA,1992_12_02_israel_bulgaria,1992-12-02,Lyuboslav Penev,83,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,goal_365d,NA,1993_04_14_austria_bulgaria,1993-04-14,Trifon Ivanov,54,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,goal_365d,NA,1993_04_28_bulgaria_finland,1993-04-28,Hristo Stoichkov,15,FALSE,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,goal_365d,NA,1993_04_28_bulgaria_finland,1993-04-28,Zlatko Yankov,43,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,goal_365d,NA,1993_05_12_bulgaria_israel,1993-05-12,Hristo Stoichkov,35,FALSE,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,home,Bulgaria,goal_365d,NA,1993_05_12_bulgaria_israel,1993-05-12,Nasko Sirakov,60,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,prior_match,1993-09-08,1992_08_26_norway_sweden,NA,NA,NA,NA,NA
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,prior_match,1993-09-08,1992_09_09_finland_sweden,NA,NA,NA,NA,NA
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,prior_match,1993-09-08,1992_10_07_sweden_bulgaria,NA,NA,NA,NA,NA
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,prior_match,1993-09-08,1992_11_11_israel_sweden,NA,NA,NA,NA,NA
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,prior_match,1993-09-08,1993_04_15_hungary_sweden,NA,NA,NA,NA,NA
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,prior_match,1993-09-08,1993_04_28_france_sweden,NA,NA,NA,NA,NA
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,prior_match,1993-09-08,1993_05_19_sweden_austria,NA,NA,NA,NA,NA
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,prior_match,1993-09-08,1993_06_02_sweden_israel,NA,NA,NA,NA,NA
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,prior_match,1993-09-08,1993_08_11_sweden_switzerland,NA,NA,NA,NA,NA
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,prior_match,1993-09-08,1993_08_22_sweden_france,NA,NA,NA,NA,NA
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_last_10,NA,1992_09_09_finland_sweden,1992-09-09,Klas Ingesson,77,FALSE,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_last_10,NA,1992_10_07_sweden_bulgaria,1992-10-07,Martin Dahlin,56,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_last_10,NA,1992_10_07_sweden_bulgaria,1992-10-07,Stefan Pettersson,76,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_last_10,NA,1992_11_11_israel_sweden,1992-11-11,Anders Limpar,37,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_last_10,NA,1992_11_11_israel_sweden,1992-11-11,Martin Dahlin,58,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_last_10,NA,1992_11_11_israel_sweden,1992-11-11,Klas Ingesson,74,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_last_10,NA,1993_04_28_france_sweden,1993-04-28,Martin Dahlin,14,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_last_10,NA,1993_05_19_sweden_austria,1993-05-19,Jan Eriksson,50,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_last_10,NA,1993_06_02_sweden_israel,1993-06-02,Tomas Brolin,17,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_last_10,NA,1993_06_02_sweden_israel,1993-06-02,Tomas Brolin,41,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_last_10,NA,1993_06_02_sweden_israel,1993-06-02,Pär Zetterberg,55,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_last_10,NA,1993_06_02_sweden_israel,1993-06-02,Tomas Brolin,65,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_last_10,NA,1993_06_02_sweden_israel,1993-06-02,Stefan Landberg,89,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_last_10,NA,1993_08_22_sweden_france,1993-08-22,Martin Dahlin,89,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_365d,NA,1992_09_09_finland_sweden,1992-09-09,Klas Ingesson,77,FALSE,TRUE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_365d,NA,1992_10_07_sweden_bulgaria,1992-10-07,Martin Dahlin,56,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_365d,NA,1992_10_07_sweden_bulgaria,1992-10-07,Stefan Pettersson,76,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_365d,NA,1992_11_11_israel_sweden,1992-11-11,Anders Limpar,37,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_365d,NA,1992_11_11_israel_sweden,1992-11-11,Martin Dahlin,58,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_365d,NA,1992_11_11_israel_sweden,1992-11-11,Klas Ingesson,74,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_365d,NA,1993_04_28_france_sweden,1993-04-28,Martin Dahlin,14,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_365d,NA,1993_05_19_sweden_austria,1993-05-19,Jan Eriksson,50,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_365d,NA,1993_06_02_sweden_israel,1993-06-02,Tomas Brolin,17,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_365d,NA,1993_06_02_sweden_israel,1993-06-02,Tomas Brolin,41,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_365d,NA,1993_06_02_sweden_israel,1993-06-02,Pär Zetterberg,55,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_365d,NA,1993_06_02_sweden_israel,1993-06-02,Tomas Brolin,65,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_365d,NA,1993_06_02_sweden_israel,1993-06-02,Stefan Landberg,89,FALSE,FALSE
+1993_09_08_bulgaria_sweden_fifa_world_cup_qualification,1993-09-08,Bulgaria,Sweden,away,Sweden,goal_365d,NA,1993_08_22_sweden_france,1993-08-22,Martin Dahlin,89,FALSE,FALSE
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,home,Cuba,prior_match,1986-10-30,1981_11_15_haiti_cuba,NA,NA,NA,NA,NA
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,home,Cuba,prior_match,1986-10-30,1981_11_21_cuba_canada,NA,NA,NA,NA,NA
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,home,Cuba,prior_match,1986-10-30,1983_07_27_panama_cuba,NA,NA,NA,NA,NA
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,home,Cuba,prior_match,1986-10-30,1983_07_31_panama_cuba,NA,NA,NA,NA,NA
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,home,Cuba,prior_match,1986-10-30,1983_08_02_costa_rica_cuba,NA,NA,NA,NA,NA
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,home,Cuba,prior_match,1986-10-30,1983_08_04_costa_rica_cuba,NA,NA,NA,NA,NA
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,home,Cuba,prior_match,1986-10-30,1984_03_13_panama_cuba,NA,NA,NA,NA,NA
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,home,Cuba,prior_match,1986-10-30,1984_03_18_panama_cuba,NA,NA,NA,NA,NA
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,home,Cuba,prior_match,1986-10-30,1985_01_20_guyana_cuba,NA,NA,NA,NA,NA
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,home,Cuba,prior_match,1986-10-30,1985_01_27_guyana_cuba,NA,NA,NA,NA,NA
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,home,Cuba,goal_last_10,NA,1981_11_15_haiti_cuba,1981-11-15,Frantz Mathieu,55,TRUE,FALSE
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,home,Cuba,goal_last_10,NA,1981_11_15_haiti_cuba,1981-11-15,Ramón Núñez,90,FALSE,FALSE
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,home,Cuba,goal_last_10,NA,1981_11_21_cuba_canada,1981-11-21,Ramón Núñez,2,FALSE,FALSE
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,home,Cuba,goal_last_10,NA,1981_11_21_cuba_canada,1981-11-21,Jorge Luis Rodríguez,74,FALSE,FALSE
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,away,Panama,prior_match,1986-10-30,1984_03_24_panama_costa_rica,NA,NA,NA,NA,NA
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,away,Panama,prior_match,1986-10-30,1984_04_27_panama_nicaragua,NA,NA,NA,NA,NA
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,away,Panama,prior_match,1986-10-30,1984_05_29_el_salvador_panama,NA,NA,NA,NA,NA
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,away,Panama,prior_match,1986-10-30,1984_06_15_panama_honduras,NA,NA,NA,NA,NA
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,away,Panama,prior_match,1986-10-30,1984_06_24_honduras_panama,NA,NA,NA,NA,NA
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,away,Panama,prior_match,1986-10-30,1985_03_29_panama_guatemala,NA,NA,NA,NA,NA
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,away,Panama,prior_match,1986-10-30,1985_04_14_panama_trinidad_and_tobago,NA,NA,NA,NA,NA
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,away,Panama,prior_match,1986-10-30,1985_04_17_panama_trinidad_and_tobago,NA,NA,NA,NA,NA
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,away,Panama,prior_match,1986-10-30,1986_05_21_panama_dominican_republic,NA,NA,NA,NA,NA
+1986_10_30_cuba_panama_friendly,1986-10-30,Cuba,Panama,away,Panama,prior_match,1986-10-30,1986_10_28_honduras_panama,NA,NA,NA,NA,NA
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,home,South Korea,prior_match,2018-05-28,2017_11_10_south_korea_colombia,NA,NA,NA,NA,NA
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,home,South Korea,prior_match,2018-05-28,2017_11_14_south_korea_serbia,NA,NA,NA,NA,NA
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,home,South Korea,prior_match,2018-05-28,2017_12_09_south_korea_china_pr,NA,NA,NA,NA,NA
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,home,South Korea,prior_match,2018-05-28,2017_12_12_north_korea_south_korea,NA,NA,NA,NA,NA
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,home,South Korea,prior_match,2018-05-28,2017_12_16_japan_south_korea,NA,NA,NA,NA,NA
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,home,South Korea,prior_match,2018-05-28,2018_01_27_moldova_south_korea,NA,NA,NA,NA,NA
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,home,South Korea,prior_match,2018-05-28,2018_01_30_jamaica_south_korea,NA,NA,NA,NA,NA
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,home,South Korea,prior_match,2018-05-28,2018_02_03_latvia_south_korea,NA,NA,NA,NA,NA
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,home,South Korea,prior_match,2018-05-28,2018_03_24_northern_ireland_south_korea,NA,NA,NA,NA,NA
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,home,South Korea,prior_match,2018-05-28,2018_03_27_poland_south_korea,NA,NA,NA,NA,NA
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,home,South Korea,goal_365d,NA,2017_06_13_qatar_south_korea,2017-06-13,Ki Sung-yueng,62,FALSE,FALSE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,home,South Korea,goal_365d,NA,2017_06_13_qatar_south_korea,2017-06-13,Hwang Hee-chan,70,FALSE,FALSE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,prior_match,2018-05-28,2017_07_07_honduras_costa_rica,NA,NA,NA,NA,NA
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,prior_match,2018-05-28,2017_07_11_honduras_french_guiana,NA,NA,NA,NA,NA
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,prior_match,2018-05-28,2017_07_14_canada_honduras,NA,NA,NA,NA,NA
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,prior_match,2018-05-28,2017_07_20_mexico_honduras,NA,NA,NA,NA,NA
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,prior_match,2018-05-28,2017_09_01_trinidad_and_tobago_honduras,NA,NA,NA,NA,NA
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,prior_match,2018-05-28,2017_09_05_honduras_united_states,NA,NA,NA,NA,NA
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,prior_match,2018-05-28,2017_10_07_costa_rica_honduras,NA,NA,NA,NA,NA
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,prior_match,2018-05-28,2017_10_10_honduras_mexico,NA,NA,NA,NA,NA
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,prior_match,2018-05-28,2017_11_10_honduras_australia,NA,NA,NA,NA,NA
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,prior_match,2018-05-28,2017_11_15_australia_honduras,NA,NA,NA,NA,NA
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,goal_last_10,NA,2017_09_01_trinidad_and_tobago_honduras,2017-09-01,Alexander López,7,FALSE,FALSE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,goal_last_10,NA,2017_09_01_trinidad_and_tobago_honduras,2017-09-01,Alberth Elis,16,FALSE,FALSE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,goal_last_10,NA,2017_09_05_honduras_united_states,2017-09-05,Romell Quioto,27,FALSE,FALSE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,goal_last_10,NA,2017_10_07_costa_rica_honduras,2017-10-07,Eddie Hernández,66,FALSE,FALSE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,goal_last_10,NA,2017_10_10_honduras_mexico,2017-10-10,Alberth Elis,34,FALSE,FALSE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,goal_last_10,NA,2017_10_10_honduras_mexico,2017-10-10,Guillermo Ochoa,53,TRUE,FALSE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,goal_last_10,NA,2017_10_10_honduras_mexico,2017-10-10,Romell Quioto,60,FALSE,FALSE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,goal_last_10,NA,2017_11_15_australia_honduras,2017-11-15,Alberth Elis,90,FALSE,FALSE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,goal_365d,NA,2017_06_13_panama_honduras,2017-06-13,Romell Quioto,5,FALSE,FALSE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,goal_365d,NA,2017_06_13_panama_honduras,2017-06-13,Alberth Elis,66,FALSE,FALSE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,goal_365d,NA,2017_09_01_trinidad_and_tobago_honduras,2017-09-01,Alexander López,7,FALSE,FALSE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,goal_365d,NA,2017_09_01_trinidad_and_tobago_honduras,2017-09-01,Alberth Elis,16,FALSE,FALSE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,goal_365d,NA,2017_09_05_honduras_united_states,2017-09-05,Romell Quioto,27,FALSE,FALSE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,goal_365d,NA,2017_10_07_costa_rica_honduras,2017-10-07,Eddie Hernández,66,FALSE,FALSE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,goal_365d,NA,2017_10_10_honduras_mexico,2017-10-10,Alberth Elis,34,FALSE,FALSE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,goal_365d,NA,2017_10_10_honduras_mexico,2017-10-10,Guillermo Ochoa,53,TRUE,FALSE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,goal_365d,NA,2017_10_10_honduras_mexico,2017-10-10,Romell Quioto,60,FALSE,FALSE
+2018_05_28_south_korea_honduras_friendly,2018-05-28,South Korea,Honduras,away,Honduras,goal_365d,NA,2017_11_15_australia_honduras,2017-11-15,Alberth Elis,90,FALSE,FALSE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,prior_match,2024-01-22,2023_03_28_kuwait_tajikistan,NA,NA,NA,NA,NA
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,prior_match,2024-01-22,2023_06_11_tajikistan_turkmenistan,NA,NA,NA,NA,NA
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,prior_match,2024-01-22,2023_06_14_oman_tajikistan,NA,NA,NA,NA,NA
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,prior_match,2024-01-22,2023_06_17_uzbekistan_tajikistan,NA,NA,NA,NA,NA
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,prior_match,2024-01-22,2023_09_08_singapore_tajikistan,NA,NA,NA,NA,NA
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,prior_match,2024-01-22,2023_11_16_tajikistan_jordan,NA,NA,NA,NA,NA
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,prior_match,2024-01-22,2023_11_21_pakistan_tajikistan,NA,NA,NA,NA,NA
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,prior_match,2024-01-22,2024_01_04_tajikistan_hong_kong,NA,NA,NA,NA,NA
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,prior_match,2024-01-22,2024_01_13_china_pr_tajikistan,NA,NA,NA,NA,NA
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,prior_match,2024-01-22,2024_01_17_qatar_tajikistan,NA,NA,NA,NA,NA
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,goal_last_10,NA,2023_11_16_tajikistan_jordan,2023-11-16,Shahrom Samiev,89,FALSE,FALSE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,goal_last_10,NA,2023_11_21_pakistan_tajikistan,2023-11-21,Amadoni Kamolov,9,FALSE,FALSE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,goal_last_10,NA,2023_11_21_pakistan_tajikistan,2023-11-21,Rustam Soirov,13,FALSE,FALSE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,goal_last_10,NA,2023_11_21_pakistan_tajikistan,2023-11-21,Parvizdzhon Umarbayev,26,FALSE,FALSE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,goal_last_10,NA,2023_11_21_pakistan_tajikistan,2023-11-21,Ehson Panjshanbe,45,FALSE,FALSE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,goal_last_10,NA,2023_11_21_pakistan_tajikistan,2023-11-21,Amadoni Kamolov,66,FALSE,FALSE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,goal_last_10,NA,2023_11_21_pakistan_tajikistan,2023-11-21,Shahrom Samiev,90,FALSE,FALSE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,goal_365d,NA,2023_11_16_tajikistan_jordan,2023-11-16,Shahrom Samiev,89,FALSE,FALSE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,goal_365d,NA,2023_11_21_pakistan_tajikistan,2023-11-21,Amadoni Kamolov,9,FALSE,FALSE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,goal_365d,NA,2023_11_21_pakistan_tajikistan,2023-11-21,Rustam Soirov,13,FALSE,FALSE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,goal_365d,NA,2023_11_21_pakistan_tajikistan,2023-11-21,Parvizdzhon Umarbayev,26,FALSE,FALSE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,goal_365d,NA,2023_11_21_pakistan_tajikistan,2023-11-21,Ehson Panjshanbe,45,FALSE,FALSE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,goal_365d,NA,2023_11_21_pakistan_tajikistan,2023-11-21,Amadoni Kamolov,66,FALSE,FALSE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,home,Tajikistan,goal_365d,NA,2023_11_21_pakistan_tajikistan,2023-11-21,Shahrom Samiev,90,FALSE,FALSE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,away,Lebanon,prior_match,2024-01-22,2023_07_01_india_lebanon,NA,NA,NA,NA,NA
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,away,Lebanon,prior_match,2024-01-22,2023_09_07_thailand_lebanon,NA,NA,NA,NA,NA
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,away,Lebanon,prior_match,2024-01-22,2023_09_10_lebanon_india,NA,NA,NA,NA,NA
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,away,Lebanon,prior_match,2024-01-22,2023_10_12_montenegro_lebanon,NA,NA,NA,NA,NA
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,away,Lebanon,prior_match,2024-01-22,2023_10_17_united_arab_emirates_lebanon,NA,NA,NA,NA,NA
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,away,Lebanon,prior_match,2024-01-22,2023_11_16_lebanon_palestine,NA,NA,NA,NA,NA
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,away,Lebanon,prior_match,2024-01-22,2023_11_21_bangladesh_lebanon,NA,NA,NA,NA,NA
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,away,Lebanon,prior_match,2024-01-22,2024_01_04_saudi_arabia_lebanon,NA,NA,NA,NA,NA
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,away,Lebanon,prior_match,2024-01-22,2024_01_12_qatar_lebanon,NA,NA,NA,NA,NA
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,away,Lebanon,prior_match,2024-01-22,2024_01_17_lebanon_china_pr,NA,NA,NA,NA,NA
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,away,Lebanon,goal_last_10,NA,2023_11_21_bangladesh_lebanon,2023-11-21,Majed Osman,67,FALSE,FALSE
+2024_01_22_tajikistan_lebanon_afc_asian_cup,2024-01-22,Tajikistan,Lebanon,away,Lebanon,goal_365d,NA,2023_11_21_bangladesh_lebanon,2023-11-21,Majed Osman,67,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,prior_match,1947-12-04,1945_08_15_argentina_uruguay,NA,NA,NA,NA,NA
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,prior_match,1947-12-04,1945_12_16_brazil_argentina,NA,NA,NA,NA,NA
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,prior_match,1947-12-04,1945_12_20_brazil_argentina,NA,NA,NA,NA,NA
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,prior_match,1947-12-04,1945_12_23_brazil_argentina,NA,NA,NA,NA,NA
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,prior_match,1947-12-04,1946_01_12_argentina_paraguay,NA,NA,NA,NA,NA
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,prior_match,1947-12-04,1946_01_19_argentina_bolivia,NA,NA,NA,NA,NA
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,prior_match,1947-12-04,1946_01_26_argentina_chile,NA,NA,NA,NA,NA
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,prior_match,1947-12-04,1946_02_02_argentina_uruguay,NA,NA,NA,NA,NA
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,prior_match,1947-12-04,1946_02_10_argentina_brazil,NA,NA,NA,NA,NA
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,prior_match,1947-12-04,1947_12_02_argentina_paraguay,NA,NA,NA,NA,NA
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1946_01_12_argentina_paraguay,1946-01-12,Vicente de la Mata,6,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1946_01_12_argentina_paraguay,1946-01-12,Rinaldo Martino,43,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1946_01_19_argentina_bolivia,1946-01-19,Ángel Labruna,34,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1946_01_19_argentina_bolivia,1946-01-19,Norberto Doroteo Méndez,39,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1946_01_19_argentina_bolivia,1946-01-19,Norberto Doroteo Méndez,60,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1946_01_19_argentina_bolivia,1946-01-19,Juan Carlos Salvini,75,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1946_01_19_argentina_bolivia,1946-01-19,Félix Loustau,79,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1946_01_19_argentina_bolivia,1946-01-19,Juan Carlos Salvini,84,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1946_01_19_argentina_bolivia,1946-01-19,Ángel Labruna,89,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1946_01_26_argentina_chile,1946-01-26,Ángel Labruna,39,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1946_01_26_argentina_chile,1946-01-26,Ángel Labruna,60,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1946_01_26_argentina_chile,1946-01-26,Adolfo Pedernera,65,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1946_02_02_argentina_uruguay,1946-02-02,Adolfo Pedernera,8,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1946_02_02_argentina_uruguay,1946-02-02,Ángel Labruna,46,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1946_02_02_argentina_uruguay,1946-02-02,Norberto Doroteo Méndez,72,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1946_02_10_argentina_brazil,1946-02-10,Norberto Doroteo Méndez,14,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1946_02_10_argentina_brazil,1946-02-10,Norberto Doroteo Méndez,20,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1947_12_02_argentina_paraguay,1947-12-02,José Manuel Moreno,10,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1947_12_02_argentina_paraguay,1947-12-02,Félix Loustau,22,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1947_12_02_argentina_paraguay,1947-12-02,René Pontoni,40,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1947_12_02_argentina_paraguay,1947-12-02,René Pontoni,50,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1947_12_02_argentina_paraguay,1947-12-02,René Pontoni,82,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_last_10,NA,1947_12_02_argentina_paraguay,1947-12-02,Norberto Doroteo Méndez,87,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_365d,NA,1947_12_02_argentina_paraguay,1947-12-02,José Manuel Moreno,10,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_365d,NA,1947_12_02_argentina_paraguay,1947-12-02,Félix Loustau,22,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_365d,NA,1947_12_02_argentina_paraguay,1947-12-02,René Pontoni,40,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_365d,NA,1947_12_02_argentina_paraguay,1947-12-02,René Pontoni,50,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_365d,NA,1947_12_02_argentina_paraguay,1947-12-02,René Pontoni,82,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,home,Argentina,goal_365d,NA,1947_12_02_argentina_paraguay,1947-12-02,Norberto Doroteo Méndez,87,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,Bolivia,prior_match,1947-12-04,1945_02_11_bolivia_ecuador,NA,NA,NA,NA,NA
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,Bolivia,prior_match,1947-12-04,1945_02_15_bolivia_uruguay,NA,NA,NA,NA,NA
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,Bolivia,prior_match,1947-12-04,1945_02_21_bolivia_colombia,NA,NA,NA,NA,NA
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,Bolivia,prior_match,1947-12-04,1946_01_16_bolivia_brazil,NA,NA,NA,NA,NA
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,Bolivia,prior_match,1947-12-04,1946_01_19_argentina_bolivia,NA,NA,NA,NA,NA
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,Bolivia,prior_match,1947-12-04,1946_01_26_bolivia_paraguay,NA,NA,NA,NA,NA
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,Bolivia,prior_match,1947-12-04,1946_01_29_bolivia_uruguay,NA,NA,NA,NA,NA
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,Bolivia,prior_match,1947-12-04,1946_02_08_bolivia_chile,NA,NA,NA,NA,NA
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,Bolivia,prior_match,1947-12-04,1947_01_05_venezuela_bolivia,NA,NA,NA,NA,NA
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,Bolivia,prior_match,1947-12-04,1947_11_30_ecuador_bolivia,NA,NA,NA,NA,NA
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,Bolivia,goal_last_10,NA,1945_02_21_bolivia_colombia,1945-02-21,Raúl Fernández,57,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,Bolivia,goal_last_10,NA,1945_02_21_bolivia_colombia,1945-02-21,Zenón González,75,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,Bolivia,goal_last_10,NA,1945_02_21_bolivia_colombia,1945-02-21,Severo Orgaz,80,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,Bolivia,goal_last_10,NA,1946_01_19_argentina_bolivia,1946-01-19,Miguel Peredo,67,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,Bolivia,goal_last_10,NA,1946_01_26_bolivia_paraguay,1946-01-26,Juan Bautista Coronel,20,TRUE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,Bolivia,goal_last_10,NA,1946_01_26_bolivia_paraguay,1946-01-26,Zenón González,42,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,Bolivia,goal_last_10,NA,1946_02_08_bolivia_chile,1946-02-08,Miguel Peredo,50,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,Bolivia,goal_last_10,NA,1947_11_30_ecuador_bolivia,1947-11-30,Benigno Gutiérrez,26,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,Bolivia,goal_last_10,NA,1947_11_30_ecuador_bolivia,1947-11-30,Benigno Gutiérrez,44,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,Bolivia,goal_365d,NA,1947_11_30_ecuador_bolivia,1947-11-30,Benigno Gutiérrez,26,FALSE,FALSE
+1947_12_04_argentina_bolivia_copa_am_rica,1947-12-04,Argentina,Bolivia,away,Bolivia,goal_365d,NA,1947_11_30_ecuador_bolivia,1947-11-30,Benigno Gutiérrez,44,FALSE,FALSE

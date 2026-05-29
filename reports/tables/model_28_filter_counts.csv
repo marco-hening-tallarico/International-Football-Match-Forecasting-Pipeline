@@ -1,0 +1,9 @@
+step,n_rows
+raw_modeling_table,49257
+valid_match_result,49257
+rating_freshness_filter,42526
+minimum_prior_matches_filter,41386
+complete_cases_baseline_safe,41386
+complete_cases_safe_plus_form_compact,41386
+complete_cases_safe_plus_form_draw,41386
+complete_all_variant_features,41386

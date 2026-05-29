@@ -1,14 +1,16 @@
-# ============================================================
 # 06_clean_football_data_uk.R
-# Clean football-data.co.uk match files into core + odds tables
-# Handles old files with inconsistent trailing empty columns
 #
-# Outputs:
-#   data/processed/football_data_uk_matches.csv
-#   data/processed/football_data_uk_matches_core.csv
-#   data/processed/football_data_uk_odds_wide.csv
-#   data/validation/football_data_uk_cleaning_summary.csv
-# ============================================================
+# Cleans football-data.co.uk season files into core match fields and a
+# separate wide odds table. Handles older files with inconsistent trailing
+# empty columns.
+#
+# Reads: data/raw/football_data_uk/*.csv
+#
+# Writes:
+# - data/processed/football_data_uk_matches.csv
+# - data/processed/football_data_uk_matches_core.csv
+# - data/processed/football_data_uk_odds_wide.csv
+# - data/validation/football_data_uk_cleaning_summary.csv
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")
@@ -58,9 +60,7 @@ MATCH_RESULT_COLS <- c(
     "ar"
 )
 
-# -----------------------------
 # Helper functions
-# -----------------------------
 
 read_fd_uk_csv <- function(path) {
     tryCatch(

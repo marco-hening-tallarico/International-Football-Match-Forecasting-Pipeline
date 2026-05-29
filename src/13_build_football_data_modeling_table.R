@@ -1,15 +1,16 @@
-# ============================================================
 # 13_build_football_data_modeling_table.R
-# Join football-data.co.uk core matches with wide odds for modeling
 #
-# Inputs:
-#   data/processed/football_data_uk_matches_core.csv
-#   data/processed/football_data_uk_odds_wide.csv
+# Joins football-data.co.uk core match fields with wide odds for club-level
+# modeling. Market columns stay in the joined table but are excluded from
+# the safe international feature workflow.
 #
-# Outputs:
-#   data/processed/football_data_uk_modeling_table.csv
-#   data/validation/football_data_uk_modeling_table_validation.csv
-# ============================================================
+# Reads:
+# - data/processed/football_data_uk_matches_core.csv
+# - data/processed/football_data_uk_odds_wide.csv
+#
+# Writes:
+# - data/processed/football_data_uk_modeling_table.csv
+# - data/validation/football_data_uk_modeling_table_validation.csv
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")

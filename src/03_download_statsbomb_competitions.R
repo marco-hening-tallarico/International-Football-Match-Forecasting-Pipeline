@@ -1,7 +1,12 @@
-# ============================================================
 # 03_download_statsbomb_competitions.R
-# Download and clean StatsBomb Open Data competitions
-# ============================================================
+#
+# Downloads StatsBomb Open Data competition metadata and writes cleaned
+# competition-season reference tables.
+#
+# Writes:
+# - data/processed/statsbomb_competitions.csv
+# - data/processed/statsbomb_competitions.rds
+# - data/metadata/source_manifest.csv (updated)
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")

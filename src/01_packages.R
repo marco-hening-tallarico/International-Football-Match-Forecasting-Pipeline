@@ -1,7 +1,7 @@
-# ============================================================
 # 01_packages.R
-# Install and load packages for the soccer ML project
-# ============================================================
+#
+# Installs missing CRAN packages and loads the shared library set.
+# Run after 00_project_setup.R.
 
 core_packages <- c(
     # Data manipulation

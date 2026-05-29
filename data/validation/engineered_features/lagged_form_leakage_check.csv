@@ -1,0 +1,7 @@
+metric,value
+rows_checked,49257
+home_leakage_violations,0
+away_leakage_violations,0
+any_leakage_violations,0
+max_home_prior_date_used,2026-03-28
+max_away_prior_date_used,2026-03-28

@@ -1,7 +1,14 @@
-# ============================================================
 # 09_validate_international_results.R
-# Practical validation workflow for international match results
-# ============================================================
+#
+# Validates cleaned international match results: schema, keys, score logic,
+# date ranges, and a set of warning-level duplicate or extreme-score checks.
+#
+# Reads:
+# - data/processed/international_results.csv
+# - data/raw/international_results/results.csv (row-count cross-check)
+#
+# Writes:
+# - data/validation/processed_data/international_results_validation_*.csv
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")
@@ -169,7 +176,7 @@ add_check(
 
 if (length(missing_cols) > 0L || length(missing_raw_cols) > 0L) {
     checks <- dplyr::bind_rows(check_rows)
-    readr::write_csv(checks, file.path(VALIDATION_DIR, "international_results_validation_checks.csv"))
+    readr::write_csv(checks, file.path(VALIDATION_PROCESSED_DIR, "international_results_validation_checks.csv"))
     fail("International results validation could not continue because required columns are missing.")
 }
 
@@ -567,9 +574,9 @@ add_check(
     status = "recorded"
 )
 
-check_output_path <- file.path(VALIDATION_DIR, "international_results_validation_checks.csv")
-summary_output_path <- file.path(VALIDATION_DIR, "international_results_validation_summary.csv")
-examples_output_path <- file.path(VALIDATION_DIR, "international_results_validation_examples.csv")
+check_output_path <- file.path(VALIDATION_PROCESSED_DIR, "international_results_validation_checks.csv")
+summary_output_path <- file.path(VALIDATION_PROCESSED_DIR, "international_results_validation_summary.csv")
+examples_output_path <- file.path(VALIDATION_PROCESSED_DIR, "international_results_validation_examples.csv")
 
 checks <- dplyr::bind_rows(check_rows) |>
     dplyr::arrange(

@@ -1,16 +1,15 @@
-# ============================================================
 # 04f_clean_statsbomb_lineups.R
-# Flatten StatsBomb raw lineup JSON into processed player-lineup rows
 #
-# Inputs:
-#   data/raw/statsbomb_open/lineups/{match_id}.json
-#   data/processed/statsbomb_matches.csv  (lineage reference)
+# Flattens raw StatsBomb lineup JSON into one row per player appearance.
 #
-# Outputs:
-#   data/processed/statsbomb_lineups.csv
-#   data/validation/statsbomb_lineups_cleaning_summary.csv
-#   data/validation/statsbomb_lineups_schema_audit.csv
-# ============================================================
+# Reads:
+# - data/raw/statsbomb_open/lineups/{match_id}.json
+# - data/processed/statsbomb_matches.csv (lineage)
+#
+# Writes:
+# - data/processed/statsbomb_lineups.csv
+# - data/validation/statsbomb_lineups_cleaning_summary.csv
+# - data/validation/statsbomb_lineups_schema_audit.csv
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")
@@ -43,9 +42,7 @@ LINEUP_COLUMNS <- c(
     "cards_json"
 )
 
-# ============================================================
 # Safe column accessors
-# ============================================================
 
 get_chr <- function(df, col, n = nrow(df)) {
     if (col %in% names(df)) {
@@ -192,9 +189,7 @@ build_player_rows <- function(
     )
 }
 
-# ============================================================
 # Transform one raw lineup file
-# ============================================================
 
 transform_statsbomb_lineups_file <- function(path) {
     raw_file <- normalizePath(path, winslash = "/", mustWork = FALSE)
@@ -355,9 +350,7 @@ transform_statsbomb_lineups_file <- function(path) {
     )
 }
 
-# ============================================================
 # Discover raw files
-# ============================================================
 
 if (!dir.exists(LINEUPS_RAW_DIR)) {
     stop(

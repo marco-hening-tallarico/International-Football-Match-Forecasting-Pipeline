@@ -1,22 +1,35 @@
 .Rhistory
 .RData
 .Rproj.user/
-data/raw/
-data/interim/
 *.log
 .DS_Store
 
+# Raw and interim data
+data/raw/
+data/interim/
+
 # Large StatsBomb processed files
 data/processed/statsbomb_events.csv
+data/processed/statsbomb_shots.csv
+data/processed/statsbomb_lineups.csv
+data/processed/statsbomb_360.csv
 
 # Wide football-data.co.uk odds table (exceeds GitHub file size limit)
 data/processed/football_data_uk_odds_wide.csv
+data/processed/football_data_uk_modeling_table.csv
 
-# Raw high-volume StatsBomb files
+# Raw high-volume StatsBomb directories
 data/raw/statsbomb_open/events/
 data/raw/statsbomb_open/lineups/
-data/processed/statsbomb_shots.csv
-data/processed/statsbomb_lineups.csv
-data/processed/statsbomb_lineups.csv
-data/processed/statsbomb_360.csv
-data/processed/football_data_uk_modeling_table.csv
+
+# Notebook cache
+notebooks/*_cache/
+notebooks/.knitr/
+
+# Legacy duplicate output trees (new runs use reports/)
+# graphs/
+# outputs/
+# data/model_outputs/
+
+# Optional: uncomment after renv init if you prefer not to commit the library
+# renv/library/

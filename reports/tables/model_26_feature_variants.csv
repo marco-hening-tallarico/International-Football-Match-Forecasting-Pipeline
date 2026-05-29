@@ -1,0 +1,5 @@
+feature_variant,n_features,features
+baseline_safe,11,rating_diff; home_rating_pre_match; away_rating_pre_match; rating_age_days_home; rating_age_days_away; neutral; is_world_cup; is_world_cup_qualifier; is_continental_tournament; is_continental_qualifier; is_friendly
+draw_abs_only,12,rating_diff; home_rating_pre_match; away_rating_pre_match; rating_age_days_home; rating_age_days_away; neutral; is_world_cup; is_world_cup_qualifier; is_continental_tournament; is_continental_qualifier; is_friendly; abs_rating_diff
+draw_smooth,13,rating_diff; home_rating_pre_match; away_rating_pre_match; rating_age_days_home; rating_age_days_away; neutral; is_world_cup; is_world_cup_qualifier; is_continental_tournament; is_continental_qualifier; is_friendly; abs_rating_diff; rating_diff_squared
+draw_smooth_neutral,14,rating_diff; home_rating_pre_match; away_rating_pre_match; rating_age_days_home; rating_age_days_away; neutral; is_world_cup; is_world_cup_qualifier; is_continental_tournament; is_continental_qualifier; is_friendly; abs_rating_diff; rating_diff_squared; neutral_x_abs_rating_diff

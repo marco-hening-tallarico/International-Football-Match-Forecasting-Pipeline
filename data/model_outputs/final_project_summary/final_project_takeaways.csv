@@ -1,0 +1,9 @@
+takeaway,value
+best_model,lightgbm
+best_feature_set,rating_plus_form
+strongest_feature_tier,Rating + form
+goalscorer_feature_result,No material log-loss improvement vs rating_plus_form
+hardest_class,D
+engineered_feature_validation,61 features checked (34 form + 27 goalscorer); 8/8 validation checks passed
+main_limitation,"Draw recall remains low; no squad-value, injury, or market-odds signals yet"
+recommended_next_step,Calibrate LightGBM probabilities; test two-stage draw model; add squad/market and odds data

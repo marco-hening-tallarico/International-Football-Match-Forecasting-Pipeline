@@ -1,0 +1,26 @@
+date,home_team,away_team,result_class,home_unique_scorers_last_10,home_goals_by_top_scorer_last_10,home_non_penalty_goals_last_10,home_penalty_goals_last_10,home_unique_scorers_365d,home_goals_by_top_scorer_365d,home_non_penalty_goals_365d,home_penalty_goals_365d,home_avg_goal_minute_365d,away_unique_scorers_last_10,away_goals_by_top_scorer_last_10,away_non_penalty_goals_last_10,away_penalty_goals_last_10,away_unique_scorers_365d,away_goals_by_top_scorer_365d,away_non_penalty_goals_365d,away_penalty_goals_365d,away_avg_goal_minute_365d,unique_scorers_diff_last_10,top_scorer_goals_diff_last_10,non_penalty_goals_diff_last_10,penalty_goals_diff_last_10,unique_scorers_diff_365d,top_scorer_goals_diff_365d,non_penalty_goals_diff_365d,penalty_goals_diff_365d,avg_goal_minute_diff_365d
+1872-11-30,Scotland,England,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+1873-03-08,England,Scotland,1,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA
+1874-03-07,Scotland,England,1,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA
+1875-03-06,England,Scotland,0,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA
+1876-03-04,Scotland,England,1,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA
+1876-03-25,Scotland,Wales,1,0,0,0,0,0,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+1877-03-03,England,Scotland,-1,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA
+1877-03-05,Wales,Scotland,-1,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA
+1878-03-02,Scotland,England,1,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA
+1878-03-23,Scotland,Wales,1,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA
+1879-01-18,England,Wales,1,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA
+1879-04-05,England,Scotland,1,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA
+1879-04-07,Wales,Scotland,-1,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA
+1880-03-13,Scotland,England,1,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA
+1880-03-15,Wales,England,-1,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA
+1880-03-27,Scotland,Wales,1,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA
+1881-02-26,England,Wales,-1,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA
+1881-03-12,England,Scotland,-1,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA
+1881-03-14,Wales,Scotland,-1,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA
+1882-02-18,Northern Ireland,England,-1,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,0,0,0,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+1882-02-25,Wales,Northern Ireland,1,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA
+1882-03-11,Scotland,England,1,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA
+1882-03-13,Wales,England,1,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA
+1882-03-25,Scotland,Wales,1,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA
+1883-02-03,England,Wales,1,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA,0,0,0,0,0,0,0,0,NA

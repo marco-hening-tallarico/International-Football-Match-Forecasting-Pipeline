@@ -1,8 +1,7 @@
-# ============================================================
 # 02_helpers.R
-# Reusable helper functions for downloads, reading files,
-# and tracking data provenance
-# ============================================================
+#
+# Shared helpers for downloads, CSV/JSON reads, manifest logging, and
+# team-name normalization. No standalone outputs.
 
 safe_download <- function(url, destfile, overwrite = FALSE) {
     dir.create(dirname(destfile), recursive = TRUE, showWarnings = FALSE)

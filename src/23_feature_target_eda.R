@@ -1,16 +1,15 @@
-# src/23_feature_target_eda.R
+# 23_feature_target_eda.R
 #
-# Purpose:
-#   Exploratory EDA for approved features and targets in
-#   data/processed/international_modeling_table.csv.
+# Exploratory plots and summary tables for approved pre-match features and
+# the H/D/A target in the international modeling table.
 #
-# Inputs:
-#   data/processed/international_modeling_table.csv
-#   reports/tables/approved_feature_sets_final.R
+# Reads:
+# - data/processed/international_modeling_table.csv
+# - reports/tables/approved_feature_sets_final.R
 #
-# Outputs:
-#   reports/tables/eda_*.csv
-#   reports/figures/eda_*.png
+# Writes:
+# - reports/tables/eda_*.csv
+# - reports/figures/eda_*.png
 
 suppressPackageStartupMessages({
     library(readr)
@@ -22,9 +21,7 @@ suppressPackageStartupMessages({
     library(forcats)
 })
 
-# -----------------------------
 # Paths
-# -----------------------------
 
 model_path <- "data/processed/international_modeling_table.csv"
 feature_set_path <- "reports/tables/approved_feature_sets_final.R"
@@ -35,9 +32,7 @@ figures_dir <- "reports/figures"
 dir.create(tables_dir, recursive = TRUE, showWarnings = FALSE)
 dir.create(figures_dir, recursive = TRUE, showWarnings = FALSE)
 
-# -----------------------------
 # Load data and approved features
-# -----------------------------
 
 model_df <- read_csv(model_path, show_col_types = FALSE)
 
@@ -88,9 +83,7 @@ if (length(missing_model_features) > 0) {
     )
 }
 
-# -----------------------------
 # Build canonical target
-# -----------------------------
 # Goal:
 #   Create outcome as H / D / A.
 #   Use result_class or match_result if available.
@@ -171,9 +164,7 @@ if (target_na_prop > 0.01) {
     )
 }
 
-# -----------------------------
 # Identify date/split columns
-# -----------------------------
 
 date_col <- case_when(
     "date" %in% names(model_df) ~ "date",
@@ -203,9 +194,7 @@ if (!is.na(split_col)) {
         mutate(.eda_split = NA_character_)
 }
 
-# -----------------------------
 # Feature type groups
-# -----------------------------
 
 feature_classes <- tibble(
     column = model_features,
@@ -218,9 +207,7 @@ numeric_features <- feature_classes |>
 
 categorical_features <- setdiff(model_features, numeric_features)
 
-# -----------------------------
 # 1. Target balance
-# -----------------------------
 
 target_balance <- model_df |>
     filter(!is.na(outcome)) |>
@@ -249,9 +236,7 @@ ggsave(
     dpi = 150
 )
 
-# -----------------------------
 # 2. Target balance by split
-# -----------------------------
 
 if (!all(is.na(model_df$.eda_split))) {
     target_by_split <- model_df |>
@@ -290,9 +275,7 @@ if (!all(is.na(model_df$.eda_split))) {
     }
 }
 
-# -----------------------------
 # 3. Target trend by season
-# -----------------------------
 
 if ("season" %in% names(model_df)) {
     target_by_season <- model_df |>
@@ -334,9 +317,7 @@ if ("season" %in% names(model_df)) {
     }
 }
 
-# -----------------------------
 # 4. Missingness by feature
-# -----------------------------
 
 feature_missingness <- tibble(column = model_features) |>
     mutate(
@@ -377,9 +358,7 @@ ggsave(
     dpi = 150
 )
 
-# -----------------------------
 # 5. Numeric feature summary
-# -----------------------------
 
 numeric_summary <- map_dfr(
     numeric_features,
@@ -411,9 +390,7 @@ write_csv(
     file.path(tables_dir, "eda_numeric_feature_summary.csv")
 )
 
-# -----------------------------
 # 6. Numeric feature summaries by outcome
-# -----------------------------
 
 numeric_by_outcome <- model_df |>
     filter(!is.na(outcome)) |>
@@ -438,9 +415,7 @@ write_csv(
     file.path(tables_dir, "eda_numeric_features_by_outcome.csv")
 )
 
-# -----------------------------
 # 7. Numeric feature histograms
-# -----------------------------
 
 for (col in numeric_features) {
     p <- ggplot(model_df, aes(x = .data[[col]])) +
@@ -460,9 +435,7 @@ for (col in numeric_features) {
     )
 }
 
-# -----------------------------
 # 8. Numeric feature distributions by outcome
-# -----------------------------
 
 for (col in numeric_features) {
     p <- model_df |>
@@ -484,9 +457,7 @@ for (col in numeric_features) {
     )
 }
 
-# -----------------------------
 # 9. Categorical cardinality and top levels
-# -----------------------------
 
 categorical_summary <- tibble(column = categorical_features) |>
     mutate(
@@ -533,9 +504,7 @@ write_csv(
     file.path(tables_dir, "eda_categorical_features_by_outcome.csv")
 )
 
-# -----------------------------
 # 10. Rating-diff specific diagnostics
-# -----------------------------
 
 if ("rating_diff" %in% names(model_df)) {
     rating_diff_summary <- model_df |>
@@ -631,9 +600,7 @@ if ("rating_diff" %in% names(model_df)) {
     }
 }
 
-# -----------------------------
 # 11. Neutral-site diagnostics
-# -----------------------------
 
 if ("neutral" %in% names(model_df)) {
     neutral_outcome <- model_df |>
@@ -675,9 +642,7 @@ if ("neutral" %in% names(model_df)) {
     }
 }
 
-# -----------------------------
 # 12. Competition/tournament diagnostics
-# -----------------------------
 
 for (col in intersect(c("competition", "tournament"), names(model_df))) {
     comp_outcome <- model_df |>
@@ -727,9 +692,7 @@ for (col in intersect(c("competition", "tournament"), names(model_df))) {
     }
 }
 
-# -----------------------------
 # 13. Rating freshness diagnostics
-# -----------------------------
 
 age_cols <- intersect(c("rating_age_days_home", "rating_age_days_away"), names(model_df))
 
@@ -782,9 +745,7 @@ if (length(age_cols) > 0) {
     )
 }
 
-# -----------------------------
 # 14. Split drift diagnostics
-# -----------------------------
 
 if (!all(is.na(model_df$.eda_split))) {
     numeric_split_drift <- map_dfr(
@@ -811,9 +772,7 @@ if (!all(is.na(model_df$.eda_split))) {
     )
 }
 
-# -----------------------------
 # 15. Correlation among numeric features
-# -----------------------------
 
 if (length(numeric_features) >= 2) {
     corr_df <- model_df |>
@@ -856,9 +815,7 @@ if (length(numeric_features) >= 2) {
     )
 }
 
-# -----------------------------
 # 16. Compact EDA index
-# -----------------------------
 
 eda_index <- tibble(
     output = c(
@@ -902,9 +859,7 @@ write_csv(
     file.path(tables_dir, "eda_output_index.csv")
 )
 
-# -----------------------------
 # Console output
-# -----------------------------
 
 cat("\nEDA complete.\n")
 
@@ -935,9 +890,7 @@ cat(figures_dir, "\n")
 
 
 
-# -----------------------------
 # Additional EDA: useful missing plots
-# -----------------------------
 
 # 17. Outcome rates by logical/tournament flags
 # These are low-cardinality features, so they are safe and readable to plot.

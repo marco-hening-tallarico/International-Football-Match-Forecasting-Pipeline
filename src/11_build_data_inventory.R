@@ -1,41 +1,28 @@
-# ============================================================
 # 11_build_data_inventory.R
-# Source registry and coverage audit for the soccer data pipeline.
 #
-# Scans data/raw, data/processed, and data/metadata for every CSV
-# and RDS file and records shape, date range, team/competition
-# counts, file size, and modification time.
+# Scans raw, processed, metadata, and validation assets and writes a row-level
+# inventory with shape, date range, and file metadata. StatsBomb JSON under
+# data/raw/statsbomb_open/ is counted from file metadata only (no full parse).
 #
-# Also inventories raw StatsBomb JSON under data/raw/statsbomb_open/
-# using file metadata only (no full JSON parse; event files are large).
+# Writes:
+# - data/metadata/data_inventory.csv
+# - data/validation/source_coverage_summary.csv
 #
-# Outputs:
-#   data/metadata/data_inventory.csv
-#   data/validation/source_coverage_summary.csv
-#
-# Design rules:
-#   - tryCatch wraps every file read; one unreadable file never
-#     stops the whole script.
-#   - No hard-coded absolute paths beyond PROJECT_ROOT from setup.
-#   - readr::write_csv for all outputs.
-# ============================================================
+# Notes:
+# - tryCatch wraps every file read so one bad file does not stop the run.
 
 source("src/00_project_setup.R")
 source("src/01_packages.R")
 source("src/02_helpers.R")
 
-# ============================================================
 # Constants
-# ============================================================
 
-DIRS_TO_SCAN <- c(RAW_DIR, PROCESSED_DIR, META_DIR)
+DIRS_TO_SCAN <- c(RAW_DIR, PROCESSED_DIR, META_DIR, VALIDATION_DIR)
 
 INVENTORY_PATH <- file.path(META_DIR, "data_inventory.csv")
 COVERAGE_PATH  <- file.path(VALIDATION_DIR, "source_coverage_summary.csv")
 
-# ============================================================
 # Helpers: path classification
-# ============================================================
 
 guess_source <- function(path) {
     p <- normalizePath(path, mustWork = FALSE)
@@ -139,9 +126,7 @@ guess_layer <- function(path) {
 # Inline string concat helper (avoids needing glue in simple cases)
 `%+%` <- paste0
 
-# ============================================================
 # Helpers: extract metrics from a data frame
-# ============================================================
 
 # use_fd_uk_parser = TRUE  →  call parse_fd_uk_date() from 02_helpers.R,
 #                              which handles dd/mm/yy, dd/mm/yyyy, etc.
@@ -226,9 +211,7 @@ extract_n_competitions <- function(dat) {
     dplyr::n_distinct(dat[[col]], na.rm = TRUE)
 }
 
-# ============================================================
 # StatsBomb raw JSON: metadata only (no parse)
-# ============================================================
 
 inspect_statsbomb_json_file <- function(path) {
     finfo <- tryCatch(file.info(path), error = function(e) NULL)
@@ -254,9 +237,7 @@ inspect_statsbomb_json_file <- function(path) {
     )
 }
 
-# ============================================================
 # Core inspector: one file → one tibble row
-# ============================================================
 
 inspect_one_file <- function(path) {
     if (is_statsbomb_raw_json(path)) {
@@ -369,9 +350,7 @@ inspect_one_file <- function(path) {
     )
 }
 
-# ============================================================
 # Collect all CSV and RDS files under the three scan directories
-# ============================================================
 
 message("Scanning directories for CSV and RDS files...")
 
@@ -408,9 +387,7 @@ if (dir.exists(statsbomb_raw_dir)) {
 message("  Total CSV/RDS files found: ", length(target_paths))
 message("  Total StatsBomb raw JSON files found: ", length(statsbomb_json_paths))
 
-# ============================================================
 # Inspect every file with progress messages
-# ============================================================
 
 n_files      <- length(target_paths)
 log_interval <- max(1L, floor(n_files / 10L))  # message roughly every 10 %
@@ -459,16 +436,12 @@ inventory <- dplyr::bind_rows(
 ) |>
     dplyr::arrange(raw_or_processed, source_guess, dataset_guess, path)
 
-# ============================================================
 # Write data/metadata/data_inventory.csv
-# ============================================================
 
 readr::write_csv(inventory, INVENTORY_PATH)
 message("Written: ", INVENTORY_PATH)
 
-# ============================================================
 # Build source_coverage_summary.csv
-# ============================================================
 
 coverage_summary <- inventory |>
     dplyr::group_by(source_guess, raw_or_processed, dataset_guess) |>
@@ -504,9 +477,7 @@ coverage_summary <- inventory |>
 readr::write_csv(coverage_summary, COVERAGE_PATH)
 message("Written: ", COVERAGE_PATH)
 
-# ============================================================
 # Console summary
-# ============================================================
 
 message("")
 message("============================================================")
