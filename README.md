@@ -2,6 +2,30 @@
 
 Predict **home win / draw / away win** probabilities for international association football matches using leakage-safe pre-match features, chronological evaluation, and documented validation.
 
+The **main project** is international match outcome forecasting (multiclass H/D/A). **StatsBomb Open Data** and **football-data.co.uk** are optional side tracks for club-level data; they are not required to reproduce the headline international results.
+
+## Documentation
+
+Start with the **[project overview](docs/project_overview.md)** — the reviewer-facing map of objectives, data, pipeline, and where to look next.
+
+| Document | Description |
+|----------|-------------|
+| [docs/project_overview.md](docs/project_overview.md) | Reviewer-facing overview **(start here)** |
+| [docs/script_map.md](docs/script_map.md) | Script inventory and track separation |
+| [docs/pipeline.md](docs/pipeline.md) | Script-by-script pipeline reference |
+| [docs/data_sources.md](docs/data_sources.md) | Raw files, processed outputs, limitations |
+| [docs/data_dictionary.md](docs/data_dictionary.md) | Column definitions |
+| [docs/leakage_audit.md](docs/leakage_audit.md) | Feature timing and exclusion rules |
+| [docs/modeling_plan.md](docs/modeling_plan.md) | Modeling stages and feature tiers |
+| [docs/evaluation_plan.md](docs/evaluation_plan.md) | Metrics, splits, selection protocol |
+
+**Recommended reproduction path** (from the project root; see [Reproduce](#reproduce) for package install and optional runs):
+
+```bash
+Rscript src/run_light_pipeline.R
+Rscript src/run_modeling_pipeline.R
+```
+
 ## 60-second summary
 
 1. **Data** — Historical international results, goalscorers, shootouts, and World Football Elo ratings are downloaded, cleaned, and validated.
@@ -63,6 +87,8 @@ flowchart LR
 ```
 
 ## Reproduce
+
+**Recommended path** for the main international workflow: `run_light_pipeline.R` then `run_modeling_pipeline.R` (steps 2–3 below). Use `run_pipeline.R` only if you need the optional StatsBomb or football-data.co.uk side tracks.
 
 From the project root (R ≥ 4.2 recommended):
 
@@ -136,17 +162,9 @@ worldcup-forecast-r/
 - Early-era matches have sparser ratings and form history; complete-case cohorts differ slightly across feature tiers.
 - StatsBomb event/360 processing is optional and can take hours; it is not required for the international forecasting story.
 
-## Documentation
+## Project status
 
-| File | Contents |
-|------|----------|
-| [docs/pipeline.md](docs/pipeline.md) | Script-by-script pipeline reference |
-| [docs/data_sources.md](docs/data_sources.md) | Raw files, processed outputs, limitations |
-| [docs/data_dictionary.md](docs/data_dictionary.md) | Column definitions |
-| [docs/leakage_audit.md](docs/leakage_audit.md) | Feature timing and exclusion rules |
-| [docs/modeling_plan.md](docs/modeling_plan.md) | Modeling stages and feature tiers |
-| [docs/evaluation_plan.md](docs/evaluation_plan.md) | Metrics, splits, selection protocol |
-| [PROJECT_STATUS.md](PROJECT_STATUS.md) | What is done, known issues, reviewer checklist |
+[PROJECT_STATUS.md](PROJECT_STATUS.md) — what is done, known issues, reviewer checklist. Full `docs/` index: [Documentation](#documentation) above.
 
 ## License
 
