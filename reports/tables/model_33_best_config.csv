@@ -1,0 +1,2 @@
+model_family,config_id,feature_variant,split,n,log_loss,brier_score,accuracy,macro_f1,selection_metric,model_28_validation_log_loss,improvement_vs_model_28_validation,material_improvement_vs_model_28
+lightgbm,slower_small,safe_plus_form_compact,validation,6820,0.8917270201375737,0.5256928711098847,0.5863636363636363,0.4315699356986314,validation_log_loss,0.8915169777591728,-2.1004237840083206e-4,FALSE

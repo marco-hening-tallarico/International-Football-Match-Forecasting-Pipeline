@@ -1,5 +1,5 @@
 source,model,feature_variant,split,actual_draw_rate,mean_pred_D,predicted_draw_rate,draw_recall,draw_precision,draw_top_rate.x,draw_second_rate.x,median_draw_margin_to_top.x,draw_top_rate.y,draw_second_rate.y,median_draw_margin_to_top.y,draw_top_rate,draw_second_rate,median_draw_margin_to_top
-model_25_draw_diagnostics,glmnet_multinomial_ridge,NA,test,0.2364883401920439,0.2180613695340213,0,0,0,NA,NA,NA,0,0.7650205761316873,0.3539685259961535,NA,NA,NA
-model_25_draw_diagnostics,lightgbm,NA,test,0.2364883401920439,0.21311467514259663,6.858710562414266e-4,5.80046403712297e-4,0.2,NA,NA,NA,6.858710562414266e-4,0.8299039780521262,0.35776882127597265,NA,NA,NA
-model_25_draw_diagnostics,multinom,NA,test,0.2364883401920439,0.21787651352555065,0,0,0,NA,NA,NA,0,0.8117969821673525,0.3663232940932065,NA,NA,NA
-model_28_final_selected,lightgbm,safe_plus_form_compact,test,0.236520784744135,0.2190856719854452,0.00233228152009877,0.00232018561484918,0.2352941176470588,NA,NA,NA,NA,NA,NA,NA,NA,NA
+model_25_draw_diagnostics,glmnet_multinomial_ridge,NA,test,0.2359164242263951,0.2166955610279994,0,0,0,NA,NA,NA,0,0.7505950806664904,0.35493991215817444,NA,NA,NA
+model_25_draw_diagnostics,lightgbm,NA,test,0.2359164242263951,0.21235839770563197,1.322401481089659e-4,0,0,NA,NA,NA,1.322401481089659e-4,0.8295424490875429,0.35487760278887454,NA,NA,NA
+model_25_draw_diagnostics,multinom,NA,test,0.2359164242263951,0.21646544619931987,0,0,0,NA,NA,NA,0,0.8004496165035705,0.3682152071743479,NA,NA,NA
+model_28_final_selected,lightgbm,safe_plus_form_compact,test,0.2359476259754001,0.2191454925939283,0.00277741039545033,0.00112107623318385,0.09523809523809525,NA,NA,NA,NA,NA,NA,NA,NA,NA

@@ -1,0 +1,4 @@
+model_family,config_id,feature_variant,split,n,log_loss,brier_score,accuracy,macro_f1,evaluation_role
+lightgbm,slower_small,safe_plus_form_compact,test,7289,0.8745155637756651,0.5155006906412007,0.5952805597475648,0.43780397808085475,validation_selected_winner
+lightgbm,current_final,safe_plus_form_compact,test,7289,0.8746620128250434,0.515526479124386,0.5952805597475648,0.43849282529877026,current_final_grid_comparison
+lightgbm,model_28_lightgbm_official,safe_plus_form_compact,test,7289,0.8744001616802515,NA,0.5948689806557826,0.43813718928928486,model_28_official_artifact

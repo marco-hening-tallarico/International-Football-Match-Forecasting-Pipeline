@@ -22,19 +22,20 @@ home_won_shootout,numeric,49257,0,0,2,0; 1,post_match_leakage,Known post-match o
 away_won_shootout,numeric,49257,0,0,2,0; 1,post_match_leakage,Known post-match outcome or score column; do not use as a predictor.
 home_team_clean,character,49257,0,0,327,scotland; england; wales; northern_ireland; united_states,unknown_review_required,NA
 away_team_clean,character,49257,0,0,321,england; scotland; wales; northern_ireland; canada,unknown_review_required,NA
-home_rating_pre_match,numeric,46313,2944,0.059768154780031266,1637,396; 403; 404; 433; 434,unknown_review_required,Not auto-classified; name suggests a pre-match field. Review before using in models.
-home_rating_date,Date,46313,2944,0.059768154780031266,14290,1872-11-30; 1873-03-08; 1874-03-07; 1875-03-06; 1876-03-04,unknown_review_required,Not auto-classified; name suggests a pre-match field. Review before using in models.
-away_rating_pre_match,numeric,46151,3106,0.06305702742757374,1653,405; 406; 412; 451; 454,unknown_review_required,Not auto-classified; name suggests a pre-match field. Review before using in models.
-away_rating_date,Date,46151,3106,0.06305702742757374,14184,1872-11-30; 1873-03-08; 1874-03-07; 1875-03-06; 1876-03-25,unknown_review_required,Not auto-classified; name suggests a pre-match field. Review before using in models.
+home_rating_pre_match,numeric,47884,1373,0.027874210772073006,1640,396; 403; 404; 433; 434,unknown_review_required,Not auto-classified; name suggests a pre-match field. Review before using in models.
+home_rating_date,Date,47884,1373,0.027874210772073006,14471,1872-11-30; 1873-03-08; 1874-03-07; 1875-03-06; 1876-03-04,unknown_review_required,Not auto-classified; name suggests a pre-match field. Review before using in models.
+away_rating_pre_match,numeric,47874,1383,0.02807722760216822,1657,405; 406; 412; 451; 454,unknown_review_required,Not auto-classified; name suggests a pre-match field. Review before using in models.
+away_rating_date,Date,47874,1383,0.02807722760216822,14405,1872-11-30; 1873-03-08; 1874-03-07; 1875-03-06; 1876-03-25,unknown_review_required,Not auto-classified; name suggests a pre-match field. Review before using in models.
 home_rank_pre_match,logical,0,49257,1,0,NA,unknown_review_required,Not auto-classified; name suggests a pre-match field. Review before using in models.
 away_rank_pre_match,logical,0,49257,1,0,NA,unknown_review_required,Not auto-classified; name suggests a pre-match field. Review before using in models.
-rating_diff,numeric,44128,5129,0.10412733215583572,1798,-1238; -1218; -1179; -1159; -1093,allowed_pre_match_feature,NA
+rating_diff,numeric,47314,1943,0.03944617008750025,1821,-1238; -1218; -1179; -1159; -1093,allowed_pre_match_feature,NA
 rank_diff,logical,0,49257,1,0,NA,unknown_review_required,NA
-rating_age_days_home,numeric,46313,2944,0.059768154780031266,957,1; 2; 3; 4; 5,unknown_review_required,NA
-rating_age_days_away,numeric,46151,3106,0.06305702742757374,1025,1; 2; 3; 4; 5,unknown_review_required,NA
+rating_age_days_home,numeric,47884,1373,0.027874210772073006,970,1; 2; 3; 4; 5,unknown_review_required,NA
+rating_age_days_away,numeric,47874,1383,0.02807722760216822,1038,1; 2; 3; 4; 5,unknown_review_required,NA
 data_split,character,49257,0,0,2,train; test,split,Train / test assignment for held-out evaluation.
 is_friendly,logical,49257,0,0,2,FALSE; TRUE,unknown_review_required,Tournament or match-type flag; review for pre-match use.
 is_world_cup,logical,49257,0,0,2,FALSE; TRUE,unknown_review_required,Tournament or match-type flag; review for pre-match use.
 is_world_cup_qualifier,logical,49257,0,0,2,FALSE; TRUE,unknown_review_required,Tournament or match-type flag; review for pre-match use.
 is_continental_qualifier,logical,49257,0,0,2,FALSE; TRUE,unknown_review_required,Tournament or match-type flag; review for pre-match use.
 is_continental_tournament,logical,49257,0,0,2,FALSE; TRUE,unknown_review_required,Tournament or match-type flag; review for pre-match use.
+data_split_modeling,character,49257,0,0,3,train; validation; test,unknown_review_required,NA
