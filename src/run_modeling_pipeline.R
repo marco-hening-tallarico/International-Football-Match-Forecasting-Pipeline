@@ -40,6 +40,8 @@ scripts <- c(
     "src/30_model_with_goalscorer_features.R",
     "src/31_final_results_visualization.R",
     "src/32_finalize_international_modeling_project.R"
+    # Optional — controlled hyperparameter sensitivity (not required for Model 28 final):
+    # "src/33_model_hyperparameter_sensitivity.R"
 )
 
 for (script in scripts) {

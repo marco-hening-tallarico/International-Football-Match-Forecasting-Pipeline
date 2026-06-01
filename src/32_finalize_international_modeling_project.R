@@ -16,12 +16,9 @@ source("src/00_project_setup.R")
 source("src/01_packages.R")
 source("src/02_helpers.R")
 
-OUTPUT_TABLE_DIR <- file.path(REPORTS_TABLES_DIR, "final_project")
-OUTPUT_PLOT_DIR <- file.path(REPORTS_FIGURES_DIR, "final_model")
-MODEL_30_DIR <- file.path(REPORTS_TABLES_DIR, "model_30")
-
-dir.create(OUTPUT_TABLE_DIR, recursive = TRUE, showWarnings = FALSE)
-dir.create(OUTPUT_PLOT_DIR, recursive = TRUE, showWarnings = FALSE)
+OUTPUT_TABLE_DIR <- file.path("reports", "tables", "final_project")
+OUTPUT_PLOT_DIR <- file.path("reports", "figures", "final_model")
+MODEL_30_DIR <- file.path("reports", "tables", "model_30")
 
 required_pkgs <- c(
     "readr",
@@ -104,8 +101,27 @@ plots_written <- character()
 
 # 1. Helpers
 
+resolve_project_path <- function(path) {
+    if (grepl("^/", path) || grepl("^[A-Za-z]:[/\\\\]", path)) {
+        return(normalizePath(path, winslash = "/", mustWork = FALSE))
+    }
+
+    normalizePath(
+        file.path(PROJECT_ROOT, path),
+        winslash = "/",
+        mustWork = FALSE
+    )
+}
+
+project_path <- function(...) {
+    resolve_project_path(file.path(...))
+}
+
+dir.create(project_path(OUTPUT_TABLE_DIR), recursive = TRUE, showWarnings = FALSE)
+dir.create(project_path(OUTPUT_PLOT_DIR), recursive = TRUE, showWarnings = FALSE)
+
 read_required_csv <- function(relative_path) {
-    full_path <- file.path(PROJECT_ROOT, relative_path)
+    full_path <- resolve_project_path(relative_path)
 
     if (!file.exists(full_path)) {
         stop("Required file not found: ", relative_path, call. = FALSE)
@@ -115,7 +131,7 @@ read_required_csv <- function(relative_path) {
 }
 
 read_optional_csv <- function(relative_path) {
-    full_path <- file.path(PROJECT_ROOT, relative_path)
+    full_path <- resolve_project_path(relative_path)
 
     if (!file.exists(full_path)) {
         return(NULL)
@@ -276,8 +292,8 @@ pick_best_model <- function(metrics_tbl, split_name) {
 }
 
 save_plot_dual <- function(plot_obj, filename_stem, width = 10, height = 6) {
-    png_path <- file.path(PROJECT_ROOT, OUTPUT_PLOT_DIR, paste0(filename_stem, ".png"))
-    pdf_path <- file.path(PROJECT_ROOT, OUTPUT_PLOT_DIR, paste0(filename_stem, ".pdf"))
+    png_path <- project_path(OUTPUT_PLOT_DIR, paste0(filename_stem, ".png"))
+    pdf_path <- project_path(OUTPUT_PLOT_DIR, paste0(filename_stem, ".pdf"))
 
     ggplot2::ggsave(
         filename = png_path,
@@ -377,15 +393,75 @@ if (!is.null(calibration_bins)) {
 best_validation_model <- pick_best_model(performance_summary, "validation")
 best_test_model <- pick_best_model(performance_summary, "test")
 
-final_best_model_summary <- dplyr::bind_rows(
+model_28_metrics_path <- project_path("reports/tables/model_28_metrics.csv")
+portfolio_final_rows <- tibble::tibble()
+if (file.exists(model_28_metrics_path)) {
+    model_28_metrics_tbl <- readr::read_csv(model_28_metrics_path, show_col_types = FALSE)
+    portfolio_final_rows <- model_28_metrics_tbl |>
+        dplyr::filter(
+            .data$feature_variant == "safe_plus_form_compact",
+            .data$model %in% c("lightgbm", "multinom"),
+            .data$split %in% c("validation", "test")
+        ) |>
+        dplyr::transmute(
+            role = dplyr::if_else(
+                .data$model == "lightgbm",
+                "portfolio_final",
+                "same_cohort_challenger"
+            ),
+            selection_basis = dplyr::if_else(
+                .data$split == "validation",
+                "validation_log_loss",
+                "test_reporting_only"
+            ),
+            model_stage = "model_28",
+            model = .data$model,
+            feature_set = .data$feature_variant,
+            split = .data$split,
+            n = .data$n,
+            log_loss = .data$log_loss,
+            brier_score = NA_real_,
+            accuracy = .data$accuracy,
+            macro_f1 = .data$macro_f1
+        )
+}
+
+tier_robustness_rows <- dplyr::bind_rows(
     best_validation_model |>
-        dplyr::mutate(selection_basis = "validation_log_loss"),
+        dplyr::mutate(
+            role = "tier_robustness_best_validation",
+            selection_basis = "validation_log_loss",
+            model_stage = "model_30"
+        ),
     best_test_model |>
-        dplyr::mutate(selection_basis = "test_log_loss")
+        dplyr::mutate(
+            role = "tier_robustness_best_validation",
+            selection_basis = "test_reporting_only",
+            model_stage = "model_30"
+        )
 ) |>
-    dplyr::mutate(feature_set = as.character(.data$feature_set)) |>
+    dplyr::transmute(
+        role = .data$role,
+        selection_basis = .data$selection_basis,
+        model_stage = .data$model_stage,
+        model = .data$model,
+        feature_set = as.character(.data$feature_set),
+        split = .data$split,
+        n = .data$n,
+        log_loss = .data$log_loss,
+        brier_score = .data$brier_score,
+        accuracy = .data$accuracy,
+        macro_f1 = .data$macro_f1
+    )
+
+final_best_model_summary <- dplyr::bind_rows(
+    portfolio_final_rows,
+    tier_robustness_rows
+) |>
     dplyr::select(
+        role,
         selection_basis,
+        model_stage,
         model,
         feature_set,
         split,
@@ -394,7 +470,7 @@ final_best_model_summary <- dplyr::bind_rows(
 
 readr::write_csv(
     final_best_model_summary,
-    file.path(PROJECT_ROOT, OUTPUT_TABLE_DIR, "final_best_model_summary.csv")
+    project_path(OUTPUT_TABLE_DIR, "final_best_model_summary.csv")
 )
 
 best_val_model_name <- best_validation_model$model[[1]]
@@ -439,8 +515,7 @@ final_incremental_performance_summary <- performance_summary |>
 
 readr::write_csv(
     final_incremental_performance_summary,
-    file.path(
-        PROJECT_ROOT,
+    project_path(
         OUTPUT_TABLE_DIR,
         "final_incremental_performance_summary.csv"
     )
@@ -512,7 +587,7 @@ final_classwise_summary <- classwise_metrics |>
 
 readr::write_csv(
     final_classwise_summary,
-    file.path(PROJECT_ROOT, OUTPUT_TABLE_DIR, "final_classwise_summary.csv")
+    project_path(OUTPUT_TABLE_DIR, "final_classwise_summary.csv")
 )
 
 hardest_class_row <- final_classwise_summary |>
@@ -594,7 +669,7 @@ final_extreme_feature_audit <- purrr::map_dfr(
 
 readr::write_csv(
     final_extreme_feature_audit,
-    file.path(PROJECT_ROOT, OUTPUT_TABLE_DIR, "final_extreme_feature_audit.csv")
+    project_path(OUTPUT_TABLE_DIR, "final_extreme_feature_audit.csv")
 )
 
 collect_extreme_examples <- function(feature_name) {
@@ -671,8 +746,7 @@ final_extreme_feature_examples <- purrr::map_dfr(
 
 readr::write_csv(
     final_extreme_feature_examples,
-    file.path(
-        PROJECT_ROOT,
+    project_path(
         OUTPUT_TABLE_DIR,
         "final_extreme_feature_examples.csv"
     )
@@ -719,8 +793,7 @@ final_high_confidence_correct_predictions <- best_model_test_predictions |>
 
 readr::write_csv(
     final_confident_wrong_predictions,
-    file.path(
-        PROJECT_ROOT,
+    project_path(
         OUTPUT_TABLE_DIR,
         "final_confident_wrong_predictions.csv"
     )
@@ -728,8 +801,7 @@ readr::write_csv(
 
 readr::write_csv(
     final_high_confidence_correct_predictions,
-    file.path(
-        PROJECT_ROOT,
+    project_path(
         OUTPUT_TABLE_DIR,
         "final_high_confidence_correct_predictions.csv"
     )
@@ -1175,7 +1247,7 @@ final_project_takeaways <- tibble::tibble(
 
 readr::write_csv(
     final_project_takeaways,
-    file.path(PROJECT_ROOT, OUTPUT_TABLE_DIR, "final_project_takeaways.csv")
+    project_path(OUTPUT_TABLE_DIR, "final_project_takeaways.csv")
 )
 
 # 10. Final Markdown report
@@ -1260,9 +1332,15 @@ report_lines <- c(
     "- Metrics: log loss, Brier score, macro F1, classwise precision/recall/F1, confusion matrices.",
     "- Model selection based primarily on validation log loss (test reserved for final reporting).",
     "",
-    "## Main Results",
+    "## Portfolio final (Model 28 cohort — authoritative)",
+    "- **Preferred portfolio final model**: Model 28 — LightGBM + `safe_plus_form_compact`.",
+    "- Selected by lowest validation log loss within `model_28_metrics.csv` (script 31).",
+    "- See `reports/tables/final_project_summary.csv` for headline validation/test metrics.",
+    "- **Simpler interpretable challenger**: Model 28 — multinom + `safe_plus_form_compact` on the same cohort (within 0.005 validation log loss of LightGBM).",
+    "",
+    "## Tier / robustness analysis (Model 30 cohort — not directly comparable)",
     paste0(
-        "- **Best validation model**: ",
+        "- **Best metric result on a different cohort**: ",
         best_val_model_name,
         " with `",
         best_val_feature_set,
@@ -1270,23 +1348,13 @@ report_lines <- c(
         format_metric(best_validation_model$log_loss[[1]]),
         ", macro F1 = ",
         format_metric(best_validation_model$macro_f1[[1]]),
+        ", val n = ",
+        best_validation_model$n[[1]],
         ")."
     ),
+    "- This cohort uses the goalscorer-enriched table and fair-comparison filters; it does **not** replace the Model 28 portfolio final without harmonized cohorts and script 31 policy.",
     paste0(
-        "- **Best test model**: ",
-        best_test_model$model[[1]],
-        " with `",
-        as.character(best_test_model$feature_set[[1]]),
-        "` (test log loss = ",
-        format_metric(best_test_model$log_loss[[1]]),
-        ", accuracy = ",
-        format_metric(best_test_model$accuracy[[1]]),
-        ", macro F1 = ",
-        format_metric(best_test_model$macro_f1[[1]]),
-        ")."
-    ),
-    paste0(
-        "- **Best validation model on test split**: validation-selected ",
+        "- On the test split (reporting only): ",
         best_val_model_name,
         " / `",
         best_val_feature_set,
@@ -1370,8 +1438,7 @@ report_lines <- c(
     "- Report: `final_international_modeling_report.md`."
 )
 
-report_path <- file.path(
-    PROJECT_ROOT,
+report_path <- project_path(
     OUTPUT_TABLE_DIR,
     "final_international_modeling_report.md"
 )
@@ -1383,7 +1450,10 @@ writeLines(report_lines, report_path)
 message("")
 message("=== International Modeling Project Finalization ===")
 message(
-    "Best validation model: ",
+    "Portfolio final (Model 28): see reports/tables/final_project_summary.csv"
+)
+message(
+    "Tier robustness best validation (Model 30): ",
     best_val_model_name,
     " / ",
     best_val_feature_set,

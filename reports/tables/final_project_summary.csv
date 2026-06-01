@@ -1,13 +1,26 @@
 item,value
+preferred_portfolio_final_model,model_28_lightgbm_safe_plus_form_compact
+preferred_portfolio_final_stage,model_28_lagged_form
 final_selected_model,lightgbm
 final_selected_feature_variant,safe_plus_form_compact
-selection_rule,best validation log loss within model_28_metrics.csv
-validation_log_loss,0.891516977759173
-test_log_loss,0.874400161680251
-test_accuracy,0.594868980655783
-test_macro_f1,0.438137189289285
-test_draw_recall,0.00232018561484918
-test_predicted_draw_rate,0.00233228152009877
+selection_rule,best validation log loss within model_28_metrics.csv on Model 28 filtered cohort
+validation_log_loss,0.893090833285094
+validation_n,7366
+test_log_loss,0.872846077694717
+test_n,7561
+test_accuracy,0.595027112815765
+test_macro_f1,0.437411265799795
+test_draw_recall,0.00112107623318385
+test_predicted_draw_rate,0.00277741039545033
+best_metric_model_overall_artifacts,model_30_lightgbm_rating_plus_form
+best_metric_model_validation_log_loss,0.888841489351604
+best_metric_model_validation_n,7334
+best_metric_model_note,tier_robustness_only; not directly comparable due to cohort differences
+simpler_interpretable_challenger,model_28_multinom_safe_plus_form_compact
+challenger_validation_log_loss,0.894851509521105
+challenger_validation_log_loss_delta_vs_portfolio_final,0.00176067623601084
+challenger_test_log_loss,0.870737330588561
+practical_difference_threshold,0.005
 baseline_files_available,TRUE
 stages_included,baseline; model_24_safe_features; model_26_draw_aware_elo; model_28_lagged_form
-baseline_note,Baseline comparison files were loaded for incremental staging.
+baseline_note,Baseline comparison files were loaded for incremental staging. Model 30 tier results documented under reports/tables/model_30/ and reports/tables/final_project/final_best_model_summary.csv.

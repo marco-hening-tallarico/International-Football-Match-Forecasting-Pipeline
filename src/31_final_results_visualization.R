@@ -683,27 +683,82 @@ final_prediction_examples <- dplyr::bind_rows(
 
 # 10. Project summary table
 
+challenger_validation_row <- model_28_metrics |>
+    dplyr::filter(
+        .data$feature_variant == final_selected_feature_variant,
+        .data$model == "multinom",
+        .data$split == "validation"
+    ) |>
+    dplyr::slice(1)
+
+challenger_test_row <- model_28_metrics |>
+    dplyr::filter(
+        .data$feature_variant == final_selected_feature_variant,
+        .data$model == "multinom",
+        .data$split == "test"
+    ) |>
+    dplyr::slice(1)
+
+challenger_validation_delta <- if (nrow(challenger_validation_row) > 0) {
+    challenger_validation_row$log_loss[[1]] - final_validation_row$log_loss[[1]]
+} else {
+    NA_real_
+}
+
+model_30_perf_path <- file.path(
+    PROJECT_ROOT,
+    "reports/tables/model_30/model_30_performance_summary.csv"
+)
+model_30_tier_validation_row <- NULL
+if (file.exists(model_30_perf_path)) {
+    model_30_perf <- readr::read_csv(model_30_perf_path, show_col_types = FALSE)
+    model_30_tier_validation_row <- model_30_perf |>
+        dplyr::filter(
+            .data$feature_set == "rating_plus_form",
+            .data$model_name == "lightgbm",
+            .data$split == "validation"
+        ) |>
+        dplyr::slice(1)
+}
+
 final_project_summary <- tibble::tibble(
     item = c(
+        "preferred_portfolio_final_model",
+        "preferred_portfolio_final_stage",
         "final_selected_model",
         "final_selected_feature_variant",
         "selection_rule",
         "validation_log_loss",
+        "validation_n",
         "test_log_loss",
+        "test_n",
         "test_accuracy",
         "test_macro_f1",
         "test_draw_recall",
         "test_predicted_draw_rate",
+        "best_metric_model_overall_artifacts",
+        "best_metric_model_validation_log_loss",
+        "best_metric_model_validation_n",
+        "best_metric_model_note",
+        "simpler_interpretable_challenger",
+        "challenger_validation_log_loss",
+        "challenger_validation_log_loss_delta_vs_portfolio_final",
+        "challenger_test_log_loss",
+        "practical_difference_threshold",
         "baseline_files_available",
         "stages_included",
         "baseline_note"
     ),
     value = c(
+        "model_28_lightgbm_safe_plus_form_compact",
+        "model_28_lagged_form",
         final_selected_model,
         as.character(final_selected_feature_variant),
-        "best validation log loss within model_28_metrics.csv",
+        "best validation log loss within model_28_metrics.csv on Model 28 filtered cohort",
         as.character(final_validation_row$log_loss[[1]]),
+        as.character(final_validation_row$n[[1]]),
         as.character(if (!is.null(final_test_row)) final_test_row$log_loss[[1]] else NA),
+        as.character(if (!is.null(final_test_row)) final_test_row$n[[1]] else NA),
         as.character(if (!is.null(final_test_row)) final_test_row$accuracy[[1]] else NA),
         as.character(if (!is.null(final_test_row)) final_test_row$macro_f1[[1]] else NA),
         as.character(
@@ -722,10 +777,47 @@ final_project_summary <- tibble::tibble(
                 NA
             }
         ),
+        "model_30_lightgbm_rating_plus_form",
+        as.character(
+            if (!is.null(model_30_tier_validation_row)) {
+                model_30_tier_validation_row$log_loss[[1]]
+            } else {
+                NA
+            }
+        ),
+        as.character(
+            if (!is.null(model_30_tier_validation_row)) {
+                model_30_tier_validation_row$n[[1]]
+            } else {
+                NA
+            }
+        ),
+        "tier_robustness_only; not directly comparable due to cohort differences",
+        "model_28_multinom_safe_plus_form_compact",
+        as.character(
+            if (nrow(challenger_validation_row) > 0) {
+                challenger_validation_row$log_loss[[1]]
+            } else {
+                NA
+            }
+        ),
+        as.character(challenger_validation_delta),
+        as.character(
+            if (nrow(challenger_test_row) > 0) {
+                challenger_test_row$log_loss[[1]]
+            } else {
+                NA
+            }
+        ),
+        "0.005",
         as.character(baseline_files_available),
         paste(stages_included, collapse = "; "),
         if (baseline_files_available) {
-            "Baseline comparison files were loaded for incremental staging."
+            paste(
+                "Baseline comparison files were loaded for incremental staging.",
+                "Model 30 tier results documented under reports/tables/model_30/",
+                "and reports/tables/final_project/final_best_model_summary.csv."
+            )
         } else {
             "Baseline files were unavailable to this script; baseline stage omitted."
         }
@@ -1270,17 +1362,56 @@ markdown_report <- c(
     progress_md_sep,
     progress_md_lines,
     "",
-    "## Final selected model",
+    "## Model roles (do not conflate)",
+    "",
+    "| Role | Configuration | Val log loss |",
+    "| --- | --- | --- |",
+    paste0(
+        "| **Preferred portfolio final** | Model 28 — ",
+        final_selected_model,
+        " + `",
+        final_selected_feature_variant,
+        "` | **",
+        format_md_number(final_val_log_loss),
+        "** |"
+    ),
+    if (nrow(challenger_validation_row) > 0) {
+        paste0(
+            "| **Simpler interpretable challenger** | Model 28 — multinom + `",
+            final_selected_feature_variant,
+            "` | ",
+            format_md_number(challenger_validation_row$log_loss[[1]]),
+            " (Δ +",
+            format_md_number(challenger_validation_delta),
+            ") |"
+        )
+    } else {
+        "| **Simpler interpretable challenger** | Model 28 — multinom + same variant | see `model_28_metrics.csv` |"
+    },
+    if (!is.null(model_30_tier_validation_row)) {
+        paste0(
+            "| **Tier / robustness (different cohort)** | Model 30 — lightgbm + `rating_plus_form` | **",
+            format_md_number(model_30_tier_validation_row$log_loss[[1]]),
+            "** |"
+        )
+    } else {
+        "| **Tier / robustness** | Model 30 — see `model_30_performance_summary.csv` | not directly comparable |"
+    },
+    "",
+    "Model 28 and Model 30 are **not directly comparable** (different tables, filters, and row counts).",
+    "",
+    "## Preferred portfolio final model",
     "- Selected by **validation log loss**, not test performance.",
     paste0(
-        "- Final stage: Model 28 (`",
+        "- Stage: Model 28 (`",
         final_selected_feature_variant,
         "` + `",
         final_selected_model,
         "`)."
     ),
+    "- Tree gain over same-cohort multinom on validation is **marginal** (below 0.005 practical-difference threshold).",
     "",
-    "## Performance",
+    "## Held-out test metrics (reporting only)",
     paste0(
         "- Validation log loss: **",
         format_md_number(final_val_log_loss),

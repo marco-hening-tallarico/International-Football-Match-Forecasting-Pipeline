@@ -20,8 +20,6 @@ source("src/00_project_setup.R")
 source("src/01_packages.R")
 source("src/02_helpers.R")
 
-CHRONOLOGICAL_SPLIT_DATE <- as.Date("2018-01-01")
-
 MATCHES_PATH <- file.path(
     PROCESSED_DIR,
     "international_results_with_shootouts.csv"
@@ -36,6 +34,11 @@ UNMATCHED_PATH <- file.path(
     VALIDATION_PROCESSED_DIR,
     "international_modeling_table_unmatched_ratings.csv"
 )
+UNRESOLVED_ELO_PATH <- file.path(
+    VALIDATION_PROCESSED_DIR,
+    "international_modeling_table_unresolved_elo_teams.csv"
+)
+CROSSWALK_PATH <- file.path(META_DIR, "team_name_crosswalk.csv")
 
 PRESERVED_MATCH_COLS <- c(
     "source_match_id",
@@ -60,15 +63,6 @@ PRESERVED_MATCH_COLS <- c(
     "home_won_shootout",
     "away_won_shootout"
 )
-
-make_team_clean <- function(team_name) {
-    team_name |>
-        as.character() |>
-        stringr::str_squish() |>
-        stringr::str_to_lower() |>
-        stringr::str_replace_all("[^a-z0-9]+", "_") |>
-        stringr::str_replace_all("^_|_$", "")
-}
 
 add_tournament_flags <- function(match_table) {
     tournament_lower <- stringr::str_to_lower(
@@ -155,12 +149,30 @@ international_team_ratings <- readr::read_csv(
     ) |>
     dplyr::arrange(.data$team_clean, .data$rating_date)
 
+team_name_crosswalk <- load_team_name_crosswalk(CROSSWALK_PATH)
+team_name_crosswalk <- apply_standard_result_to_elo_mappings(
+    team_name_crosswalk,
+    available_elo_teams = unique(international_team_ratings$team)
+)
+crosswalk_lookup <- build_result_to_elo_clean_lookup(team_name_crosswalk)
+available_elo_team_clean <- unique(international_team_ratings$team_clean)
+
 matches_row_count <- nrow(international_matches)
 
 matches_for_join <- international_matches |>
     dplyr::mutate(
         home_team_clean = make_team_clean(.data$home_team),
-        away_team_clean = make_team_clean(.data$away_team)
+        away_team_clean = make_team_clean(.data$away_team),
+        home_elo_lookup_team_clean = resolve_elo_team_clean(
+            .data$home_team,
+            crosswalk_lookup = crosswalk_lookup,
+            available_elo_team_clean = available_elo_team_clean
+        ),
+        away_elo_lookup_team_clean = resolve_elo_team_clean(
+            .data$away_team,
+            crosswalk_lookup = crosswalk_lookup,
+            available_elo_team_clean = available_elo_team_clean
+        )
     )
 
 home_pre_match <- lookup_pre_match_ratings(
@@ -168,7 +180,7 @@ home_pre_match <- lookup_pre_match_ratings(
         dplyr::transmute(
             source_match_id = .data$source_match_id,
             date = .data$date,
-            team_clean = .data$home_team_clean
+            team_clean = .data$home_elo_lookup_team_clean
         ),
     international_team_ratings |>
         dplyr::transmute(
@@ -187,7 +199,7 @@ away_pre_match <- lookup_pre_match_ratings(
         dplyr::transmute(
             source_match_id = .data$source_match_id,
             date = .data$date,
-            team_clean = .data$away_team_clean
+            team_clean = .data$away_elo_lookup_team_clean
         ),
     international_team_ratings |>
         dplyr::transmute(
@@ -226,12 +238,13 @@ international_modeling_table <- international_matches |>
             .data$date - .data$away_rating_date
         ),
         data_split = dplyr::if_else(
-            .data$date < CHRONOLOGICAL_SPLIT_DATE,
+            .data$date < CHRONOLOGICAL_TEST_SPLIT_DATE,
             "train",
             "test"
         )
     ) |>
-    add_tournament_flags()
+    add_tournament_flags() |>
+    assign_data_split_modeling()
 
 if (nrow(international_modeling_table) != matches_row_count) {
     stop(
@@ -390,6 +403,34 @@ if (!all(
     stop("data_split must be only train or test.")
 }
 
+if (!all(
+    international_modeling_table$data_split_modeling %in%
+        c("train", "validation", "test"),
+    na.rm = TRUE
+)) {
+    stop("data_split_modeling must be only train, validation, or test.")
+}
+
+international_modeling_table_unresolved_elo_teams <- dplyr::bind_rows(
+    matches_for_join |>
+        dplyr::transmute(
+            team = .data$home_team,
+            team_clean = .data$home_team_clean,
+            elo_lookup_team_clean = .data$home_elo_lookup_team_clean
+        ),
+    matches_for_join |>
+        dplyr::transmute(
+            team = .data$away_team,
+            team_clean = .data$away_team_clean,
+            elo_lookup_team_clean = .data$away_elo_lookup_team_clean
+        )
+) |>
+    dplyr::distinct(.data$team, .keep_all = TRUE) |>
+    dplyr::filter(
+        !.data$elo_lookup_team_clean %in% available_elo_team_clean
+    ) |>
+    dplyr::arrange(.data$team)
+
 international_modeling_table_unmatched_ratings <- international_modeling_table |>
     dplyr::filter(
         is.na(.data$home_rating_pre_match) |
@@ -463,7 +504,11 @@ modeling_summary <- tibble::tibble(
         "matches_input_rows",
         "modeling_table_rows",
         "train_rows",
+        "validation_rows",
         "test_rows",
+        "train_modeling_rows",
+        "crosswalk_mapping_rows",
+        "unresolved_elo_team_rows",
         "both_ratings_rows",
         "pct_both_ratings",
         "rows_missing_home_rating",
@@ -483,7 +528,15 @@ modeling_summary <- tibble::tibble(
         as.character(matches_row_count),
         as.character(nrow(international_modeling_table)),
         as.character(sum(international_modeling_table$data_split == "train")),
+        as.character(
+            sum(international_modeling_table$data_split_modeling == "validation")
+        ),
         as.character(sum(international_modeling_table$data_split == "test")),
+        as.character(
+            sum(international_modeling_table$data_split_modeling == "train")
+        ),
+        as.character(length(crosswalk_lookup)),
+        as.character(nrow(international_modeling_table_unresolved_elo_teams)),
         as.character(sum(both_ratings_present)),
         as.character(round(100 * mean(both_ratings_present), 2)),
         as.character(sum(is.na(international_modeling_table$home_rating_pre_match))),
@@ -531,6 +584,11 @@ readr::write_csv(
     international_modeling_table_unmatched_ratings,
     UNMATCHED_PATH
 )
+readr::write_csv(
+    international_modeling_table_unresolved_elo_teams,
+    UNRESOLVED_ELO_PATH
+)
+readr::write_csv(team_name_crosswalk, CROSSWALK_PATH)
 
 message("Done.")
 message("Modeling table rows: ", nrow(international_modeling_table))
@@ -553,3 +611,5 @@ message(
 message("Wrote: ", OUTPUT_PATH)
 message("Wrote: ", SUMMARY_PATH)
 message("Wrote: ", UNMATCHED_PATH)
+message("Wrote: ", UNRESOLVED_ELO_PATH)
+message("Wrote: ", CROSSWALK_PATH)

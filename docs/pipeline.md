@@ -33,9 +33,9 @@ Run all commands from the **project root**. Scripts are numbered in dependency o
 | `09_validate_international_results.R` | Hard validation checks | 08 |
 | `10_plot_international_results_validation.R` | EDA validation plots | 08 |
 | `15_download_international_ratings.R` | Download World Football Elo | — |
-| `16_clean_international_ratings.R` | Clean Elo ratings | 15 |
+| `16_clean_international_ratings.R` | Clean Elo ratings; maintain crosswalk (`elo_team` mappings) | 15 |
 | `17_validate_international_ratings.R` | Ratings QA | 16 |
-| `18_build_international_modeling_table.R` | Pre-match Elo + flags + split | 08, 16 |
+| `18_build_international_modeling_table.R` | Pre-match Elo (crosswalk join) + flags + `data_split` / `data_split_modeling` | 08, 16 |
 
 **Processed outputs:** `international_results.csv`, `international_modeling_table.csv`, etc.  
 **Validation outputs:** `data/validation/processed_data/international_*`

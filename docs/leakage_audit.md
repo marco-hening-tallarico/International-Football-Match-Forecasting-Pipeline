@@ -12,7 +12,7 @@ Features must be knowable **before kickoff** on the match date:
 
 | Group | Examples | Built in |
 |-------|----------|----------|
-| Elo ratings | `home_rating_pre_match`, `away_rating_pre_match`, `rating_diff` | 18 |
+| Elo ratings | `home_rating_pre_match`, `away_rating_pre_match`, `rating_diff` | 18 (crosswalk + pre-match join) |
 | Rating freshness | `rating_age_days_home`, `rating_age_days_away` | 18 |
 | Tournament context | `flag_is_world_cup`, `flag_is_friendly`, `neutral`, etc. | 18 |
 | Lagged form | `home_points_per_match_last_5`, `away_goal_diff_per_match_last_10`, … | 27 |
@@ -29,7 +29,7 @@ Approved lists are frozen in `reports/tables/approved_feature_sets_final.R` (scr
 
 ## Lagged feature validation
 
-Script `27_build_lagged_team_form_features.R` builds form using only matches with `date < current_match_date`.
+Script `27_build_lagged_team_form_features.R` builds form using only matches with `date < current_match_date`. Kickoff times are unavailable, so same-calendar-day fixtures for the same team are excluded from lagged windows (conservative; avoids same-day leakage).
 
 Checks written to `data/validation/engineered_features/`:
 
@@ -50,7 +50,8 @@ Script `30b_validate_engineered_features.R` adds:
 | Risk | Status | Mitigation |
 |------|--------|------------|
 | Same-match goals in form features | **Audited — pass** | Strict date filter in 27, 29 |
-| Elo rating after the match | **Controlled** | Pre-match rating join in 18 with timing check |
+| Elo rating after the match | **Controlled** | Pre-match rating join in 18 (`rating_lookup_date = date - 1`) with hard timing checks; result team names mapped via crosswalk before join |
+| Unknown team coerced to another Elo team | **Avoided** | Crosswalk provides explicit `elo_team_clean` only; otherwise lookup slug is unchanged and join may return `NA` (logged) |
 | Train/test random shuffle | **Avoided** | Chronological split by date |
 | Test set used for selection | **Avoided** | Selection on validation log loss only |
 | Goalscorer features using future scorers | **Audited — pass** | 30b leakage audit |

@@ -28,15 +28,6 @@ CROSSWALK_PATH <- file.path(META_DIR, "team_name_crosswalk.csv")
 RESULTS_PATH <- file.path(PROCESSED_DIR, "international_results.csv")
 RATINGS_SOURCE <- "world_football_elo"
 
-make_team_clean <- function(team_name) {
-    team_name |>
-        as.character() |>
-        stringr::str_squish() |>
-        stringr::str_to_lower() |>
-        stringr::str_replace_all("[^a-z0-9]+", "_") |>
-        stringr::str_replace_all("^_|_$", "")
-}
-
 standardize_column_names <- function(column_names) {
     clean_names <- janitor::make_clean_names(column_names)
     rename_map <- c(
@@ -167,39 +158,7 @@ rating_teams <- unique(international_team_ratings$team)
 all_raw_teams <- unique(c(results_teams, rating_teams))
 all_raw_teams <- all_raw_teams[!is.na(all_raw_teams) & all_raw_teams != ""]
 
-if (file.exists(CROSSWALK_PATH)) {
-    team_name_crosswalk <- readr::read_csv(
-        CROSSWALK_PATH,
-        show_col_types = FALSE
-    )
-    required_crosswalk_cols <- c(
-        "source",
-        "raw_team",
-        "team_clean",
-        "canonical_team",
-        "notes"
-    )
-    missing_crosswalk_cols <- setdiff(
-        required_crosswalk_cols,
-        names(team_name_crosswalk)
-    )
-
-    if (length(missing_crosswalk_cols) > 0L) {
-        stop(
-            "team_name_crosswalk.csv is missing columns: ",
-            paste(missing_crosswalk_cols, collapse = ", "),
-            call. = FALSE
-        )
-    }
-} else {
-    team_name_crosswalk <- tibble::tibble(
-        source = character(),
-        raw_team = character(),
-        team_clean = character(),
-        canonical_team = character(),
-        notes = character()
-    )
-}
+team_name_crosswalk <- load_team_name_crosswalk(CROSSWALK_PATH)
 
 existing_keys <- team_name_crosswalk |>
     dplyr::distinct(.data$source, .data$raw_team)
@@ -213,16 +172,20 @@ new_team_rows <- tibble::tibble(
 ) |>
     dplyr::anti_join(existing_keys, by = c("source", "raw_team"))
 
-exact_match_notes <- new_team_rows |>
-    dplyr::group_by(.data$team_clean) |>
-    dplyr::mutate(
-        notes = dplyr::if_else(
-            dplyr::n() > 1L,
-            "needs_review_duplicate_team_clean",
-            .data$notes
-        )
-    ) |>
-    dplyr::ungroup()
+if (nrow(new_team_rows) > 0L) {
+    exact_match_notes <- new_team_rows |>
+        dplyr::group_by(.data$team_clean) |>
+        dplyr::mutate(
+            notes = dplyr::if_else(
+                dplyr::n() > 1L,
+                "needs_review_duplicate_team_clean",
+                .data$notes
+            )
+        ) |>
+        dplyr::ungroup()
+} else {
+    exact_match_notes <- new_team_rows
+}
 
 team_name_crosswalk <- dplyr::bind_rows(
     team_name_crosswalk,
@@ -230,6 +193,11 @@ team_name_crosswalk <- dplyr::bind_rows(
 ) |>
     dplyr::distinct(.data$source, .data$raw_team, .keep_all = TRUE) |>
     dplyr::arrange(.data$source, .data$team_clean, .data$raw_team)
+
+team_name_crosswalk <- apply_standard_result_to_elo_mappings(
+    team_name_crosswalk,
+    available_elo_teams = unique(international_team_ratings$team)
+)
 
 crosswalk_candidates_for_review <- team_name_crosswalk |>
     dplyr::filter(.data$notes == "needs_review_duplicate_team_clean")

@@ -54,5 +54,5 @@
 | File | Purpose |
 |------|---------|
 | `data/metadata/source_manifest.csv` | Download log |
-| `data/metadata/team_name_crosswalk.csv` | Maps result team names → Elo team names |
+| `data/metadata/team_name_crosswalk.csv` | Maps result team names → Elo lookup slugs (`elo_team`, `elo_team_clean`); applied in scripts 17–18 before pre-match rating joins. Unresolved teams are logged, not coerced. |
 | `data/metadata/data_inventory.csv` | File inventory from `11_build_data_inventory.R` |

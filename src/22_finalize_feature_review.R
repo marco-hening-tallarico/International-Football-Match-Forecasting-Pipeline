@@ -12,31 +12,26 @@
 # - reports/feature_review_international_modeling_table.md
 # - reports/tables/approved_feature_sets.R
 
-suppressPackageStartupMessages({
-    library(readr)
-    library(dplyr)
-    library(tidyr)
-    library(stringr)
-    library(purrr)
-    library(glue)
-})
+source("src/00_project_setup.R")
+source("src/01_packages.R")
+source("src/02_helpers.R")
 
-model_path <- "data/processed/international_modeling_table.csv"
-audit_path <- "reports/tables/feature_audit_international_modeling_table.csv"
+model_path <- file.path(PROCESSED_DIR, "international_modeling_table.csv")
+audit_path <- file.path(
+    REPORTS_TABLES_DIR,
+    "feature_audit_international_modeling_table.csv"
+)
 
-out_csv <- "reports/tables/feature_review_all_columns.csv"
-out_md  <- "reports/feature_review_international_modeling_table.md"
-out_r   <- "reports/tables/approved_feature_sets.R"
+out_csv <- file.path(REPORTS_TABLES_DIR, "feature_review_all_columns.csv")
+out_md <- file.path(REPORTS_DIR, "feature_review_international_modeling_table.md")
+out_r <- file.path(REPORTS_TABLES_DIR, "approved_feature_sets.R")
 
-dir.create("reports/tables", recursive = TRUE, showWarnings = FALSE)
-dir.create("reports", recursive = TRUE, showWarnings = FALSE)
-
-model_df <- read_csv(model_path, show_col_types = FALSE)
+model_df <- readr::read_csv(model_path, show_col_types = FALSE)
 
 audit <- if (file.exists(audit_path)) {
-    read_csv(audit_path, show_col_types = FALSE)
+    readr::read_csv(audit_path, show_col_types = FALSE)
 } else {
-    tibble(column = names(model_df))
+    tibble::tibble(column = names(model_df))
 }
 
 # Helpers
@@ -54,19 +49,19 @@ safe_examples <- function(x, n = 6) {
 }
 
 guess_decision <- function(col, x) {
-    col_l <- str_to_lower(col)
+    col_l <- stringr::str_to_lower(col)
     all_missing <- all(is.na(x))
 
-    case_when(
+    dplyr::case_when(
         all_missing ~ "exclude",
 
         col_l %in% c("home_win", "draw", "away_win") ~ "exclude",
 
-        str_detect(col_l, "score|goals|goal_diff|winner|margin|shootout|penalt") ~ "exclude",
+        stringr::str_detect(col_l, "score|goals|goal_diff|winner|margin|shootout|penalt") ~ "exclude",
 
         col_l %in% c("date", "match_date") ~ "exclude_as_feature_keep_for_split",
 
-        str_detect(col_l, "_rating_date$") ~ "exclude_as_feature_keep_for_audit",
+        stringr::str_detect(col_l, "_rating_date$") ~ "exclude_as_feature_keep_for_audit",
 
         col_l %in% c(
             "home_team_clean",
@@ -81,11 +76,11 @@ guess_decision <- function(col, x) {
             "tournament"
         ) ~ "use_with_care",
 
-        str_detect(col_l, "rating_pre_match|rating_diff|rating_age_days") ~ "keep",
+        stringr::str_detect(col_l, "rating_pre_match|rating_diff|rating_age_days") ~ "keep",
 
         col_l %in% c("neutral") ~ "keep",
 
-        str_detect(col_l, "^is_") ~ "keep",
+        stringr::str_detect(col_l, "^is_") ~ "keep",
 
         TRUE ~ "review"
     )
@@ -104,13 +99,13 @@ format_r_character_vector_lines <- function(object_name, values) {
 }
 
 guess_reason <- function(col, decision) {
-    col_l <- str_to_lower(col)
+    col_l <- stringr::str_to_lower(col)
 
-    case_when(
+    dplyr::case_when(
         decision == "exclude" & col_l %in% c("home_win", "draw", "away_win") ~
             "Direct target/result label. Cannot be used as a feature.",
 
-        decision == "exclude" & str_detect(col_l, "shootout") ~
+        decision == "exclude" & stringr::str_detect(col_l, "shootout") ~
             "Post-match field. Not known before kickoff.",
 
         decision == "exclude" ~
@@ -144,29 +139,29 @@ guess_reason <- function(col, decision) {
 
 # Column inspection table
 
-column_report <- tibble(column = names(model_df)) |>
-    mutate(
-        r_class = map_chr(column, ~ paste(class(model_df[[.x]]), collapse = "/")),
-        non_missing_n = map_int(column, ~ sum(!is.na(model_df[[.x]]))),
-        missing_n = map_int(column, ~ sum(is.na(model_df[[.x]]))),
+column_report <- tibble::tibble(column = names(model_df)) |>
+    dplyr::mutate(
+        r_class = purrr::map_chr(column, ~ paste(class(model_df[[.x]]), collapse = "/")),
+        non_missing_n = purrr::map_int(column, ~ sum(!is.na(model_df[[.x]]))),
+        missing_n = purrr::map_int(column, ~ sum(is.na(model_df[[.x]]))),
         missing_prop = missing_n / nrow(model_df),
         missing_percent = round(100 * missing_prop, 2),
-        n_distinct = map_int(column, ~ n_distinct(model_df[[.x]], na.rm = TRUE)),
-        example_values = map_chr(column, ~ safe_examples(model_df[[.x]])),
-        suggested_decision = map2_chr(column, column, ~ guess_decision(.x, model_df[[.x]])),
-        reason = map2_chr(column, suggested_decision, guess_reason)
+        n_distinct = purrr::map_int(column, ~ dplyr::n_distinct(model_df[[.x]], na.rm = TRUE)),
+        example_values = purrr::map_chr(column, ~ safe_examples(model_df[[.x]])),
+        suggested_decision = purrr::map2_chr(column, column, ~ guess_decision(.x, model_df[[.x]])),
+        reason = purrr::map2_chr(column, suggested_decision, guess_reason)
     )
 
 review_table <- column_report |>
-    left_join(
-        audit |> select(any_of(c("column", "feature_role", "notes"))),
+    dplyr::left_join(
+        audit |> dplyr::select(dplyr::any_of(c("column", "feature_role", "notes"))),
         by = "column"
     ) |>
-    mutate(
+    dplyr::mutate(
         final_decision = suggested_decision,
         final_notes = reason
     ) |>
-    arrange(
+    dplyr::arrange(
         factor(
             final_decision,
             levels = c(
@@ -178,35 +173,35 @@ review_table <- column_report |>
                 "review"
             )
         ),
-        desc(missing_percent),
+        dplyr::desc(missing_percent),
         column
     )
 
-write_csv(review_table, out_csv)
+readr::write_csv(review_table, out_csv)
 
 # Feature vectors
 
 safe_features <- review_table |>
-    filter(final_decision == "keep") |>
-    pull(column)
+    dplyr::filter(final_decision == "keep") |>
+    dplyr::pull(column)
 
 careful_features <- review_table |>
-    filter(final_decision == "use_with_care") |>
-    pull(column)
+    dplyr::filter(final_decision == "use_with_care") |>
+    dplyr::pull(column)
 
 excluded_features <- review_table |>
-    filter(str_starts(final_decision, "exclude")) |>
-    pull(column)
+    dplyr::filter(stringr::str_starts(final_decision, "exclude")) |>
+    dplyr::pull(column)
 
 review_features <- review_table |>
-    filter(final_decision == "review") |>
-    pull(column)
+    dplyr::filter(final_decision == "review") |>
+    dplyr::pull(column)
 
 model_features <- c(safe_features, careful_features)
 
 feature_set_lines <- c(
     "# reports/tables/approved_feature_sets.R",
-    "# Generated by src/22_feature_review_helper.R",
+    "# Generated by src/22_finalize_feature_review.R",
     "",
     format_r_character_vector_lines("safe_features", safe_features),
     "",
@@ -241,16 +236,16 @@ md_header <- c(
 )
 
 md_rows <- review_table |>
-    mutate(
-        example_values = str_replace_all(example_values, "\\|", "/"),
-        final_notes = str_replace_all(final_notes, "\\|", "/")
+    dplyr::mutate(
+        example_values = stringr::str_replace_all(example_values, "\\|", "/"),
+        final_notes = stringr::str_replace_all(final_notes, "\\|", "/")
     ) |>
-    transmute(
-        row = glue(
+    dplyr::transmute(
+        row = glue::glue(
             "| `{column}` | {r_class} | {missing_percent} | {n_distinct} | **{final_decision}** | {example_values} | {final_notes} |"
         )
     ) |>
-    pull(row)
+    dplyr::pull(row)
 
 md_sets <- c(
     "",
@@ -310,7 +305,7 @@ cat("\nWrote approved feature vectors:\n")
 cat(out_r, "\n")
 
 cat("\nDecision counts:\n")
-print(review_table |> count(final_decision, sort = TRUE))
+print(review_table |> dplyr::count(final_decision, sort = TRUE))
 
 cat("\nSafe features:\n")
 print(safe_features)
@@ -321,28 +316,27 @@ print(careful_features)
 cat("\nStill requiring manual review:\n")
 print(review_features)
 
+review_path <- file.path(REPORTS_TABLES_DIR, "feature_review_all_columns.csv")
 
-library(readr)
-library(dplyr)
-
-review_path <- "reports/tables/feature_review_all_columns.csv"
-
-review_table <- read_csv(review_path, show_col_types = FALSE)
+review_table <- readr::read_csv(review_path, show_col_types = FALSE)
 
 review_table_final <- review_table |>
-    mutate(
-        final_decision = case_when(
+    dplyr::mutate(
+        final_decision = dplyr::case_when(
             column %in% c("away_team", "home_team") ~ "exclude",
-            column == "data_split" ~ "exclude_as_feature_keep_for_split",
+            column %in% c("data_split", "data_split_modeling") ~
+                "exclude_as_feature_keep_for_split",
             column %in% c("match_result", "result_class") ~ "exclude",
             column == "source_match_id" ~ "exclude",
             TRUE ~ final_decision
         ),
-        final_notes = case_when(
+        final_notes = dplyr::case_when(
             column %in% c("away_team", "home_team") ~
                 "Raw team identifier. Excluded because cleaned team identifiers are already available.",
             column == "data_split" ~
-                "Split/control column. Keep for validation workflow only; never use as a model feature.",
+                "Legacy train/test split (test from 2018-01-01). Keep for compatibility; prefer data_split_modeling for modeling.",
+            column == "data_split_modeling" ~
+                "Authoritative train/validation/test split for modeling. Never use as a model feature.",
             column %in% c("match_result", "result_class") ~
                 "Target or target-derived result field. Direct leakage if used as a feature.",
             column == "source_match_id" ~
@@ -351,26 +345,26 @@ review_table_final <- review_table |>
         )
     )
 
-write_csv(
+readr::write_csv(
     review_table_final,
-    "reports/tables/feature_review_all_columns_final.csv"
+    file.path(REPORTS_TABLES_DIR, "feature_review_all_columns_final.csv")
 )
 
 safe_features <- review_table_final |>
-    filter(final_decision == "keep") |>
-    pull(column)
+    dplyr::filter(final_decision == "keep") |>
+    dplyr::pull(column)
 
 careful_features <- review_table_final |>
-    filter(final_decision == "use_with_care") |>
-    pull(column)
+    dplyr::filter(final_decision == "use_with_care") |>
+    dplyr::pull(column)
 
 excluded_features <- review_table_final |>
-    filter(grepl("^exclude", final_decision)) |>
-    pull(column)
+    dplyr::filter(grepl("^exclude", final_decision)) |>
+    dplyr::pull(column)
 
 review_features <- review_table_final |>
-    filter(final_decision == "review") |>
-    pull(column)
+    dplyr::filter(final_decision == "review") |>
+    dplyr::pull(column)
 
 model_features <- c(safe_features, careful_features)
 
@@ -391,11 +385,11 @@ feature_set_lines <- c(
 
 writeLines(
     feature_set_lines,
-    "reports/tables/approved_feature_sets_final.R"
+    file.path(REPORTS_TABLES_DIR, "approved_feature_sets_final.R")
 )
 
 cat("\nFinal decision counts:\n")
-print(review_table_final |> count(final_decision, sort = TRUE))
+print(review_table_final |> dplyr::count(final_decision, sort = TRUE))
 
 cat("\nFinal model features:\n")
 print(model_features)

@@ -15,17 +15,29 @@ multiclass probabilities for home win (H), draw (D), and away win (A).
 | Stage | Best model | Feature variant | Val log loss | Test log loss | Test accuracy | Test macro F1 |
 | --- | --- | --- | --- | --- | --- | --- |
 | baseline | draw_aware_quadratic_multinom | — | 0.893 | 0.872 | 0.597 | 0.438 |
-| model_24_safe_features | lightgbm | — | 0.894 | 0.876 | 0.594 | 0.436 |
-| model_26_draw_aware_elo | lightgbm | draw_abs_only | 0.894 | 0.877 | 0.592 | 0.434 |
-| model_28_lagged_form | lightgbm | safe_plus_form_compact | 0.892 | 0.874 | 0.595 | 0.438 |
+| model_24_safe_features | lightgbm | — | 0.893 | 0.874 | 0.595 | 0.436 |
+| model_26_draw_aware_elo | lightgbm | draw_abs_only | 0.893 | 0.874 | 0.594 | 0.435 |
+| model_28_lagged_form | lightgbm | safe_plus_form_compact | 0.893 | 0.873 | 0.595 | 0.437 |
 
-## Final selected model
-- Selected by **validation log loss**, not test performance.- Final stage: Model 28 (`safe_plus_form_compact` + `lightgbm`).
+## Model roles (do not conflate)
 
-## Performance
-- Validation log loss: **0.892**.
-- Test log loss: **0.874**.
-- Test accuracy: **0.595**; test macro F1: **0.438**.
+| Role | Configuration | Val log loss |
+| --- | --- | --- |
+| **Preferred portfolio final** | Model 28 — lightgbm + `safe_plus_form_compact` | **0.893** |
+| **Simpler interpretable challenger** | Model 28 — multinom + `safe_plus_form_compact` | 0.895 (Δ +0.002) |
+| **Tier / robustness (different cohort)** | Model 30 — lightgbm + `rating_plus_form` | **0.889** |
+
+Model 28 and Model 30 are **not directly comparable** (different tables, filters, and row counts).
+
+## Preferred portfolio final model
+- Selected by **validation log loss**, not test performance.
+- Stage: Model 28 (`safe_plus_form_compact` + `lightgbm`).
+- Tree gain over same-cohort multinom on validation is **marginal** (below 0.005 practical-difference threshold).
+
+## Held-out test metrics (reporting only)
+- Validation log loss: **0.893**.
+- Test log loss: **0.873**.
+- Test accuracy: **0.595**; test macro F1: **0.437**.
 
 ## Draw behavior
 - Mean predicted draw probability (`mean_pred_D`) is often in a plausible range.

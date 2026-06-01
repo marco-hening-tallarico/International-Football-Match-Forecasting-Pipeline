@@ -970,32 +970,20 @@ df <- df |>
         neutral_x_abs_rating_diff = neutral_numeric * abs_rating_diff
     )
 
-if (!all(df$data_split %in% c("train", "test"))) {
+if ("data_split_modeling" %in% names(df)) {
+    if (!all(df$data_split_modeling %in% c("train", "validation", "test"))) {
+        message("data_split_modeling contains unexpected values:")
+        print(table(df$data_split_modeling, useNA = "ifany"))
+    }
+} else if (!all(df$data_split %in% c("train", "test"))) {
     message("data_split contains values other than train/test:")
     print(table(df$data_split, useNA = "ifany"))
 }
 
-train_all <- df |>
-    dplyr::filter(data_split == "train") |>
-    dplyr::arrange(date)
-
-test <- df |>
-    dplyr::filter(data_split == "test") |>
-    dplyr::arrange(date)
-
-if (nrow(train_all) == 0) {
-    stop("No training rows after filtering.", call. = FALSE)
-}
-
-if (nrow(test) == 0) {
-    stop("No test rows after filtering.", call. = FALSE)
-}
-
-validation_fraction <- 0.20
-validation_start_index <- floor(nrow(train_all) * (1 - validation_fraction)) + 1
-
-train <- train_all[seq_len(validation_start_index - 1), ]
-validation <- train_all[validation_start_index:nrow(train_all), ]
+splits <- make_chronological_modeling_splits(df)
+train <- splits$train
+validation <- splits$validation
+test <- splits$test
 
 message("Train rows: ", nrow(train))
 message("Validation rows: ", nrow(validation))

@@ -1,6 +1,5 @@
 # reports/tables/approved_feature_sets_final.R
-#
-# Final approved feature lists after manual review. Loaded by Model 24+ scripts.
+# Final approved feature sets after manual review
 
 safe_features <- c(
   "rating_diff",
@@ -46,6 +45,7 @@ excluded_features <- c(
   "shootout_played",
   "away_team",
   "data_split",
+  "data_split_modeling",
   "home_team",
   "match_result",
   "result_class",

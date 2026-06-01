@@ -11,6 +11,7 @@ Start with the **[project overview](docs/project_overview.md)** — the reviewer
 | Document | Description |
 |----------|-------------|
 | [docs/project_overview.md](docs/project_overview.md) | Reviewer-facing overview **(start here)** |
+| [docs/model_selection_rationale.md](docs/model_selection_rationale.md) | Portfolio final vs tier robustness vs challenger |
 | [docs/script_map.md](docs/script_map.md) | Script inventory and track separation |
 | [docs/pipeline.md](docs/pipeline.md) | Script-by-script pipeline reference |
 | [docs/data_sources.md](docs/data_sources.md) | Raw files, processed outputs, limitations |
@@ -19,56 +20,87 @@ Start with the **[project overview](docs/project_overview.md)** — the reviewer
 | [docs/modeling_plan.md](docs/modeling_plan.md) | Modeling stages and feature tiers |
 | [docs/evaluation_plan.md](docs/evaluation_plan.md) | Metrics, splits, selection protocol |
 
-**Recommended reproduction path** (from the project root; see [Reproduce](#reproduce) for package install and optional runs):
+**Recommended reproduction path** (from the project root; see [Reproduce](#reproduce) for package install):
 
 ```bash
 Rscript src/run_light_pipeline.R
 Rscript src/run_modeling_pipeline.R
 ```
 
+## Project goal
+
+Build a reproducible pipeline that forecasts international match outcomes as **calibrated H / D / A probabilities**, with explicit leakage controls, chronological splits, and transparent model selection on **validation log loss** (test metrics reported only after selection).
+
+## Data sources
+
+| Source | Role |
+|--------|------|
+| [martj42/international_results](https://github.com/martj42/international_results) | Match results, goalscorers, shootouts |
+| [World Football Elo](http://www.eloratings.net/) | Pre-match team strength ratings |
+| [StatsBomb Open Data](https://github.com/statsbomb/open-data) | Optional club/event context (heavy) |
+| [football-data.co.uk](https://www.football-data.co.uk/) | Optional club results + odds (heavy) |
+
+## Leakage-safe feature policy
+
+- Features use only information available **before** kickoff (Elo as-of match date, tournament context, lagged form from prior matches).
+- Post-match scores, lineups, and in-match events are excluded from the modeling matrix.
+- Details: [docs/leakage_audit.md](docs/leakage_audit.md).
+
+## Evaluation protocol
+
+- **Splits:** chronological train → validation → test on the modeling table (not random).
+- **Selection metric:** validation multiclass **log loss**.
+- **Test split:** held out for final reporting; not used for hyperparameter or feature-set selection.
+
+## Final models (three roles — do not conflate)
+
+| Role | Configuration | Val log loss | Notes |
+|------|---------------|--------------|-------|
+| **Preferred portfolio final** | Model 28 — LightGBM + `safe_plus_form_compact` | **0.89309** | Script 31; val *n* = 7,366 |
+| **Simpler interpretable challenger** | Model 28 — multinom + `safe_plus_form_compact` | 0.89485 | Same cohort; Δ +0.00176 (< 0.005 threshold) |
+| **Tier / robustness (different cohort)** | Model 30 — LightGBM + `rating_plus_form` | **0.88884** | Not directly comparable; val *n* = 7,334 |
+
+**Why the portfolio final is defensible:** Model 28 is the official selection pool (`model_28_metrics.csv`), with a documented leakage path and compact form tier. LightGBM beats multinom on validation by only **0.00176** log loss — a **marginal** gain. Model 30’s lower validation metric reflects a **different cohort and feature set**; it is retained as tier analysis, not as a drop-in replacement.
+
+**Held-out test metrics (portfolio final only):** log loss **0.873**, accuracy **59.5%**, macro F1 **0.437** (*n* = 7,561). See [MODEL_CARD.md](MODEL_CARD.md) and [reports/final/final_results_summary.md](reports/final/final_results_summary.md).
+
 ## 60-second summary
 
-1. **Data** — Historical international results, goalscorers, shootouts, and World Football Elo ratings are downloaded, cleaned, and validated.
-2. **Features** — Pre-match Elo, tournament context, lagged team form, and goalscorer depth features are built using only information available before kickoff.
-3. **Models** — Frequency/majority baselines, Elo-only multinomial models, glmnet ridge, and LightGBM are compared on the same chronological splits.
-4. **Evaluation** — Model selection uses **validation log loss**; a held-out test set is reserved for final reporting. Calibration and classwise metrics are checked explicitly.
-5. **Result** — The best incremental gain came from compact lagged form features (Model 28: LightGBM, test log loss **0.874**, accuracy **59.5%**). Gains over strong Elo baselines are modest but real.
-
-See [reports/final/final_results_summary.md](reports/final/final_results_summary.md) and [MODEL_CARD.md](MODEL_CARD.md) for headline metrics.
+1. **Data** — International results, goalscorers, shootouts, and Elo ratings are downloaded, cleaned, and validated.
+2. **Features** — Pre-match Elo, tournament context, lagged team form, and optional goalscorer depth (tier study).
+3. **Models** — Baselines, Elo multinomial, glmnet ridge, and LightGBM on chronological splits.
+4. **Selection** — Validation log loss within the Model 28 cohort; test reserved for final reporting.
+5. **Result** — Portfolio final: Model 28 LightGBM + compact form. Gains over Elo baselines are modest but real.
 
 ## Results at a glance
 
-The project forecasts three-class match outcomes — **home win (H), draw (D), and away win (A)** — as calibrated probabilities, not just predicted labels. Models are trained and compared on **chronological train, validation, and test splits** so that pre-match features never use information from future matches. **Log loss** is the primary selection metric because the deliverable is probabilistic; accuracy and macro F1 are reported for context. The figures below walk through data scale, incremental improvement, calibration quality, class-level behavior (including the draw-class difficulty), and feature interpretability.
+The project forecasts three-class match outcomes as calibrated probabilities. Figures below use the **portfolio final** (Model 28 LightGBM) unless noted.
 
 ### Data scale and chronological splits
 
 ![International matches by year with train, validation, and test split boundaries](reports/figures/international_results/09_matches_by_year_full_data_with_split.png)
 
-The modeling dataset spans decades of international matches, with volume increasing in recent eras. Vertical split boundaries mark the chronological train, validation, and test partitions used throughout the project. This design mirrors real forecasting: models are fit on the past and evaluated on held-out future matches, reducing the risk of optimistic metrics from random or leaky splits.
-
 ### Incremental model improvement
 
 ![Test-set log loss across modeling stages and feature tiers](reports/figures/final_incremental_test_log_loss.png)
 
-Test-set log loss tracks performance as feature tiers are added — from Elo baselines through safe pre-match features to compact lagged form. Improvements are **modest but meaningful**: strong Elo-only baselines already explain much of the signal, and supervised models refine probabilities rather than replacing that foundation. The best incremental gain came from compact lagged form features (Model 28: LightGBM, test log loss **0.874**), not from adding every available feature tier.
+Improvements are modest: Elo baselines are strong; compact lagged form (Model 28) gave the clearest gain on the official staging path.
 
 ### Probabilistic calibration
 
-![Calibration plot for the selected final model on the test split](reports/figures/final_model_calibration_plot.png)
-
-Because the model outputs **H / D / A probabilities**, calibration matters as much as headline accuracy. This plot compares predicted probability bins to observed outcome frequencies on the held-out test set. Well-calibrated forecasts mean that when the model assigns ~60% to a class, that class occurs roughly 60% of the time — a requirement for downstream uses such as simulation or risk-aware decision-making.
+![Calibration plot for the portfolio final model on the test split](reports/figures/final_model_calibration_plot.png)
 
 ### Class-level behavior and draw difficulty
 
-![Confusion matrix heatmap for the selected final model on the test split](reports/figures/final_model_confusion_heatmap.png)
+![Confusion matrix heatmap for the portfolio final model on the test split](reports/figures/final_model_confusion_heatmap.png)
 
-The confusion matrix shows where the model gets each outcome right or wrong at the class level. Home and away wins are predicted more reliably than draws; **draws remain the hardest class** and are often under-ranked as the top predicted label even when draw probability is in a plausible range. This is an honest limitation of the current feature set and class structure, not a reason to overstate overall performance.
+Draws remain the hardest class to rank as the top prediction.
 
 ### Feature interpretability
 
-![Feature importance for the selected LightGBM model](reports/figures/final_model/08_feature_importance.png)
+![Feature importance for LightGBM](reports/figures/final_model/08_feature_importance.png)
 
-Feature importance highlights which pre-match signals the tree model relies on most — primarily Elo rating differences, tournament context, and compact lagged form metrics. These rankings support **interpretability** (the model uses plausible football signals) but should not be read as **causal proof** that changing a feature would change match outcomes. Importance reflects predictive contribution within this dataset and evaluation setup.
+Importance reflects predictive contribution, not causality. The tier-study plot uses the Model 30 cohort; portfolio diagnostics use Model 28 outputs from script 31.
 
 ### Pipeline overview
 
@@ -87,8 +119,6 @@ flowchart LR
 ```
 
 ## Reproduce
-
-**Recommended path** for the main international workflow: `run_light_pipeline.R` then `run_modeling_pipeline.R` (steps 2–3 below). Use `run_pipeline.R` only if you need the optional StatsBomb or football-data.co.uk side tracks.
 
 From the project root (R ≥ 4.2 recommended):
 
@@ -115,22 +145,12 @@ Rscript src/run_modeling_pipeline.R
 
 Raw downloads are gitignored. Place manual fallbacks under `data/raw/` as documented in [docs/data_sources.md](docs/data_sources.md).
 
-## Data sources
-
-| Source | Role |
-|--------|------|
-| [martj42/international_results](https://github.com/martj42/international_results) | Match results, goalscorers, shootouts |
-| [World Football Elo](http://www.eloratings.net/) | Pre-match team strength ratings |
-| [StatsBomb Open Data](https://github.com/statsbomb/open-data) | Optional club/event context (heavy) |
-| [football-data.co.uk](https://www.football-data.co.uk/) | Optional club results + odds (heavy) |
-
 ## Modeling approach
 
 - **Target:** `match_result` → H / D / A (multiclass).
-- **Splits:** Chronological train → validation → test on `international_modeling_table.csv`.
-- **Feature tiers:** baseline Elo → + tournament context → + lagged form → + goalscorer depth.
-- **Selection metric:** validation log loss (test set untouched during selection).
-- **Leakage controls:** documented in [docs/leakage_audit.md](docs/leakage_audit.md).
+- **Portfolio table:** `international_modeling_table_with_form.csv` (Model 28).
+- **Feature tiers:** baseline Elo → tournament context → lagged form → goalscorer depth (Model 30 tier study).
+- **Selection:** validation log loss within Model 28 (`src/31_final_results_visualization.R`).
 
 ## Repository structure
 
@@ -140,14 +160,14 @@ worldcup-forecast-r/
 ├── data/
 │   ├── raw/                # Source downloads (gitignored)
 │   ├── processed/          # Clean modeling-ready tables
-│   ├── validation/         # QA CSVs (processed_data/, engineered_features/, modeling/)
-│   ├── predictions/        # Model prediction exports
+│   ├── validation/         # QA CSVs
+│   ├── predictions/        # Optional exports (e.g. final_preferred_model_predictions.csv)
 │   └── metadata/           # Manifests, team crosswalk
 ├── reports/
 │   ├── figures/            # Final and diagnostic plots
 │   ├── tables/             # Metrics, comparisons, model outputs
-│   └── final/              # Narrative summary for reviewers
-├── models/                 # Saved model objects (by family)
+│   └── final/              # Narrative summaries for reviewers
+├── models/                 # Optional serialized models (portfolio final not saved by default)
 ├── notebooks/              # Exploratory Rmd notebooks
 ├── docs/                   # Pipeline, data dictionary, leakage audit, plans
 ├── README.md
@@ -155,17 +175,19 @@ worldcup-forecast-r/
 └── MODEL_CARD.md
 ```
 
-## Important caveats
+## Limitations and future work
 
-- Elo-only baselines are already strong; ML adds modest refinement, not a large step change.
-- Draw prediction remains difficult — models often under-rank the draw class despite reasonable draw *probabilities*.
-- Early-era matches have sparser ratings and form history; complete-case cohorts differ slightly across feature tiers.
-- StatsBomb event/360 processing is optional and can take hours; it is not required for the international forecasting story.
+- Elo-only baselines are already strong; ML adds modest refinement.
+- Draw prediction remains difficult — models often under-rank the draw class.
+- Model 28 and Model 30 cohorts differ; harmonize before promoting any Model 30 configuration.
+- Early-era matches have sparser ratings and form history.
+- No market odds, squad value, or injury features in the published run.
+- Optional: `renv`, serialized portfolio final model, cohort-harmonized re-selection.
 
 ## Project status
 
-[PROJECT_STATUS.md](PROJECT_STATUS.md) — what is done, known issues, reviewer checklist. Full `docs/` index: [Documentation](#documentation) above.
+[PROJECT_STATUS.md](PROJECT_STATUS.md) — what is done, known issues, reviewer checklist.
 
 ## License
 
-Open source — see LICENSE if present.
+No `LICENSE` file is in the repository yet. Add one before public release; see [docs/license_needed.md](docs/license_needed.md).

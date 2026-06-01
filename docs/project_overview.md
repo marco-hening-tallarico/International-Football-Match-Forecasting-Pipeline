@@ -126,7 +126,15 @@ Models are compared in **incremental feature tiers** (same chronological splits 
 
 **Selection protocol:** fit on train, select on **validation log loss**, report **test** metrics once for the chosen configuration. No test-set peeking during selection.
 
-Documented outcome (see `reports/final/final_results_summary.md` and [MODEL_CARD.md](../MODEL_CARD.md)): the selected configuration for the published run is **LightGBM** with the **`safe_plus_form_compact`** variant from Model 28 (lagged form tier). Gains over strong Elo baselines are **modest**; goalscorer features did not clearly beat form alone in the final tier comparison. Exact metrics and caveats are in those artifacts—not repeated here.
+**Final model story (three roles — do not conflate):**
+
+| Role | Configuration | Val log loss | Notes |
+|------|---------------|--------------|-------|
+| **Portfolio final** | Model 28 — LightGBM + `safe_plus_form_compact` | **0.89309** | Selected by script 31 from `model_28_metrics.csv` |
+| **Tier / robustness** | Model 30 — LightGBM + `rating_plus_form` | **0.88884** | Different cohort; not directly comparable |
+| **Interpretable challenger** | Model 28 — multinom + `safe_plus_form_compact` | 0.89485 | +0.00176 vs LightGBM on validation; test 0.87074 reported only |
+
+See `reports/final/final_results_summary.md`, [MODEL_CARD.md](../MODEL_CARD.md), and [model_selection_rationale.md](model_selection_rationale.md). Gains over strong Elo baselines are **modest**; goalscorer features did not beat `rating_plus_form` on the Model 30 tier cohort. Exact metrics and caveats are in those artifacts—not repeated here.
 
 **Non-goals** for this project version: large-scale hyperparameter search, neural/embedding team models, in-play updating, betting-market integration (noted as future work in [modeling_plan.md](modeling_plan.md)).
 
@@ -189,8 +197,10 @@ After a full modeling run, reviewers should find artifacts under `reports/` and 
 | `data/processed/international_modeling_table*.csv` | Modeling tables (base, form, goalscorers) |
 | `reports/tables/final_project/` | Incremental tier summary, best-model tables |
 | `reports/figures/` | EDA, calibration, final comparison plots |
-| `reports/final/final_results_summary.md` | Narrative summary of stages and selected model |
-| [MODEL_CARD.md](../MODEL_CARD.md) | Model card (if present in repo root) |
+| `reports/final/final_results_summary.md` | Narrative summary of stages and portfolio final |
+| `reports/final/final_international_modeling_report.md` | Curated reviewer report (may differ slightly from script 32 output) |
+| [MODEL_CARD.md](../MODEL_CARD.md) | Model card (portfolio final + tier robustness) |
+| `data/predictions/final_preferred_model_predictions.csv` | Portfolio-final row-level probabilities (when exported) |
 | `reports/tables/model_<NN>/` | Per-stage metrics and diagnostics |
 | `data/validation/processed_data/`, `data/validation/engineered_features/` | Cleaning and leakage QA |
 
@@ -213,4 +223,4 @@ Legacy paths (`graphs/`, `outputs/`) may exist from older runs; new pipeline out
 
 ---
 
-*Last consolidated from project docs: 2026-06-01. For schema or metric details that may change after a new pipeline run, prefer the generated artifacts and the linked docs above.*
+*Last consolidated from project docs: 2026-06-01 (portfolio final = Model 28 LightGBM). For schema or metric details that may change after a new pipeline run, prefer the generated artifacts and the linked docs above.*

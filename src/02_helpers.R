@@ -244,4 +244,269 @@ safe_integer <- function(x) {
 }
 
 
+CHRONOLOGICAL_TEST_SPLIT_DATE <- as.Date("2018-01-01")
+DEFAULT_VALIDATION_FRACTION <- 0.20
+
+# Explicit FIFA / results names -> World Football Elo team labels.
+# Applied only when the Elo team exists in cleaned ratings (script 16).
+STANDARD_RESULT_TO_ELO_TEAM_MAPPINGS <- c(
+    "China PR" = "China",
+    "Czech Republic" = "Czechia",
+    "Czechoslovakia" = "Czechia",
+    "Republic of Ireland" = "Ireland",
+    "Timor-Leste" = "East Timor",
+    "German DR" = "Germany",
+    "South Yemen" = "Yemen",
+    "Yemen DPR" = "Yemen",
+    "Vietnam Republic" = "Vietnam",
+    "Yugoslavia" = "Serbia"
+)
+
+
+make_team_clean <- function(team_name) {
+    team_name |>
+        as.character() |>
+        stringr::str_squish() |>
+        stringr::str_to_lower() |>
+        stringr::str_replace_all("[^a-z0-9]+", "_") |>
+        stringr::str_replace_all("^_|_$", "")
+}
+
+
+load_team_name_crosswalk <- function(
+    crosswalk_path = file.path(META_DIR, "team_name_crosswalk.csv")
+) {
+    optional_cols <- c("elo_team", "elo_team_clean")
+    base_cols <- c(
+        "source",
+        "raw_team",
+        "team_clean",
+        "canonical_team",
+        "notes"
+    )
+
+    if (!file.exists(crosswalk_path)) {
+        empty <- tibble::tibble(
+            source = character(),
+            raw_team = character(),
+            team_clean = character(),
+            canonical_team = character(),
+            notes = character()
+        )
+        empty$elo_team <- character()
+        empty$elo_team_clean <- character()
+        return(empty)
+    }
+
+    crosswalk <- readr::read_csv(crosswalk_path, show_col_types = FALSE)
+    missing_base <- setdiff(base_cols, names(crosswalk))
+
+    if (length(missing_base) > 0L) {
+        stop(
+            "team_name_crosswalk.csv is missing columns: ",
+            paste(missing_base, collapse = ", "),
+            call. = FALSE
+        )
+    }
+
+    for (col_name in optional_cols) {
+        if (!col_name %in% names(crosswalk)) {
+            crosswalk[[col_name]] <- NA_character_
+        }
+    }
+
+    crosswalk
+}
+
+
+apply_standard_result_to_elo_mappings <- function(
+    crosswalk,
+    available_elo_teams
+) {
+    if (length(available_elo_teams) == 0L) {
+        return(crosswalk)
+    }
+
+    available_elo_clean <- make_team_clean(available_elo_teams)
+    names(available_elo_clean) <- available_elo_teams
+
+    for (result_team in names(STANDARD_RESULT_TO_ELO_TEAM_MAPPINGS)) {
+        elo_team <- STANDARD_RESULT_TO_ELO_TEAM_MAPPINGS[[result_team]]
+        elo_team_clean <- make_team_clean(elo_team)
+
+        if (!elo_team_clean %in% available_elo_clean) {
+            next
+        }
+
+        row_idx <- which(crosswalk$raw_team == result_team)
+        mapping_notes <- paste0(
+            "mapped_to_elo:",
+            elo_team
+        )
+
+        if (length(row_idx) == 0L) {
+            crosswalk <- dplyr::bind_rows(
+                crosswalk,
+                tibble::tibble(
+                    source = "international_results",
+                    raw_team = result_team,
+                    team_clean = make_team_clean(result_team),
+                    canonical_team = result_team,
+                    notes = mapping_notes,
+                    elo_team = elo_team,
+                    elo_team_clean = elo_team_clean
+                )
+            )
+        } else {
+            crosswalk$elo_team[row_idx] <- elo_team
+            crosswalk$elo_team_clean[row_idx] <- elo_team_clean
+            for (idx in row_idx) {
+                old_note <- crosswalk$notes[idx]
+                if (
+                    is.na(old_note) ||
+                        old_note == "" ||
+                        old_note == "auto_initialized"
+                ) {
+                    crosswalk$notes[idx] <- mapping_notes
+                }
+            }
+        }
+    }
+
+    crosswalk |>
+        dplyr::distinct(.data$source, .data$raw_team, .keep_all = TRUE) |>
+        dplyr::arrange(.data$source, .data$team_clean, .data$raw_team)
+}
+
+
+build_result_to_elo_clean_lookup <- function(crosswalk) {
+    explicit <- crosswalk |>
+        dplyr::filter(
+            !is.na(.data$raw_team),
+            .data$raw_team != "",
+            !is.na(.data$elo_team_clean),
+            .data$elo_team_clean != ""
+        ) |>
+        dplyr::transmute(
+            raw_team = .data$raw_team,
+            elo_team_clean = .data$elo_team_clean
+        ) |>
+        dplyr::distinct(.data$raw_team, .keep_all = TRUE)
+
+    stats::setNames(explicit$elo_team_clean, explicit$raw_team)
+}
+
+
+resolve_elo_team_clean <- function(
+    team_name,
+    crosswalk_lookup = character(),
+    available_elo_team_clean = character()
+) {
+    team_name <- as.character(team_name)
+    result_team_clean <- make_team_clean(team_name)
+    elo_lookup_team_clean <- result_team_clean
+
+    direct_hit <- result_team_clean %in% available_elo_team_clean
+    elo_lookup_team_clean[direct_hit] <- result_team_clean[direct_hit]
+
+    if (length(crosswalk_lookup) > 0L) {
+        crosswalk_hit <- team_name %in% names(crosswalk_lookup)
+        elo_lookup_team_clean[crosswalk_hit] <- unname(
+            crosswalk_lookup[team_name[crosswalk_hit]]
+        )
+    }
+
+    elo_lookup_team_clean
+}
+
+
+assign_data_split_modeling <- function(
+    modeling_table,
+    validation_fraction = DEFAULT_VALIDATION_FRACTION
+) {
+    if (!"data_split" %in% names(modeling_table)) {
+        stop(
+            "modeling_table must include data_split before assigning data_split_modeling.",
+            call. = FALSE
+        )
+    }
+
+    train_rows <- modeling_table |>
+        dplyr::filter(.data$data_split == "train") |>
+        dplyr::arrange(.data$date)
+
+    validation_start_index <- floor(nrow(train_rows) * (1 - validation_fraction)) + 1L
+    validation_ids <- character()
+    train_modeling_ids <- character()
+
+    if (nrow(train_rows) > 0L) {
+        if (validation_start_index <= nrow(train_rows)) {
+            validation_ids <- train_rows$source_match_id[
+                validation_start_index:nrow(train_rows)
+            ]
+            train_modeling_ids <- train_rows$source_match_id[
+                seq_len(validation_start_index - 1L)
+            ]
+        } else {
+            train_modeling_ids <- train_rows$source_match_id
+        }
+    }
+
+    modeling_table |>
+        dplyr::mutate(
+            data_split_modeling = dplyr::case_when(
+                .data$data_split == "test" ~ "test",
+                .data$source_match_id %in% validation_ids ~ "validation",
+                .data$source_match_id %in% train_modeling_ids ~ "train",
+                .data$data_split == "train" ~ "train",
+                TRUE ~ NA_character_
+            )
+        )
+}
+
+
+make_chronological_modeling_splits <- function(
+    modeling_df,
+    validation_fraction = DEFAULT_VALIDATION_FRACTION
+) {
+    if ("data_split_modeling" %in% names(modeling_df)) {
+        train <- modeling_df |>
+            dplyr::filter(.data$data_split_modeling == "train") |>
+            dplyr::arrange(.data$date)
+        validation <- modeling_df |>
+            dplyr::filter(.data$data_split_modeling == "validation") |>
+            dplyr::arrange(.data$date)
+        test <- modeling_df |>
+            dplyr::filter(.data$data_split_modeling == "test") |>
+            dplyr::arrange(.data$date)
+    } else {
+        train_all <- modeling_df |>
+            dplyr::filter(.data$data_split == "train") |>
+            dplyr::arrange(.data$date)
+        test <- modeling_df |>
+            dplyr::filter(.data$data_split == "test") |>
+            dplyr::arrange(.data$date)
+
+        if (nrow(train_all) == 0L || nrow(test) == 0L) {
+            stop("Train or test split is empty after filtering.", call. = FALSE)
+        }
+
+        validation_start_index <- floor(nrow(train_all) * (1 - validation_fraction)) + 1L
+
+        train <- train_all[seq_len(validation_start_index - 1L), ]
+        validation <- train_all[validation_start_index:nrow(train_all), ]
+    }
+
+    if (nrow(train) == 0L || nrow(validation) == 0L || nrow(test) == 0L) {
+        stop("Train, validation, or test split is empty.", call. = FALSE)
+    }
+
+    list(
+        train = train,
+        validation = validation,
+        test = test
+    )
+}
+
+
 message("Helper functions loaded.")

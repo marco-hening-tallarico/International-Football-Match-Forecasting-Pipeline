@@ -726,30 +726,7 @@ fit_variant_models <- function(
 }
 
 make_chronological_splits <- function(modeling_df) {
-    train_all <- modeling_df |>
-        dplyr::filter(data_split == "train") |>
-        dplyr::arrange(date)
-
-    test <- modeling_df |>
-        dplyr::filter(data_split == "test") |>
-        dplyr::arrange(date)
-
-    if (nrow(train_all) == 0) {
-        stop("No training rows after filtering.", call. = FALSE)
-    }
-
-    if (nrow(test) == 0) {
-        stop("No test rows after filtering.", call. = FALSE)
-    }
-
-    validation_fraction <- 0.20
-    validation_start_index <- floor(nrow(train_all) * (1 - validation_fraction)) + 1
-
-    list(
-        train = train_all[seq_len(validation_start_index - 1), ],
-        validation = train_all[validation_start_index:nrow(train_all), ],
-        test = test
-    )
+    make_chronological_modeling_splits(modeling_df)
 }
 
 # 3. Load data
@@ -1008,7 +985,12 @@ filter_counts <- dplyr::bind_rows(
 readr::write_csv(filter_counts, "reports/tables/model_28_filter_counts.csv")
 print(filter_counts)
 
-if (!all(df$data_split %in% c("train", "test"))) {
+if ("data_split_modeling" %in% names(df)) {
+    if (!all(df$data_split_modeling %in% c("train", "validation", "test"))) {
+        message("data_split_modeling contains unexpected values:")
+        print(table(df$data_split_modeling, useNA = "ifany"))
+    }
+} else if (!all(df$data_split %in% c("train", "test"))) {
     message("data_split contains values other than train/test:")
     print(table(df$data_split, useNA = "ifany"))
 }

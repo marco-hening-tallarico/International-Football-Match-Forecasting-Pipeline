@@ -995,29 +995,7 @@ fit_variant_models <- function(
 }
 
 make_chronological_splits <- function(modeling_df) {
-    train_all <- modeling_df |>
-        dplyr::filter(data_split == "train") |>
-        dplyr::arrange(date)
-
-    test <- modeling_df |>
-        dplyr::filter(data_split == "test") |>
-        dplyr::arrange(date)
-
-    if (nrow(train_all) == 0) {
-        stop("No training rows after filtering.", call. = FALSE)
-    }
-
-    if (nrow(test) == 0) {
-        stop("No test rows after filtering.", call. = FALSE)
-    }
-
-    validation_start_index <- floor(nrow(train_all) * (1 - VALIDATION_FRACTION)) + 1
-
-    list(
-        train = train_all[seq_len(validation_start_index - 1), ],
-        validation = train_all[validation_start_index:nrow(train_all), ],
-        test = test
-    )
+    make_chronological_modeling_splits(modeling_df)
 }
 
 select_available_features <- function(

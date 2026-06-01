@@ -18,15 +18,22 @@ Used for model and feature-variant selection on the validation split.
 
 ## Split design
 
-Defined on `international_modeling_table.csv` via `data_split` column (script 18):
+Defined on `international_modeling_table.csv` (script 18):
 
-| Split | Typical use |
-|-------|-------------|
-| train | Fit model parameters |
-| validation | Select model / feature variant |
-| test | Final held-out report |
+| Column | Values | Use |
+|--------|--------|-----|
+| `data_split_modeling` | train / validation / test | **Authoritative** split for modeling scripts |
+| `data_split` | train / test | Legacy train vs held-out test (`date >= 2018-01-01`) |
 
-Splits are **chronological** — no random shuffling. This mimics forecasting future matches from past data.
+| Split | Rule | Typical use |
+|-------|------|-------------|
+| train | `data_split_modeling == "train"` | Fit model parameters |
+| validation | `data_split_modeling == "validation"` | Select model / feature variant (last 20% of pre-2018 training rows by `date`) |
+| test | `data_split_modeling == "test"` | Final held-out report (`date >= 2018-01-01`) |
+
+Modeling scripts use `data_split_modeling` when present and fall back to carving validation from `data_split == "train"` otherwise. Splits are **chronological** — no random shuffling.
+
+**Model 28 cohort filters** (applied after the split, on complete-case rows): both teams must have pre-match Elo with `rating_age_days_* <= 365` and at least 10 prior international matches per team. Counts: `reports/tables/model_28_filter_counts.csv`.
 
 ## Cohort rules
 

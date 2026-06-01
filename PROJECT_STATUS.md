@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-05-29
+Last updated: 2026-06-01
 
 ## Status table
 
@@ -20,12 +20,16 @@ Last updated: 2026-05-29
 - End-to-end pipeline from raw international data to model comparison tables.
 - Leakage-safe lagged form and goalscorer features with manual recompute checks.
 - Incremental model comparison: baseline Elo → safe features → draw-aware Elo → lagged form → goalscorers.
-- Final selected model (Model 28 tier): **LightGBM** with `safe_plus_form_compact` features.
-- Portfolio documentation: README, pipeline reference, leakage audit, model card.
+- **Portfolio final:** Model 28 — **LightGBM** + `safe_plus_form_compact` (val log loss 0.89309; script 31).
+- **Tier robustness:** Model 30 — LightGBM + `rating_plus_form` (val 0.88884; different cohort; not portfolio final).
+- **Interpretable challenger:** Model 28 — multinom + `safe_plus_form_compact` (+0.00176 val log loss vs LightGBM).
+- Portfolio documentation: README, MODEL_CARD, model selection rationale, final reports.
 
 ## What remains (optional improvements)
 
-- [ ] Add `renv.lock` for fully pinned reproducibility from a fresh clone.
+- [ ] Add `renv.lock` for fully pinned reproducibility from a fresh clone (see `docs/final_reproducibility_check.md`).
+- [ ] Add `LICENSE` before public release (see `docs/license_needed.md`).
+- [ ] Serialize portfolio final to `models/final_preferred_model.rds` (requires retrain or pipeline hook).
 - [ ] Add `notebooks/notebook_4_final_project_report.Rmd` as a single reviewer-facing HTML report.
 - [ ] Trim exploratory figures to 5–8 headline plots in `reports/figures/final_model/`.
 - [ ] Wire best model into a World Cup tournament simulation script.

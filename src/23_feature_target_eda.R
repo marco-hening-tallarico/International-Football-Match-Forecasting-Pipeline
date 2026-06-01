@@ -44,7 +44,7 @@ if (!file.exists(feature_set_path)) {
     )
 }
 
-source(feature_set_path)
+source(feature_set_path, local = TRUE)
 
 required_objects <- c(
     "safe_features",

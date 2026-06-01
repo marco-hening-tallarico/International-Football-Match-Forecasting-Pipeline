@@ -25,7 +25,9 @@ Produce calibrated multiclass probabilities P(H), P(D), P(A) for international m
 3. **rating_plus_form** — + compact lagged form  
 4. **rating_plus_form_plus_goalscorers** — + goalscorer depth  
 
-Each tier uses the same chronological splits for fair comparison.
+Each tier uses the same chronological splits for fair comparison (`data_split_modeling` on the modeling table; see [evaluation_plan.md](evaluation_plan.md)).
+
+**Draw-rate combined features** (`form_draw_rate_mean_last_10`, etc.) are the **arithmetic mean** of home and away team draw rates over the window—not home-minus-away differences. Difference-style form columns use the `form_*_diff_*` naming pattern.
 
 ## Model families per stage
 

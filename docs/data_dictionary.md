@@ -1,6 +1,6 @@
 # Data Dictionary
 
-Last reviewed: 2026-05-29
+Last reviewed: 2026-06-01
 
 Full schema documentation for processed tables. For data provenance see [data_sources.md](data_sources.md).
 
@@ -36,17 +36,20 @@ Validation outputs: `data/validation/processed_data/international_results_valida
 ## Modeling table: international_modeling_table.csv
 
 **Script:** `18_build_international_modeling_table.R`  
-**Grain:** one match with pre-match features and `data_split`
+**Grain:** one match with pre-match features and split labels
 
 Key columns beyond results:
 
 | Column | Description |
 |--------|-------------|
-| `home_rating_pre_match`, `away_rating_pre_match` | Elo before kickoff |
+| `home_rating_pre_match`, `away_rating_pre_match` | Elo before kickoff (joined via `data/metadata/team_name_crosswalk.csv` when names differ) |
 | `rating_diff` | home − away rating |
 | `rating_age_days_home`, `rating_age_days_away` | Days since last Elo update |
 | `flag_is_world_cup`, `flag_is_friendly`, … | Tournament context |
-| `data_split` | train / validation / test |
+| `data_split` | Legacy **train** / **test** only (test from `2018-01-01`; kept for backward compatibility) |
+| `data_split_modeling` | Authoritative **train** / **validation** / **test** for modeling (validation = last 20% of pre-2018 train rows by date) |
+
+Elo joins use the latest rating on or before `match_date - 1`. Unresolved result team names (no crosswalk mapping and no matching Elo slug) are logged to `data/validation/processed_data/international_modeling_table_unresolved_elo_teams.csv`.
 
 Extended tables:
 

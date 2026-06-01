@@ -32,10 +32,16 @@ strictly pre-match features.
 - Metrics: log loss, Brier score, macro F1, classwise precision/recall/F1, confusion matrices.
 - Model selection based primarily on validation log loss (test reserved for final reporting).
 
-## Main Results
-- **Best validation model**: lightgbm with `rating_plus_form` (validation log loss = 0.8888, macro F1 = 0.4490).
-- **Best test model**: lightgbm with `rating_plus_form` (test log loss = 0.8696, accuracy = 0.6024, macro F1 = 0.4629).
-- **Best validation model on test split**: validation-selected lightgbm / `rating_plus_form` achieved test log loss = 0.8696, accuracy = 0.6024, macro F1 = 0.4629.
+## Portfolio final (Model 28 cohort — authoritative)
+- **Preferred portfolio final model**: Model 28 — LightGBM + `safe_plus_form_compact`.
+- Selected by lowest validation log loss within `model_28_metrics.csv` (script 31).
+- See `reports/tables/final_project_summary.csv` for headline validation/test metrics.
+- **Simpler interpretable challenger**: Model 28 — multinom + `safe_plus_form_compact` on the same cohort (within 0.005 validation log loss of LightGBM).
+
+## Tier / robustness analysis (Model 30 cohort — not directly comparable)
+- **Best metric result on a different cohort**: lightgbm with `rating_plus_form` (validation log loss = 0.8888, macro F1 = 0.4490, val n = 7334).
+- This cohort uses the goalscorer-enriched table and fair-comparison filters; it does **not** replace the Model 28 portfolio final without harmonized cohorts and script 31 policy.
+- On the test split (reporting only): lightgbm / `rating_plus_form` achieved test log loss = 0.8696, accuracy = 0.6024, macro F1 = 0.4629.
 - **Strongest feature tier**: Rating + form.
 - **Form tier (validation)**: log-loss delta vs prior tier = -0.0041; macro-F1 delta = 0.0222.
 - **Goalscorer tier (validation)**: log-loss delta vs `rating_plus_form` = 1e-04; improved log loss = FALSE.
@@ -69,8 +75,8 @@ Calibration bins were produced for the best validation model on the test split (
 LightGBM gain importance for `rating_plus_form` highlights rating difference and form-derived features among the top predictors.
 
 ## Files Produced
-- Tables: `data/model_outputs/final_project_summary`
-- Plots: `graphs/final_model_results`
+- Tables: `reports/tables/final_project`
+- Plots: `reports/figures/final_model`
 - Key tables: `final_best_model_summary.csv`, `final_incremental_performance_summary.csv`,
   `final_classwise_summary.csv`, `final_extreme_feature_audit.csv`,
   `final_confident_wrong_predictions.csv`, `final_high_confidence_correct_predictions.csv`,
